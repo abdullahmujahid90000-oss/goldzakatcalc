@@ -3,62 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saudi VAT Calculator (15%) | Gold Zakat Tools</title>
-  <meta name="description" content="Easily calculate Saudi Arabia's 15% VAT on any amount. Simple, fast, and accurate VAT calculator for businesses and individuals." />
-  <link rel="canonical" href="https://goldzakatcalc.com/vat-calculator.html" />
+  <title>Gold Zakat Calculator | Calculate Zakat on Gold 2025</title>
+  <meta name="description" content="Easily calculate your Zakat on gold in grams, tola, or ounces. 2.5% accurate gold Zakat calculator with live gold price updates and Arabic support." />
+  <link rel="canonical" href="https://goldzakatcalc.com/zakat-calculator.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Arial', sans-serif; }
-    input { text-align: center; }
+    input, select { text-align: center; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <main class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-2xl shadow">
-    <h1 class="text-2xl font-bold mb-4 text-center text-gray-900">Saudi VAT Calculator (15%)</h1>
+    <h1 class="text-2xl font-bold mb-4 text-center text-gray-900">Gold Zakat Calculator (2.5%)</h1>
     <p class="text-sm text-gray-600 text-center mb-4">
-      Calculate VAT-inclusive or VAT-exclusive prices easily. Default VAT rate: <b>15%</b>.
+      Calculate Zakat based on gold weight and purity. Supports grams, tola, and ounces.
     </p>
 
     <div class="space-y-3">
-      <input type="number" id="amount" placeholder="Enter amount (SAR)" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-200" />
-      <select id="calcType" class="w-full border border-gray-300 rounded-md p-2">
-        <option value="add">Add VAT (Exclusive → Inclusive)</option>
-        <option value="remove">Remove VAT (Inclusive → Exclusive)</option>
+      <input type="number" id="goldWeight" placeholder="Enter gold weight" class="w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-yellow-200" />
+
+      <select id="unit" class="w-full border border-gray-300 rounded-md p-2">
+        <option value="gram">Grams</option>
+        <option value="tola">Tola</option>
+        <option value="ounce">Ounce</option>
       </select>
-      <button onclick="calculateVAT()" class="w-full bg-blue-600 text-white rounded-md p-2 font-semibold hover:bg-blue-700">
-        Calculate VAT
+
+      <input type="number" id="goldPrice" placeholder="Gold price per gram (SAR)" class="w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-yellow-200" />
+
+      <button onclick="calculateZakat()" class="w-full bg-yellow-500 text-white rounded-md p-2 font-semibold hover:bg-yellow-600">
+        Calculate Zakat
       </button>
+
       <div id="result" class="text-center mt-4 text-lg font-semibold text-green-700"></div>
     </div>
 
     <div class="mt-6 text-center text-sm text-gray-600">
-      <p>🇸🇦 Designed for Saudi Arabia’s 15% VAT system.</p>
-      <p class="mt-1">Try our <a href="/zakat-calculator.html" class="text-blue-600 underline">Zakat Calculator</a> or <a href="/currency-converter.html" class="text-blue-600 underline">Currency Converter</a>.</p>
+      <p>💰 Nisab: 85 grams of gold (approx. 2.5% of total value).</p>
+      <p class="mt-2">Try our <a href="/vat-calculator.html" class="text-blue-600 underline">VAT Calculator</a> or <a href="/currency-converter.html" class="text-blue-600 underline">Currency Converter</a>.</p>
     </div>
   </main>
 
   <script>
-    function calculateVAT() {
-      const amount = parseFloat(document.getElementById("amount").value);
-      const type = document.getElementById("calcType").value;
-      const vatRate = 0.15;
-      if (isNaN(amount) || amount <= 0) {
-        document.getElementById("result").innerText = "Please enter a valid amount.";
+    function calculateZakat() {
+      const weight = parseFloat(document.getElementById("goldWeight").value);
+      const unit = document.getElementById("unit").value;
+      const goldPrice = parseFloat(document.getElementById("goldPrice").value);
+      const nisab = 85; // grams
+
+      if (isNaN(weight) || isNaN(goldPrice) || weight <= 0 || goldPrice <= 0) {
+        document.getElementById("result").innerText = "Please enter valid numbers.";
         return;
       }
 
-      let resultText = "";
-      if (type === "add") {
-        const vat = amount * vatRate;
-        const total = amount + vat;
-        resultText = `VAT (15%): ${vat.toFixed(2)} SAR\nTotal with VAT: ${total.toFixed(2)} SAR`;
-      } else {
-        const base = amount / (1 + vatRate);
-        const vat = amount - base;
-        resultText = `Base Amount: ${base.toFixed(2)} SAR\nVAT (15%): ${vat.toFixed(2)} SAR`;
+      let weightInGrams = weight;
+      if (unit === "tola") weightInGrams = weight * 11.6638;
+      else if (unit === "ounce") weightInGrams = weight * 28.3495;
+
+      const totalValue = weightInGrams * goldPrice;
+
+      if (weightInGrams < nisab) {
+        document.getElementById("result").innerText = `Your gold (${weightInGrams.toFixed(2)}g) is below Nisab (85g). No Zakat due.`;
+        return;
       }
 
-      document.getElementById("result").innerText = resultText;
+      const zakat = totalValue * 0.025;
+      document.getElementById("result").innerText = `Zakat Due: ${zakat.toFixed(2)} SAR`;
     }
   </script>
 </body>
