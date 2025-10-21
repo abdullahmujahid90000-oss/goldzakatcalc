@@ -3,63 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saudi VAT Calculator (15%) | Gold Zakat Tools</title>
-  <meta name="description" content="Easily calculate Saudi Arabia's 15% VAT on any amount. Simple, fast, and accurate VAT calculator for businesses and individuals." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>Saudi VAT Calculator (15%) – Inclusive & Exclusive</title>
+  <meta name="description" content="Quick KSA VAT calculator for 15% — add/remove VAT, inclusive and exclusive totals with breakdown. Mobile-friendly, Arabic-ready." />
   <link rel="canonical" href="https://goldzakatcalc.com/vat-calculator.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="Saudi VAT Calculator (15%) – Inclusive & Exclusive" />
+  <meta property="og:description" content="Add or remove VAT, see net, VAT amount, and gross totals instantly." />
+  <meta property="og:url" content="https://goldzakatcalc.com/vat-calculator.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- FAQ JSON -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the VAT rate in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate in Saudi Arabia is 15%."}},
+      {"@type":"Question","name":"Can I calculate VAT inclusive and exclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter either net or gross and the tool shows VAT amount and the other value instantly."}}
+    ]
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: 'Arial', sans-serif; }
-    input { text-align: center; }
-  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <main class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-2xl shadow">
-    <h1 class="text-2xl font-bold mb-4 text-center text-gray-900">Saudi VAT Calculator (15%)</h1>
-    <p class="text-sm text-gray-600 text-center mb-4">
-      Calculate VAT-inclusive or VAT-exclusive prices easily. Default VAT rate: <b>15%</b>.
-    </p>
+  <header class="border-b bg-white">
+    <nav class="max-w-6xl mx-auto p-4 flex flex-wrap items-center justify-between">
+      <a href="/" class="font-semibold">Gold Zakat Calculator</a>
+      <div class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
+        <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
+        <a class="text-blue-600" href="/currency-converter.html">Currency</a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="space-y-3">
-      <input type="number" id="amount" placeholder="Enter amount (SAR)" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-200" />
-      <select id="calcType" class="w-full border border-gray-300 rounded-md p-2">
-        <option value="add">Add VAT (Exclusive → Inclusive)</option>
-        <option value="remove">Remove VAT (Inclusive → Exclusive)</option>
-      </select>
-      <button onclick="calculateVAT()" class="w-full bg-blue-600 text-white rounded-md p-2 font-semibold hover:bg-blue-700">
-        Calculate VAT
-      </button>
-      <div id="result" class="text-center mt-4 text-lg font-semibold text-green-700"></div>
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Saudi VAT Calculator (15%)</h1>
+
+    <div class="bg-white p-5 rounded-xl shadow space-y-4">
+      <div class="grid sm:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm text-gray-600">VAT rate (%)</span>
+          <input id="vatRate" type="number" step="0.01" class="w-full border rounded p-2" value="15" />
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="text-sm text-gray-600">Enter Net (excl. VAT) OR Gross (incl. VAT)</span>
+          <input id="amount" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 100" />
+        </label>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <label class="flex items-center gap-2">
+          <input type="radio" name="mode" value="net" checked /> Net → Gross
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="mode" value="gross" /> Gross → Net
+        </label>
+      </div>
+
+      <button id="calc" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate</button>
+
+      <div id="out" class="p-4 bg-gray-50 rounded border text-sm"></div>
     </div>
 
-    <div class="mt-6 text-center text-sm text-gray-600">
-      <p>🇸🇦 Designed for Saudi Arabia’s 15% VAT system.</p>
-      <p class="mt-1">Try our <a href="/zakat-calculator.html" class="text-blue-600 underline">Zakat Calculator</a> or <a href="/currency-converter.html" class="text-blue-600 underline">Currency Converter</a>.</p>
-    </div>
+    <p class="mt-4 text-xs text-gray-500">Disclaimer: Informational only. Confirm local rules and invoices for official use.</p>
   </main>
 
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto p-6 text-sm flex flex-wrap gap-4 justify-between">
+      <p>&copy; <span id="year"></span> Gold Zakat Calculator.</p>
+      <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
+    </div>
+  </footer>
+
   <script>
-    function calculateVAT() {
-      const amount = parseFloat(document.getElementById("amount").value);
-      const type = document.getElementById("calcType").value;
-      const vatRate = 0.15;
-      if (isNaN(amount) || amount <= 0) {
-        document.getElementById("result").innerText = "Please enter a valid amount.";
-        return;
-      }
+    function calcVAT() {
+      const rate = Number(document.getElementById('vatRate').value) || 15;
+      const amount = Number(document.getElementById('amount').value) || 0;
+      const mode = document.querySelector('input[name="mode"]:checked').value;
 
-      let resultText = "";
-      if (type === "add") {
-        const vat = amount * vatRate;
-        const total = amount + vat;
-        resultText = `VAT (15%): ${vat.toFixed(2)} SAR\nTotal with VAT: ${total.toFixed(2)} SAR`;
+      let net=0, vat=0, gross=0;
+      if (mode === 'net') {
+        net = amount;
+        vat = net * (rate/100);
+        gross = net + vat;
       } else {
-        const base = amount / (1 + vatRate);
-        const vat = amount - base;
-        resultText = `Base Amount: ${base.toFixed(2)} SAR\nVAT (15%): ${vat.toFixed(2)} SAR`;
+        gross = amount;
+        net = gross / (1 + rate/100);
+        vat = gross - net;
       }
 
-      document.getElementById("result").innerText = resultText;
+      document.getElementById('out').innerHTML = `
+        <div><strong>Net:</strong> ${net.toFixed(2)}</div>
+        <div><strong>VAT (${rate}%):</strong> ${vat.toFixed(2)}</div>
+        <div class="text-lg"><strong>Gross:</strong> ${gross.toFixed(2)}</div>
+      `;
     }
+
+    document.getElementById('calc').addEventListener('click', calcVAT);
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
