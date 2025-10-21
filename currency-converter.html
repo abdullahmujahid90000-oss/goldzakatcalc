@@ -3,87 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <title>Currency Converter – SAR, USD, AED, PKR and more</title>
-  <meta name="description" content="Simple currency converter for SAR, USD, AED, PKR and more. Edit rates manually for transparent calculations." />
+  <title>Currency Converter – SAR, USD, AED, PKR, INR & more</title>
+  <meta name="description" content="Convert currencies with rates from exchangerate.host. Supports SAR, USD, AED, PKR, INR, EUR, GBP, QAR, KWD, BHD, OMR, TRY, EGP, and more." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://goldzakatcalc.com/currency-converter.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Currency Converter – SAR, USD, AED, PKR and more" />
-  <meta property="og:site_name" content="Gold Zakat Calculator" />
-  <meta property="og:description" content="Convert common currencies with editable rates. Fast and simple." />
-  <meta property="og:url" content="https://goldzakatcalc.com/currency-converter.html" />
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/currency-converter.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/currency-converter.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/currency-converter.html" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  (function(){ try{
+    var pref=localStorage.getItem('prefLang'); if(pref) return;
+    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+    if(lang.startsWith('ar')) location.replace('/ar/currency-converter.html');
+  }catch(e){} })();
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <header class="border-b bg-white">
-    <nav class="max-w-6xl mx-auto p-4 flex flex-wrap items-center justify-between">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <div class="space-x-4 text-sm">
+      <nav class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/">Home</a>
         <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
         <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
-        <a class="text-blue-600" href="/currency-converter.html">Currency</a>
-      </div>
-    </nav>
+        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-gray-600" href="/ar/currency-converter.html" id="langSwitchAR">العربية</a>
+      </nav>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto p-6">
     <h1 class="text-3xl font-bold mb-6">Currency Converter</h1>
 
     <div class="bg-white p-5 rounded-xl shadow space-y-4">
-      <div class="grid sm:grid-cols-3 gap-4">
-        <label class="block">
+      <div class="grid md:grid-cols-4 gap-4">
+        <label class="block md:col-span-2">
           <span class="text-sm text-gray-600">Amount</span>
-          <input id="amt" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 100" />
+          <input id="amt" type="number" step="0.01" value="1" class="mt-1 w-full border rounded-lg p-2">
         </label>
-
         <label class="block">
           <span class="text-sm text-gray-600">From</span>
-          <select id="from" class="w-full border rounded p-2">
-            <option>SAR</option><option>USD</option><option>AED</option><option>PKR</option><option>EUR</option>
-          </select>
+          <select id="from" class="mt-1 w-full border rounded-lg p-2"></select>
         </label>
-
         <label class="block">
           <span class="text-sm text-gray-600">To</span>
-          <select id="to" class="w-full border rounded p-2">
-            <option>USD</option><option>SAR</option><option>AED</option><option>PKR</option><option>EUR</option>
-          </select>
+          <select id="to" class="mt-1 w-full border rounded-lg p-2"></select>
         </label>
       </div>
-
-      <div class="grid sm:grid-cols-5 gap-4">
-        <div class="sm:col-span-5 text-sm text-gray-600">Edit rates (1 unit of the left currency = rate in the right currency). Example: 1 USD = 3.75 SAR.</div>
-        <label class="block">
-          <span class="text-xs">1 USD in SAR</span>
-          <input id="USD_SAR" type="number" step="0.0001" class="w-full border rounded p-2" value="3.7500" />
-        </label>
-        <label class="block">
-          <span class="text-xs">1 SAR in USD</span>
-          <input id="SAR_USD" type="number" step="0.0001" class="w-full border rounded p-2" value="0.2667" />
-        </label>
-        <label class="block">
-          <span class="text-xs">1 AED in SAR</span>
-          <input id="AED_SAR" type="number" step="0.0001" class="w-full border rounded p-2" value="1.0200" />
-        </label>
-        <label class="block">
-          <span class="text-xs">1 SAR in AED</span>
-          <input id="SAR_AED" type="number" step="0.0001" class="w-full border rounded p-2" value="0.9804" />
-        </label>
-        <label class="block">
-          <span class="text-xs">1 USD in PKR</span>
-          <input id="USD_PKR" type="number" step="0.01" class="w-full border rounded p-2" value="280" />
-        </label>
+      <button id="go" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Convert</button>
+      <div id="res" class="hidden">
+        <hr class="my-4">
+        <p class="text-lg font-semibold">Result: <span id="out">0.00</span></p>
+        <p class="text-xs text-gray-500" id="stamp"></p>
       </div>
-
-      <button id="convert" class="bg-blue-600 text-white px-4 py-2 rounded">Convert</button>
-      <div id="out" class="p-4 bg-gray-50 rounded border text-sm"></div>
     </div>
 
-    <p class="mt-4 text-xs text-gray-500">Use official sources for live rates. This tool is for quick estimates.</p>
+    <p class="mt-4 text-xs text-gray-500">Rates via exchangerate.host. For official use, verify with your bank.</p>
   </main>
 
   <footer class="border-t bg-white">
@@ -94,34 +70,39 @@
   </footer>
 
   <script>
-    // Simple directed rates table (edit via inputs)
-    function rateKey(a,b){ return `${a}_${b}`; }
-
-    function getRate(a,b){
-      if(a===b) return 1;
-      const id = document.getElementById(rateKey(a,b));
-      if (id && Number(id.value)) return Number(id.value);
-      // fallback: invert if opposite exists
-      const inv = document.getElementById(rateKey(b,a));
-      if (inv && Number(inv.value)) return 1/Number(inv.value);
-      return NaN;
-    }
-
-    function convert(){
-      const amt = Number(document.getElementById('amt').value)||0;
-      const from = document.getElementById('from').value;
-      const to   = document.getElementById('to').value;
-      const r = getRate(from,to);
-      const outEl = document.getElementById('out');
-      if (isNaN(r)){
-        outEl.innerHTML = `<span class="text-red-600">Rate not set for ${from}→${to}. Add it above.</span>`;
-        return;
-      }
-      outEl.innerHTML = `<strong>${amt.toFixed(2)} ${from}</strong> = <strong>${(amt*r).toFixed(2)} ${to}</strong>`;
-    }
-
-    document.getElementById('convert').addEventListener('click', convert);
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const COMMON = ["SAR","USD","AED","PKR","INR","EUR","GBP","QAR","KWD","BHD","OMR","TRY","EGP","BDT","IDR","MYR","JPY","CNY"];
+    function fillSelect(id){
+      const s = document.getElementById(id);
+      COMMON.forEach(c=>{
+        const o=document.createElement('option'); o.value=o.textContent=c; s.appendChild(o);
+      });
+      if(id==='from') s.value='SAR';
+      if(id==='to') s.value='USD';
+    }
+    fillSelect('from'); fillSelect('to');
+
+    document.getElementById('go').addEventListener('click', async ()=>{
+      const a = parseFloat(document.getElementById('amt').value||'0');
+      const f = document.getElementById('from').value;
+      const t = document.getElementById('to').value;
+      try{
+        const data = await fetch(`https://api.exchangerate.host/convert?from=${f}&to=${t}&amount=${a}`).then(r=>r.json());
+        document.getElementById('out').textContent = (data.result||0).toFixed(4);
+        document.getElementById('stamp').textContent = data.date ? ('Rate date: '+data.date) : '';
+        document.getElementById('res').classList.remove('hidden');
+      }catch(e){
+        document.getElementById('out').textContent = 'Conversion failed';
+        document.getElementById('res').classList.remove('hidden');
+      }
+    });
+
+    (function(){
+      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
+      var btn=document.getElementById('langSwitchAR');
+      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
+    })();
   </script>
 </body>
 </html>
