@@ -3,72 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gold Zakat Calculator | Calculate Zakat on Gold 2025</title>
-  <meta name="description" content="Easily calculate your Zakat on gold in grams, tola, or ounces. 2.5% accurate gold Zakat calculator with live gold price updates and Arabic support." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce</title>
+  <meta name="description" content="Calculate Zakat on gold using weight and price per gram. Supports grams, tola, ounce with Nisab check. Fast, mobile-friendly, Arabic-ready." />
   <link rel="canonical" href="https://goldzakatcalc.com/zakat-calculator.html" />
+
+  <!-- OG/Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce" />
+  <meta property="og:description" content="Calculate Zakat on gold using weight and price per gram. Includes Nisab check." />
+  <meta property="og:url" content="https://goldzakatcalc.com/zakat-calculator.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- FAQ JSON -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the Zakat rate on gold?","acceptedAnswer":{"@type":"Answer","text":"Zakat on gold is 2.5% of total value if your gold reaches the Nisab (~85 grams) and one lunar year has passed."}},
+      {"@type":"Question","name":"How is Nisab calculated?","acceptedAnswer":{"@type":"Answer","text":"Nisab for gold is approximately 85 grams. If your gold is below Nisab, Zakat is not due."}}
+    ]
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: 'Arial', sans-serif; }
-    input, select { text-align: center; }
-  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <main class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-2xl shadow">
-    <h1 class="text-2xl font-bold mb-4 text-center text-gray-900">Gold Zakat Calculator (2.5%)</h1>
-    <p class="text-sm text-gray-600 text-center mb-4">
-      Calculate Zakat based on gold weight and purity. Supports grams, tola, and ounces.
-    </p>
+  <header class="border-b bg-white">
+    <nav class="max-w-6xl mx-auto p-4 flex flex-wrap items-center justify-between">
+      <a href="/" class="font-semibold">Gold Zakat Calculator</a>
+      <div class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
+        <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
+        <a class="text-blue-600" href="/currency-converter.html">Currency</a>
+        <a class="text-blue-600" href="/about.html">About</a>
+        <a class="text-blue-600" href="/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="space-y-3">
-      <input type="number" id="goldWeight" placeholder="Enter gold weight" class="w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-yellow-200" />
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Gold Zakat Calculator</h1>
 
-      <select id="unit" class="w-full border border-gray-300 rounded-md p-2">
-        <option value="gram">Grams</option>
-        <option value="tola">Tola</option>
-        <option value="ounce">Ounce</option>
-      </select>
+    <div class="bg-white p-5 rounded-xl shadow space-y-4">
+      <div class="grid sm:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm text-gray-600">Unit</span>
+          <select id="unit" class="w-full border rounded p-2">
+            <option value="g">Grams (g)</option>
+            <option value="tola">Tola</option>
+            <option value="oz">Ounce (oz)</option>
+          </select>
+        </label>
 
-      <input type="number" id="goldPrice" placeholder="Gold price per gram (SAR)" class="w-full border border-gray-300 rounded-md p-2 focus:ring focus:ring-yellow-200" />
+        <label class="block">
+          <span class="text-sm text-gray-600">Weight</span>
+          <input id="weight" type="number" step="0.001" class="w-full border rounded p-2" placeholder="e.g., 50" />
+        </label>
 
-      <button onclick="calculateZakat()" class="w-full bg-yellow-500 text-white rounded-md p-2 font-semibold hover:bg-yellow-600">
-        Calculate Zakat
-      </button>
+        <label class="block">
+          <span class="text-sm text-gray-600">Gold price / gram (SAR)</span>
+          <input id="price" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 270" />
+        </label>
+      </div>
 
-      <div id="result" class="text-center mt-4 text-lg font-semibold text-green-700"></div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block">
+          <span class="text-sm text-gray-600">Nisab (grams)</span>
+          <input id="nisab" type="number" step="0.01" class="w-full border rounded p-2" value="85" />
+        </label>
+        <label class="block">
+          <span class="text-sm text-gray-600">Zakat rate (%)</span>
+          <input id="rate" type="number" step="0.01" class="w-full border rounded p-2" value="2.5" />
+        </label>
+      </div>
+
+      <button id="calc" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate Zakat</button>
+
+      <div id="result" class="p-4 bg-gray-50 rounded border text-sm"></div>
+      <button id="copyBtn" class="text-blue-600 text-sm underline">Copy result</button>
     </div>
 
-    <div class="mt-6 text-center text-sm text-gray-600">
-      <p>💰 Nisab: 85 grams of gold (approx. 2.5% of total value).</p>
-      <p class="mt-2">Try our <a href="/vat-calculator.html" class="text-blue-600 underline">VAT Calculator</a> or <a href="/currency-converter.html" class="text-blue-600 underline">Currency Converter</a>.</p>
-    </div>
+    <p class="mt-4 text-xs text-gray-500">Disclaimer: This tool provides estimates for educational purposes. Confirm local prices and rulings with reliable sources.</p>
   </main>
 
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto p-6 text-sm flex flex-wrap gap-4 justify-between">
+      <p>&copy; <span id="year"></span> Gold Zakat Calculator.</p>
+      <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
+    </div>
+  </footer>
+
   <script>
-    function calculateZakat() {
-      const weight = parseFloat(document.getElementById("goldWeight").value);
-      const unit = document.getElementById("unit").value;
-      const goldPrice = parseFloat(document.getElementById("goldPrice").value);
-      const nisab = 85; // grams
+    const toGrams = (unit, value) => {
+      const v = Number(value) || 0;
+      if (unit === 'tola') return v * 11.6638038;
+      if (unit === 'oz')   return v * 31.1034768;
+      return v;
+    };
 
-      if (isNaN(weight) || isNaN(goldPrice) || weight <= 0 || goldPrice <= 0) {
-        document.getElementById("result").innerText = "Please enter valid numbers.";
-        return;
-      }
+    function calc() {
+      const unit   = document.getElementById('unit').value;
+      const weight = Number(document.getElementById('weight').value) || 0;
+      const price  = Number(document.getElementById('price').value)  || 0;
+      const nisab  = Number(document.getElementById('nisab').value)  || 85;
+      const rate   = Number(document.getElementById('rate').value)   || 2.5;
 
-      let weightInGrams = weight;
-      if (unit === "tola") weightInGrams = weight * 11.6638;
-      else if (unit === "ounce") weightInGrams = weight * 28.3495;
+      const grams = toGrams(unit, weight);
+      const valueSAR = grams * price;
+      const due = grams >= nisab ? (valueSAR * (rate/100)) : 0;
 
-      const totalValue = weightInGrams * goldPrice;
-
-      if (weightInGrams < nisab) {
-        document.getElementById("result").innerText = `Your gold (${weightInGrams.toFixed(2)}g) is below Nisab (85g). No Zakat due.`;
-        return;
-      }
-
-      const zakat = totalValue * 0.025;
-      document.getElementById("result").innerText = `Zakat Due: ${zakat.toFixed(2)} SAR`;
+      const html = `
+        <div><strong>Total gold (g):</strong> ${grams.toFixed(3)}</div>
+        <div><strong>Gold value (SAR):</strong> ${valueSAR.toFixed(2)}</div>
+        <div><strong>Nisab reached?:</strong> ${grams >= nisab ? 'Yes' : 'No'}</div>
+        <div class="mt-2 text-lg"><strong>Zakat due (SAR):</strong> ${due.toFixed(2)}</div>
+      `;
+      document.getElementById('result').innerHTML = html;
     }
+
+    document.getElementById('calc').addEventListener('click', calc);
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const t = document.getElementById('result').innerText.trim();
+      if (t) navigator.clipboard.writeText(t);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
