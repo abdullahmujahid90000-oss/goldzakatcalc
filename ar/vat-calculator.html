@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حاسبة ضريبة القيمة المضافة ١٥٪ – شامل/غير شامل</title>
+  <meta name="description" content="احسب ضريبة القيمة المضافة في السعودية (١٥٪) — إضافة الضريبة أو إزالتها بسرعة، صافي، ضريبة، إجمالي.">
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goldzakatcalc.com/ar/vat-calculator.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/vat-calculator.html" />
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/vat-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/vat-calculator.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"ما نسبة ضريبة القيمة المضافة في السعودية؟","acceptedAnswer":{"@type":"Answer","text":"حاليًا ١٥٪."}},
+    {"@type":"Question","name":"هل الحاسبة تدعم السعر الشامل أو غير الشامل؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يمكنك اختيار إضافة الضريبة أو إزالتها."}}
+  ]}
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="border-b bg-white">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <a href="/ar/" class="font-semibold">حاسبات الذهب والمالية</a>
+      <nav class="space-x-4 space-x-reverse text-sm">
+        <a href="/ar/zakat-calculator.html" class="text-blue-600">الزكاة</a>
+        <a href="/ar/currency-converter.html" class="text-blue-600">العملات</a>
+        <a href="/ar/about.html" class="text-gray-600">من نحن</a>
+        <a href="/ar/contact.html" class="text-gray-600">تواصل</a>
+        <a href="/vat-calculator.html" class="text-gray-600">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-2xl md:text-3xl font-bold mb-2">حاسبة ضريبة القيمة المضافة (١٥٪)</h1>
+    <div class="bg-white border rounded-2xl p-5 space-y-4">
+      <div class="grid md:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm text-gray-600">المبلغ</span>
+          <input id="amount" type="number" step="0.01" class="mt-1 w-full border rounded-lg p-2" placeholder="0.00">
+        </label>
+        <label class="block">
+          <span class="text-sm text-gray-600">النسبة ٪</span>
+          <input id="rate" type="number" step="0.01" value="15" class="mt-1 w-full border rounded-lg p-2">
+        </label>
+        <label class="block">
+          <span class="text-sm text-gray-600">الوضع</span>
+          <select id="mode" class="mt-1 w-full border rounded-lg p-2">
+            <option value="add">إضافة الضريبة</option>
+            <option value="remove">إزالة الضريبة</option>
+          </select>
+        </label>
+      </div>
+      <button id="calc" class="bg-blue-600 text-white px-4 py-2 rounded-lg">احسب</button>
+      <div id="out" class="hidden">
+        <hr class="my-4">
+        <p class="text-sm text-gray-600">الصافي: <span id="net">0.00</span></p>
+        <p class="text-sm text-gray-600">الضريبة: <span id="vat">0.00</span></p>
+        <p class="text-lg font-semibold">الإجمالي: <span id="gross">0.00</span></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto p-4 text-sm flex items-center justify-between">
+      <p>© <span id="year"></span> Gold Zakat Calculator.</p>
+      <nav class="space-x-4 space-x-reverse">
+        <a href="/ar/privacy.html" class="text-gray-600">الخصوصية</a>
+        <a href="/ar/terms.html" class="text-gray-600">الشروط</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('calc').addEventListener('click', ()=>{
+      const amount = parseFloat(document.getElementById('amount').value || '0');
+      const r = parseFloat(document.getElementById('rate').value || '0')/100;
+      const mode = document.getElementById('mode').value;
+      let net, vat, gross;
+      if(mode==='add'){ net = amount; vat = net*r; gross = net+vat; }
+      else{ gross = amount; net = gross/(1+r); vat = gross-net; }
+      document.getElementById('net').textContent = net.toFixed(2);
+      document.getElementById('vat').textContent = vat.toFixed(2);
+      document.getElementById('gross').textContent = gross.toFixed(2);
+      document.getElementById('out').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
