@@ -3,43 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
   <title>Saudi VAT Calculator (15%) – Inclusive & Exclusive</title>
-  <meta name="description" content="Quick KSA VAT calculator for 15% — add/remove VAT, inclusive and exclusive totals with breakdown. Mobile-friendly, Arabic-ready." />
+  <meta name="description" content="Quick KSA VAT calculator for 15% — add/remove VAT, net, VAT, and gross totals. Mobile-friendly." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://goldzakatcalc.com/vat-calculator.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Gold Zakat Calculator" />
-  <meta property="og:title" content="Saudi VAT Calculator (15%) – Inclusive & Exclusive" />
-  <meta property="og:description" content="Add or remove VAT, see net, VAT amount, and gross totals instantly." />
-  <meta property="og:url" content="https://goldzakatcalc.com/vat-calculator.html" />
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- FAQ JSON -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What is the VAT rate in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate in Saudi Arabia is 15%."}},
-      {"@type":"Question","name":"Can I calculate VAT inclusive and exclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter either net or gross and the tool shows VAT amount and the other value instantly."}}
-    ]
-  }
-  </script>
-
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/vat-calculator.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/vat-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/vat-calculator.html" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  (function(){ try{
+    var pref=localStorage.getItem('prefLang'); if(pref) return;
+    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+    if(lang.startsWith('ar')) location.replace('/ar/vat-calculator.html');
+  }catch(e){} })();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the VAT rate in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate is 15%."}},
+    {"@type":"Question","name":"Can I calculate VAT inclusive and exclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter either net or gross and the tool shows VAT and the other value."}}
+  ]}
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <header class="border-b bg-white">
-    <nav class="max-w-6xl mx-auto p-4 flex flex-wrap items-center justify-between">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <div class="space-x-4 text-sm">
+      <nav class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/">Home</a>
         <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
-        <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
         <a class="text-blue-600" href="/currency-converter.html">Currency</a>
-      </div>
-    </nav>
+        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-gray-600" href="/ar/vat-calculator.html" id="langSwitchAR">العربية</a>
+      </nav>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto p-6">
@@ -52,7 +49,7 @@
           <input id="vatRate" type="number" step="0.01" class="w-full border rounded p-2" value="15" />
         </label>
         <label class="block sm:col-span-2">
-          <span class="text-sm text-gray-600">Enter Net (excl. VAT) OR Gross (incl. VAT)</span>
+          <span class="text-sm text-gray-600">Enter Net (excl.) OR Gross (incl.)</span>
           <input id="amount" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 100" />
         </label>
       </div>
@@ -71,7 +68,7 @@
       <div id="out" class="p-4 bg-gray-50 rounded border text-sm"></div>
     </div>
 
-    <p class="mt-4 text-xs text-gray-500">Disclaimer: Informational only. Confirm local rules and invoices for official use.</p>
+    <p class="mt-4 text-xs text-gray-500">Informational only. Confirm local rules and invoices for official use.</p>
   </main>
 
   <footer class="border-t bg-white">
@@ -86,27 +83,22 @@
       const rate = Number(document.getElementById('vatRate').value) || 15;
       const amount = Number(document.getElementById('amount').value) || 0;
       const mode = document.querySelector('input[name="mode"]:checked').value;
-
       let net=0, vat=0, gross=0;
-      if (mode === 'net') {
-        net = amount;
-        vat = net * (rate/100);
-        gross = net + vat;
-      } else {
-        gross = amount;
-        net = gross / (1 + rate/100);
-        vat = gross - net;
-      }
-
+      if (mode === 'net') { net = amount; vat = net * (rate/100); gross = net + vat; }
+      else { gross = amount; net = gross / (1 + rate/100); vat = gross - net; }
       document.getElementById('out').innerHTML = `
         <div><strong>Net:</strong> ${net.toFixed(2)}</div>
         <div><strong>VAT (${rate}%):</strong> ${vat.toFixed(2)}</div>
-        <div class="text-lg"><strong>Gross:</strong> ${gross.toFixed(2)}</div>
-      `;
+        <div class="text-lg"><strong>Gross:</strong> ${gross.toFixed(2)}</div>`;
     }
-
     document.getElementById('calc').addEventListener('click', calcVAT);
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function(){
+      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
+      var btn=document.getElementById('langSwitchAR');
+      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
+    })();
   </script>
 </body>
 </html>
