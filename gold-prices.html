@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gold Prices Today — Live Chart | Gold Zakat Calculator</title>
+  <meta name="description" content="Live gold price chart (XAUUSD) with a quick calculator for ounce → gram/tola. Links to Zakat, VAT, and currency tools. Mobile-friendly." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://goldzakatcalc.com/gold-prices.html" />
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/gold-prices.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/gold-prices.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/gold-prices.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gold Prices Today — Live Chart" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:description" content="Track live gold with a full interactive chart and quick calculator." />
+  <meta property="og:url" content="https://goldzakatcalc.com/gold-prices.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  (function(){ try{
+    var pref=localStorage.getItem('prefLang'); if(pref) return;
+    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+    if(lang.startsWith('ar')) location.replace('/ar/gold-prices.html');
+  }catch(e){} })();
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="border-b bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="font-semibold text-lg">Gold Zakat Calculator</a>
+      <nav class="space-x-4 text-sm">
+        <a class="text-blue-700" href="/">Home</a>
+        <a class="text-blue-700" href="/zakat-calculator.html">Zakat</a>
+        <a class="text-blue-700" href="/vat-calculator.html">VAT</a>
+        <a class="text-blue-700 font-semibold" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-blue-700" href="/currency-converter.html">Currency</a>
+        <a class="text-gray-600" href="/ar/gold-prices.html" id="langSwitchAR">العربية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Gold Prices Today — Live Chart</h1>
+    <p class="text-gray-600 mb-6">Follow spot gold (XAUUSD) and quickly convert ounce prices into grams and tola.</p>
+
+    <section class="bg-white rounded-xl shadow-sm p-4 mb-8">
+      <div class="tradingview-widget-container">
+        <div id="tv_gold_chart_en" style="height:560px;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script>
+          new TradingView.widget({
+            "container_id": "tv_gold_chart_en",
+            "autosize": true,
+            "symbol": "OANDA:XAUUSD",
+            "interval": "60",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "allow_symbol_change": true
+          });
+        </script>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">Prices may have a slight delay depending on the data provider.</p>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm p-4">
+      <h2 class="text-xl font-semibold mb-4">Quick Calculator: Ounce → Gram/Tola</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm mb-1">Ounce price (your currency)</label>
+          <input id="ozPrice" type="number" step="0.01" class="w-full border rounded px-3 py-2" placeholder="e.g., 2350">
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Show results in:</label>
+          <select id="unit" class="w-full border rounded px-3 py-2">
+            <option value="gram">Gram</option>
+            <option value="tola">Tola (≈ 11.663g)</option>
+            <option value="ounce">Ounce</option>
+          </select>
+        </div>
+      </div>
+      <button id="calcBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Calculate</button>
+      <div id="calcOut" class="mt-4 bg-gray-50 border rounded p-3 text-sm leading-7 hidden"></div>
+    </section>
+  </main>
+
+  <footer class="mt-12 border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-wrap gap-3 justify-between">
+      <div>© <span id="year"></span> Gold Zakat Calculator. All rights reserved.</div>
+      <div class="space-x-3">
+        <a class="text-gray-600" href="/privacy.html">Privacy</a>
+        <a class="text-gray-600" href="/terms.html">Terms</a>
+        <a class="text-gray-600" href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const GRAM_PER_OUNCE = 31.1034768, GRAM_PER_TOLA = 11.6638038;
+    const ozPriceEl = document.getElementById('ozPrice');
+    const unitEl = document.getElementById('unit');
+    const outEl = document.getElementById('calcOut');
+    function format(n){ return new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).format(n); }
+    document.getElementById('calcBtn').addEventListener('click', () => {
+      const oz = parseFloat(ozPriceEl.value);
+      if (isNaN(oz) || oz <= 0){
+        outEl.classList.remove('hidden'); outEl.innerHTML='Please enter a valid ounce price.'; return;
+      }
+      const perGram = oz / GRAM_PER_OUNCE;
+      const perTola = perGram * GRAM_PER_TOLA;
+      let html = `<div>Ounce price: <b>${format(oz)}</b></div>`;
+      html += `<div>Per gram: <b>${format(perGram)}</b></div>`;
+      html += `<div>Per tola: <b>${format(perTola)}</b></div>`;
+      outEl.classList.remove('hidden'); outEl.innerHTML = html;
+    });
+
+    (function(){
+      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
+      var btn=document.getElementById('langSwitchAR');
+      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
+    })();
+  </script>
+</body>
+</html>
