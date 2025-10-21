@@ -1,246 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gold Value Calculator – Live Estimator</title>
-  <meta name="description" content="Calculate your gold’s value by weight, karat, and live price per gram. Supports grams, tolas, ounces. Includes Arabic mode and copyable results." />
-  <link rel="canonical" href="https://YOUR-DOMAIN/" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Small focus ring for accessibility */
-    :focus { outline: 2px dashed #0ea5e9; outline-offset: 2px; }
-  </style>
+  <title>Gold Zakat Calculator – Zakat on Gold, VAT & Currency Tools (2025)</title>
+  <meta name="description" content="Free online gold Zakat calculator (2.5%) with grams, tola, and ounce support. Includes VAT calculator and currency converter. Fast, mobile-friendly, Arabic-ready." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://goldzakatcalc.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="Gold Zakat Calculator – Zakat on Gold, VAT & Currency Tools (2025)" />
+  <meta property="og:description" content="Free online gold Zakat calculator (2.5%) with grams, tola, and ounce support. Includes VAT calculator and currency converter." />
+  <meta property="og:url" content="https://goldzakatcalc.com/" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gold Zakat Calculator",
+    "url": "https://goldzakatcalc.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://goldzakatcalc.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white">
-    <nav class="max-w-4xl mx-auto p-4 flex items-center gap-4">
-      <a href="/" class="font-semibold">Gold Calc</a>
-      <a href="/zakat-calculator.html" class="text-sm hover:underline" data-i18n="nav_zakat">Zakat Calculator</a>
-      <a href="/currency-converter.html" class="text-sm hover:underline" data-i18n="nav_currency">Currency Helper</a>
-      <a href="/about.html" class="text-sm hover:underline" data-i18n="nav_about">About</a>
-      <a href="/contact.html" class="text-sm hover:underline" data-i18n="nav_contact">Contact</a>
-      <div class="ml-auto flex items-center gap-2">
-        <label for="lang" class="text-sm">EN/AR</label>
-        <select id="lang" class="border rounded px-2 py-1 text-sm">
-          <option value="en">EN</option>
-          <option value="ar">AR</option>
-        </select>
-      </div>
-    </nav>
-  </header>
-
-  <main class="max-w-4xl mx-auto p-6">
-    <h1 class="text-2xl md:text-3xl font-bold mb-2" data-i18n="h1">Gold Value Calculator</h1>
-    <p class="text-gray-600 mb-6" data-i18n="intro">
-      Enter your gold weight, select karat, and input today’s price per gram. We’ll estimate your gold’s value.
-    </p>
-
-    <section class="bg-white rounded-2xl shadow p-4 md:p-6">
-      <form id="gold-form" class="grid sm:grid-cols-2 gap-4" onsubmit="event.preventDefault();calculate();">
-        <div>
-          <label class="block mb-1 font-medium" for="weight" data-i18n="label_weight">Gold weight</label>
-          <div class="flex gap-2">
-            <input id="weight" inputmode="decimal" type="number" step="0.01" min="0" class="w-full border rounded px-3 py-2" placeholder="e.g., 10.5" required />
-            <select id="unit" class="border rounded px-2 py-2">
-              <option value="g">g</option>
-              <option value="tola">tola</option>
-              <option value="oz">oz</option>
-            </select>
-          </div>
-          <p class="text-xs text-gray-500 mt-1" data-i18n="hint_units">Supports grams, tolas, and troy ounces.</p>
-        </div>
-
-        <div>
-          <label class="block mb-1 font-medium" for="karat" data-i18n="label_karat">Purity (karat)</label>
-          <select id="karat" class="w-full border rounded px-3 py-2" required>
-            <option value="24">24K</option>
-            <option value="22">22K</option>
-            <option value="21">21K</option>
-            <option value="18">18K</option>
-            <option value="14">14K</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block mb-1 font-medium" for="price" data-i18n="label_price">Gold price per gram</label>
-          <div class="flex">
-            <input id="price" inputmode="decimal" type="number" step="0.01" min="0" class="w-full border rounded-l px-3 py-2" placeholder="e.g., 270" required />
-            <select id="currency" class="border rounded-r px-2 py-2">
-              <option value="USD">USD</option>
-              <option value="SAR">SAR</option>
-              <option value="AED">AED</option>
-              <option value="PKR">PKR</option>
-              <option value="INR">INR</option>
-            </select>
-          </div>
-          <p class="text-xs text-gray-500 mt-1" data-i18n="hint_price">Use your local 24K price/gram (from your jeweler/news).</p>
-        </div>
-
-        <div class="flex items-end">
-          <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded" data-i18n="btn_calc">Calculate</button>
-        </div>
-      </form>
-
-      <div class="mt-6 flex items-center gap-3">
-        <div id="result" class="text-lg font-semibold" aria-live="polite"></div>
-        <button id="copyBtn" class="hidden text-sm border px-3 py-1 rounded" data-i18n="btn_copy">Copy result</button>
-      </div>
-
-      <p class="mt-2 text-sm">
-        <a class="text-blue-600 underline" href="/zakat-calculator.html" data-i18n="cta_zakat">Calculate zakat on this gold →</a>
-      </p>
-    </section>
-
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold mb-2" data-i18n="how_heading">How it works</h2>
-      <ul class="list-disc ms-5 space-y-1 text-gray-700" id="how-list">
-        <li data-i18n="how_1">We convert your weight to grams if needed.</li>
-        <li data-i18n="how_2">We apply purity: value = grams × price/gram × (karat/24).</li>
-        <li data-i18n="how_3">Result shows estimated market value in your chosen currency.</li>
-      </ul>
-    </section>
-
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold mb-2" data-i18n="ex_heading">Examples</h2>
-      <div class="text-sm text-gray-700 space-y-2" id="examples">
-        <p data-i18n="ex_1">Example: 10g of 22K at 270 SAR/g ≈ 10 × 270 × (22/24) = 2475 SAR.</p>
-        <p data-i18n="ex_2">Example: 1 tola (11.6638g) of 24K at 70 USD/g ≈ 816.47 USD.</p>
-      </div>
-    </section>
-
-    <section class="mt-10" aria-labelledby="faq-title">
-      <h2 id="faq-title" class="text-xl font-semibold mb-2" data-i18n="faq_heading">FAQ</h2>
-      <details class="bg-white rounded border p-3 mb-2">
-        <summary class="font-medium" data-i18n="faq1_q">Where do I get today’s gold price?</summary>
-        <p class="mt-2 text-gray-700" data-i18n="faq1_a">Use your local jeweler, bank site, or news. Enter the 24K price per gram.</p>
-      </details>
-      <details class="bg-white rounded border p-3 mb-2">
-        <summary class="font-medium" data-i18n="faq2_q">Is the result exact?</summary>
-        <p class="mt-2 text-gray-700" data-i18n="faq2_a">It’s an estimate. Actual offers vary by dealer fees and making costs.</p>
-      </details>
-      <details class="bg-white rounded border p-3">
-        <summary class="font-medium" data-i18n="faq3_q">Can I calculate zakat?</summary>
-        <p class="mt-2 text-gray-700" data-i18n="faq3_a">Yes. Use the Zakat Calculator; it checks nisab and 2.5% rate.</p>
-      </details>
-    </section>
-  </main>
-
-  <footer class="mt-16 border-t">
-    <div class="max-w-4xl mx-auto p-4 text-sm text-gray-600 flex flex-wrap gap-4">
-      <a href="/privacy.html" class="hover:underline" data-i18n="nav_privacy">Privacy</a>
-      <a href="/terms.html" class="hover:underline" data-i18n="nav_terms">Terms</a>
-      <a href="/about.html" class="hover:underline" data-i18n="nav_about">About</a>
-      <a href="/contact.html" class="hover:underline" data-i18n="nav_contact">Contact</a>
-    </div>
-  </footer>
-
-  <!-- JSON-LD: SoftwareApplication -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"Gold Value Calculator",
-    "applicationCategory":"FinanceApplication",
-    "operatingSystem":"Web",
-    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-    "url":"https://YOUR-DOMAIN/",
-    "description":"Calculate gold value by weight, karat, and price per gram. Supports grams, tolas, ounces."
-  }
-  </script>
-
-  <!-- JSON-LD: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Where do I get today’s gold price?","acceptedAnswer":{"@type":"Answer","text":"Use your local jeweler, bank site, or news. Enter the 24K price per gram."}},
-      {"@type":"Question","name":"Is the result exact?","acceptedAnswer":{"@type":"Answer","text":"It’s an estimate. Actual offers vary by dealer fees and making costs."}},
-      {"@type":"Question","name":"Can I calculate zakat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the Zakat Calculator; it checks nisab and 2.5% rate."}}
-    ]
-  }
-  </script>
-
-  <script>
-    // i18n strings
-    const STR = {
-      en: {
-        nav_zakat:"Zakat Calculator", nav_currency:"Currency Helper", nav_about:"About", nav_contact:"Contact",
-        nav_privacy:"Privacy", nav_terms:"Terms",
-        h1:"Gold Value Calculator",
-        intro:"Enter your gold weight, select karat, and input today’s price per gram. We’ll estimate your gold’s value.",
-        label_weight:"Gold weight", label_karat:"Purity (karat)", label_price:"Gold price per gram",
-        hint_units:"Supports grams, tolas, and troy ounces.", hint_price:"Use your local 24K price/gram (from your jeweler/news).",
-        btn_calc:"Calculate", btn_copy:"Copy result",
-        cta_zakat:"Calculate zakat on this gold →",
-        how_heading:"How it works", how_1:"We convert your weight to grams if needed.", how_2:"We apply purity: value = grams × price/gram × (karat/24).", how_3:"Result shows estimated market value in your chosen currency.",
-        ex_heading:"Examples", ex_1:"Example: 10g of 22K at 270 SAR/g ≈ 10 × 270 × (22/24) = 2475 SAR.", ex_2:"Example: 1 tola (11.6638g) of 24K at 70 USD/g ≈ 816.47 USD.",
-        faq_heading:"FAQ", faq1_q:"Where do I get today’s gold price?", faq1_a:"Use your local jeweler, bank site, or news. Enter the 24K price per gram.",
-        faq2_q:"Is the result exact?", faq2_a:"It’s an estimate. Actual offers vary by dealer fees and making costs.",
-        faq3_q:"Can I calculate zakat?", faq3_a:"Yes. Use the Zakat Calculator; it checks nisab and 2.5% rate."
-      },
-      ar: {
-        nav_zakat:"حاسبة الزكاة", nav_currency:"تحويل العملات", nav_about:"من نحن", nav_contact:"اتصل بنا",
-        nav_privacy:"الخصوصية", nav_terms:"الشروط",
-        h1:"حاسبة قيمة الذهب",
-        intro:"أدخل وزن الذهب، واختر العيار، وضع سعر اليوم للغرام. سنحسب قيمة ذهبك تقريبًا.",
-        label_weight:"وزن الذهب", label_karat:"العيار (قيراط)", label_price:"سعر الذهب للغرام",
-        hint_units:"يدعم الغرام، التولة، والأونصة التروا.", hint_price:"استخدم سعر 24 قيراط للغرام من مصدر محلي.",
-        btn_calc:"احسب", btn_copy:"نسخ النتيجة",
-        cta_zakat:"احسب زكاة هذا الذهب →",
-        how_heading:"كيف تعمل الحاسبة", how_1:"نحوّل الوزن إلى غرام إن لزم.", how_2:"نطبق العيار: القيمة = الغرام × السعر/غرام × (العيار/24).", how_3:"تظهر النتيجة بقيمة سوقية تقريبية بعملتك.",
-        ex_heading:"أمثلة", ex_1:"مثال: 10غ من 22ق بسعر 270 ر.س/غ ≈ 2475 ر.س.", ex_2:"مثال: 1 تولة (11.6638غ) من 24ق بسعر 70 $/غ ≈ 816.47 $.",
-        faq_heading:"الأسئلة الشائعة", faq1_q:"من أين أحصل على سعر الذهب اليوم؟", faq1_a:"من الصائغ المحلي أو موقع بنك أو الأخبار. أدخل سعر 24ق للغرام.",
-        faq2_q:"هل النتيجة دقيقة؟", faq2_a:"هي تقدير. قد تختلف الأسعار الفعلية حسب الرسوم والتكاليف.",
-        faq3_q:"هل أستطيع حساب الزكاة؟", faq3_a:"نعم، استخدم حاسبة الزكاة؛ تتحقق من النصاب ونسبة 2.5%."
-      }
-    };
-
-    const gramsPer = { g:1, tola:11.6638038, oz:31.1034768 };
-
-    function setLang(lang){
-      const dict = STR[lang] || STR.en;
-      document.documentElement.lang = lang;
-      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const key = el.getAttribute('data-i18n');
-        if (dict[key]) el.textContent = dict[key];
-      });
-    }
-
-    function calculate(){
-      const weight = parseFloat(document.getElementById('weight').value);
-      const unit = document.getElementById('unit').value;
-      const karat = parseFloat(document.getElementById('karat').value);
-      const price = parseFloat(document.getElementById('price').value);
-      const currency = document.getElementById('currency').value;
-      if (isNaN(weight) || weight <= 0 || isNaN(price) || price <= 0) {
-        document.getElementById('result').textContent = (document.documentElement.lang==='ar')
-          ? "أكمل الحقول أولاً."
-          : "Please fill valid values first.";
-        return;
-      }
-      const grams = weight * (gramsPer[unit] || 1);
-      const purity = karat/24;
-      const value = grams * price * purity;
-      const text = (document.documentElement.lang==='ar')
-        ? `القيمة التقديرية: ${value.toFixed(2)} ${currency}`
-        : `Estimated value: ${value.toFixed(2)} ${currency}`;
-      const res = document.getElementById('result');
-      res.textContent = text;
-      document.getElementById('copyBtn').classList.remove('hidden');
-      document.getElementById('copyBtn').onclick = async ()=>{
-        try { await navigator.clipboard.writeText(text); 
-          document.getElementById('copyBtn').textContent = (document.documentElement.lang==='ar')?'تم النسخ ✔':'Copied ✔';
-          setTimeout(()=>{ document.getElementById('copyBtn').textContent = STR[document.documentElement.lang].btn_copy; }, 1200);
-        } catch(e){}
-      };
-    }
-
-    // init
-    setLang('en');
-    document.getElementById('lang').addEventListener('change', e=> setLang(e.target.value));
-  </script>
-</body>
-</html>
