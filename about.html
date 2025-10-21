@@ -3,43 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow" />
   <title>About – Gold Zakat Calculator</title>
-  <meta name="description" content="Gold Zakat Calculator provides fast, easy tools to estimate Zakat, VAT, and currency conversions. Built for clarity, speed, and mobile use." />
+  <meta name="description" content="Free, fast tools for Zakat on gold, VAT calculations, currency conversion, and live gold prices. English and Arabic supported." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://goldzakatcalc.com/about.html" />
-  <meta property="og:title" content="About – Gold Zakat Calculator" />
-  <meta property="og:site_name" content="Gold Zakat Calculator" />
-  <meta property="og:description" content="Simple tools for Zakat, VAT and currency." />
-  <meta property="og:url" content="https://goldzakatcalc.com/about.html" />
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/about.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/about.html" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>(function(){try{var pref=localStorage.getItem('prefLang');if(pref)return;var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();if(lang.startsWith('ar'))location.replace('/ar/about.html');}catch(e){}})();</script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <header class="border-b bg-white">
-    <nav class="max-w-6xl mx-auto p-4 flex justify-between">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <div class="space-x-4 text-sm">
+      <nav class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/">Home</a>
         <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
         <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
         <a class="text-blue-600" href="/currency-converter.html">Currency</a>
-      </div>
-    </nav>
+        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-gray-600" href="/ar/about.html" id="langSwitchAR">العربية</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="max-w-3xl mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-3">About</h1>
-    <p class="mb-4">Gold Zakat Calculator is a simple online tool designed to help users estimate Zakat on gold quickly and clearly. We also provide a VAT calculator and currency converter.</p>
-    <p class="mb-2 text-sm text-gray-600">Disclaimer: These tools are for educational purposes. Always verify current gold prices and rulings with reliable local sources.</p>
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">About</h1>
+    <p class="mb-4">We provide free and fast tools for everyday finance: <strong>Gold Zakat (2.5%)</strong>, <strong>VAT 15%</strong>, a simple <strong>currency converter</strong>, and a <strong>live gold price chart</strong>.</p>
+    <p class="mb-2 text-sm text-gray-600">Disclaimer: These tools provide estimates. For decisions, confirm prices locally and consult reliable sources.</p>
   </main>
 
   <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto p-6 text-sm flex justify-between">
+    <div class="max-w-6xl mx-auto p-6 text-sm flex items-center justify-between">
       <p>&copy; <span id="year"></span> Gold Zakat Calculator.</p>
       <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
+      var btn=document.getElementById('langSwitchAR');
+      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
+    })();
+  </script>
 </body>
 </html>
