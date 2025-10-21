@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حاسبة زكاة الذهب ٢.٥٪ – جرام/تولة/أونصة مع نصاب</title>
+  <meta name="description" content="احسب زكاة الذهب ٢.٥٪ حسب الوزن وسعر الجرام. يدعم الجرام والتولة والأونصة مع فحص نصاب الذهب (≈٨٥ جرام). محاولة جلب سعر الجرام تلقائيًا.">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://goldzakatcalc.com/ar/zakat-calculator.html" />
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/zakat-calculator.html" />
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/zakat-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/zakat-calculator.html" />
+  <!-- OG/Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="حاسبة زكاة الذهب ٢.٥٪" />
+  <meta property="og:description" content="أدخل الوزن والسعر، واحسب الزكاة مع فحص النصاب." />
+  <meta property="og:url" content="https://goldzakatcalc.com/ar/zakat-calculator.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FAQ JSON-LD (Arabic) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"كم نسبة الزكاة على الذهب؟","acceptedAnswer":{"@type":"Answer","text":"نسبة الزكاة ٢.٥٪ من قيمة الذهب إذا بلغ النصاب (حوالي ٨٥ جرام) وحال عليه الحول."}},
+      {"@type":"Question","name":"ما هو نصاب الذهب؟","acceptedAnswer":{"@type":"Answer","text":"نصاب الذهب حوالي ٨٥ جرامًا. إن كان الوزن أقل فلا تجب الزكاة."}}
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Nav -->
+  <header class="border-b bg-white">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <a href="/ar/" class="font-semibold">حاسبات الذهب والمالية</a>
+      <nav class="space-x-4 space-x-reverse text-sm">
+        <a href="/ar/vat-calculator.html" class="text-blue-600">القيمة المضافة</a>
+        <a href="/ar/currency-converter.html" class="text-blue-600">العملات</a>
+        <a href="/ar/about.html" class="text-gray-600">من نحن</a>
+        <a href="/ar/contact.html" class="text-gray-600">تواصل</a>
+        <a href="/zakat-calculator.html" class="text-gray-600">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-2xl md:text-3xl font-bold mb-2">حاسبة زكاة الذهب (٢.٥٪)</h1>
+    <p class="text-gray-600 mb-6">أدخل الوزن وسعر الجرام بالريال السعودي. يمكنك تجربة جلب السعر تلقائيًا.</p>
+
+    <div class="bg-white border rounded-2xl p-5 space-y-4">
+      <div class="grid md:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm text-gray-600">الوزن</span>
+          <input id="weight" type="number" step="0.01" class="mt-1 w-full border rounded-lg p-2" placeholder="0.00">
+        </label>
+        <label class="block">
+          <span class="text-sm text-gray-600">الوحدة</span>
+          <select id="unit" class="mt-1 w-full border rounded-lg p-2">
+            <option value="g">جرام</option>
+            <option value="tola">تولة (11.663g)</option>
+            <option value="oz">أونصة (31.103g)</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-sm text-gray-600">سعر الجرام (SAR)</span>
+          <input id="price" type="number" step="0.01" class="mt-1 w-full border rounded-lg p-2" placeholder="مثال: 250">
+        </label>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="autoBtn" class="text-blue-600 underline text-sm">جلب سعر الجرام تلقائيًا</button>
+        <span id="autoMsg" class="text-xs text-gray-500"></span>
+      </div>
+
+      <button id="calcBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg">احسب الزكاة</button>
+
+      <div id="resultBox" class="hidden">
+        <hr class="my-4">
+        <p id="nisabText" class="text-sm"></p>
+        <p class="text-lg font-semibold mt-2">الزكاة الواجبة: <span id="zakatVal">0.00</span> ريال</p>
+        <button id="copyBtn" class="text-blue-600 underline text-sm mt-2">نسخ النتيجة</button>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-4">تنبيه: النتائج تقديرية. تأكد من الأسعار المحلية.</p>
+  </main>
+
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto p-4 text-sm flex items-center justify-between">
+      <p>© <span id="year"></span> Gold Zakat Calculator.</p>
+      <nav class="space-x-4 space-x-reverse">
+        <a href="/ar/privacy.html" class="text-gray-600">الخصوصية</a>
+        <a href="/ar/terms.html" class="text-gray-600">الشروط</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const G_PER_TOLA = 11.6638038;
+    const G_PER_OZ = 31.1034768;
+    const NISAB_G = 85; // تقريبي
+
+    function toGrams(weight, unit){
+      if (unit === 'g') return weight;
+      if (unit === 'tola') return weight * G_PER_TOLA;
+      if (unit === 'oz') return weight * G_PER_OZ;
+      return weight;
+    }
+
+    document.getElementById('calcBtn').addEventListener('click', ()=>{
+      const w = parseFloat(document.getElementById('weight').value || '0');
+      const u = document.getElementById('unit').value;
+      const price = parseFloat(document.getElementById('price').value || '0');
+      const grams = toGrams(w, u);
+      const total = grams * price;
+      const zakat = total * 0.025;
+
+      const nisabOK = grams >= NISAB_G;
+      const msg = nisabOK ? 'بلغ الذهب النصاب.' : 'لم يبلغ الذهب النصاب (≈٨٥ جرام).';
+      document.getElementById('nisabText').textContent = msg;
+      document.getElementById('zakatVal').textContent = zakat.toFixed(2);
+      document.getElementById('resultBox').classList.remove('hidden');
+    });
+
+    // نسخ نتيجة
+    document.getElementById('copyBtn').addEventListener('click', ()=>{
+      const t = 'الزكاة: ' + document.getElementById('zakatVal').textContent + ' ريال';
+      navigator.clipboard.writeText(t);
+    });
+
+    // جلب سعر الجرام تلقائيًا (يعتمد على exchangerate.host)
+    async function autoFetch(){
+      const msg = document.getElementById('autoMsg');
+      msg.textContent = '...جاري التحميل';
+      try{
+        // سعر الأونصة بالدولار
+        const xauUsd = await fetch('https://api.exchangerate.host/convert?from=XAU&to=USD').then(r=>r.json());
+        // تحويل USD -> SAR
+        const usdSar = await fetch('https://api.exchangerate.host/convert?from=USD&to=SAR').then(r=>r.json());
+        if(!xauUsd.result || !usdSar.result) throw new Error();
+
+        const usdPerOz = xauUsd.result;      // USD / أونصة
+        const sarPerUsd = usdSar.result;     // SAR لكل USD
+        const sarPerOz = usdPerOz * sarPerUsd;
+        const sarPerGram = sarPerOz / 31.1034768;
+
+        document.getElementById('price').value = sarPerGram.toFixed(2);
+        msg.textContent = 'تم التحديث.';
+      }catch(e){
+        msg.textContent = 'تعذّر الجلب. أدخل السعر يدويًا.';
+      }
+    }
+    document.getElementById('autoBtn').addEventListener('click', autoFetch);
+  </script>
+</body>
+</html>
