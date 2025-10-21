@@ -12,4 +12,54 @@
     input { text-align: center; }
   </style>
 </head>
-<body class
+<body class="bg-gray-50 text-gray-800">
+  <main class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-2xl shadow">
+    <h1 class="text-2xl font-bold mb-4 text-center text-gray-900">Saudi VAT Calculator (15%)</h1>
+    <p class="text-sm text-gray-600 text-center mb-4">
+      Calculate VAT-inclusive or VAT-exclusive prices easily. Default VAT rate: <b>15%</b>.
+    </p>
+
+    <div class="space-y-3">
+      <input type="number" id="amount" placeholder="Enter amount (SAR)" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-200" />
+      <select id="calcType" class="w-full border border-gray-300 rounded-md p-2">
+        <option value="add">Add VAT (Exclusive → Inclusive)</option>
+        <option value="remove">Remove VAT (Inclusive → Exclusive)</option>
+      </select>
+      <button onclick="calculateVAT()" class="w-full bg-blue-600 text-white rounded-md p-2 font-semibold hover:bg-blue-700">
+        Calculate VAT
+      </button>
+      <div id="result" class="text-center mt-4 text-lg font-semibold text-green-700"></div>
+    </div>
+
+    <div class="mt-6 text-center text-sm text-gray-600">
+      <p>🇸🇦 Designed for Saudi Arabia’s 15% VAT system.</p>
+      <p class="mt-1">Try our <a href="/zakat-calculator.html" class="text-blue-600 underline">Zakat Calculator</a> or <a href="/currency-converter.html" class="text-blue-600 underline">Currency Converter</a>.</p>
+    </div>
+  </main>
+
+  <script>
+    function calculateVAT() {
+      const amount = parseFloat(document.getElementById("amount").value);
+      const type = document.getElementById("calcType").value;
+      const vatRate = 0.15;
+      if (isNaN(amount) || amount <= 0) {
+        document.getElementById("result").innerText = "Please enter a valid amount.";
+        return;
+      }
+
+      let resultText = "";
+      if (type === "add") {
+        const vat = amount * vatRate;
+        const total = amount + vat;
+        resultText = `VAT (15%): ${vat.toFixed(2)} SAR\nTotal with VAT: ${total.toFixed(2)} SAR`;
+      } else {
+        const base = amount / (1 + vatRate);
+        const vat = amount - base;
+        resultText = `Base Amount: ${base.toFixed(2)} SAR\nVAT (15%): ${vat.toFixed(2)} SAR`;
+      }
+
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+</body>
+</html>
