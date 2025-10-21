@@ -3,46 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
   <title>Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce</title>
-  <meta name="description" content="Calculate Zakat on gold using weight and price per gram. Supports grams, tola, ounce with Nisab check. Fast, mobile-friendly, Arabic-ready." />
+  <meta name="description" content="Calculate Zakat on gold using weight and price per gram. Supports grams, tola, ounce with Nisab check. Fast, mobile-friendly." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://goldzakatcalc.com/zakat-calculator.html" />
-
-  <!-- OG/Twitter -->
+  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/zakat-calculator.html" />
+  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/zakat-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/zakat-calculator.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Gold Zakat Calculator" />
   <meta property="og:title" content="Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce" />
-  <meta property="og:description" content="Calculate Zakat on gold using weight and price per gram. Includes Nisab check." />
+  <meta property="og:description" content="Calculate gold Zakat and check Nisab. Grams/tola/ounce supported." />
   <meta property="og:url" content="https://goldzakatcalc.com/zakat-calculator.html" />
   <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- FAQ JSON -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What is the Zakat rate on gold?","acceptedAnswer":{"@type":"Answer","text":"Zakat on gold is 2.5% of total value if your gold reaches the Nisab (~85 grams) and one lunar year has passed."}},
-      {"@type":"Question","name":"How is Nisab calculated?","acceptedAnswer":{"@type":"Answer","text":"Nisab for gold is approximately 85 grams. If your gold is below Nisab, Zakat is not due."}}
-    ]
-  }
+  <!-- Auto-detect to AR on first visit if browser is Arabic -->
+  <script>
+  (function(){ try{
+    var pref = localStorage.getItem('prefLang'); if(pref) return;
+    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+    if(lang.startsWith('ar')) location.replace('/ar/zakat-calculator.html');
+  }catch(e){} })();
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the Zakat rate on gold?","acceptedAnswer":{"@type":"Answer","text":"2.5% of total value if you meet Nisab (~85g) and a lunar year has passed."}},
+    {"@type":"Question","name":"What is the Nisab for gold?","acceptedAnswer":{"@type":"Answer","text":"Approximately 85 grams. If your gold is below Nisab, Zakat is not due."}}
+  ]}
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <header class="border-b bg-white">
-    <nav class="max-w-6xl mx-auto p-4 flex flex-wrap items-center justify-between">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <div class="space-x-4 text-sm">
-        <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
+      <nav class="space-x-4 text-sm">
+        <a class="text-blue-600" href="/">Home</a>
         <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
         <a class="text-blue-600" href="/currency-converter.html">Currency</a>
-        <a class="text-blue-600" href="/about.html">About</a>
-        <a class="text-blue-600" href="/contact.html">Contact</a>
-      </div>
-    </nav>
+        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-gray-600" href="/ar/zakat-calculator.html" id="langSwitchAR">العربية</a>
+      </nav>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto p-6">
@@ -58,12 +62,10 @@
             <option value="oz">Ounce (oz)</option>
           </select>
         </label>
-
         <label class="block">
           <span class="text-sm text-gray-600">Weight</span>
           <input id="weight" type="number" step="0.001" class="w-full border rounded p-2" placeholder="e.g., 50" />
         </label>
-
         <label class="block">
           <span class="text-sm text-gray-600">Gold price / gram (SAR)</span>
           <input id="price" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 270" />
@@ -87,7 +89,7 @@
       <button id="copyBtn" class="text-blue-600 text-sm underline">Copy result</button>
     </div>
 
-    <p class="mt-4 text-xs text-gray-500">Disclaimer: This tool provides estimates for educational purposes. Confirm local prices and rulings with reliable sources.</p>
+    <p class="mt-4 text-xs text-gray-500">Disclaimer: Estimates only. Confirm prices locally and consult reliable rulings if needed.</p>
   </main>
 
   <footer class="border-t bg-white">
@@ -104,18 +106,15 @@
       if (unit === 'oz')   return v * 31.1034768;
       return v;
     };
-
     function calc() {
       const unit   = document.getElementById('unit').value;
       const weight = Number(document.getElementById('weight').value) || 0;
       const price  = Number(document.getElementById('price').value)  || 0;
       const nisab  = Number(document.getElementById('nisab').value)  || 85;
       const rate   = Number(document.getElementById('rate').value)   || 2.5;
-
       const grams = toGrams(unit, weight);
       const valueSAR = grams * price;
       const due = grams >= nisab ? (valueSAR * (rate/100)) : 0;
-
       const html = `
         <div><strong>Total gold (g):</strong> ${grams.toFixed(3)}</div>
         <div><strong>Gold value (SAR):</strong> ${valueSAR.toFixed(2)}</div>
@@ -124,13 +123,19 @@
       `;
       document.getElementById('result').innerHTML = html;
     }
-
     document.getElementById('calc').addEventListener('click', calc);
     document.getElementById('copyBtn').addEventListener('click', () => {
       const t = document.getElementById('result').innerText.trim();
       if (t) navigator.clipboard.writeText(t);
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // language switch saves preference and maps to AR counterpart
+    (function(){
+      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
+      var btn=document.getElementById('langSwitchAR');
+      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
+    })();
   </script>
 </body>
 </html>
