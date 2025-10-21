@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://goldzakatcalc.com/sitemap.xml
