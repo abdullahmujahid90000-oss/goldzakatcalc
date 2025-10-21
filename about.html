@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Gold Zakat Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <main class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-center">About Gold Zakat Calculator</h1>
+    <p class="mb-4">
+      Gold Zakat Calculator is a simple online tool designed to help users estimate zakat on their gold quickly and accurately.
+      Our goal is to make zakat calculation easier, more transparent, and accessible for everyone.
+    </p>
+
+    <p>
+      This website is developed for educational and informational purposes.
+      Always verify current gold rates and zakat nisab values from reliable local sources before making final decisions.
+    </p>
+
+    <footer class="mt-10 text-center text-sm text-gray-500">
+      &copy; <span id="year"></span> Gold Zakat Calculator. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
