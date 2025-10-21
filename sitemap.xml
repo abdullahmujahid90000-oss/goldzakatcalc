@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- English Pages -->
   <url><loc>https://goldzakatcalc.com/</loc></url>
   <url><loc>https://goldzakatcalc.com/zakat-calculator.html</loc></url>
   <url><loc>https://goldzakatcalc.com/vat-calculator.html</loc></url>
   <url><loc>https://goldzakatcalc.com/currency-converter.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/gold-prices.html</loc></url>
   <url><loc>https://goldzakatcalc.com/about.html</loc></url>
   <url><loc>https://goldzakatcalc.com/privacy.html</loc></url>
   <url><loc>https://goldzakatcalc.com/terms.html</loc></url>
   <url><loc>https://goldzakatcalc.com/contact.html</loc></url>
+
+  <!-- Arabic Pages -->
+  <url><loc>https://goldzakatcalc.com/ar/</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/zakat-calculator.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/vat-calculator.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/currency-converter.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/gold-prices.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/about.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/privacy.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/terms.html</loc></url>
+  <url><loc>https://goldzakatcalc.com/ar/contact.html</loc></url>
 </urlset>
