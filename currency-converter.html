@@ -1,117 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
-</script>
-
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Currency Converter – SAR, USD, AED, PKR, INR & more</title>
-  <meta name="description" content="Convert currencies with rates from exchangerate.host. Supports SAR, USD, AED, PKR, INR, EUR, GBP, QAR, KWD, BHD, OMR, TRY, EGP, and more." />
-  <meta name="robots" content="index,follow" />
+  <title>Currency Converter – SAR, USD, AED, PKR, INR & More | Gold Zakat Calculator</title>
+  <meta name="description" content="Live currency converter for SAR, USD, AED, PKR, INR, EUR, GBP and more. Fast, mobile-friendly, with copy and swap. Rates auto-update." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://goldzakatcalc.com/currency-converter.html" />
   <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/currency-converter.html" />
   <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/currency-converter.html" />
   <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/currency-converter.html" />
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="Currency Converter – SAR, USD, AED, PKR, INR & More" />
+  <meta property="og:description" content="Live currency converter with up-to-date exchange rates. Simple, fast, mobile-friendly." />
+  <meta property="og:url" content="https://goldzakatcalc.com/currency-converter.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- GA4 (already added site-wide; safe to keep once per page) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
   <script>
-  (function(){ try{
-    var pref=localStorage.getItem('prefLang'); if(pref) return;
-    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-    if(lang.startsWith('ar')) location.replace('/ar/currency-converter.html');
-  }catch(e){} })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-Z1C2Y7GSZ5',{'page_path': location.pathname});
+  </script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"How often do rates update?","acceptedAnswer":{"@type":"Answer","text":"Rates are requested from exchangerate.host and cached for 12 hours. If offline, the last cached rates are used."}},
+      {"@type":"Question","name":"Which currencies are supported?","acceptedAnswer":{"@type":"Answer","text":"SAR, USD, AED, PKR, INR, EUR, GBP, KWD, QAR, BHD, OMR by default; more can be added easily."}}
+    ]
+  }
   </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <header class="border-b bg-white">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/" class="font-semibold">Gold Zakat Calculator</a>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="font-semibold text-lg">Gold Zakat Calculator</a>
       <nav class="space-x-4 text-sm">
-        <a class="text-blue-600" href="/">Home</a>
-        <a class="text-blue-600" href="/zakat-calculator.html">Zakat</a>
-        <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
-        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
-        <a class="text-gray-600" href="/ar/currency-converter.html" id="langSwitchAR">العربية</a>
+        <a class="text-blue-700" href="/zakat-calculator.html">Zakat</a>
+        <a class="text-blue-700" href="/vat-calculator.html">VAT</a>
+        <a class="text-blue-700 font-semibold" href="/currency-converter.html">Currency</a>
+        <a class="text-blue-700" href="/gold-prices.html">Gold Prices</a>
+        <a class="text-gray-600" href="/about.html">About</a>
+        <a class="text-gray-600" href="/contact.html">Contact</a>
+        <a class="text-gray-600" href="/privacy.html">Privacy</a>
+        <a class="text-gray-600" href="/terms.html">Terms</a>
+        <!-- language -->
+        <a class="text-gray-600" href="/ar/currency-converter.html" rel="alternate" hreflang="ar">العربية</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">Currency Converter</h1>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-2">Currency Converter</h1>
+    <p class="text-gray-600 mb-6">Live conversion for popular currencies. Rates auto-update and are cached for 12 hours.</p>
 
-    <div class="bg-white p-5 rounded-xl shadow space-y-4">
-      <div class="grid md:grid-cols-4 gap-4">
-        <label class="block md:col-span-2">
-          <span class="text-sm text-gray-600">Amount</span>
-          <input id="amt" type="number" step="0.01" value="1" class="mt-1 w-full border rounded-lg p-2">
-        </label>
-        <label class="block">
-          <span class="text-sm text-gray-600">From</span>
-          <select id="from" class="mt-1 w-full border rounded-lg p-2"></select>
-        </label>
-        <label class="block">
-          <span class="text-sm text-gray-600">To</span>
-          <select id="to" class="mt-1 w-full border rounded-lg p-2"></select>
-        </label>
-      </div>
-      <button id="go" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Convert</button>
-      <div id="res" class="hidden">
-        <hr class="my-4">
-        <p class="text-lg font-semibold">Result: <span id="out">0.00</span></p>
-        <p class="text-xs text-gray-500" id="stamp"></p>
-      </div>
-    </div>
+    <!-- Info banners -->
+    <div id="notice" class="hidden mb-4 rounded-lg border border-yellow-300 bg-yellow-50 text-yellow-700 text-sm p-3"></div>
 
-    <p class="mt-4 text-xs text-gray-500">Rates via exchangerate.host. For official use, verify with your bank.</p>
+    <section class="bg-white rounded-xl shadow-sm p-5">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm mb-1">Amount</label>
+          <input id="amount" type="number" step="any" min="0" value="1" class="w-full border rounded-lg px-3 py-2">
+        </div>
+        <div class="md:pt-6">
+          <button id="swap" class="mt-2 md:mt-0 w-full md:w-auto border rounded-lg px-3 py-2 hover:bg-gray-50">Swap ⇄</button>
+        </div>
+
+        <div>
+          <label class="block text-sm mb-1">From</label>
+          <select id="from" class="w-full border rounded-lg px-3 py-2"></select>
+        </div>
+        <div>
+          <label class="block text-sm mb-1">To</label>
+          <select id="to" class="w-full border rounded-lg px-3 py-2"></select>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <button id="convert" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-4 py-2">Convert</button>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold mb-2">Result</h2>
+        <div id="result" class="text-2xl font-mono">—</div>
+        <div class="text-sm text-gray-500 mt-2">
+          <span id="updated">Last updated: —</span>
+          · <button id="copyBtn" class="underline">Copy</button>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="font-semibold mb-2 text-sm">Quick picks</h3>
+        <div id="quick" class="flex flex-wrap gap-2 text-sm"></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto p-6 text-sm flex flex-wrap gap-4 justify-between">
-      <p>&copy; <span id="year"></span> Gold Zakat Calculator.</p>
-      <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
+  <footer class="mt-12 border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-wrap gap-3 justify-between">
+      <div>© <span id="year"></span> Gold Zakat Calculator.</div>
+      <div class="space-x-3">
+        <a class="text-gray-600" href="/privacy.html">Privacy</a>
+        <a class="text-gray-600" href="/terms.html">Terms</a>
+        <a class="text-gray-600" href="/contact.html">Contact</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    const COMMON = ["SAR","USD","AED","PKR","INR","EUR","GBP","QAR","KWD","BHD","OMR","TRY","EGP","BDT","IDR","MYR","JPY","CNY"];
-    function fillSelect(id){
-      const s = document.getElementById(id);
-      COMMON.forEach(c=>{
-        const o=document.createElement('option'); o.value=o.textContent=c; s.appendChild(o);
-      });
-      if(id==='from') s.value='SAR';
-      if(id==='to') s.value='USD';
-    }
-    fillSelect('from'); fillSelect('to');
+  const CURRENCIES = [
+    'SAR','USD','AED','PKR','INR','EUR','GBP','KWD','QAR','BHD','OMR'
+  ];
+  const NICE = {
+    SAR:'Saudi Riyal', USD:'US Dollar', AED:'UAE Dirham', PKR:'Pakistani Rupee',
+    INR:'Indian Rupee', EUR:'Euro', GBP:'British Pound', KWD:'Kuwaiti Dinar',
+    QAR:'Qatari Riyal', BHD:'Bahraini Dinar', OMR:'Omani Rial'
+  };
+  const QUICK = ['SAR','USD','AED','PKR','INR','EUR','GBP'];
 
-    document.getElementById('go').addEventListener('click', async ()=>{
-      const a = parseFloat(document.getElementById('amt').value||'0');
-      const f = document.getElementById('from').value;
-      const t = document.getElementById('to').value;
-      try{
-        const data = await fetch(`https://api.exchangerate.host/convert?from=${f}&to=${t}&amount=${a}`).then(r=>r.json());
-        document.getElementById('out').textContent = (data.result||0).toFixed(4);
-        document.getElementById('stamp').textContent = data.date ? ('Rate date: '+data.date) : '';
-        document.getElementById('res').classList.remove('hidden');
-      }catch(e){
-        document.getElementById('out').textContent = 'Conversion failed';
-        document.getElementById('res').classList.remove('hidden');
+  const $from = document.getElementById('from');
+  const $to   = document.getElementById('to');
+  const $amount = document.getElementById('amount');
+  const $result = document.getElementById('result');
+  const $updated = document.getElementById('updated');
+  const $notice = document.getElementById('notice');
+
+  // Populate selects
+  function option(c) {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = `${c} — ${NICE[c]||c}`;
+    return o;
+  }
+  CURRENCIES.forEach(c => { $from.appendChild(option(c)); $to.appendChild(option(c)); });
+  $from.value = 'USD';
+  $to.value = 'SAR';
+
+  // Quick buttons
+  const $quick = document.getElementById('quick');
+  QUICK.forEach(c=>{
+    const b=document.createElement('button');
+    b.className='border rounded px-2 py-1 hover:bg-gray-50';
+    b.textContent=c;
+    b.onclick=()=>{ $to.value=c; convert(); };
+    $quick.appendChild(b);
+  });
+
+  // Rates store
+  const KEY='fx_usd_rates_v1';
+  const TTL=12*60*60*1000; // 12h
+
+  async function fetchRatesUSD(){
+    const url='https://api.exchangerate.host/latest?base=USD';
+    const r=await fetch(url);
+    if(!r.ok) throw new Error('Rate fetch failed');
+    const j=await r.json();
+    if(!j || !j.rates) throw new Error('Bad data');
+    return {ts:Date.now(), rates:j.rates};
+  }
+
+  async function getRates(){
+    try{
+      const cached=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(cached && (Date.now()-cached.ts)<TTL){
+        return cached;
       }
-    });
+      const fresh=await fetchRatesUSD();
+      localStorage.setItem(KEY, JSON.stringify(fresh));
+      return fresh;
+    }catch(e){
+      const cached=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(cached){
+        showNotice('Using cached rates (offline).');
+        return cached;
+      }
+      throw e;
+    }
+  }
 
-    (function(){
-      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
-      var btn=document.getElementById('langSwitchAR');
-      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
-    })();
+  function showNotice(msg){
+    $notice.textContent=msg;
+    $notice.classList.remove('hidden');
+  }
+
+  async function convert(){
+    const amt = parseFloat($amount.value||'0');
+    if(!(amt>=0)){ $result.textContent='—'; return; }
+    try{
+      const {ts, rates}=await getRates();
+      const f=$from.value.toUpperCase(), t=$to.value.toUpperCase();
+      if(!rates[f] || !rates[t]){ $result.textContent='—'; showNotice('Rate not available for selected currency.'); return; }
+      // Convert via USD base: amount * (tUSD / fUSD)
+      const out = amt * (rates[t]/rates[f]);
+      $result.textContent = `${amt.toLocaleString()} ${f} = ${out.toLocaleString(undefined,{maximumFractionDigits:6})} ${t}`;
+      const d=new Date(ts);
+      $updated.textContent = `Last updated: ${d.toLocaleString()}`;
+    }catch(e){
+      showNotice('Could not fetch rates right now.');
+      $result.textContent='—';
+    }
+  }
+
+  document.getElementById('convert').addEventListener('click', convert);
+  document.getElementById('swap').addEventListener('click', ()=>{
+    const tmp=$from.value; $from.value=$to.value; $to.value=tmp; convert();
+  });
+  document.getElementById('copyBtn').addEventListener('click', ()=>{
+    navigator.clipboard.writeText($result.textContent||'');
+  });
+
+  // auto-convert on load and when inputs change
+  ['change','keyup'].forEach(ev=>{
+    $amount.addEventListener(ev, ()=>{ if($amount.value!=='') convert(); });
+    $from.addEventListener(ev, convert);
+    $to.addEventListener(ev, convert);
+  });
+  convert();
   </script>
 </body>
 </html>
