@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Sitemap: https://goldzakatcalc.com/sitemap_index.xml
 Sitemap: https://goldzakatcalc.com/sitemap.xml
 Sitemap: https://goldzakatcalc.com/ar/sitemap.xml
