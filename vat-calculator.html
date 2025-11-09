@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133"
-     crossorigin="anonymous"></script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Saudi VAT Calculator (15%) – Inclusive & Exclusive</title>
-  <meta name="description" content="Quick KSA VAT calculator for 15% — add/remove VAT, net, VAT, and gross totals. Mobile-friendly." />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Quick KSA VAT calculator for 15% — add/remove VAT, net, VAT, and gross totals. Mobile-friendly.">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://goldzakatcalc.com/vat-calculator.html" />
-  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/vat-calculator.html" />
-  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/vat-calculator.html" />
-  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/vat-calculator.html" />
+  <link rel="alternate" href="https://goldzakatcalc.com/vat-calculator.html" hreflang="en" />
+  <link rel="alternate" href="https://goldzakatcalc.com/ar/vat-calculator.html" hreflang="ar" />
+  <link rel="alternate" href="https://goldzakatcalc.com/vat-calculator.html" hreflang="x-default" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gold Zakat Calculator" />
+  <meta property="og:title" content="Saudi VAT Calculator (15%) – Inclusive & Exclusive" />
+  <meta property="og:description" content="Instant 15% VAT add/remove. Enter net or gross and get VAT + totals." />
+  <meta property="og:url" content="https://goldzakatcalc.com/vat-calculator.html" />
+  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: auto-redirect Arabic users to AR page -->
   <script>
-  (function(){ try{
-    var pref=localStorage.getItem('prefLang'); if(pref) return;
-    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-    if(lang.startsWith('ar')) location.replace('/ar/vat-calculator.html');
-  }catch(e){} })();
+    (function(){
+      try{
+        var pref = localStorage.getItem('prefLang');
+        if (pref) return;
+        var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (lang.startsWith('ar')) location.replace('/ar/vat-calculator.html');
+      }catch(e){}
+    })();
   </script>
+
+  <!-- WebPage schema (optional but good) -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is the VAT rate in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate is 15%."}},
-    {"@type":"Question","name":"Can I calculate VAT inclusive and exclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter either net or gross and the tool shows VAT and the other value."}}
-  ]}
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Saudi VAT Calculator (15%) – Inclusive & Exclusive",
+    "url":"https://goldzakatcalc.com/vat-calculator.html",
+    "description":"Quick KSA 15% VAT calculator — add/remove VAT, net/VAT/gross totals."
+  }
+  </script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the VAT rate in Saudi Arabia?",
+        "acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate is 15%."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I calculate VAT inclusive and exclusive?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Enter either net or gross and the tool shows VAT and the other value."}
+      }
+    ]
+  }
   </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
