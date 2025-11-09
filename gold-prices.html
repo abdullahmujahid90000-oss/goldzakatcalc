@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133"
-     crossorigin="anonymous"></script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Today’s Gold Price 2025 | Live 24K, 22K, 21K Rates</title>
-<meta name="description" content="Live gold prices with 24K, 22K, and 21K rates. Track daily changes and calculate zakat using today’s price.">  <meta name="robots" content="index,follow,max-image-preview:large" />
-<link rel="canonical" href="https://goldzakatcalc.com/gold-prices.html" />
-<link rel="alternate" href="https://goldzakatcalc.com/gold-prices.html" hreflang="en" />
-<link rel="alternate" href="https://goldzakatcalc.com/ar/gold-prices.html" hreflang="ar" />
-<link rel="alternate" href="https://goldzakatcalc.com/gold-prices.html" hreflang="x-default" />
-  
+  <title>Today’s Gold Price 2025 | Live 24K, 22K, 21K Rates</title>
+  <meta name="description" content="Live gold prices with 24K, 22K, and 21K rates. Track daily changes and calculate zakat using today’s price.">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Canonical + hreflang (ONE set only) -->
+  <link rel="canonical" href="https://goldzakatcalc.com/gold-prices.html" />
+  <link rel="alternate" href="https://goldzakatcalc.com/gold-prices.html" hreflang="en" />
+  <link rel="alternate" href="https://goldzakatcalc.com/ar/gold-prices.html" hreflang="ar" />
+  <link rel="alternate" href="https://goldzakatcalc.com/gold-prices.html" hreflang="x-default" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Gold Prices Today — Live Chart" />
   <meta property="og:site_name" content="Gold Zakat Calculator" />
@@ -28,13 +33,32 @@
   <meta property="og:url" content="https://goldzakatcalc.com/gold-prices.html" />
   <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: auto-redirect Arabic users to AR page -->
   <script>
-  (function(){ try{
-    var pref=localStorage.getItem('prefLang'); if(pref) return;
-    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-    if(lang.startsWith('ar')) location.replace('/ar/gold-prices.html');
-  }catch(e){} })();
+    (function(){
+      try{
+        var pref = localStorage.getItem('prefLang');
+        if (pref) return;
+        var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (lang.startsWith('ar')) location.replace('/ar/gold-prices.html');
+      }catch(e){}
+    })();
+  </script>
+
+  <!-- Structured Data: WebPage (keep in head) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Gold Prices Today — Live Chart",
+    "url":"https://goldzakatcalc.com/gold-prices.html",
+    "description":"Live gold prices with an interactive chart and quick converter.",
+    "inLanguage":"en"
+  }
   </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -98,6 +122,14 @@
       <button id="calcBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Calculate</button>
       <div id="calcOut" class="mt-4 bg-gray-50 border rounded p-3 text-sm leading-7 hidden"></div>
     </section>
+
+    <!-- FAQ (visible) -->
+    <section id="faq" class="max-w-3xl mx-auto mt-10">
+      <h2 class="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+      <p><strong>How often are gold prices updated?</strong><br>Prices are refreshed regularly using market data; check the on-page timestamp.</p>
+      <p class="mt-3"><strong>Which karats do you show?</strong><br>We display live prices for 24K, 22K, and 21K.</p>
+      <p class="mt-3"><strong>Can I use today’s price to calculate zakat?</strong><br>Yes. Use today’s 24K price to estimate the value of your gold and multiply by 0.025 after reaching nisab.</p>
+    </section>
   </main>
 
   <footer class="mt-12 border-t bg-white">
@@ -113,22 +145,28 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     const GRAM_PER_OUNCE = 31.1034768, GRAM_PER_TOLA = 11.6638038;
     const ozPriceEl = document.getElementById('ozPrice');
     const unitEl = document.getElementById('unit');
     const outEl = document.getElementById('calcOut');
+
     function format(n){ return new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).format(n); }
+
     document.getElementById('calcBtn').addEventListener('click', () => {
       const oz = parseFloat(ozPriceEl.value);
       if (isNaN(oz) || oz <= 0){
-        outEl.classList.remove('hidden'); outEl.innerHTML='Please enter a valid ounce price.'; return;
+        outEl.classList.remove('hidden');
+        outEl.textContent = 'Please enter a valid ounce price.';
+        return;
       }
       const perGram = oz / GRAM_PER_OUNCE;
       const perTola = perGram * GRAM_PER_TOLA;
       let html = `<div>Ounce price: <b>${format(oz)}</b></div>`;
       html += `<div>Per gram: <b>${format(perGram)}</b></div>`;
       html += `<div>Per tola: <b>${format(perTola)}</b></div>`;
-      outEl.classList.remove('hidden'); outEl.innerHTML = html;
+      outEl.classList.remove('hidden');
+      outEl.innerHTML = html;
     });
 
     (function(){
@@ -136,51 +174,31 @@
       var btn=document.getElementById('langSwitchAR');
       if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
     })();
+  </script>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the nisab for gold in 2025?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The nisab equals the value of 85 grams of gold at today's price."
+  <!-- Single FAQPage JSON-LD (place just before </body>) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How often are gold prices updated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Prices are refreshed regularly using market data; check the on-page timestamp for the latest update." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which karats do you show?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We display live prices for 24K, 22K, and 21K to match the most common gold purities." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use today’s price to calculate zakat?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use today’s 24K price to estimate the total value of your gold and multiply by 0.025 after reaching nisab." }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I calculate 2.5% zakat on my gold?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Multiply your total gold value by 0.025 after reaching nisab."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I pay zakat on jewelry I wear daily?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Opinions differ, but most scholars say zakat applies if total gold value reaches nisab."
-      }
-    }
-  ]
-}
-</script>
-<section id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>How often are gold prices updated?</strong><br>
-  Prices are refreshed regularly using market data; check the timestamp on the page.</p>
-
-  <p><strong>Which karats do you show?</strong><br>
-  We display live prices for 24K, 22K, and 21K.</p>
-
-  <p><strong>Can I use today’s price to calculate zakat?</strong><br>
-  Yes. Use today’s 24K price to estimate the value of your gold for zakat.</p>
-</section>
-  
+    ]
+  }
   </script>
 </body>
 </html>
