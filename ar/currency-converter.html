@@ -3,53 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محول الريال السعودي إلى الروبية الباكستانية | أسعار الصرف 2026</title>
+    <title>محول العملات للوافدين 2026 | تحويل الريال السعودي</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; text-align: right; }
-        .container { max-width: 800px; margin: 50px auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         h1 { color: #2c3e50; text-align: center; }
-        .calc-grid { display: flex; flex-direction: column; gap: 20px; align-items: center; background: #f9f9f9; padding: 25px; border-radius: 10px; border: 1px solid #e0e0e0; }
-        input { width: 90%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 18px; text-align: center; }
-        .result { font-size: 24px; font-weight: bold; color: #27ae60; margin-top: 10px; }
-        footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #eee; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        .res-display { margin-top: 25px; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <h1>محول العملات: ريال سعودي إلى روبية باكستانية</h1>
-    <p style="text-align:center;">تحديث: 6 أبريل 2026</p>
+    <h1>محول تحويلات المغتربين</h1>
+    <p style="text-align:center;">أسعار الصرف المباشرة - 6 أبريل 2026</p>
 
-    <div class="calc-grid">
-        <p>سعر الصرف الحالي: 1 ريال سعودي = 74.34 روبية باكستانية</p>
-        <input type="number" id="sarInput" placeholder="أدخل المبلغ بالريال" oninput="convertAr()">
-        <div class="result" id="pkrOutput">0.00 روبية</div>
+    <div style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+        <label>المبلغ بالريال السعودي:</label>
+        <input type="number" id="sarAr" placeholder="مثال: 1000" oninput="convertAr()">
+
+        <label>تحويل إلى:</label>
+        <select id="currAr" onchange="convertAr()">
+            <option value="12.85">مصر (جنيه) - 12.85</option>
+            <option value="74.34">باكستان (روبية) - 74.34</option>
+            <option value="22.15">الهند (روبية) - 22.15</option>
+            <option value="14.92">الفلبين (بيزو) - 14.92</option>
+        </select>
+
+        <div id="resBoxAr" class="res-display">
+            <p>سيستلم أهلك مبلغ وقدره:</p>
+            <h2 id="finalAr" style="color: #27ae60;"></h2>
+        </div>
     </div>
 
-    <div style="margin-top:40px; line-height:1.7;">
-        <h2>تحويل الأموال من السعودية إلى باكستان</h2>
-        <p>يعتمد الملايين من المغتربين في المملكة العربية السعودية على تحويلاتهم المالية لدعم عائلاتهم. تتبع سعر الصرف اليومي يساعدك في اختيار التوقيت الأنسب للتحويل.</p>
-    </div>
-
-    <footer>
-        <a href="/ar/index.html">الرئيسية</a> | <a href="/ar/privacy.html">سياسة الخصوصية</a>
-    </footer>
+    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#b8860b;">← عرض جميع الأدوات</a></p>
 </div>
 
 <script>
 function convertAr() {
-    let sar = document.getElementById('sarInput').value;
-    let rate = 74.34;
-    let result = sar * rate;
-    document.getElementById('pkrOutput').innerText = result.toLocaleString() + " روبية باكستانية";
+    let sar = document.getElementById('sarAr').value;
+    let rate = document.getElementById('currAr').value;
+    if(sar > 0) {
+        let total = sar * rate;
+        document.getElementById('finalAr').innerText = total.toLocaleString(undefined, {minimumFractionDigits: 2}) + " " + document.getElementById('currAr').options[document.getElementById('currAr').selectedIndex].text.split(' ')[0];
+        document.getElementById('resBoxAr').style.display = 'block';
+    }
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
 </script>
-
 </body>
 </html>
