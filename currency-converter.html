@@ -3,56 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAR to PKR Converter | Live Saudi Riyal to Pakistani Rupee Rate 2026</title>
+    <title>Saudi Riyal Currency Converter 2026 | SAR to PKR, INR, EGP, PHP</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 50px auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         h1 { color: #2c3e50; text-align: center; }
-        .calc-grid { display: flex; flex-direction: column; gap: 20px; align-items: center; background: #fffdf5; padding: 25px; border-radius: 10px; border: 1px solid #e0e0e0; }
-        input { width: 90%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 18px; }
-        .rate-info { font-size: 14px; color: #666; margin-bottom: 10px; }
-        .result { font-size: 24px; font-weight: bold; color: #27ae60; margin-top: 10px; }
-        .info-section { margin-top: 40px; line-height: 1.6; color: #555; }
-        footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #eee; }
+        .calc-box { background: #fffdf5; padding: 20px; border-radius: 10px; border: 1px solid #ddd; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        .res-display { margin-top: 25px; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; }
+        #finalAmount { font-size: 28px; color: #27ae60; font-weight: bold; }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <h1>SAR to PKR Live Converter</h1>
-    <p style="text-align:center;">Updated: April 6, 2026</p>
+    <h1>SAR Remittance Converter</h1>
+    <p style="text-align:center;">Live Exchange Rates - April 6, 2026</p>
 
-    <div class="calc-grid">
-        <div class="rate-info">Current Exchange Rate: 1 SAR = 74.34 PKR</div>
-        <input type="number" id="sarAmount" placeholder="Enter SAR Amount" oninput="convertCurrency()">
-        <div class="result" id="pkrResult">0.00 PKR</div>
+    <div class="calc-box">
+        <label>Amount in Saudi Riyal (SAR):</label>
+        <input type="number" id="sarAmount" placeholder="e.g. 1000" oninput="convert()">
+
+        <label>Convert To:</label>
+        <select id="targetCurrency" onchange="convert()">
+            <option value="74.34">Pakistan (PKR) - Rate: 74.34</option>
+            <option value="22.15">India (INR) - Rate: 22.15</option>
+            <option value="12.85">Egypt (EGP) - Rate: 12.85</option>
+            <option value="14.92">Philippines (PHP) - Rate: 14.92</option>
+            <option value="31.20">Bangladesh (BDT) - Rate: 31.20</option>
+        </select>
+
+        <div id="resultBox" class="res-display">
+            <p>Your Family Receives:</p>
+            <div id="finalAmount">0.00</div>
+        </div>
     </div>
 
-    <div class="info-section">
-        <h2>Sending Money to Pakistan from Riyadh?</h2>
-        <p>If you are an expat in Saudi Arabia, tracking the <strong>SAR to PKR exchange rate</strong> is vital for your monthly remittances. Rates fluctuate daily based on global markets and oil prices.</p>
-        <p>This tool uses the latest interbank rates to help you estimate how much your family will receive in Pakistan. For the best rates, always compare services like STC Pay, Enjaz, and Al Rajhi Tahweel.</p>
+    <div style="margin-top:30px; line-height:1.7; color:#555;">
+        <h3>Why check rates daily?</h3>
+        <p>If you live in Riyadh or Jeddah, exchange rates can change every hour. Using this tool helps you decide if today is the best day to send money via STC Pay, Urpay, or local banks.</p>
     </div>
-
-    <footer>
-        <a href="/index.html">Home</a> | <a href="/gold-prices.html">Gold Prices</a> | <a href="/privacy.html">Privacy</a>
-    </footer>
+    
+    <p style="text-align:center;"><a href="/index.html" style="color:#b8860b;">← View All Calculators</a></p>
 </div>
 
 <script>
-function convertCurrency() {
+function convert() {
     let sar = document.getElementById('sarAmount').value;
-    let rate = 74.34;
-    let result = sar * rate;
-    document.getElementById('pkrResult').innerText = result.toLocaleString() + " PKR";
+    let rate = document.getElementById('targetCurrency').value;
+    if(sar > 0) {
+        let total = sar * rate;
+        document.getElementById('finalAmount').innerText = total.toLocaleString(undefined, {minimumFractionDigits: 2}) + " " + document.getElementById('targetCurrency').options[document.getElementById('targetCurrency').selectedIndex].text.split(' ')[1];
+        document.getElementById('resultBox').style.display = 'block';
+    }
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">Looking for another tool?</p>
-    <a href="/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← View All Saudi Calculators & Tools
-    </a>
-</div>
 </script>
-
 </body>
 </html>
