@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Zakat Calculator 2026 | Accurate Zakat in KSA & Pakistan</title>
-    <meta name="description" content="Free and accurate Gold Zakat Calculator. Calculate Zakat on 24k, 22k, and 21k gold based on current April 2026 prices in Saudi Arabia and Pakistan.">
-    <link rel="stylesheet" href="style.css"> <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #fcfcfc; margin: 0; padding: 0; }
-        .nav { background: #b8860b; padding: 15px; text-align: center; color: white; }
+    <title>حاسبة زكاة الذهب 2026 | الرياض والمملكة العربية السعودية</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #fcfcfc; text-align: right; margin: 0; }
+        .nav { background: #b8860b; padding: 15px; color: white; text-align: center; }
         .container { max-width: 900px; margin: 40px auto; padding: 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; }
-        .hero { text-align: center; padding: 20px 0; }
         .calc-box { background: #fffdf5; padding: 30px; border: 2px solid #eee; border-radius: 10px; text-align: center; }
-        input { width: 80%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
-        button { width: 80%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 18px; }
+        input, select { width: 80%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 80%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
         .result-area { margin-top: 25px; font-size: 20px; font-weight: bold; color: #d9534f; }
-        .content-section { margin-top: 40px; line-height: 1.8; color: #444; }
         footer { text-align: center; padding: 30px; background: #333; color: white; margin-top: 50px; }
         footer a { color: #f1c40f; text-decoration: none; margin: 0 10px; }
     </style>
@@ -22,41 +19,38 @@
 <body>
 
 <div class="nav">
-    <strong>Gold Zakat Calculator</strong> | <a href="/ar/index.html" style="color: white;">العربية</a>
+    <strong>حاسبة زكاة الذهب</strong> | <a href="/index.html" style="color: white;">English</a>
 </div>
 
 <div class="container">
-    <div class="hero">
-        <h1>Gold Zakat Calculator (April 2026)</h1>
-        <p>Calculate your Zakat obligation instantly based on current Saudi & Global Gold Rates.</p>
-    </div>
+    <h1 style="text-align: center;">حاسبة زكاة الذهب لعام 2026</h1>
+    <p style="text-align: center;">احسب زكاة مالك بدقة بناءً على أسعار الذهب اليوم في المملكة العربية السعودية.</p>
 
     <div class="calc-box">
-        <label>Total Gold Weight in Grams:</label><br>
-        <input type="number" id="weight" placeholder="e.g. 87.48"><br>
+        <label>وزن الذهب الكلي (بالجرام):</label><br>
+        <input type="number" id="weight" placeholder="مثال: 100"><br>
         
-        <label>Select Gold Purity:</label><br>
-        <select id="purity" style="width: 80%; padding: 12px; margin: 10px 0;">
-            <option value="564.26">24K Gold (SAR 564.26/g)</option>
-            <option value="517.24">22K Gold (SAR 517.24/g)</option>
-            <option value="493.73">21K Gold (SAR 493.73/g)</option>
-            <option value="423.19">18K Gold (SAR 423.19/g)</option>
+        <label>اختر عيار الذهب:</label><br>
+        <select id="purity">
+            <option value="564.26">عيار 24 (564.26 ريال)</option>
+            <option value="517.24">عيار 22 (517.24 ريال)</option>
+            <option value="493.73">عيار 21 (493.73 ريال)</option>
+            <option value="423.19">عيار 18 (423.19 ريال)</option>
         </select><br>
         
-        <button onclick="calcZakat()">Calculate My Zakat</button>
+        <button onclick="calcZakat()">احسب الزكاة الواجبة</button>
         <div id="result" class="result-area"></div>
     </div>
 
-    <div class="content-section">
-        <h2>How to Calculate Zakat on Gold in 2026?</h2>
-        <p>Zakat is a mandatory pillar of Islam. For gold, the <strong>Nisab threshold is 87.48 grams</strong>. If you own gold above this weight for a full lunar year, you must pay 2.5% of its current market value.</p>
-        <p>In Riyadh and across KSA, gold prices are currently high. Using a tool like our calculator ensures you don't overpay or underpay your religious obligation.</p>
+    <div style="margin-top: 40px; line-height: 1.8;">
+        <h2>كيفية حساب زكاة الذهب في السعودية؟</h2>
+        <p>نصاب الذهب هو <strong>87.48 جرام</strong>. إذا كنت تملك ذهباً يزن هذا المقدار أو أكثر وحال عليه الحول (سنة هجرية)، تجب عليك الزكاة بنسبة 2.5% من قيمته السوقية الحالية.</p>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Gold Zakat Calculator | Riyadh, KSA</p>
-    <a href="/about.html">About Us</a> | <a href="/privacy.html">Privacy Policy</a> | <a href="/contact.html">Contact</a> | <a href="/terms.html">Terms</a>
+    <p>&copy; 2026 حاسبة زكاة الذهب | الرياض</p>
+    <a href="/ar/about.html">من نحن</a> | <a href="/ar/privacy.html">سياسة الخصوصية</a>
 </footer>
 
 <script>
@@ -66,9 +60,9 @@ function calcZakat() {
     if (weight >= 87.48) {
         let totalVal = weight * price;
         let zakatDue = totalVal * 0.025;
-        document.getElementById('result').innerHTML = "Total Value: " + totalVal.toLocaleString() + " SAR <br> Zakat Amount (2.5%): " + zakatDue.toLocaleString() + " SAR";
+        document.getElementById('result').innerHTML = "إجمالي القيمة: " + totalVal.toLocaleString() + " ريال <br> مقدار الزكاة (2.5%): " + zakatDue.toLocaleString() + " ريال";
     } else {
-        document.getElementById('result').innerHTML = "Weight is below Nisab (87.48g). No Zakat due.";
+        document.getElementById('result').innerHTML = "الوزن أقل من النصاب (87.48 جرام). لا توجد زكاة واجبة.";
     }
 }
 </script>
