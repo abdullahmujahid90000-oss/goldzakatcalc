@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi GOSI Calculator 2026 | Social Insurance Contribution KSA</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f4f8; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; font-size: 22px; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 20px; font-weight: bold; cursor: pointer; }
+        .res { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; display: none; line-height: 1.6; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Saudi GOSI Calculator (2026)</h1>
+    <label>Basic Salary + Housing (SAR):</label>
+    <input type="number" id="gosiSalary" placeholder="e.g. 10000">
+    <label>Nationality:</label>
+    <select id="gosiType">
+        <option value="expat">Expatriate (Non-Saudi)</option>
+        <option value="saudi">Saudi National</option>
+    </select>
+    <button onclick="calcGOSI()">Calculate Contribution</button>
+    <div id="gosiResult" class="res">
+        <p id="empCont"></p>
+        <p id="compCont"></p>
+        <p id="totalGosi" style="font-weight:bold; color:#2c3e50;"></p>
+    </div>
+</div>
+<script>
+function calcGOSI() {
+    let salary = parseFloat(document.getElementById('gosiSalary').value);
+    let type = document.getElementById('gosiType').value;
+    if(!salary) return;
+    let emp, comp;
+    if(type === 'saudi') {
+        emp = salary * 0.0975; // 9% Pension + 0.75% SANED
+        comp = salary * 0.1175; // 9% Pension + 2% Hazard + 0.75% SANED
+    } else {
+        emp = 0;
+        comp = salary * 0.02; // 2% Occupational Hazard
+    }
+    document.getElementById('empCont').innerText = "Employee Deduction: " + emp.toFixed(2) + " SAR";
+    document.getElementById('compCont').innerText = "Company Contribution: " + comp.toFixed(2) + " SAR";
+    document.getElementById('totalGosi').innerText = "Total GOSI Monthly: " + (emp + comp).toFixed(2) + " SAR";
+    document.getElementById('gosiResult').style.display = 'block';
+}
+</script>
+</body>
+</html>
