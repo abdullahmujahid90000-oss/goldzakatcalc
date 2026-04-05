@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- English Pages -->
-  <url><loc>https://goldzakatcalc.com/</loc></url>
-  <url><loc>https://goldzakatcalc.com/zakat-calculator.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/vat-calculator.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/currency-converter.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/gold-prices.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/about.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/privacy.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/terms.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/contact.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/zakat-nisab-gold.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/how-to-calc-zakat-gold.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ksa-vat-explained-15.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.goldzakatcalc.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.goldzakatcalc.com/index.html"/>
+    <priority>1.0</priority>
+  </url>
 
+  <url>
+    <loc>https://www.goldzakatcalc.com/vat-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/vat-calculator.html"/>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Arabic Pages -->
-  <url><loc>https://goldzakatcalc.com/ar/</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/zakat-calculator.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/vat-calculator.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/currency-converter.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/gold-prices.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/about.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/privacy.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/terms.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/contact.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/zakat-nisab-gold.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/how-to-calc-zakat-gold.html</loc></url>
-  <url><loc>https://goldzakatcalc.com/ar/ksa-vat-explained-15.html</loc></url>
+  <url>
+    <loc>https://www.goldzakatcalc.com/ksa-eos-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/ksa-eos-calculator.html"/>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.goldzakatcalc.com/car-finance-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/car-finance-calculator.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.goldzakatcalc.com/gosi-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/gosi-calculator.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.goldzakatcalc.com/bmi-health-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.goldzakatcalc.com/ar/bmi-health-calculator.html"/>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
