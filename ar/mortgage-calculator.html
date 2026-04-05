@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة التمويل العقاري السعودي 2026 | سكني ومرابحة</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f4f9; padding: 20px; text-align: right; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #1e3a8a; text-align: center; }
+        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f8fafc; padding: 25px; border-radius: 12px; }
+        input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #cbd5e1; border-radius: 6px; text-align: center; }
+        button { grid-column: span 2; padding: 18px; background: #1e3a8a; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .res-screen { grid-column: span 2; margin-top: 25px; padding: 20px; background: #ecfdf5; border: 2px solid #10b981; text-align: center; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>حاسبة التمويل العقاري</h1>
+    <div class="calc-grid">
+        <div>
+            <label>سعر العقار (ريال):</label>
+            <input type="number" id="pAr" placeholder="مثال: 1,500,000">
+        </div>
+        <div>
+            <label>الدفعة الأولى (ريال):</label>
+            <input type="number" id="dAr" placeholder="مثال: 150,000">
+        </div>
+        <div>
+            <label>نسبة الربح (% سنوي):</label>
+            <input type="number" id="rAr" value="4.5">
+        </div>
+        <div>
+            <label>مدة التمويل (سنة):</label>
+            <input type="number" id="nAr" value="25">
+        </div>
+        <button onclick="calcMAr()">احسب القسط الشهري</button>
+        <div id="resAr" class="res-screen">
+            <h3>قسطك الشهري التقديري:</h3>
+            <h2 id="outAr" style="color: #065f46;"></h2>
+        </div>
+    </div>
+</div>
+
+<script>
+function calcMAr() {
+    let p = parseFloat(document.getElementById('pAr').value);
+    let d = parseFloat(document.getElementById('dAr').value) || 0;
+    let r = parseFloat(document.getElementById('rAr').value) / 100 / 12;
+    let n = parseFloat(document.getElementById('nAr').value) * 12;
+    if (!p || !n) return;
+    let loan = p - d;
+    let monthly = (loan * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    document.getElementById('outAr').innerText = Math.round(monthly).toLocaleString() + " ريال سعودي";
+    document.getElementById('resAr').style.display = 'block';
+}
+</script>
+</body>
+</html>
