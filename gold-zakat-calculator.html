@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Calculate Zakat on Gold 2026 - Step by Step Guide</title>
+    <title>Gold Zakat Calculator 2026 | Accurate Zakat Calculation</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #444; max-width: 800px; margin: auto; padding: 40px; }
-        h1 { color: #b8860b; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .step-box { background: #f9f9f9; padding: 20px; border-left: 5px solid #b8860b; margin: 20px 0; }
-        .nisab { font-weight: bold; color: #d9534f; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fcfcfc; padding: 20px; }
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #b8860b; }
+        h1 { color: #b8860b; text-align: center; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px; }
+        .result { margin-top: 25px; padding: 20px; background: #fffdf5; border: 1px dashed #b8860b; border-radius: 8px; display: none; text-align: center; }
     </style>
 </head>
 <body>
-
-    <h1>How to Calculate Zakat on Gold (2026 Guide)</h1>
-    <p>Calculating Zakat is a spiritual and financial duty. This guide explains exactly how to do it for your gold assets held in Saudi Arabia or Pakistan.</p>
-
-    <div class="step-box">
-        <h3>Step 1: Check the Nisab</h3>
-        <p>The Nisab for gold is <span class="nisab">87.48 grams</span> (or 7.5 Tolas). If your total gold weight is less than this, you do not owe Zakat.</p>
+<div class="container">
+    <h1>Gold Zakat Calculator</h1>
+    <label>Gold Weight (Grams):</label>
+    <input type="number" id="weight" placeholder="e.g. 100">
+    <label>Gold Purity:</label>
+    <select id="price">
+        <option value="564.26">24K (SAR 564.26/g)</option>
+        <option value="517.24">22K (SAR 517.24/g)</option>
+        <option value="493.73">21K (SAR 493.73/g)</option>
+    </select>
+    <button onclick="calc()">Calculate Zakat</button>
+    <div id="res" class="result">
+        <p id="totalVal"></p>
+        <h2 id="zakatDue" style="color: #d9534f;"></h2>
     </div>
-
-    <div class="step-box">
-        <h3>Step 2: Determine Total Weight</h3>
-        <p>Include all your gold: bars, coins, and jewelry. Note: In some schools of thought, jewelry worn for daily use is exempt, but many prefer to pay Zakat on all gold to be safe.</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 3: Find Current Market Value</h3>
-        <p>Use the current market price of gold (e.g., SAR 564.26 for 24K). Multiply your weight by this price to get the total value.</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 4: Calculate 2.5%</h3>
-        <p>The Zakat rate is fixed at <strong>2.5%</strong>. Divide your total value by 40 to find the exact amount you need to pay.</p>
-    </div>
-
-    <p><em>Example: If you own 100g of 24K gold valued at 56,426 SAR, your Zakat is 1,410.65 SAR.</em></p>
-
-    <p>For an instant calculation, use our <a href="/index.html">Zakat Calculator Home Page</a>.</p>
-
+    <p style="text-align:center; margin-top:20px;"><a href="/index.html" style="color:#b8860b;">← Back to Hub</a></p>
+</div>
+<script>
+function calc() {
+    let w = document.getElementById('weight').value;
+    let p = document.getElementById('price').value;
+    if (w >= 87.48) {
+        let total = w * p;
+        let zakat = total * 0.025;
+        document.getElementById('totalVal').innerText = "Total Gold Value: " + total.toLocaleString() + " SAR";
+        document.getElementById('zakatDue').innerText = "Zakat Due (2.5%): " + zakat.toLocaleString() + " SAR";
+        document.getElementById('res').style.display = 'block';
+    } else {
+        alert("Weight is below Nisab (87.48g). No Zakat due.");
+    }
+}
+</script>
 </body>
 </html>
