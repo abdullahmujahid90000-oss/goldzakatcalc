@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Mortgage Calculator 2026 | Home Loan Installments KSA</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f9; padding: 20px; color: #333; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #1e3a8a; text-align: center; }
+        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        label { font-weight: 600; font-size: 14px; }
+        input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+        button { grid-column: span 2; padding: 18px; background: #1e3a8a; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 18px; transition: 0.3s; }
+        button:hover { background: #1e40af; }
+        .res-screen { grid-column: span 2; margin-top: 25px; padding: 20px; background: #ecfdf5; border: 2px solid #10b981; border-radius: 10px; text-align: center; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Saudi Home Mortgage Calculator</h1>
+    <p style="text-align:center;">Plan your dream home in Riyadh or Jeddah</p>
+
+    <div class="calc-grid">
+        <div>
+            <label>Property Price (SAR):</label>
+            <input type="number" id="propPrice" placeholder="e.g. 1,500,000">
+        </div>
+        <div>
+            <label>Down Payment (SAR):</label>
+            <input type="number" id="downPay" placeholder="Min 10% (e.g. 150,000)">
+        </div>
+        <div>
+            <label>Profit Rate (% Yearly):</label>
+            <input type="number" id="mRate" value="4.5" step="0.1">
+        </div>
+        <div>
+            <label>Term (Years):</label>
+            <input type="number" id="mTerm" value="25">
+        </div>
+        <button onclick="calcMortgage()">Calculate Monthly Installment</button>
+
+        <div id="mResult" class="res-screen">
+            <p>Estimated Monthly Mortgage Payment:</p>
+            <h2 id="mMonthly" style="color: #065f46;"></h2>
+            <p id="mTotal" style="font-size: 13px; color: #666;"></p>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; line-height: 1.8;">
+        <h2>Mortgage Tips for Saudi Arabia (2026)</h2>
+        <p>Buying a home in KSA often involves <strong>REDF (Real Estate Development Fund)</strong> support or <strong>Sakani</strong> programs. Most banks require a 10% down payment for your first home.</p>
+        <p><strong>REDF Subsidy:</strong> Remember that many Saudi nationals receive an interest subsidy that can significantly lower these monthly payments.</p>
+    </div>
+</div>
+
+<script>
+function calcMortgage() {
+    let p = parseFloat(document.getElementById('propPrice').value);
+    let d = parseFloat(document.getElementById('downPay').value) || 0;
+    let r = parseFloat(document.getElementById('mRate').value) / 100 / 12;
+    let n = parseFloat(document.getElementById('mTerm').value) * 12;
+
+    if (!p || !n) return;
+
+    let loan = p - d;
+    let monthly = (loan * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    
+    document.getElementById('mMonthly').innerText = Math.round(monthly).toLocaleString() + " SAR / Month";
+    document.getElementById('mTotal').innerText = "Total Repayment over " + (n/12) + " years: " + Math.round(monthly * n).toLocaleString() + " SAR";
+    document.getElementById('mResult').style.display = 'block';
+}
+</script>
+</body>
+</html>
