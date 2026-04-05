@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كيفية حساب زكاة الذهب 2026 - دليل خطوة بخطوة</title>
+    <title>حاسبة زكاة الذهب 2026 | حساب دقيق للزكاة</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: #444; max-width: 800px; margin: auto; padding: 40px; text-align: right; }
-        h1 { color: #b8860b; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .step-box { background: #f9f9f9; padding: 20px; border-right: 5px solid #b8860b; margin: 20px 0; }
-        .nisab { font-weight: bold; color: #d9534f; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fcfcfc; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #b8860b; }
+        h1 { color: #b8860b; text-align: center; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        .result { margin-top: 25px; padding: 20px; background: #fffdf5; border: 1px dashed #b8860b; border-radius: 8px; display: none; text-align: center; }
     </style>
 </head>
 <body>
-
-    <h1>كيفية حساب زكاة الذهب (دليل عام 2026)</h1>
-    <p>حساب الزكاة فريضة دينية وواجب مالي. يوضح هذا الدليل كيفية حساب زكاة مدخراتك من الذهب بدقة.</p>
-
-    <div class="step-box">
-        <h3>الخطوة 1: معرفة النصاب</h3>
-        <p>نصاب الذهب هو <span class="nisab">87.48 جرام</span>. إذا كان إجمالي وزن الذهب الذي تملكه أقل من هذا المقدار، فلا تجب عليك الزكاة.</p>
+<div class="container">
+    <h1>حاسبة زكاة الذهب</h1>
+    <label>وزن الذهب (جرام):</label>
+    <input type="number" id="wAr" placeholder="مثال: 100">
+    <label>عيار الذهب:</label>
+    <select id="pAr">
+        <option value="564.26">عيار 24 (564.26 ريال)</option>
+        <option value="517.24">عيار 22 (517.24 ريال)</option>
+        <option value="493.73">عيار 21 (493.73 ريال)</option>
+    </select>
+    <button onclick="calcAr()">احسب الزكاة</button>
+    <div id="resAr" class="result">
+        <p id="totalAr"></p>
+        <h2 id="zakatAr" style="color: #d9534f;"></h2>
     </div>
-
-    <div class="step-box">
-        <h3>الخطوة 2: تحديد الوزن الإجمالي</h3>
-        <p>يجب حساب كل ما تملكه من ذهب: سبائك، عملات، ومجوهرات. (ملاحظة: الذهب المعد للاستعمال الشخصي "الحلي" فيه خلاف بين الفقهاء، والأحوط إخراج الزكاة عنه إذا بلغ النصاب).</p>
-    </div>
-
-    <div class="step-box">
-        <h3>الخطوة 3: تحديد القيمة السوقية</h3>
-        <p>استخدم سعر السوق الحالي (مثلاً: 582 ريال لعيار 24). اضرب الوزن الإجمالي في سعر الجرام للحصول على القيمة الكلية.</p>
-    </div>
-
-    <div class="step-box">
-        <h3>الخطوة 4: حساب نسبة 2.5%</h3>
-        <p>مقدار الزكاة هو <strong>2.5%</strong> من القيمة الإجمالية. يمكنك ببساطة قسمة المبلغ الإجمالي على 40 لمعرفة مقدار الزكاة الواجبة.</p>
-    </div>
-
-    <p><em>مثال: إذا كنت تملك 100 جرام من ذهب عيار 24 بقيمة 58,200 ريال، فإن مقدار الزكاة هو 1,455 ريال سعودي.</em></p>
-
-    <p>للحساب الفوري، استخدم <a href="/ar/index.html">حاسبة زكاة الذهب في الصفحة الرئيسية</a>.</p>
-
+    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#b8860b;">← العودة للرئيسية</a></p>
+</div>
+<script>
+function calcAr() {
+    let w = document.getElementById('wAr').value;
+    let p = document.getElementById('pAr').value;
+    if (w >= 87.48) {
+        let total = w * p;
+        let zakat = total * 0.025;
+        document.getElementById('totalAr').innerText = "إجمالي قيمة الذهب: " + total.toLocaleString() + " ريال";
+        document.getElementById('zakatAr').innerText = "مقدار الزكاة (2.5%): " + zakat.toLocaleString() + " ريال";
+        document.getElementById('resAr').style.display = 'block';
+    } else {
+        alert("الوزن أقل من النصاب (87.48 جرام). لا تجب الزكاة.");
+    }
+}
+</script>
 </body>
 </html>
