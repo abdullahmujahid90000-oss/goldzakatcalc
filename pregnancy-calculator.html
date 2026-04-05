@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Due Date Calculator | KSA Family Tools</title>
+</head>
+<body style="font-family:sans-serif; padding:20px;">
+<div style="max-width:500px; margin:auto; padding:30px; border:1px solid #ccc; border-radius:10px;">
+    <h3>Estimated Due Date Calculator</h3>
+    <label>First Day of Last Period:</label>
+    <input type="date" id="lastPeriod" style="width:100%; padding:10px; margin:10px 0;">
+    <button onclick="calcDue()" style="width:100%; padding:15px; background:#e91e63; color:white; border:none; border-radius:5px; cursor:pointer;">Calculate Due Date</button>
+    <h3 id="dueResult" style="text-align:center; color:#e91e63; margin-top:20px;"></h3>
+</div>
+<script>
+function calcDue() {
+    let date = new Date(document.getElementById('lastPeriod').value);
+    if(date) {
+        date.setDate(date.getDate() + 7);
+        date.setMonth(date.getMonth() + 9);
+        document.getElementById('dueResult').innerText = "Estimated Due Date: " + date.toDateString();
+    }
+}
+</script>
+</body>
+</html>
