@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
-  <!-- GA -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-Z1C2Y7GSZ5',{'page_path':location.pathname});</script>
-
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Saudi VAT Explained (15%) — Inclusive vs Exclusive, Examples</title>
-  <meta name="description" content="Understand KSA VAT 15% with clear inclusive/exclusive examples. Learn how to add or remove VAT and the difference between net, VAT, and gross.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-
-  <link rel="canonical" href="https://goldzakatcalc.com/ksa-vat-explained-15.html">
-  <link rel="alternate" href="https://goldzakatcalc.com/ksa-vat-explained-15.html" hreflang="en">
-  <link rel="alternate" href="https://goldzakatcalc.com/ar/ksa-vat-explained-15.html" hreflang="ar">
-  <link rel="alternate" href="https://goldzakatcalc.com/ksa-vat-explained-15.html" hreflang="x-default">
-
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Gold Zakat Calculator">
-  <meta property="og:title" content="Saudi VAT Explained (15%) — Inclusive vs Exclusive">
-  <meta property="og:description" content="A simple guide to KSA VAT 15% with examples you can copy.">
-  <meta property="og:url" content="https://goldzakatcalc.com/ksa-vat-explained-15.html">
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- WebPage schema -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Saudi VAT Explained (15%)","url":"https://goldzakatcalc.com/ksa-vat-explained-15.html","description":"Guide to Saudi VAT 15% with inclusive/exclusive examples.","inLanguage":"en"}
-  </script>
-
-  <!-- FAQ schema -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is the VAT rate in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"The current standard VAT rate is 15%."}},
-    {"@type":"Question","name":"What is the difference between inclusive and exclusive VAT?","acceptedAnswer":{"@type":"Answer","text":"Exclusive means VAT is added to the net price. Inclusive means VAT is already included in the total (gross)."}}
-  ]}
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi VAT Calculator 15% | Exclusive & Inclusive Tax Calc 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .calc-card { background: #f1f8ff; border: 1px solid #d1e7ff; padding: 25px; border-radius: 10px; margin-bottom: 30px; }
+        h1 { color: #004a99; text-align: center; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 10px; }
+        button { flex: 1; padding: 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        .btn-add { background: #004a99; color: white; }
+        .btn-remove { background: #6c757d; color: white; }
+        .res-box { margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 2px dashed #004a99; display: none; text-align: center; }
+        .info-content { line-height: 1.7; color: #555; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <nav class="space-x-4 text-sm">
-        <a class="text-blue-700" href="/vat-calculator.html">VAT Calculator</a>
-        <a class="text-blue-700" href="/currency-converter.html">Currency</a>
-        <a class="text-blue-700" href="/zakat-calculator.html">Zakat</a>
-        <a class="text-gray-600" href="/ar/ksa-vat-explained-15.html" hreflang="ar">العربية</a>
-      </nav>
+<body>
+
+<div class="container">
+    <h1>Saudi Arabia VAT Calculator (15%)</h1>
+    
+    <div class="calc-card">
+        <label>Enter Amount (SAR):</label>
+        <input type="number" id="vatAmount" placeholder="e.g. 1000">
+        <div class="btn-group">
+            <button class="btn-add" onclick="calcVAT(true)">Add 15% VAT</button>
+            <button class="btn-remove" onclick="calcVAT(false)">Remove 15% VAT</button>
+        </div>
+
+        <div id="vatResult" class="res-box">
+            <p id="netLabel"></p>
+            <p id="vatLabel" style="color: #004a99; font-weight: bold;"></p>
+            <h2 id="totalLabel"></h2>
+        </div>
     </div>
-  </header>
 
-  <main class="max-w-3xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-4">Saudi VAT Explained (15%)</h1>
-    <p class="text-gray-700 mb-6">A quick guide to how VAT works in KSA with 15% rate.</p>
-
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Exclusive VAT (net → gross)</h2>
-    <p>Net 100 → VAT 15 → Gross 115.</p>
-
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Inclusive VAT (gross → net)</h2>
-    <p>Gross 115 → Net 115 / 1.15 = 100 → VAT 15.</p>
-
-    <p class="mt-6"><a href="/vat-calculator.html" class="text-blue-700 underline">Open the 15% VAT calculator</a></p>
-
-    <section id="faq" class="mt-10">
-      <h3 class="text-xl font-semibold mb-3">FAQs</h3>
-      <p><strong>Refunds & invoices?</strong> Always follow official invoices and local rules.</p>
-    </section>
-  </main>
-
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto p-6 text-sm flex flex-wrap gap-4 justify-between">
-      <p>© <span id="year"></span> Gold Zakat Calculator.</p>
-      <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
+    <div class="info-content">
+        <h2>How to Calculate VAT in Saudi Arabia?</h2>
+        <p>Since July 2020, the standard VAT rate in the Kingdom of Saudi Arabia is <strong>15%</strong>. This applies to most goods and services.</p>
+        <ul>
+            <li><strong>To add VAT:</strong> Multiply your amount by 1.15.</li>
+            <li><strong>To find the VAT amount only:</strong> Multiply by 0.15.</li>
+            <li><strong>To remove VAT:</strong> Divide the total price by 1.15.</li>
+        </ul>
+        <p>Whether you are a business registered with ZATCA or a consumer, this tool helps you verify your invoices instantly.</p>
     </div>
-  </footer>
+</div>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+function calcVAT(isAdding) {
+    let amount = parseFloat(document.getElementById('vatAmount').value);
+    if (!amount) return;
+    
+    let vat, total, net;
+    if (isAdding) {
+        net = amount;
+        vat = amount * 0.15;
+        total = amount + vat;
+        document.getElementById('netLabel').innerText = "Net Amount: " + net.toFixed(2) + " SAR";
+    } else {
+        total = amount;
+        net = amount / 1.15;
+        vat = amount - net;
+        document.getElementById('netLabel').innerText = "Original Amount: " + net.toFixed(2) + " SAR";
+    }
+    
+    document.getElementById('vatLabel').innerText = "VAT (15%): " + vat.toFixed(2) + " SAR";
+    document.getElementById('totalLabel').innerText = "Total: " + total.toFixed(2) + " SAR";
+    document.getElementById('vatResult').style.display = 'block';
+}
+</script>
 </body>
 </html>
