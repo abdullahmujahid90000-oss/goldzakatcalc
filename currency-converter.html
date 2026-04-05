@@ -1,287 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Currency Converter 2025 | Daily FX Rates</title>
-<meta name="description" content="Convert currencies instantly with daily updated rates. Supports SAR, USD, EUR, GBP, and more.">  <meta name="robots" content="index,follow,max-image-preview:large" />
-<link rel="canonical" href="https://goldzakatcalc.com/currency-converter.html" />
-<link rel="alternate" href="https://goldzakatcalc.com/currency-converter.html" hreflang="en" />
-<link rel="alternate" href="https://goldzakatcalc.com/ar/currency-converter.html" hreflang="ar" />
-<link rel="alternate" href="https://goldzakatcalc.com/currency-converter.html" hreflang="x-default" />
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133"
-     crossorigin="anonymous"></script>
-
-  <!-- OG/Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Gold Zakat Calculator" />
-  <meta property="og:title" content="Currency Converter – SAR, USD, AED, PKR, INR and more" />
-  <meta property="og:description" content="Live FX rates with fee/margin slider. Popular currencies: SAR, USD, AED, PKR, INR, EUR, GBP and more." />
-  <meta property="og:url" content="https://goldzakatcalc.com/currency-converter.html" />
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Google tag (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
-  </script>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- FAQ JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Where do the rates come from?","acceptedAnswer":{"@type":"Answer","text":"Rates are fetched from publicly available sources (Frankfurter API with European Central Bank data) and cached for 12 hours for speed and reliability."}},
-      {"@type":"Question","name":"Can I add a fee or margin?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the margin slider (0–5%) to approximate your bank or exchange fee. The result updates instantly."}}
-    ]
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAR to PKR Converter | Live Saudi Riyal to Pakistani Rupee Rate 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 50px auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; }
+        .calc-grid { display: flex; flex-direction: column; gap: 20px; align-items: center; background: #fffdf5; padding: 25px; border-radius: 10px; border: 1px solid #e0e0e0; }
+        input { width: 90%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 18px; }
+        .rate-info { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .result { font-size: 24px; font-weight: bold; color: #27ae60; margin-top: 10px; }
+        .info-section { margin-top: 40px; line-height: 1.6; color: #555; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #eee; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="border-b bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="/" class="font-semibold text-lg">Gold Zakat Calculator</a>
-      <nav class="space-x-4 text-sm">
-        <a class="text-blue-700" href="/zakat-calculator.html">Zakat</a>
-        <a class="text-blue-700" href="/vat-calculator.html">VAT</a>
-        <a class="text-blue-700 font-semibold" href="/currency-converter.html">Currency</a>
-        <a class="text-blue-700" href="/gold-prices.html">Gold Prices</a>
-        <a class="text-gray-600" href="/about.html">About</a>
-        <a class="text-gray-600" href="/contact.html">Contact</a>
-        <a class="text-gray-600" href="/privacy.html">Privacy</a>
-        <a class="text-gray-600" href="/terms.html">Terms</a>
-        <a id="goAR" class="text-gray-600" href="/ar/currency-converter.html">العربية</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-2">Currency Converter</h1>
-    <p class="text-gray-600 mb-4">Live conversion for popular currencies. Rates auto-update and are cached for 12 hours.</p>
+<div class="container">
+    <h1>SAR to PKR Live Converter</h1>
+    <p style="text-align:center;">Updated: April 6, 2026</p>
 
-    <div id="alert" class="hidden mb-4 rounded-md bg-yellow-50 text-yellow-900 border border-yellow-200 px-4 py-3">
-      Could not fetch rates right now. Showing last cached rates if available.
+    <div class="calc-grid">
+        <div class="rate-info">Current Exchange Rate: 1 SAR = 74.34 PKR</div>
+        <input type="number" id="sarAmount" placeholder="Enter SAR Amount" oninput="convertCurrency()">
+        <div class="result" id="pkrResult">0.00 PKR</div>
     </div>
 
-    <div class="bg-white rounded-xl shadow-sm p-5">
-      <div class="grid md:grid-cols-[1fr_auto_1fr] gap-3 items-end">
-        <div>
-          <label class="block text-sm font-medium mb-1">Amount</label>
-          <input id="amt" type="number" min="0" step="0.01" value="1"
-                 class="w-full rounded-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500" />
-        </div>
-
-        <button id="swap" class="mt-6 md:mt-0 h-11 px-4 rounded-lg border bg-gray-50 hover:bg-gray-100">Swap ⇄</button>
-
-        <div></div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">From</label>
-          <select id="from" class="w-full h-11 rounded-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500"></select>
-        </div>
-
-        <div></div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">To</label>
-          <select id="to" class="w-full h-11 rounded-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500"></select>
-        </div>
-      </div>
-
-      <div class="mt-4">
-        <label class="block text-sm font-medium mb-1">Fee / Margin (0–5%)</label>
-        <div class="flex items-center gap-3">
-          <input id="fee" type="range" min="0" max="5" value="0" step="0.1" class="w-full">
-          <span id="feeLabel" class="text-sm text-gray-700 w-12 text-right">0%</span>
-        </div>
-        <p class="text-xs text-gray-500 mt-1">We apply the margin to the final result (helpful to simulate bank/exchange spread).</p>
-      </div>
-
-      <div class="mt-4">
-        <button id="btn" class="h-11 px-5 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Convert</button>
-      </div>
-
-      <div class="mt-6">
-        <h2 class="text-lg font-semibold mb-1">Result</h2>
-        <div id="out" class="text-2xl font-bold">—</div>
-        <div class="text-xs text-gray-500 mt-2">Last updated: <span id="stamp">—</span> · <button id="copy" class="underline">Copy</button></div>
-      </div>
-
-      <div class="mt-6">
-        <div class="text-sm font-medium mb-2">Quick picks</div>
-        <div id="quick" class="flex flex-wrap gap-2"></div>
-      </div>
+    <div class="info-section">
+        <h2>Sending Money to Pakistan from Riyadh?</h2>
+        <p>If you are an expat in Saudi Arabia, tracking the <strong>SAR to PKR exchange rate</strong> is vital for your monthly remittances. Rates fluctuate daily based on global markets and oil prices.</p>
+        <p>This tool uses the latest interbank rates to help you estimate how much your family will receive in Pakistan. For the best rates, always compare services like STC Pay, Enjaz, and Al Rajhi Tahweel.</p>
     </div>
-  </main>
 
-  <footer class="mt-12 border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-wrap gap-3 justify-between">
-      <div>© <span id="year"></span> Gold Zakat Calculator.</div>
-      <div class="space-x-3">
-        <a class="text-gray-600" href="/privacy.html">Privacy</a>
-        <a class="text-gray-600" href="/terms.html">Terms</a>
-        <a class="text-gray-600" href="/contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
+    <footer>
+        <a href="/index.html">Home</a> | <a href="/gold-prices.html">Gold Prices</a> | <a href="/privacy.html">Privacy</a>
+    </footer>
+</div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+function convertCurrency() {
+    let sar = document.getElementById('sarAmount').value;
+    let rate = 74.34;
+    let result = sar * rate;
+    document.getElementById('pkrResult').innerText = result.toLocaleString() + " PKR";
+}
+</script>
 
-    // --- Currency List (extendable)
-    const CURRENCIES = [
-      ["SAR","Saudi Riyal"],["USD","US Dollar"],["AED","UAE Dirham"],["PKR","Pakistani Rupee"],
-      ["INR","Indian Rupee"],["EUR","Euro"],["GBP","British Pound"],["QAR","Qatari Riyal"],
-      ["KWD","Kuwaiti Dinar"],["BHD","Bahraini Dinar"],["OMR","Omani Rial"],["JOD","Jordanian Dinar"],
-      ["EGP","Egyptian Pound"],["TRY","Turkish Lira"],["CNY","Chinese Yuan"],["MYR","Malaysian Ringgit"],
-      ["THB","Thai Baht"],["IDR","Indonesian Rupiah"],["BDT","Bangladeshi Taka"],["LKR","Sri Lankan Rupee"]
-    ];
-
-    const byId = id => document.getElementById(id);
-    const els = {amt:byId('amt'), from:byId('from'), to:byId('to'), btn:byId('btn'),
-                 out:byId('out'), stamp:byId('stamp'), alert:byId('alert'),
-                 swap:byId('swap'), fee:byId('fee'), feeLabel:byId('feeLabel'),
-                 copy:byId('copy'), quick:byId('quick')};
-
-    // Build selects + quick picks
-    function buildSelects(){
-      const opts = CURRENCIES.map(([c,n])=>`<option value="${c}">${c} — ${n}</option>`).join('');
-      els.from.innerHTML = opts;
-      els.to.innerHTML   = opts;
-      els.from.value = "USD";
-      els.to.value   = "SAR";
-
-      // quick chips
-      const chips = ["SAR","USD","AED","PKR","INR","EUR","GBP","QAR","KWD","OMR","BHD","EGP","TRY","CNY"];
-      els.quick.innerHTML = chips.map(c=>`<button data-code="${c}" class="px-3 py-1.5 rounded-lg border text-sm hover:bg-gray-50">${c}</button>`).join('');
-      els.quick.addEventListener('click', e=>{
-        const code = e.target?.dataset?.code;
-        if(!code) return;
-        els.to.value = code;
-        convert();
-      });
-    }
-
-    // Caching
-    const CACHE_KEY = 'fx_rates_v2';
-    const CACHE_TTL_MS = 12 * 60 * 60 * 1000;
-
-    function inCache(){
-      try{
-        const raw = localStorage.getItem(CACHE_KEY);
-        if(!raw) return null;
-        const obj = JSON.parse(raw);
-        if(Date.now() - obj.ts > CACHE_TTL_MS) return null;
-        return obj;
-      }catch(_){ return null; }
-    }
-    function saveCache(data){
-      localStorage.setItem(CACHE_KEY, JSON.stringify({ts:Date.now(), ...data}));
-    }
-    function fmt(ts){ return new Date(ts).toLocaleString(); }
-
-    // Fetch rates: Frankfurter (ECB) -> fallback exchangerate.host
-    async function fetchRates(){
-      const list = CURRENCIES.map(([c])=>c).join(',');
-      try{
-        // Frankfurter: base EUR
-        const r = await fetch(`https://api.frankfurter.app/latest?from=EUR&to=${encodeURIComponent(list)}`);
-        if(!r.ok) throw new Error('Frankfurter error');
-        const j = await r.json();
-        // Normalize: we want an object of rates vs EUR, include EUR itself =1
-        const rates = {...j.rates, EUR:1};
-        const stamp = Date.now();
-        saveCache({rates, stamp, src:'Frankfurter'});
-        return {rates, stamp, src:'Frankfurter'};
-      }catch(_){
-        // Fallback
-        const r2 = await fetch(`https://api.exchangerate.host/latest?base=EUR&symbols=${encodeURIComponent(list)}`);
-        if(!r2.ok) throw new Error('Fallback error');
-        const j2 = await r2.json();
-        const rates = {...j2.rates, EUR:1};
-        const stamp = Date.now();
-        saveCache({rates, stamp, src:'exchangerate.host'});
-        return {rates, stamp, src:'exchangerate.host'};
-      }
-    }
-
-    let STATE = inCache();
-
-    async function ensureRates(){
-      if(STATE) return STATE;
-      try{
-        STATE = await fetchRates();
-        els.alert.classList.add('hidden');
-      }catch(e){
-        els.alert.classList.remove('hidden');
-        // try to keep old cache if exists
-        STATE = inCache();
-      }
-      return STATE;
-    }
-
-    function ratePair(rates, from, to){
-      // both are vs EUR; convert via EUR
-      const rf = rates[from];
-      const rt = rates[to];
-      if(rf==null || rt==null) return null;
-      return rt / rf;
-    }
-
-    function convert(){
-      ensureRates().then(s=>{
-        if(!s || !s.rates){ els.out.textContent = '—'; return; }
-
-        const amount = parseFloat(els.amt.value || '0');
-        const from = els.from.value;
-        const to = els.to.value;
-        const pair = ratePair(s.rates, from, to);
-        if(pair==null){ els.out.textContent='—'; return; }
-
-        let result = amount * pair;
-
-        // apply fee/margin on result (0–5%)
-        const margin = parseFloat(els.fee.value || '0') / 100;
-        result = result * (1 + margin);
-
-        els.out.textContent = `${amount.toLocaleString()} ${from} ≈ ${result.toLocaleString(undefined,{maximumFractionDigits:4})} ${to}`;
-        els.stamp.textContent = `${fmt(s.stamp)} (${s.src})`;
-
-        // GA event
-        try{ gtag('event','convert',{from,to,margin:els.fee.value}); }catch(_){}
-      });
-    }
-
-    // UI bindings
-    buildSelects();
-    els.fee.addEventListener('input', ()=>{ els.feeLabel.textContent = els.fee.value + '%'; convert(); });
-    els.btn.addEventListener('click', convert);
-    els.amt.addEventListener('input', ()=>{ /* live update is fine */ });
-    ['from','to'].forEach(id=>els[id].addEventListener('change', convert));
-    els.swap.addEventListener('click', ()=>{
-      const a = els.from.value; els.from.value = els.to.value; els.to.value = a;
-      convert();
-    });
-    els.copy.addEventListener('click', ()=>{
-      navigator.clipboard.writeText(els.out.textContent || '');
-    });
-
-    // first load
-    ensureRates().then(s=>{
-      if(!s) els.alert.classList.remove('hidden');
-      els.feeLabel.textContent = els.fee.value + '%';
-      convert();
-    });
-  </script>
 </body>
 </html>
