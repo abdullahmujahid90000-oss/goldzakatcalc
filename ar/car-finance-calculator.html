@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تمويل السيارات السعودية 2026 | احسب قسطك الشهري</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; text-align: right; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f9f9f9; padding: 25px; border-radius: 12px; }
+        h1 { color: #1a3a5f; text-align: center; }
+        label { font-weight: bold; display: block; margin-top: 5px; }
+        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        .full-width { grid-column: span 2; }
+        button { grid-column: span 2; padding: 15px; background: #1a3a5f; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .result-box { grid-column: span 2; margin-top: 20px; padding: 20px; background: #eef6ff; border: 2px dashed #1a3a5f; border-radius: 10px; text-align: center; display: none; }
+        @media (max-width: 600px) { .calc-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } button { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>حاسبة تمويل السيارات</h1>
+    <p style="text-align:center;">احسب أقساط سيارتك بناءً على عروض بنوك السعودية لعام 2026</p>
+
+    <div class="calc-grid">
+        <div>
+            <label>سعر السيارة (ريال):</label>
+            <input type="number" id="carPriceAr" placeholder="مثال: 120000">
+        </div>
+        <div>
+            <label>الدفعة الأولى (ريال):</label>
+            <input type="number" id="downAr" placeholder="مثال: 20000">
+        </div>
+        <div>
+            <label>نسبة الربح السنوية (%):</label>
+            <input type="number" id="rateAr" value="5.5">
+        </div>
+        <div>
+            <label>مدة التمويل (سنوات):</label>
+            <input type="number" id="termAr" value="5">
+        </div>
+        <div class="full-width">
+            <label>الدفعة الأخيرة / التملك (ريال):</label>
+            <input type="number" id="balloonAr" placeholder="اختياري">
+        </div>
+        <button onclick="calcCarAr()">احسب القسط الشهري</button>
+
+        <div id="resAr" class="result-box">
+            <p>قسطك الشهري التقديري هو:</p>
+            <h2 id="monthlyAr" style="color: #1a3a5f;"></h2>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; line-height: 1.8;">
+        <h2>دليل تمويل السيارات في السعودية</h2>
+        <p>تقدم البنوك السعودية مثل مصرف الراجحي والبنك الأهلي السعودي (SNB) حلول تمويل مرنة بنظام "المرابحة" أو "الإيجار المنتهي بالتمليك".</p>
+    </div>
+</div>
+
+<script>
+function calcCarAr() {
+    let p = parseFloat(document.getElementById('carPriceAr').value);
+    let d = parseFloat(document.getElementById('downAr').value) || 0;
+    let r = parseFloat(document.getElementById('rateAr').value) / 100 / 12;
+    let t = parseFloat(document.getElementById('termAr').value) * 12;
+    let b = parseFloat(document.getElementById('balloonAr').value) || 0;
+
+    if (!p || !t) return;
+
+    let loan = p - d - b;
+    let monthly = (loan * r) / (1 - Math.pow(1 + r, -t)) + (b * r * 12 / 12);
+    
+    document.getElementById('monthlyAr').innerText = Math.round(monthly).toLocaleString() + " ريال سعودي";
+    document.getElementById('resAr').style.display = 'block';
+}
+</script>
+</body>
+</html>
