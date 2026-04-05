@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة مؤشر كتلة الجسم BMI | أدوات الصحة والرشاقة</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #fdfdfd; padding: 20px; text-align: right; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        button { width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .status { font-weight: bold; font-size: 20px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 style="color:#27ae60; text-align:center;">حاسبة مؤشر كتلة الجسم (BMI)</h2>
+    <label>الوزن (كيلوجرام):</label>
+    <input type="number" id="wAr" style="width:100%; padding:10px; margin:10px 0; text-align:center;" placeholder="مثال: 80">
+    <label>الطول (سنتيمتر):</label>
+    <input type="number" id="hAr" style="width:100%; padding:10px; margin:10px 0; text-align:center;" placeholder="مثال: 175">
+    <button onclick="calcBMIAr()">احسب الآن</button>
+    <div id="bmiResAr" style="text-align:center; display:none; margin-top:20px;">
+        <p>مؤشر كتلة جسمك هو: <span id="bmiValAr" style="font-size:24px; font-weight:bold;"></span></p>
+        <p class="status" id="bmiStatusAr"></p>
+    </div>
+</div>
+<script>
+function calcBMIAr() {
+    let w = document.getElementById('wAr').value;
+    let h = document.getElementById('hAr').value / 100;
+    if(w > 0 && h > 0) {
+        let bmi = w / (h * h);
+        let status = "";
+        if(bmi < 18.5) status = "نقص في الوزن";
+        else if(bmi < 25) status = "وزن مثالي";
+        else if(bmi < 30) status = "زيادة في الوزن";
+        else status = "سمنة";
+        document.getElementById('bmiValAr').innerText = bmi.toFixed(1);
+        document.getElementById('bmiStatusAr').innerText = status;
+        document.getElementById('bmiResAr').style.display = 'block';
+    }
+}
+</script>
+</body>
+</html>
