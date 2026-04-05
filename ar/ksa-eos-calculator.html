@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة مكافأة نهاية الخدمة 2026 | قانون العمل السعودي</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; padding: 20px; text-align: right; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h1 { color: #2d5a27; text-align: center; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #2d5a27; color: white; border: none; border-radius: 8px; margin-top: 20px; font-weight: bold; cursor: pointer; }
+        .result-screen { margin-top: 25px; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>حاسبة مكافأة نهاية الخدمة</h1>
+    <p style="text-align:center;">حسب المادتين 84 و 85 من قانون العمل السعودي</p>
+
+    <div style="background: #fffdf5; padding: 20px; border-radius: 10px; border: 1px solid #eec;">
+        <label>الراتب الأساسي الشهري (ريال):</label>
+        <input type="number" id="salaryAr" placeholder="مثال: 10000">
+
+        <label>عدد سنوات الخدمة:</label>
+        <input type="number" id="yearsAr" placeholder="مثال: 5">
+
+        <label>سبب ترك العمل:</label>
+        <select id="reasonAr">
+            <option value="termination">إنهاء عقد من قبل صاحب العمل</option>
+            <option value="resignation">استقالة الموظف</option>
+        </select>
+
+        <button onclick="calculateEOSAr()">احسب المكافأة</button>
+
+        <div id="eosResultAr" class="result-screen">
+            <h3>مكافأتك التقديرية هي:</h3>
+            <h2 id="finalAmountAr" style="color: #2d5a27;"></h2>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; line-height: 1.8;">
+        <h2>كيف تُحسب المكافأة؟</h2>
+        <p>بموجب <strong>المادة 84</strong>:</p>
+        <ul>
+            <li>الخمس سنوات الأولى: أجر نصف شهر عن كل سنة.</li>
+            <li>ما زاد عن ذلك: أجر شهر كامل عن كل سنة.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+function calculateEOSAr() {
+    let salary = parseFloat(document.getElementById('salaryAr').value);
+    let years = parseFloat(document.getElementById('yearsAr').value);
+    let reason = document.getElementById('reasonAr').value;
+    if (!salary || !years) return;
+
+    let base = (years <= 5) ? (salary / 2) * years : (salary / 2) * 5 + (salary * (years - 5));
+    let final = base;
+
+    if (reason === "resignation") {
+        if (years < 2) final = 0;
+        else if (years < 5) final = base * (1/3);
+        else if (years < 10) final = base * (2/3);
+    }
+
+    document.getElementById('finalAmountAr').innerText = final.toLocaleString() + " ريال سعودي";
+    document.getElementById('eosResultAr').style.display = 'block';
+}
+</script>
+</body>
+</html>
