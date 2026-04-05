@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة التأمينات الاجتماعية السعودية 2026 | استقطاع ساند والتقاعد</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f4f8; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; font-size: 22px; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 20px; font-weight: bold; cursor: pointer; }
+        .res { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; display: none; line-height: 1.6; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>حاسبة التأمينات الاجتماعية (GOSI)</h1>
+    <label>الراتب الأساسي + بدل السكن (ريال):</label>
+    <input type="number" id="gosiSalaryAr" placeholder="مثال: 10000">
+    <label>الجنسية:</label>
+    <select id="gosiTypeAr">
+        <option value="expat">مقيم (غير سعودي)</option>
+        <option value="saudi">مواطن سعودي</option>
+    </select>
+    <button onclick="calcGOSIAr()">احسب الاستقطاع</button>
+    <div id="gosiResultAr" class="res">
+        <p id="empAr"></p>
+        <p id="compAr"></p>
+        <p id="totalArG" style="font-weight:bold; color:#2c3e50;"></p>
+    </div>
+    <div style="margin-top:20px; font-size:14px; color:#666;">
+        <p>* ملاحظة: للسعوديين تشمل النسبة التقاعد وساند. للمقيمين تشمل الأخطار المهنية فقط بنسبة 2% يتحملها صاحب العمل.</p>
+    </div>
+</div>
+<script>
+function calcGOSIAr() {
+    let salary = parseFloat(document.getElementById('gosiSalaryAr').value);
+    let type = document.getElementById('gosiTypeAr').value;
+    if(!salary) return;
+    let emp, comp;
+    if(type === 'saudi') {
+        emp = salary * 0.0975;
+        comp = salary * 0.1175;
+    } else {
+        emp = 0;
+        comp = salary * 0.02;
+    }
+    document.getElementById('empAr').innerText = "استقطاع الموظف: " + emp.toFixed(2) + " ريال";
+    document.getElementById('compAr').innerText = "حصة الشركة: " + comp.toFixed(2) + " ريال";
+    document.getElementById('totalArG').innerText = "الإجمالي الشهري للتأمينات: " + (emp + comp).toFixed(2) + " ريال";
+    document.getElementById('gosiResultAr').style.display = 'block';
+}
+</script>
+</body>
+</html>
