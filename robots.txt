@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
-Sitemap: https://goldzakatcalc.com/sitemap_index.xml
-Sitemap: https://goldzakatcalc.com/sitemap.xml
-Sitemap: https://goldzakatcalc.com/ar/sitemap.xml
+
+# Sitemap Location
+Sitemap: https://www.goldzakatcalc.com/sitemap.xml
+
+# Prevent AI bots from scraping your unique tools if you wish, 
+# but for AdSense, we want Googlebot to have full access.
+User-agent: Mediapartners-Google
+Allow: /
