@@ -5,56 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saudi GOSI Calculator 2026 | Social Insurance Contribution KSA</title>
     <style>
-        body { font-family: sans-serif; background: #f0f4f8; padding: 20px; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; text-align: center; font-size: 22px; }
-        label { display: block; margin-top: 15px; font-weight: bold; }
-        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 20px; font-weight: bold; cursor: pointer; }
-        .res { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; display: none; line-height: 1.6; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #2c3e50; }
+        h1 { color: #2c3e50; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #555; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 25px; font-weight: bold; cursor: pointer; font-size: 18px; }
+        .res-box { margin-top: 25px; padding: 20px; background: #eef2f7; border-radius: 8px; display: none; border: 1px solid #d1d9e0; }
+        .total-row { font-size: 20px; font-weight: bold; color: #2c3e50; margin-top: 10px; padding-top: 10px; border-top: 1px solid #ccc; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>Saudi GOSI Calculator (2026)</h1>
-    <label>Basic Salary + Housing (SAR):</label>
-    <input type="number" id="gosiSalary" placeholder="e.g. 10000">
+    
+    <label>Basic Salary + Housing Allowance (SAR):</label>
+    <input type="number" id="salaryInput" placeholder="e.g. 10000">
+    
     <label>Nationality:</label>
-    <select id="gosiType">
-        <option value="expat">Expatriate (Non-Saudi)</option>
+    <select id="nationalityType">
         <option value="saudi">Saudi National</option>
+        <option value="expat">Expatriate (Non-Saudi)</option>
     </select>
-    <button onclick="calcGOSI()">Calculate Contribution</button>
-    <div id="gosiResult" class="res">
-        <p id="empCont"></p>
-        <p id="compCont"></p>
-        <p id="totalGosi" style="font-weight:bold; color:#2c3e50;"></p>
+    
+    <button onclick="calculateGOSI()">Calculate Monthly Contribution</button>
+    
+    <div id="resultArea" class="res-box">
+        <p>Employee Deduction: <span id="empDed"></span> SAR</p>
+        <p>Employer Contribution: <span id="compCont"></span> SAR</p>
+        <div class="total-row">Total GOSI Amount: <span id="totalGosi"></span> SAR</div>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 14px; color: #666; line-height: 1.6;">
+        <p><strong>Note:</strong> For Saudis, the deduction is 9.75% (Pension + Saned). For Expats, the employer pays 2% for Occupational Hazards, with 0% deduction from the employee's salary.</p>
+        <p><a href="/index.html" style="color:#b8860b; font-weight:bold;">← Back to Main Menu</a></p>
     </div>
 </div>
+
 <script>
-function calcGOSI() {
-    let salary = parseFloat(document.getElementById('gosiSalary').value);
-    let type = document.getElementById('gosiType').value;
-    if(!salary) return;
-    let emp, comp;
-    if(type === 'saudi') {
-        emp = salary * 0.0975; // 9% Pension + 0.75% SANED
-        comp = salary * 0.1175; // 9% Pension + 2% Hazard + 0.75% SANED
-    } else {
-        emp = 0;
-        comp = salary * 0.02; // 2% Occupational Hazard
+function calculateGOSI() {
+    const salary = parseFloat(document.getElementById('salaryInput').value);
+    const type = document.getElementById('nationalityType').value;
+    
+    if(!salary || salary <= 0) {
+        alert("Please enter a valid salary amount.");
+        return;
     }
-    document.getElementById('empCont').innerText = "Employee Deduction: " + emp.toFixed(2) + " SAR";
-    document.getElementById('compCont').innerText = "Company Contribution: " + comp.toFixed(2) + " SAR";
-    document.getElementById('totalGosi').innerText = "Total GOSI Monthly: " + (emp + comp).toFixed(2) + " SAR";
-    document.getElementById('gosiResult').style.display = 'block';
+
+    let employeeAmount, companyAmount;
+
+    if(type === 'saudi') {
+        // 9% Pension + 0.75% Saned
+        employeeAmount = salary * 0.0975;
+        // 9% Pension + 2% Hazards + 0.75% Saned
+        companyAmount = salary * 0.1175;
+    } else {
+        // Expats have 0% deduction
+        employeeAmount = 0;
+        // Employer pays 2% for Occupational Hazards
+        companyAmount = salary * 0.02;
+    }
+
+    document.getElementById('empDed').innerText = employeeAmount.toLocaleString(undefined, {minimumFractionDigits: 2});
+    document.getElementById('compCont').innerText = companyAmount.toLocaleString(undefined, {minimumFractionDigits: 2});
+    document.getElementById('totalGosi').innerText = (employeeAmount + companyAmount).toLocaleString(undefined, {minimumFractionDigits: 2});
+    
+    document.getElementById('resultArea').style.display = 'block';
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">Looking for another tool?</p>
-    <a href="/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← View All Saudi Calculators & Tools
-    </a>
-</div>
 </script>
 </body>
 </html>
