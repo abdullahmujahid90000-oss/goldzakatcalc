@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة مؤشر كتلة الجسم BMI | أدوات الصحة والرشاقة</title>
+    <title>حاسبة الوزن ومؤشر كتلة الجسم</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #fdfdfd; padding: 20px; text-align: right; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        button { width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        .status { font-weight: bold; font-size: 20px; margin-top: 10px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; padding: 20px; text-align: right; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; border-top: 6px solid #27ae60; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .res { margin-top: 20px; text-align: center; padding: 15px; background: #e8f5e9; border-radius: 8px; display: none; }
     </style>
 </head>
 <body>
 <div class="container">
-    <h2 style="color:#27ae60; text-align:center;">حاسبة مؤشر كتلة الجسم (BMI)</h2>
+    <h2 style="text-align:center; color:#27ae60;">حاسبة كتلة الجسم (BMI)</h2>
     <label>الوزن (كيلوجرام):</label>
-    <input type="number" id="wAr" style="width:100%; padding:10px; margin:10px 0; text-align:center;" placeholder="مثال: 80">
+    <input type="number" id="wAr" placeholder="مثال: 80">
     <label>الطول (سنتيمتر):</label>
-    <input type="number" id="hAr" style="width:100%; padding:10px; margin:10px 0; text-align:center;" placeholder="مثال: 175">
-    <button onclick="calcBMIAr()">احسب الآن</button>
-    <div id="bmiResAr" style="text-align:center; display:none; margin-top:20px;">
-        <p>مؤشر كتلة جسمك هو: <span id="bmiValAr" style="font-size:24px; font-weight:bold;"></span></p>
-        <p class="status" id="bmiStatusAr"></p>
+    <input type="number" id="hAr" placeholder="مثال: 175">
+    
+    <button onclick="calcBMIAr()">احسب النتيجة</button>
+    
+    <div id="bmiOutAr" class="res">
+        <p>مؤشر كتلة الجسم لديك: <strong id="valAr"></strong></p>
+        <p id="statusAr" style="font-size: 20px; font-weight: bold;"></p>
     </div>
+    
+    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#27ae60; text-decoration:none; font-weight:bold;">← العودة للقائمة الرئيسية</a></p>
 </div>
+
 <script>
 function calcBMIAr() {
-    let w = document.getElementById('wAr').value;
-    let h = document.getElementById('hAr').value / 100;
+    let w = parseFloat(document.getElementById('wAr').value);
+    let h = parseFloat(document.getElementById('hAr').value) / 100;
     if(w > 0 && h > 0) {
         let bmi = w / (h * h);
-        let status = "";
-        if(bmi < 18.5) status = "نقص في الوزن";
-        else if(bmi < 25) status = "وزن مثالي";
-        else if(bmi < 30) status = "زيادة في الوزن";
-        else status = "سمنة";
-        document.getElementById('bmiValAr').innerText = bmi.toFixed(1);
-        document.getElementById('bmiStatusAr').innerText = status;
-        document.getElementById('bmiResAr').style.display = 'block';
+        let s = "";
+        if(bmi < 18.5) s = "وزن ناقص";
+        else if(bmi < 25) s = "وزن مثالي";
+        else if(bmi < 30) s = "وزن زائد";
+        else s = "سمنة";
+        document.getElementById('valAr').innerText = bmi.toFixed(1);
+        document.getElementById('statusAr').innerText = s;
+        document.getElementById('bmiOutAr').style.display = 'block';
     }
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
 </script>
 </body>
 </html>
