@@ -3,43 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة التأمينات الاجتماعية السعودية 2026 | استقطاع ساند والتقاعد</title>
+    <title>حاسبة التأمينات الاجتماعية السعودية 2026 | GOSI</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f4f8; padding: 20px; text-align: right; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; text-align: center; font-size: 22px; }
-        label { display: block; margin-top: 15px; font-weight: bold; }
-        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 20px; font-weight: bold; cursor: pointer; }
-        .res { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; display: none; line-height: 1.6; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #2c3e50; }
+        h1 { color: #2c3e50; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #555; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; font-size: 16px; }
+        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 6px; margin-top: 25px; font-weight: bold; cursor: pointer; font-size: 18px; }
+        .res-box { margin-top: 25px; padding: 20px; background: #eef2f7; border-radius: 8px; display: none; border: 1px solid #d1d9e0; }
+        .total-row { font-size: 20px; font-weight: bold; color: #2c3e50; margin-top: 10px; padding-top: 10px; border-top: 1px solid #ccc; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>حاسبة التأمينات الاجتماعية (GOSI)</h1>
+    
     <label>الراتب الأساسي + بدل السكن (ريال):</label>
-    <input type="number" id="gosiSalaryAr" placeholder="مثال: 10000">
+    <input type="number" id="salaryInputAr" placeholder="مثال: 10000">
+    
     <label>الجنسية:</label>
-    <select id="gosiTypeAr">
-        <option value="expat">مقيم (غير سعودي)</option>
+    <select id="typeAr">
         <option value="saudi">مواطن سعودي</option>
+        <option value="expat">مقيم (غير سعودي)</option>
     </select>
-    <button onclick="calcGOSIAr()">احسب الاستقطاع</button>
-    <div id="gosiResultAr" class="res">
-        <p id="empAr"></p>
-        <p id="compAr"></p>
-        <p id="totalArG" style="font-weight:bold; color:#2c3e50;"></p>
+    
+    <button onclick="calcAr()">احسب الاستقطاع الشهري</button>
+    
+    <div id="resAr" class="res-box">
+        <p>استقطاع الموظف: <span id="outEmpAr"></span> ريال</p>
+        <p>مساهمة الشركة: <span id="outCompAr"></span> ريال</p>
+        <div class="total-row">إجمالي مبلغ التأمينات: <span id="outTotalAr"></span> ريال</div>
     </div>
-    <div style="margin-top:20px; font-size:14px; color:#666;">
-        <p>* ملاحظة: للسعوديين تشمل النسبة التقاعد وساند. للمقيمين تشمل الأخطار المهنية فقط بنسبة 2% يتحملها صاحب العمل.</p>
+
+    <div style="margin-top: 30px; font-size: 14px; color: #666; line-height: 1.6;">
+        <p><strong>ملاحظة:</strong> للسعوديين، الاستقطاع هو 9.75% (التقاعد + ساند). للمقيمين، صاحب العمل يدفع 2% للأخطار المهنية، مع 0% استقطاع من راتب الموظف.</p>
+        <p><a href="/ar/index.html" style="color:#b8860b; font-weight:bold;">← العودة للرئيسية</a></p>
     </div>
 </div>
+
 <script>
-function calcGOSIAr() {
-    let salary = parseFloat(document.getElementById('gosiSalaryAr').value);
-    let type = document.getElementById('gosiTypeAr').value;
-    if(!salary) return;
+function calcAr() {
+    const salary = parseFloat(document.getElementById('salaryInputAr').value);
+    const type = document.getElementById('typeAr').value;
+    
+    if(!salary || salary <= 0) {
+        alert("الرجاء إدخال مبلغ الراتب بشكل صحيح.");
+        return;
+    }
+
     let emp, comp;
+
     if(type === 'saudi') {
         emp = salary * 0.0975;
         comp = salary * 0.1175;
@@ -47,17 +61,13 @@ function calcGOSIAr() {
         emp = 0;
         comp = salary * 0.02;
     }
-    document.getElementById('empAr').innerText = "استقطاع الموظف: " + emp.toFixed(2) + " ريال";
-    document.getElementById('compAr').innerText = "حصة الشركة: " + comp.toFixed(2) + " ريال";
-    document.getElementById('totalArG').innerText = "الإجمالي الشهري للتأمينات: " + (emp + comp).toFixed(2) + " ريال";
-    document.getElementById('gosiResultAr').style.display = 'block';
+
+    document.getElementById('outEmpAr').innerText = emp.toLocaleString('ar-SA', {minimumFractionDigits: 2});
+    document.getElementById('outCompAr').innerText = comp.toLocaleString('ar-SA', {minimumFractionDigits: 2});
+    document.getElementById('outTotalAr').innerText = (emp + comp).toLocaleString('ar-SA', {minimumFractionDigits: 2});
+    
+    document.getElementById('resAr').style.display = 'block';
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
 </script>
 </body>
 </html>
