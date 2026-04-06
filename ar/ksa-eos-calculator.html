@@ -5,77 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حاسبة مكافأة نهاية الخدمة 2026 | قانون العمل السعودي</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; padding: 20px; text-align: right; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { color: #2d5a27; text-align: center; }
-        label { font-weight: bold; display: block; margin-top: 15px; }
-        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        button { width: 100%; padding: 15px; background: #2d5a27; color: white; border: none; border-radius: 8px; margin-top: 20px; font-weight: bold; cursor: pointer; }
-        .result-screen { margin-top: 25px; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; text-align: center; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; border-top: 6px solid #2d5a27; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #2d5a27; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .res { margin-top: 20px; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; text-align: center; }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <h1>حاسبة مكافأة نهاية الخدمة</h1>
-    <p style="text-align:center;">حسب المادتين 84 و 85 من قانون العمل السعودي</p>
-
-    <div style="background: #fffdf5; padding: 20px; border-radius: 10px; border: 1px solid #eec;">
-        <label>الراتب الأساسي الشهري (ريال):</label>
-        <input type="number" id="salaryAr" placeholder="مثال: 10000">
-
-        <label>عدد سنوات الخدمة:</label>
-        <input type="number" id="yearsAr" placeholder="مثال: 5">
-
-        <label>سبب ترك العمل:</label>
-        <select id="reasonAr">
-            <option value="termination">إنهاء عقد من قبل صاحب العمل</option>
-            <option value="resignation">استقالة الموظف</option>
-        </select>
-
-        <button onclick="calculateEOSAr()">احسب المكافأة</button>
-
-        <div id="eosResultAr" class="result-screen">
-            <h3>مكافأتك التقديرية هي:</h3>
-            <h2 id="finalAmountAr" style="color: #2d5a27;"></h2>
-        </div>
+    <h2 style="text-align:center; color:#2d5a27;">حاسبة مكافأة نهاية الخدمة</h2>
+    <label>آخر راتب أساسي + البدلات الثابتة (ريال):</label>
+    <input type="number" id="salAr" placeholder="مثال: 10000">
+    <label>عدد سنوات الخدمة:</label>
+    <input type="number" id="yAr" placeholder="مثال: 5">
+    <label>سبب انتهاء العلاقة التعاقدية:</label>
+    <select id="reasonAr">
+        <option value="term">إنهاء العقد من قبل الشركة</option>
+        <option value="resign">استقالة</option>
+    </select>
+    
+    <button onclick="calcEOSAr()">احسب المكافأة</button>
+    
+    <div id="eosResAr" class="res">
+        <p>مبلغ المكافأة التقديري:</p>
+        <h2 id="rewardAr" style="color:#2d5a27;"></h2>
     </div>
-
-    <div style="margin-top: 40px; line-height: 1.8;">
-        <h2>كيف تُحسب المكافأة؟</h2>
-        <p>بموجب <strong>المادة 84</strong>:</p>
-        <ul>
-            <li>الخمس سنوات الأولى: أجر نصف شهر عن كل سنة.</li>
-            <li>ما زاد عن ذلك: أجر شهر كامل عن كل سنة.</li>
-        </ul>
-    </div>
+    
+    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#2d5a27; text-decoration:none; font-weight:bold;">← العودة للقائمة الرئيسية</a></p>
 </div>
 
 <script>
-function calculateEOSAr() {
-    let salary = parseFloat(document.getElementById('salaryAr').value);
-    let years = parseFloat(document.getElementById('yearsAr').value);
-    let reason = document.getElementById('reasonAr').value;
-    if (!salary || !years) return;
+function calcEOSAr() {
+    let s = parseFloat(document.getElementById('salAr').value);
+    let y = parseFloat(document.getElementById('yAr').value);
+    let r = document.getElementById('reasonAr').value;
+    if(!s || !y) return;
 
-    let base = (years <= 5) ? (salary / 2) * years : (salary / 2) * 5 + (salary * (years - 5));
+    let base = (y <= 5) ? (s / 2) * y : (s / 2) * 5 + (s * (y - 5));
     let final = base;
 
-    if (reason === "resignation") {
-        if (years < 2) final = 0;
-        else if (years < 5) final = base * (1/3);
-        else if (years < 10) final = base * (2/3);
+    if (r === "resign") {
+        if (y < 2) final = 0;
+        else if (y < 5) final = base * (1/3);
+        else if (y < 10) final = base * (2/3);
     }
-
-    document.getElementById('finalAmountAr').innerText = final.toLocaleString() + " ريال سعودي";
-    document.getElementById('eosResultAr').style.display = 'block';
+    document.getElementById('rewardAr').innerText = Math.round(final).toLocaleString() + " ريال";
+    document.getElementById('eosResAr').style.display = 'block';
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
 </script>
 </body>
 </html>
