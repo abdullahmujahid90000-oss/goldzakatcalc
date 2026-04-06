@@ -3,54 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة زكاة الذهب 2026 | حساب دقيق للزكاة</title>
+    <title>حاسبة زكاة الذهب 2026 | الرياض السعودية</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #fcfcfc; padding: 20px; text-align: right; }
-        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #b8860b; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #fdfdfd; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 6px solid #b8860b; }
         h1 { color: #b8860b; text-align: center; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        button { width: 100%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
-        .result { margin-top: 25px; padding: 20px; background: #fffdf5; border: 1px dashed #b8860b; border-radius: 8px; display: none; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        button { width: 100%; padding: 15px; background: #b8860b; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 18px; margin-top: 20px; }
+        .result { margin-top: 20px; padding: 20px; background: #fff9e6; border: 1px dashed #b8860b; border-radius: 8px; display: none; text-align: center; }
+        .btn-home { display: block; text-align: center; margin-top: 30px; color: #b8860b; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>حاسبة زكاة الذهب</h1>
     <label>وزن الذهب (جرام):</label>
-    <input type="number" id="wAr" placeholder="مثال: 100">
+    <input type="number" id="goldWAr" placeholder="مثال: 100">
+    
     <label>عيار الذهب:</label>
-    <select id="pAr">
-        <option value="564.26">عيار 24 (564.26 ريال)</option>
-        <option value="517.24">عيار 22 (517.24 ريال)</option>
-        <option value="493.73">عيار 21 (493.73 ريال)</option>
+    <select id="goldPAr">
+        <option value="580">عيار 24 (580 ريال)</option>
+        <option value="531">عيار 22 (531 ريال)</option>
+        <option value="506">عيار 21 (506 ريال)</option>
     </select>
-    <button onclick="calcAr()">احسب الزكاة</button>
+    
+    <button onclick="calcZakatAr()">احسب الزكاة المستحقة</button>
+    
     <div id="resAr" class="result">
-        <p id="totalAr"></p>
-        <h2 id="zakatAr" style="color: #d9534f;"></h2>
+        <p id="valTextAr"></p>
+        <h2 id="finalZakatAr" style="color: #d9534f;"></h2>
     </div>
-    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#b8860b;">← العودة للرئيسية</a></p>
+    
+    <a href="/ar/index.html" class="btn-home">← العودة للقائمة الرئيسية</a>
 </div>
+
 <script>
-function calcAr() {
-    let w = document.getElementById('wAr').value;
-    let p = document.getElementById('pAr').value;
+function calcZakatAr() {
+    let w = parseFloat(document.getElementById('goldWAr').value);
+    let p = parseFloat(document.getElementById('goldPAr').value);
+    let res = document.getElementById('resAr');
+
     if (w >= 87.48) {
         let total = w * p;
         let zakat = total * 0.025;
-        document.getElementById('totalAr').innerText = "إجمالي قيمة الذهب: " + total.toLocaleString() + " ريال";
-        document.getElementById('zakatAr').innerText = "مقدار الزكاة (2.5%): " + zakat.toLocaleString() + " ريال";
-        document.getElementById('resAr').style.display = 'block';
+        document.getElementById('valTextAr').innerText = "إجمالي قيمة الذهب: " + total.toLocaleString() + " ريال";
+        document.getElementById('finalZakatAr').innerText = "الزكاة المستحقة (2.5%): " + zakat.toLocaleString() + " ريال";
+        res.style.display = 'block';
     } else {
-        alert("الوزن أقل من النصاب (87.48 جرام). لا تجب الزكاة.");
+        alert("وزن الذهب أقل من النصاب (87.48 جرام). لا تجب الزكاة.");
+        res.style.display = 'none';
     }
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
 </script>
 </body>
 </html>
