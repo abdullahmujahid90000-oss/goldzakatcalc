@@ -1,85 +1,120 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة تمويل السيارات السعودية 2026 | احسب قسطك الشهري</title>
+    <title>Saudi All-Car Finance Calculator 2026 | New & Used Car Loan KSA</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; text-align: right; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
         .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f9f9f9; padding: 25px; border-radius: 12px; }
         h1 { color: #1a3a5f; text-align: center; }
-        label { font-weight: bold; display: block; margin-top: 5px; }
-        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
+        label { font-weight: bold; font-size: 14px; color: #555; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
         .full-width { grid-column: span 2; }
-        button { grid-column: span 2; padding: 15px; background: #1a3a5f; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
-        .result-box { grid-column: span 2; margin-top: 20px; padding: 20px; background: #eef6ff; border: 2px dashed #1a3a5f; border-radius: 10px; text-align: center; display: none; }
+        button { grid-column: span 2; padding: 15px; background: #1a3a5f; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 18px; margin-top: 10px; }
+        .result-box { grid-column: span 2; margin-top: 20px; padding: 25px; background: #eef6ff; border: 2px solid #bcd; border-radius: 10px; text-align: center; display: none; }
+        .ins-tag { color: #27ae60; font-weight: bold; font-size: 14px; }
+        .info-text { margin-top: 40px; line-height: 1.8; font-size: 15px; }
         @media (max-width: 600px) { .calc-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } button { grid-column: span 1; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>حاسبة تمويل السيارات</h1>
-    <p style="text-align:center;">احسب أقساط سيارتك بناءً على عروض بنوك السعودية لعام 2026</p>
+    <h1>KSA Universal Car Finance Calculator</h1>
+    <p style="text-align:center;">Calculate installments for Any Brand - New or Used</p>
 
     <div class="calc-grid">
-        <div>
-            <label>سعر السيارة (ريال):</label>
-            <input type="number" id="carPriceAr" placeholder="مثال: 120000">
+        <div class="full-width">
+            <label>Car Condition:</label>
+            <select id="carCondition" onchange="adjustRates()">
+                <option value="new">New Car (Agency)</option>
+                <option value="used">Used Car (Showroom / Private)</option>
+            </select>
         </div>
         <div>
-            <label>الدفعة الأولى (ريال):</label>
-            <input type="number" id="downAr" placeholder="مثال: 20000">
+            <label>Vehicle Value (SAR):</label>
+            <input type="number" id="carPrice" placeholder="e.g. 150000">
         </div>
         <div>
-            <label>نسبة الربح السنوية (%):</label>
-            <input type="number" id="rateAr" value="5.5">
+            <label>Down Payment (SAR):</label>
+            <input type="number" id="downPayment" placeholder="Min 10% for some banks">
         </div>
         <div>
-            <label>مدة التمويل (سنوات):</label>
-            <input type="number" id="termAr" value="5">
+            <label>Profit Rate (% APR):</label>
+            <input type="number" id="interest" value="4.5">
+        </div>
+        <div>
+            <label>Finance Term (Years):</label>
+            <input type="number" id="term" value="5" id="termInput">
         </div>
         <div class="full-width">
-            <label>الدفعة الأخيرة / التملك (ريال):</label>
-            <input type="number" id="balloonAr" placeholder="اختياري">
+            <label>Balloon Payment / Final Installment (SAR):</label>
+            <input type="number" id="balloon" placeholder="Usually 25% - 35% of value">
         </div>
-        <button onclick="calcCarAr()">احسب القسط الشهري</button>
+        <button onclick="calculateCarLoan()">Calculate Monthly Total</button>
 
-        <div id="resAr" class="result-box">
-            <p>قسطك الشهري التقديري هو:</p>
-            <h2 id="monthlyAr" style="color: #1a3a5f;"></h2>
+        <div id="carResult" class="result-box">
+            <p>Your Estimated Monthly Installment:</p>
+            <h2 id="monthlyAmount" style="color: #1a3a5f; margin: 5px 0;"></h2>
+            <p class="ins-tag" id="insuranceEstimate"></p>
+            <p id="totalRepayment" style="font-size: 13px; color: #666; margin-top: 10px;"></p>
         </div>
     </div>
 
-    <div style="margin-top: 40px; line-height: 1.8;">
-        <h2>دليل تمويل السيارات في السعودية</h2>
-        <p>تقدم البنوك السعودية مثل مصرف الراجحي والبنك الأهلي السعودي (SNB) حلول تمويل مرنة بنظام "المرابحة" أو "الإيجار المنتهي بالتمليك".</p>
+    <div class="info-text">
+        <h2>Comprehensive Guide to Car Ownership in KSA (2026)</h2>
+        <p>This calculator is designed for <strong>all vehicle types</strong>, from economy sedans to luxury SUVs. Whether you are buying a brand-new model from an agency or a reliable <strong>used car</strong> from Haraj or a showroom, this tool helps you budget accurately.</p>
+        
+        <h3>1. Insurance Requirements</h3>
+        <p>In Saudi Arabia, if you finance a car, banks require <strong>Comprehensive Insurance</strong>. Our calculator estimates this at roughly 4% of the car's value annually. For used cars, insurance costs may vary based on the vehicle's age and condition.</p>
+        
+        <h3>2. Financing Used Cars</h3>
+        <p>Banks like Al Rajhi, SNB, and Riyad Bank now offer robust programs for used cars. Note that used car financing usually has a shorter maximum term (typically 3 years) and slightly higher profit rates compared to new cars.</p>
     </div>
 </div>
 
 <script>
-function calcCarAr() {
-    let p = parseFloat(document.getElementById('carPriceAr').value);
-    let d = parseFloat(document.getElementById('downAr').value) || 0;
-    let r = parseFloat(document.getElementById('rateAr').value) / 100 / 12;
-    let t = parseFloat(document.getElementById('termAr').value) * 12;
-    let b = parseFloat(document.getElementById('balloonAr').value) || 0;
-
-    if (!p || !t) return;
-
-    let loan = p - d - b;
-    let monthly = (loan * r) / (1 - Math.pow(1 + r, -t)) + (b * r * 12 / 12);
-    
-    document.getElementById('monthlyAr').innerText = Math.round(monthly).toLocaleString() + " ريال سعودي";
-    document.getElementById('resAr').style.display = 'block';
+function adjustRates() {
+    const condition = document.getElementById('carCondition').value;
+    if(condition === 'used') {
+        document.getElementById('interest').value = "6.5";
+        document.getElementById('term').value = "3";
+    } else {
+        document.getElementById('interest').value = "4.5";
+        document.getElementById('term').value = "5";
+    }
 }
-    <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; direction: rtl;">
-    <p style="font-size: 18px; font-weight: bold; color: #333;">هل تبحث عن أداة أخرى؟</p>
-    <a href="/ar/index.html" style="display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        ← عرض جميع الحاسبات والأدوات السعودية
-    </a>
-</div>
+
+function calculateCarLoan() {
+    let price = parseFloat(document.getElementById('carPrice').value);
+    let down = parseFloat(document.getElementById('downPayment').value) || 0;
+    let interest = parseFloat(document.getElementById('interest').value) / 100;
+    let years = parseFloat(document.getElementById('term').value);
+    let balloon = parseFloat(document.getElementById('balloon').value) || 0;
+
+    if (!price || !years) return;
+
+    // Monthly Installment Calculation
+    let loanAmount = price - down - balloon;
+    let months = years * 12;
+    let monthlyInterest = interest / 12;
+    let monthly = (loanAmount * monthlyInterest) / (1 - Math.pow(1 + monthlyInterest, -months));
+    let balloonInterest = (balloon * interest) / 12;
+    let loanMonthly = monthly + balloonInterest;
+
+    // Insurance Estimation (Approx 4% of car value annually)
+    let annualInsurance = price * 0.04;
+    let monthlyInsurance = annualInsurance / 12;
+
+    let totalMonthly = loanMonthly + monthlyInsurance;
+
+    document.getElementById('monthlyAmount').innerText = Math.round(totalMonthly).toLocaleString() + " SAR / Month";
+    document.getElementById('insuranceEstimate').innerText = "Includes approx. " + Math.round(monthlyInsurance) + " SAR for Insurance";
+    document.getElementById('totalRepayment').innerText = "Total cost of ownership over " + years + " years: " + Math.round((totalMonthly * months) + down + balloon).toLocaleString() + " SAR";
+    document.getElementById('carResult').style.display = 'block';
+}
 </script>
 </body>
 </html>
