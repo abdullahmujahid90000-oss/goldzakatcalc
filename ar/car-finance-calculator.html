@@ -3,101 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة تمويل جميع السيارات 2026 | سيارات جديدة ومستعملة السعودية</title>
+    <title>حاسبة تمويل السيارات الشاملة 2026 | شامل التأمين</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; text-align: right; }
-        .container { max-width: 850px; margin: auto; background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
         .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #f9f9f9; padding: 25px; border-radius: 12px; }
         h1 { color: #1a3a5f; text-align: center; }
-        label { font-weight: bold; display: block; margin-top: 5px; }
-        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        .full-width { grid-column: span 2; }
+        label { font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 6px; text-align: center; }
         button { grid-column: span 2; padding: 15px; background: #1a3a5f; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
-        .result-box { grid-column: span 2; margin-top: 20px; padding: 25px; background: #eef6ff; border: 2px dashed #1a3a5f; border-radius: 10px; text-align: center; display: none; }
-        .ins-tag { color: #27ae60; font-weight: bold; }
-        @media (max-width: 600px) { .calc-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } button { grid-column: span 1; } }
+        .result-box { grid-column: span 2; margin-top: 20px; padding: 20px; background: #eef6ff; border: 2px dashed #1a3a5f; border-radius: 10px; text-align: center; display: none; }
+        .nav-footer { text-align: center; margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 10px; }
+        .btn-home { display: inline-block; padding: 12px 25px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>الحاسبة الشاملة لتمويل السيارات</h1>
-    <p style="text-align:center;">احسب أقساط أي سيارة في المملكة - جديدة أو مستعملة</p>
-
+    <h1>حاسبة تمويل جميع السيارات</h1>
+    
     <div class="calc-grid">
-        <div class="full-width">
+        <div style="grid-column: span 2;">
             <label>حالة السيارة:</label>
-            <select id="carConditionAr" onchange="adjustRatesAr()">
-                <option value="new">سيارة جديدة (وكالة)</option>
-                <option value="used">سيارة مستعملة (معرض / حراج)</option>
+            <select id="typeAr" onchange="updateAr()">
+                <option value="new">جديدة (وكالة)</option>
+                <option value="used">مستعملة (معرض / حراج)</option>
             </select>
         </div>
         <div>
-            <label>قيمة السيارة (ريال):</label>
-            <input type="number" id="carPriceAr" placeholder="مثال: 150000">
+            <label>السعر (ريال):</label>
+            <input type="number" id="pAr" placeholder="مثال: 100000">
         </div>
         <div>
             <label>الدفعة الأولى (ريال):</label>
-            <input type="number" id="downAr" placeholder="مثال: 15000">
+            <input type="number" id="dAr" placeholder="مثال: 10000">
         </div>
-        <div>
-            <label>نسبة الربح (%):</label>
-            <input type="number" id="rateAr" value="4.5">
-        </div>
-        <div>
-            <label>مدة التمويل (سنوات):</label>
-            <input type="number" id="termAr" value="5">
-        </div>
-        <div class="full-width">
-            <label>الدفعة الأخيرة / التملك (ريال):</label>
-            <input type="number" id="balloonAr" placeholder="اختياري">
-        </div>
-        <button onclick="calcCarAr()">احسب القسط الإجمالي</button>
+        <button onclick="calcAr()">احسب القسط الشهري</button>
 
         <div id="resAr" class="result-box">
-            <p>القسط الشهري التقديري (شامل التأمين):</p>
-            <h2 id="monthlyAr" style="color: #1a3a5f;"></h2>
-            <p class="ins-tag" id="insAr"></p>
+            <p>القسط الشهري الإجمالي (شامل التأمين):</p>
+            <h2 id="outAr" style="color: #1a3a5f;"></h2>
         </div>
     </div>
 
-    <div style="margin-top: 40px; line-height: 1.8;">
-        <h2>دليل شراء وتمويل السيارات في السعودية</h2>
-        <p>هذه الحاسبة مخصصة <strong>لكافة أنواع السيارات</strong>. سواء كنت ترغب في شراء سيارة وكالة أو تبحث عن <strong>سيارة مستعملة</strong>، يساعدك هذا البرنامج في تقدير ميزانيتك بدقة.</p>
-        <p><strong>ملاحظة عن التأمين:</strong> عند تمويل السيارات، تشترط البنوك وجود تأمين شامل. قمنا ببرمجة الحاسبة لتقدير التأمين بنسبة 4% تقريباً من قيمة السيارة سنوياً، وهو المعدل الشائع في السوق السعودي.</p>
+    <div class="nav-footer">
+        <p>هل تبحث عن أداة أخرى؟</p>
+        <a href="/ar/index.html" class="btn-home">← العودة للرئيسية</a>
     </div>
 </div>
 
 <script>
-function adjustRatesAr() {
-    const condition = document.getElementById('carConditionAr').value;
-    if(condition === 'used') {
-        document.getElementById('rateAr').value = "6.5";
-        document.getElementById('termAr').value = "3";
-    } else {
-        document.getElementById('rateAr').value = "4.5";
-        document.getElementById('termAr').value = "5";
-    }
+function updateAr() {
+    // Logic for rates can be added here if needed
 }
-
-function calcCarAr() {
-    let p = parseFloat(document.getElementById('carPriceAr').value);
-    let d = parseFloat(document.getElementById('downAr').value) || 0;
-    let r = parseFloat(document.getElementById('rateAr').value) / 100 / 12;
-    let t = parseFloat(document.getElementById('termAr').value) * 12;
-    let b = parseFloat(document.getElementById('balloonAr').value) || 0;
-
-    if (!p || !t) return;
-
-    let loan = p - d - b;
-    let loanMonthly = (loan * r) / (1 - Math.pow(1 + r, -t)) + (b * r * 12 / 12);
-    
-    // تقدير التأمين (4% سنوياً)
+function calcAr() {
+    let p = parseFloat(document.getElementById('pAr').value);
+    let d = parseFloat(document.getElementById('dAr').value) || 0;
+    if (!p) return;
+    let loan = p - d;
+    let monthlyLoan = (loan * 0.00375) / (1 - Math.pow(1 + 0.00375, -60)); // Default 4.5% over 5 years
     let monthlyIns = (p * 0.04) / 12;
-    let totalMonthly = loanMonthly + monthlyIns;
-
-    document.getElementById('monthlyAr').innerText = Math.round(totalMonthly).toLocaleString() + " ريال سعودي / شهر";
-    document.getElementById('insAr').innerText = "يشمل حوالي " + Math.round(monthlyIns) + " ريال قيمة التأمين الشهري";
+    document.getElementById('outAr').innerText = Math.round(monthlyLoan + monthlyIns).toLocaleString() + " ريال سعودي";
     document.getElementById('resAr').style.display = 'block';
 }
 </script>
