@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محول العملات للوافدين 2026 | تحويل الريال السعودي</title>
+    <title>محول تحويلات المغتربين | سعر الريال مقابل الروبية والجنيه</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f7f6; padding: 20px; text-align: right; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; text-align: center; }
-        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; text-align: center; }
-        .res-display { margin-top: 25px; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 8px; display: none; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f4f8; padding: 20px; text-align: right; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #1a3a5f; text-align: center; margin-bottom: 5px; }
+        .live-status { text-align: center; color: #27ae60; font-weight: bold; font-size: 13px; margin-bottom: 25px; }
+        label { font-weight: bold; color: #555; display: block; margin-top: 20px; }
+        input, select { width: 100%; padding: 15px; margin-top: 8px; border: 2px solid #e1e8ed; border-radius: 10px; font-size: 18px; box-sizing: border-box; text-align: center; }
+        .result-card { margin-top: 30px; background: #1a3a5f; color: white; padding: 25px; border-radius: 12px; text-align: center; }
+        #finalAmountAr { font-size: 36px; font-weight: bold; display: block; margin-top: 10px; }
+        .bank-note { font-size: 12px; color: #bdc3c7; margin-top: 10px; }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>محول تحويلات المغتربين</h1>
-    <p style="text-align:center;">أسعار الصرف المباشرة - 6 أبريل 2026</p>
+    <p class="live-status">● أسعار السوق المباشرة نشطة الآن</p>
 
-    <div style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-        <label>المبلغ بالريال السعودي:</label>
-        <input type="number" id="sarAr" placeholder="مثال: 1000" oninput="convertAr()">
+    <label>المبلغ بالريال السعودي (SAR):</label>
+    <input type="number" id="sarAmountAr" placeholder="أدخل المبلغ بالريال" oninput="liveConvertAr()">
 
-        <label>تحويل إلى:</label>
-        <select id="currAr" onchange="convertAr()">
-            <option value="12.85">مصر (جنيه) - 12.85</option>
-            <option value="74.34">باكستان (روبية) - 74.34</option>
-            <option value="22.15">الهند (روبية) - 22.15</option>
-            <option value="14.92">الفلبين (بيزو) - 14.92</option>
-        </select>
+    <label>تحويل إلى:</label>
+    <select id="targetCurrencyAr" onchange="liveConvertAr()">
+        <option value="PKR">باكستان (PKR)</option>
+        <option value="INR">الهند (INR)</option>
+        <option value="EGP">مصر (EGP)</option>
+        <option value="PHP">الفلبين (PHP)</option>
+        <option value="BDT">بنجلاديش (BDT)</option>
+    </select>
 
-        <div id="resBoxAr" class="res-display">
-            <p>سيستلم أهلك مبلغ وقدره:</p>
-            <h2 id="finalAr" style="color: #27ae60;"></h2>
-        </div>
+    <div class="result-card">
+        <span id="rateLabelAr">أهلك سيستلمون مبلغ:</span>
+        <span id="finalAmountAr">0.00</span>
+        <p class="bank-note">قارن هذا السعر مع STC Pay، و Urpay، وتحويل الراجحي للحصول على أفضل عرض.</p>
     </div>
 
-    <p style="text-align:center; margin-top:20px;"><a href="/ar/index.html" style="color:#b8860b;">← عرض جميع الأدوات</a></p>
+    <p style="text-align: center; margin-top: 25px;"><a href="/ar/index.html" style="color:#1a3a5f; font-weight:bold; text-decoration:none;">← العودة للقائمة الرئيسية</a></p>
 </div>
 
 <script>
-function convertAr() {
-    let sar = document.getElementById('sarAr').value;
-    let rate = document.getElementById('currAr').value;
-    if(sar > 0) {
-        let total = sar * rate;
-        document.getElementById('finalAr').innerText = total.toLocaleString(undefined, {minimumFractionDigits: 2}) + " " + document.getElementById('currAr').options[document.getElementById('currAr').selectedIndex].text.split(' ')[0];
-        document.getElementById('resBoxAr').style.display = 'block';
+    async function liveConvertAr() {
+        const amount = document.getElementById('sarAmountAr').value;
+        const target = document.getElementById('targetCurrencyAr').value;
+        
+        if(!amount || amount <= 0) return;
+
+        try {
+            const response = await fetch(`https://open.er-api.com/v6/latest/SAR`);
+            const data = await response.json();
+            const rate = data.rates[target];
+            
+            const total = amount * rate;
+            document.getElementById('finalAmountAr').innerText = total.toLocaleString('ar-SA', {minimumFractionDigits: 2}) + " " + target;
+        } catch (error) {
+            console.log("خطأ في الاتصال بالشبكة");
+        }
     }
-}
 </script>
 </body>
 </html>
