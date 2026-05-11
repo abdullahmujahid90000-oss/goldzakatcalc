@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap Location
-Sitemap: https://www.goldzakatcalc.com/sitemap.xml
-
-# Prevent AI bots from scraping your unique tools if you wish, 
-# but for AdSense, we want Googlebot to have full access.
-User-agent: Mediapartners-Google
-Allow: /
+Sitemap: https://saudiutilityhub.com/sitemap.xml
