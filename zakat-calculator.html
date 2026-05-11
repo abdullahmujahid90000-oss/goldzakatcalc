@@ -1,163 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133"
-     crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1C2Y7GSZ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z1C2Y7GSZ5', { 'page_path': location.pathname });
-</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Free Zakat calculator for cash, savings, silver and business assets in Saudi Arabia 2026. Nisab check included.">
+<meta name="keywords" content="cash zakat calculator, zakat savings, حاسبة الزكاة, zakat 2026 saudi">
+<title>Cash & Savings Zakat Calculator 2026 — Saudi Arabia | Saudi Utility Hub</title>
+<link rel="canonical" href="https://saudiutilityhub.com/zakat-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--green:#1B6B3A;--green-dark:#0f4a28;--green-light:#e8f5ee;--gold:#C9A227;--gold-light:#fdf4dc;--bg:#f4f6f5;--white:#fff;--text:#1a1a2e;--muted:#6b7280;--border:#e2e8e4;--radius:12px;--radius-sm:8px;--shadow:0 2px 12px rgba(27,107,58,.10);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text strong{font-size:15px;font-weight:700;color:var(--green);display:block;line-height:1.2;}
+.logo-text span{font-size:11px;color:var(--muted);}
+.back-btn{font-size:13px;color:var(--green);font-weight:600;padding:8px 16px;background:var(--green-light);border-radius:var(--radius-sm);}
+.page-hero{background:linear-gradient(135deg,var(--green-dark),var(--green));color:white;padding:40px 20px 32px;text-align:center;}
+.badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;margin-bottom:14px;}
+.page-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;margin-bottom:10px;}
+.page-hero h1 span{color:#ffd166;}
+.page-hero p{font-size:15px;color:rgba(255,255,255,.8);max-width:520px;margin:0 auto;font-weight:300;}
+.ad-zone{max-width:1100px;margin:0 auto;padding:20px 20px 0;}
+.ad-placeholder{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);text-align:center;padding:14px;color:var(--muted);font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+.main-wrap{max-width:1100px;margin:0 auto;padding:28px 20px 40px;display:grid;grid-template-columns:1fr 320px;gap:24px;}
+@media(max-width:768px){.main-wrap{grid-template-columns:1fr;}}
+.calc-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);}
+.calc-header{background:var(--green);color:white;padding:20px 24px;}
+.calc-header h2{font-size:18px;font-weight:700;}
+.calc-header p{font-size:13px;color:rgba(255,255,255,.8);margin-top:4px;}
+.calc-body{padding:24px;}
+.field-group{margin-bottom:16px;}
+.field-group label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;}
+.field-group label span{font-weight:400;color:var(--muted);font-size:12px;}
+.field-group input,.field-group select,.field-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--text);transition:border-color .2s;}
+.field-group input:focus,.field-group select:focus{outline:none;border-color:var(--green);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.section-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:14px;}
+.calc-btn{width:100%;padding:14px;background:var(--green);color:white;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s;margin-top:6px;}
+.calc-btn:hover{background:var(--green-dark);}
+.results-section{margin-top:20px;display:none;}
+.results-section.show{display:block;}
+.result-hero{background:var(--green);color:white;border-radius:var(--radius);padding:22px;text-align:center;margin-bottom:14px;}
+.result-hero .label{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:6px;}
+.result-hero .amount{font-size:38px;font-weight:700;color:#ffd166;line-height:1;}
+.result-hero .sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;}
+.result-breakdown{background:var(--bg);border-radius:var(--radius);overflow:hidden;margin-bottom:14px;}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--border);}
+.result-row:last-child{border-bottom:none;}
+.result-row .r-label{font-size:13px;color:var(--muted);}
+.result-row .r-value{font-size:14px;font-weight:600;}
+.result-row.total-row{background:var(--green-light);}
+.result-row.total-row .r-label{font-weight:700;color:var(--text);}
+.result-row.total-row .r-value{color:var(--green);font-size:16px;}
+.sidebar{display:flex;flex-direction:column;gap:18px;}
+.side-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;}
+.side-card h3{font-size:15px;font-weight:700;margin-bottom:14px;}
+.info-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-row span:first-child{color:var(--muted);}
+.info-row span:last-child{font-weight:600;}
+.tip-list{list-style:none;}
+.tip-list li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);padding-left:18px;position:relative;line-height:1.5;}
+.tip-list li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700;}
+.tip-list li:last-child{border-bottom:none;}
+.content-section{max-width:1100px;margin:0 auto;padding:0 20px 20px;}
+.content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px;}
+.content-card h2{font-size:20px;font-weight:700;margin-bottom:16px;}
+.content-card h3{font-size:16px;font-weight:700;margin:20px 0 10px;color:var(--green);}
+.content-card p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
+.content-card ul{margin:10px 0 12px 20px;}
+.content-card ul li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:4px;}
+.faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q .arrow{font-size:18px;color:var(--green);transition:transform .3s;}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.8;margin-top:10px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .arrow{transform:rotate(180deg);}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
+.tool-mini{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:all .2s;}
+.tool-mini:hover{border-color:var(--green);transform:translateY(-2px);}
+.tool-mini .t-icon{font-size:24px;margin-bottom:8px;}
+.tool-mini .t-name{font-size:13px;font-weight:600;}
+.tool-mini .t-desc{font-size:11px;color:var(--muted);margin-top:3px;}
+footer{background:var(--green-dark);color:rgba(255,255,255,.8);padding:32px 20px 20px;margin-top:40px;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
+.footer-inner p{font-size:12px;color:rgba(255,255,255,.5);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.5);}
+.footer-links a:hover{color:white;}
+</style>
+</head><body>
+<header><div class="header-inner"><a href="index.html" class="logo"><div class="logo-icon">🇸🇦</div><div class="logo-text"><strong>Saudi Utility Hub</strong><span>Free KSA Tools</span></div></a><a href="index.html" class="back-btn">← All Tools</a></div></header>
+<div class="page-hero"><div class="badge">🌙 Islamic Finance</div><h1>Cash & Savings <span>Zakat 2026</span></h1><p>Calculate Zakat on savings, cash, bank accounts and business assets</p></div>
+<div class="ad-zone"><div class="ad-placeholder">📢 Advertisement — Google AdSense</div></div>
 
-  <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce",
-  "url":"https://goldzakatcalc.com/zakat-calculator.html",
-  "description":"Calculate Zakat on gold with Nisab check. Grams, tola, and ounce supported.",
-  "inLanguage":"en"
+<div class="main-wrap">
+<div>
+<div class="calc-card">
+<div class="calc-header"><h2>🪙 Cash & Savings Zakat Calculator</h2><p>Zakat on cash, bank savings, silver and business assets</p></div>
+<div class="calc-body">
+<div class="section-label">Your Zakatable Assets</div>
+<div class="field-group"><label>Cash on Hand <span>(SAR)</span></label><input type="number" id="z-cash" placeholder="0" min="0"></div>
+<div class="field-group"><label>Bank Savings <span>(all accounts, SAR)</span></label><input type="number" id="z-bank" placeholder="0" min="0"></div>
+<div class="field-group"><label>Business Inventory <span>(SAR)</span></label><input type="number" id="z-biz" placeholder="0" min="0"></div>
+<div class="field-group"><label>Loans Owed To You <span>(SAR)</span></label><input type="number" id="z-loans" placeholder="0" min="0"></div>
+<div class="section-label" style="margin-top:16px;">Deductions</div>
+<div class="field-group"><label>Debts You Owe <span>(SAR)</span></label><input type="number" id="z-debt" placeholder="0" min="0"></div>
+<button class="calc-btn" onclick="calcCZ()">Calculate My Zakat →</button>
+<div class="results-section" id="cz-r">
+<div class="result-hero"><div class="label">Total Zakat Due</div><div class="amount" id="cz-amt">0</div><div class="sub" id="cz-sub">2.5% of net zakatable wealth</div></div>
+<div class="result-breakdown">
+<div class="result-row"><span class="r-label">Total Assets</span><span class="r-value" id="cz-assets">—</span></div>
+<div class="result-row"><span class="r-label">Deductions</span><span class="r-value" id="cz-ded">—</span></div>
+<div class="result-row"><span class="r-label">Net Wealth</span><span class="r-value" id="cz-net">—</span></div>
+<div class="result-row total-row"><span class="r-label">✅ Zakat (2.5%)</span><span class="r-value" id="cz-zakat">—</span></div>
+</div>
+</div>
+</div></div>
+<div style="margin:20px 0;"><div class="ad-zone"><div class="ad-placeholder">📢 Advertisement — Google AdSense</div></div></div>
+<div class="content-card"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">What assets are subject to Zakat?<span class="arrow">▾</span></div><div class="faq-a">Zakat applies to cash, savings, gold, silver, business inventory and receivables. Your home, car and personal items are not zakatable.</div></div><div class="faq-item"><div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Can I deduct my debts?<span class="arrow">▾</span></div><div class="faq-a">Yes. Debts due within the year can be deducted from zakatable assets.</div></div><div class="faq-item"><div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Do I pay Zakat monthly or annually?<span class="arrow">▾</span></div><div class="faq-a">Zakat is calculated once per lunar year on wealth held for a full Haul (lunar year) above Nisab.</div></div></div><div class="content-card"><h2>More Free KSA Tools</h2><div class="tools-grid"><a href="gold-zakat-calculator.html"><div class="tool-mini"><div class="t-icon">🌙</div><div class="t-name">Gold Zakat</div><div class="t-desc">Zakat on gold</div></div></a><a href="vat-calculator.html"><div class="tool-mini"><div class="t-icon">🧾</div><div class="t-name">VAT 15%</div><div class="t-desc">Add/remove VAT</div></div></a><a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">EOS Calc</div><div class="t-desc">Gratuity</div></div></a><a href="salary-calculator.html"><div class="tool-mini"><div class="t-icon">💼</div><div class="t-name">Salary</div><div class="t-desc">Take-home pay</div></div></a><a href="gosi-calculator.html"><div class="tool-mini"><div class="t-icon">🏛️</div><div class="t-name">GOSI</div><div class="t-desc">Insurance</div></div></a><a href="car-finance-calculator.html"><div class="tool-mini"><div class="t-icon">🚗</div><div class="t-name">Car Finance</div><div class="t-desc">Monthly payments</div></div></a><a href="mortgage-calculator.html"><div class="tool-mini"><div class="t-icon">🏠</div><div class="t-name">Mortgage</div><div class="t-desc">Home loan</div></div></a><a href="dependent-levy-calculator.html"><div class="tool-mini"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">Dependent Levy</div><div class="t-desc">Family fees</div></div></a><a href="iqama-expiry-calculator.html"><div class="tool-mini"><div class="t-icon">🪪</div><div class="t-name">Iqama</div><div class="t-desc">Expiry tracker</div></div></a><a href="currency-converter.html"><div class="tool-mini"><div class="t-icon">💱</div><div class="t-name">Currency</div><div class="t-desc">Exchange rates</div></div></a><a href="remittance-fee-compare.html"><div class="tool-mini"><div class="t-icon">💸</div><div class="t-name">Remittance</div><div class="t-desc">Compare fees</div></div></a><a href="bmi-health-calculator.html"><div class="tool-mini"><div class="t-icon">⚖️</div><div class="t-name">BMI</div><div class="t-desc">Health check</div></div></a></div></div>
+</div>
+<div class="sidebar">
+<div class="side-card"><h3>📊 Nisab 2026</h3>
+<div class="info-row"><span>Gold Nisab (85g)</span><span style="color:var(--green)">~SAR 20,868</span></div>
+<div class="info-row"><span>Silver Nisab (595g)</span><span>~SAR 2,380</span></div>
+<div class="info-row"><span>Zakat Rate</span><span>2.5%</span></div>
+<div class="info-row"><span>Haul Period</span><span>1 Lunar Year</span></div>
+</div>
+<div class="ad-placeholder" style="min-height:250px;">📢 Advertisement</div>
+<a href="gold-zakat-calculator.html"><div class="tool-mini"><div class="t-icon">💰</div><div class="t-name">Gold Zakat Calc</div><div class="t-desc">Zakat on gold</div></div></a>
+</div>
+</div>
+<script>
+function fmt(n){return 'SAR '+n.toLocaleString('en-SA',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calcCZ(){
+  const a=(parseFloat(document.getElementById('z-cash').value)||0)+(parseFloat(document.getElementById('z-bank').value)||0)+(parseFloat(document.getElementById('z-biz').value)||0)+(parseFloat(document.getElementById('z-loans').value)||0);
+  const d=parseFloat(document.getElementById('z-debt').value)||0;
+  const net=Math.max(0,a-d);
+  const nisab=20868;
+  const z=net>=nisab?net*0.025:0;
+  document.getElementById('cz-amt').textContent=fmt(z);
+  document.getElementById('cz-sub').textContent=net>=nisab?'Nisab reached':'Below Nisab — no Zakat required';
+  document.getElementById('cz-assets').textContent=fmt(a);
+  document.getElementById('cz-ded').textContent=fmt(d);
+  document.getElementById('cz-net').textContent=fmt(net);
+  document.getElementById('cz-zakat').textContent=fmt(z);
+  document.getElementById('cz-r').classList.add('show');
 }
 </script>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce</title>
-  <meta name="description" content="Calculate Zakat on gold using weight and price per gram. Supports grams, tola, ounce with Nisab check. Fast, mobile-friendly." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://goldzakatcalc.com/zakat-calculator.html" />
-  <link rel="alternate" hreflang="en" href="https://goldzakatcalc.com/zakat-calculator.html" />
-  <link rel="alternate" hreflang="ar" href="https://goldzakatcalc.com/ar/zakat-calculator.html" />
-  <link rel="alternate" hreflang="x-default" href="https://goldzakatcalc.com/zakat-calculator.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Gold Zakat Calculator" />
-  <meta property="og:title" content="Gold Zakat Calculator (2.5%) – Grams, Tola, Ounce" />
-  <meta property="og:description" content="Calculate gold Zakat and check Nisab. Grams/tola/ounce supported." />
-  <meta property="og:url" content="https://goldzakatcalc.com/zakat-calculator.html" />
-  <meta property="og:image" content="https://goldzakatcalc.com/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Auto-detect to AR on first visit if browser is Arabic -->
-  <script>
-  (function(){ try{
-    var pref = localStorage.getItem('prefLang'); if(pref) return;
-    var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-    if(lang.startsWith('ar')) location.replace('/ar/zakat-calculator.html');
-  }catch(e){} })();
-  </script>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is the Zakat rate on gold?","acceptedAnswer":{"@type":"Answer","text":"2.5% of total value if you meet Nisab (~85g) and a lunar year has passed."}},
-    {"@type":"Question","name":"What is the Nisab for gold?","acceptedAnswer":{"@type":"Answer","text":"Approximately 85 grams. If your gold is below Nisab, Zakat is not due."}}
-  ]}
-  </script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="border-b bg-white">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/" class="font-semibold">Gold Zakat Calculator</a>
-      <nav class="space-x-4 text-sm">
-        <a class="text-blue-600" href="/">Home</a>
-        <a class="text-blue-600" href="/vat-calculator.html">VAT</a>
-        <a class="text-blue-600" href="/currency-converter.html">Currency</a>
-        <a class="text-blue-600" href="/gold-prices.html">Gold Prices</a>
-        <a class="text-gray-600" href="/ar/zakat-calculator.html" id="langSwitchAR">العربية</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="max-w-3xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">Gold Zakat Calculator</h1>
-
-    <div class="bg-white p-5 rounded-xl shadow space-y-4">
-      <div class="grid sm:grid-cols-3 gap-4">
-        <label class="block">
-          <span class="text-sm text-gray-600">Unit</span>
-          <select id="unit" class="w-full border rounded p-2">
-            <option value="g">Grams (g)</option>
-            <option value="tola">Tola</option>
-            <option value="oz">Ounce (oz)</option>
-          </select>
-        </label>
-        <label class="block">
-          <span class="text-sm text-gray-600">Weight</span>
-          <input id="weight" type="number" step="0.001" class="w-full border rounded p-2" placeholder="e.g., 50" />
-        </label>
-        <label class="block">
-          <span class="text-sm text-gray-600">Gold price / gram (SAR)</span>
-          <input id="price" type="number" step="0.01" class="w-full border rounded p-2" placeholder="e.g., 270" />
-        </label>
-      </div>
-
-      <div class="grid sm:grid-cols-2 gap-4">
-        <label class="block">
-          <span class="text-sm text-gray-600">Nisab (grams)</span>
-          <input id="nisab" type="number" step="0.01" class="w-full border rounded p-2" value="85" />
-        </label>
-        <label class="block">
-          <span class="text-sm text-gray-600">Zakat rate (%)</span>
-          <input id="rate" type="number" step="0.01" class="w-full border rounded p-2" value="2.5" />
-        </label>
-      </div>
-
-      <button id="calc" class="bg-blue-600 text-white px-4 py-2 rounded">Calculate Zakat</button>
-
-      <div id="result" class="p-4 bg-gray-50 rounded border text-sm"></div>
-      <button id="copyBtn" class="text-blue-600 text-sm underline">Copy result</button>
-    </div>
-
-    <p class="mt-4 text-xs text-gray-500">Disclaimer: Estimates only. Confirm prices locally and consult reliable rulings if needed.</p>
-  </main>
-
-  <footer class="border-t bg-white">
-    <div class="max-w-6xl mx-auto p-6 text-sm flex flex-wrap gap-4 justify-between">
-      <p>&copy; <span id="year"></span> Gold Zakat Calculator.</p>
-      <p><a class="text-blue-600" href="/privacy.html">Privacy</a> · <a class="text-blue-600" href="/terms.html">Terms</a></p>
-    </div>
-  </footer>
-
-  <script>
-    const toGrams = (unit, value) => {
-      const v = Number(value) || 0;
-      if (unit === 'tola') return v * 11.6638038;
-      if (unit === 'oz')   return v * 31.1034768;
-      return v;
-    };
-    function calc() {
-      const unit   = document.getElementById('unit').value;
-      const weight = Number(document.getElementById('weight').value) || 0;
-      const price  = Number(document.getElementById('price').value)  || 0;
-      const nisab  = Number(document.getElementById('nisab').value)  || 85;
-      const rate   = Number(document.getElementById('rate').value)   || 2.5;
-      const grams = toGrams(unit, weight);
-      const valueSAR = grams * price;
-      const due = grams >= nisab ? (valueSAR * (rate/100)) : 0;
-      const html = `
-        <div><strong>Total gold (g):</strong> ${grams.toFixed(3)}</div>
-        <div><strong>Gold value (SAR):</strong> ${valueSAR.toFixed(2)}</div>
-        <div><strong>Nisab reached?:</strong> ${grams >= nisab ? 'Yes' : 'No'}</div>
-        <div class="mt-2 text-lg"><strong>Zakat due (SAR):</strong> ${due.toFixed(2)}</div>
-      `;
-      document.getElementById('result').innerHTML = html;
-    }
-    document.getElementById('calc').addEventListener('click', calc);
-    document.getElementById('copyBtn').addEventListener('click', () => {
-      const t = document.getElementById('result').innerText.trim();
-      if (t) navigator.clipboard.writeText(t);
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // language switch saves preference and maps to AR counterpart
-    (function(){
-      function arFromEn(p){ if(p.startsWith('/ar/')) return p; if(p==='/'||p==='/index.html') return '/ar/'; return '/ar'+p; }
-      var btn=document.getElementById('langSwitchAR');
-      if(btn){ btn.addEventListener('click',function(e){ e.preventDefault(); localStorage.setItem('prefLang','ar'); location.href=arFromEn(location.pathname); });}
-    })();
-  </script>
-</body>
-</html>
+<footer><div class="footer-inner"><p>© 2026 Saudi Utility Hub — Estimates only.</p><div class="footer-links"><a href="index.html">Home</a><a href="gold-zakat-calculator.html">Zakat</a><a href="salary-calculator.html">Salary</a><a href="vat-calculator.html">VAT</a><a href="ksa-eos-calculator.html">EOS</a><a href="remittance-fee-compare.html">Remittance</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.closest('.faq-item').classList.toggle('open')));</script>
+</body></html>
