@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Iqama expiry calculator 2026. Track days remaining on your Saudi Iqama residence permit, calculate renewal costs and get reminders. For all expats in Saudi Arabia.">
+<meta name="keywords" content="iqama expiry calculator, iqama renewal cost 2026, how many days left iqama, iqama tracker saudi, اقامة تجديد">
+<title>Iqama Expiry Calculator & Tracker 2026 | Saudi Utility Hub</title>
+<link rel="canonical" href="https://saudiutilityhub.com/iqama-expiry-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Iqama Expiry Calculator","description":"Track your Saudi Iqama expiry date and calculate renewal costs","url":"https://saudiutilityhub.com/iqama-expiry-calculator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"}}
+</script>
+<style>
+  :root {
+    --green:#1B6B3A;--green-dark:#0f4a28;--green-light:#e8f5ee;
+    --gold:#C9A227;--gold-light:#fdf4dc;
+    --bg:#f4f6f5;--white:#ffffff;--text:#1a1a2e;
+    --muted:#6b7280;--border:#e2e8e4;
+    --radius:12px;--radius-sm:8px;--shadow:0 2px 12px rgba(27,107,58,0.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+  header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+  .header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-icon{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .logo-text strong{font-size:15px;font-weight:700;color:var(--green);display:block;line-height:1.2;}
+  .logo-text span{font-size:11px;color:var(--muted);}
+  .back-btn{font-size:13px;color:var(--green);font-weight:600;padding:8px 16px;background:var(--green-light);border-radius:var(--radius-sm);}
+  .page-hero{background:linear-gradient(135deg,var(--green-dark),var(--green));color:white;padding:40px 20px 32px;text-align:center;}
+  .badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;margin-bottom:14px;}
+  .page-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;margin-bottom:10px;}
+  .page-hero h1 span{color:#ffd166;}
+  .page-hero p{font-size:15px;color:rgba(255,255,255,0.8);max-width:520px;margin:0 auto;font-weight:300;}
+  .ad-zone{max-width:1100px;margin:0 auto;padding:20px 20px 0;}
+  .ad-placeholder{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);text-align:center;padding:14px;color:var(--muted);font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+  .main-wrap{max-width:1100px;margin:0 auto;padding:28px 20px 40px;display:grid;grid-template-columns:1fr 340px;gap:24px;}
+  @media(max-width:768px){.main-wrap{grid-template-columns:1fr;}}
+  .calc-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);}
+  .calc-header{background:var(--green);color:white;padding:20px 24px;}
+  .calc-header h2{font-size:18px;font-weight:700;}
+  .calc-header p{font-size:13px;color:rgba(255,255,255,0.8);margin-top:4px;}
+  .calc-body{padding:24px;}
+  .field-group{margin-bottom:18px;}
+  .field-group label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;}
+  .field-group label span{font-weight:400;color:var(--muted);font-size:12px;}
+  .field-group input,.field-group select{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--text);transition:border-color 0.2s;}
+  .field-group input:focus,.field-group select:focus{outline:none;border-color:var(--green);}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .section-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:14px;}
+  .calc-btn{width:100%;padding:14px;background:var(--green);color:white;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background 0.2s;margin-top:6px;}
+  .calc-btn:hover{background:var(--green-dark);}
+  .results-section{margin-top:24px;display:none;}
+  .results-section.show{display:block;}
+
+  /* Status banner */
+  .status-banner{border-radius:var(--radius);padding:24px;text-align:center;margin-bottom:16px;}
+  .status-banner.safe{background:#1B6B3A;color:white;}
+  .status-banner.warning{background:#f59e0b;color:white;}
+  .status-banner.urgent{background:#dc2626;color:white;}
+  .status-banner.expired{background:#1a1a2e;color:white;}
+  .status-banner .s-icon{font-size:40px;margin-bottom:10px;}
+  .status-banner .s-days{font-size:52px;font-weight:700;line-height:1;color:#ffd166;}
+  .status-banner .s-label{font-size:14px;color:rgba(255,255,255,0.8);margin-top:6px;}
+  .status-banner .s-date{font-size:13px;color:rgba(255,255,255,0.65);margin-top:8px;}
+
+  .result-breakdown{background:var(--bg);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;}
+  .result-row{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid var(--border);}
+  .result-row:last-child{border-bottom:none;}
+  .result-row .r-label{font-size:13px;color:var(--muted);}
+  .result-row .r-value{font-size:14px;font-weight:600;}
+  .result-row.total-row{background:var(--green-light);}
+  .result-row.total-row .r-label{font-weight:700;color:var(--text);}
+  .result-row.total-row .r-value{color:var(--green);}
+
+  /* Progress bar */
+  .progress-wrap{margin:16px 0;}
+  .progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px;}
+  .progress-bar{height:10px;background:var(--border);border-radius:50px;overflow:hidden;}
+  .progress-fill{height:100%;border-radius:50px;transition:width 0.6s ease;}
+
+  .alert-box{padding:14px 16px;border-radius:var(--radius-sm);font-size:13px;line-height:1.6;margin-top:16px;}
+  .alert-safe{background:#e8f5ee;color:#1B6B3A;border:1px solid #c3e0cc;}
+  .alert-warning{background:#fef3c7;color:#92400e;border:1px solid #f59e0b;}
+  .alert-urgent{background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;}
+
+  .sidebar{display:flex;flex-direction:column;gap:18px;}
+  .side-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;}
+  .side-card h3{font-size:15px;font-weight:700;margin-bottom:14px;}
+  .info-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+  .info-row:last-child{border-bottom:none;}
+  .info-row span:first-child{color:var(--muted);}
+  .info-row span:last-child{font-weight:600;}
+  .tip-list{list-style:none;}
+  .tip-list li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);padding-left:18px;position:relative;line-height:1.5;}
+  .tip-list li:before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;}
+  .tip-list li:last-child{border-bottom:none;}
+  .content-section{max-width:1100px;margin:0 auto;padding:0 20px 20px;}
+  .content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px;}
+  .content-card h2{font-size:20px;font-weight:700;margin-bottom:16px;}
+  .content-card h3{font-size:16px;font-weight:700;margin:20px 0 10px;color:var(--green);}
+  .content-card p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
+  .faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q .arrow{font-size:18px;color:var(--green);transition:transform 0.3s;}
+  .faq-a{font-size:14px;color:var(--muted);line-height:1.8;margin-top:10px;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  .faq-item.open .arrow{transform:rotate(180deg);}
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+  .tool-mini{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:all 0.2s;}
+  .tool-mini:hover{border-color:var(--green);transform:translateY(-2px);}
+  .tool-mini .t-icon{font-size:24px;margin-bottom:8px;}
+  .tool-mini .t-name{font-size:13px;font-weight:600;}
+  .tool-mini .t-desc{font-size:11px;color:var(--muted);margin-top:3px;}
+  footer{background:var(--green-dark);color:rgba(255,255,255,0.8);padding:32px 20px 20px;margin-top:40px;}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
+  .footer-inner p{font-size:12px;color:rgba(255,255,255,0.5);}
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,0.5);}
+  .footer-links a:hover{color:white;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🇸🇦</div>
+      <div class="logo-text"><strong>Saudi Utility Hub</strong><span>Free KSA Tools</span></div>
+    </a>
+    <a href="index.html" class="back-btn">← All Tools</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="badge">🪪 Expat Tool</div>
+  <h1>Iqama <span>Expiry Tracker</span></h1>
+  <p>Check how many days remain on your Iqama, calculate renewal costs, and never get caught with an expired residence permit</p>
+</div>
+
+<div class="ad-zone"><div class="ad-placeholder">📢 Advertisement</div></div>
+
+<div class="main-wrap">
+  <div>
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>🪪 Iqama Expiry Calculator — 2026</h2>
+        <p>Enter your Iqama expiry date to see days remaining and renewal cost</p>
+      </div>
+      <div class="calc-body">
+        <div class="section-label">Your Iqama Details</div>
+
+        <div class="field-group">
+          <label>Iqama Expiry Date <span>(Gregorian date from your Iqama card)</span></label>
+          <input type="date" id="expiry-date">
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Renewal Duration</label>
+            <select id="renewal-duration">
+              <option value="1">1 Year</option>
+              <option value="2">2 Years</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Iqama Type</label>
+            <select id="iqama-type">
+              <option value="work">Work Iqama</option>
+              <option value="family">Family Iqama</option>
+              <option value="domestic">Domestic Worker</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Number of Dependents <span>(on your Iqama sponsorship)</span></label>
+          <input type="number" id="dep-count" placeholder="0" min="0" value="0">
+        </div>
+
+        <button class="calc-btn" onclick="calculate()">Check My Iqama Status →</button>
+
+        <div class="results-section" id="results">
+
+          <div class="status-banner" id="status-banner">
+            <div class="s-icon" id="s-icon">🟢</div>
+            <div class="s-days" id="s-days">0</div>
+            <div class="s-label" id="s-label">Days Remaining</div>
+            <div class="s-date" id="s-date"></div>
+          </div>
+
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Renewal Progress</span>
+              <span id="pct-label">0% used</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill" style="width:0%; background:var(--green);"></div>
+            </div>
+          </div>
+
+          <div class="result-breakdown">
+            <div class="result-row">
+              <span class="r-label">Expiry Date</span>
+              <span class="r-value" id="r-expiry">—</span>
+            </div>
+            <div class="result-row">
+              <span class="r-label">Days Remaining</span>
+              <span class="r-value" id="r-days">—</span>
+            </div>
+            <div class="result-row">
+              <span class="r-label">Weeks Remaining</span>
+              <span class="r-value" id="r-weeks">—</span>
+            </div>
+            <div class="result-row">
+              <span class="r-label">Renewal Period</span>
+              <span class="r-value" id="r-period">—</span>
+            </div>
+            <div class="result-row">
+              <span class="r-label">Iqama Renewal Fee</span>
+              <span class="r-value" id="r-iqama-fee">—</span>
+            </div>
+            <div class="result-row">
+              <span class="r-label">Dependent Levy (annual)</span>
+              <span class="r-value" id="r-levy">—</span>
+            </div>
+            <div class="result-row total-row">
+              <span class="r-label">✅ Estimated Total Cost</span>
+              <span class="r-value" id="r-total">—</span>
+            </div>
+          </div>
+
+          <div class="alert-box" id="alert-box"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin:20px 0;"><div class="ad-placeholder">📢 Advertisement</div></div>
+
+    <div class="content-card">
+      <h2>How to Read Your Iqama Expiry Date</h2>
+      <p>Your Iqama (إقامة) has two dates printed on it — a Hijri (Islamic calendar) date and a Gregorian date. For this calculator, use the <strong>Gregorian date</strong> shown on your card.</p>
+
+      <h3>Where to Find Your Iqama Expiry Date</h3>
+      <p>The expiry date is printed on the front of your Iqama card under "Date of Expiry" or "تاريخ الانتهاء". You can also check it on the Absher app or the Iqama inquiry service on the MOI website.</p>
+
+      <h3>2026 Iqama Renewal Fees</h3>
+      <p>Renewal fees depend on your visa type and whether your employer is compliant with Saudization (Nitaqat) requirements. Typical fees for 1-year renewal range from SAR 650 to SAR 2,000. Always verify current fees on absher.sa before payment.</p>
+
+      <h3>When to Renew Your Iqama</h3>
+      <p>You can renew your Iqama up to <strong>3 months before</strong> the expiry date. Never let your Iqama expire — overstaying results in daily fines (SAR 100/day) and can affect your ability to exit Saudi Arabia.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">What happens if my Iqama expires? <span class="arrow">▾</span></div>
+        <div class="faq-a">If your Iqama expires, you are considered an overstayer (mukhalif). Fines start at SAR 100 per day. You may be banned from renewing, face deportation proceedings, and have difficulty exiting the country. Renew at least 1 month before expiry.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Can I renew my Iqama without my employer? <span class="arrow">▾</span></div>
+        <div class="faq-a">Your employer (kafeel) must initiate the Iqama renewal through Absher or Qiwa. If your employer refuses, you can file a complaint with the Ministry of Human Resources. Under new Saudization reforms, some employees can transfer employers without consent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">How much does Iqama renewal cost in 2026? <span class="arrow">▾</span></div>
+        <div class="faq-a">Iqama renewal fees in 2026 vary from SAR 650 to SAR 2,000 for 1 year depending on your employment type, Nitaqat status, and visa category. Always check the latest fees on absher.sa as rates are updated periodically.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Can I check my Iqama expiry online? <span class="arrow">▾</span></div>
+        <div class="faq-a">Yes. You can check your Iqama status on the Absher platform (absher.sa), the Iqama inquiry service on the MOI website (moi.gov.sa), or through the Tawakkalna app. You'll need your Iqama number and date of birth.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="side-card">
+      <h3>📋 2026 Renewal Fee Guide</h3>
+      <div class="info-row"><span>Work Iqama (1yr)</span><span style="color:var(--green);">SAR 650–2,000</span></div>
+      <div class="info-row"><span>Work Iqama (2yr)</span><span>SAR 1,300–4,000</span></div>
+      <div class="info-row"><span>Family Iqama (1yr)</span><span>SAR 500–1,000</span></div>
+      <div class="info-row"><span>Domestic Worker</span><span>SAR 300–600</span></div>
+      <div class="info-row"><span>Dependent Levy</span><span>SAR 400/mo each</span></div>
+      <div class="info-row"><span>Late Fine</span><span style="color:#dc2626;">SAR 100/day</span></div>
+    </div>
+
+    <div class="ad-placeholder" style="min-height:250px;">📢 Advertisement</div>
+
+    <div class="side-card">
+      <h3>✅ Renewal Checklist</h3>
+      <ul class="tip-list">
+        <li>Renew up to 3 months early</li>
+        <li>Confirm employer Iqama is valid first</li>
+        <li>Pay dependent levy before renewal</li>
+        <li>Update address in Absher if changed</li>
+        <li>Verify medical insurance is active</li>
+        <li>Check Nitaqat status of employer</li>
+        <li>Keep copy of old Iqama until new arrives</li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h3>🔗 Related Tools</h3>
+      <a href="dependent-levy-calculator.html"><div class="tool-mini" style="margin-bottom:10px;"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">Dependent Levy Calc</div><div class="t-desc">Family fee calculator</div></div></a>
+      <a href="exit-reentry-calculator.html"><div class="tool-mini" style="margin-bottom:10px;"><div class="t-icon">✈️</div><div class="t-name">Exit Visa Cost</div><div class="t-desc">Single & multiple</div></div></a>
+      <a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">EOS Calculator</div><div class="t-desc">Gratuity calculator</div></div></a>
+    </div>
+  </div>
+</div>
+
+<div class="content-section">
+  <div class="content-card">
+    <h2>More Free KSA Expat Tools</h2>
+    <div class="tools-grid">
+      <a href="dependent-levy-calculator.html"><div class="tool-mini"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">Dependent Levy</div><div class="t-desc">Family fee 2026</div></div></a>
+      <a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">EOS Calculator</div><div class="t-desc">Gratuity by law</div></div></a>
+      <a href="salary-calculator.html"><div class="tool-mini"><div class="t-icon">💼</div><div class="t-name">Salary Calculator</div><div class="t-desc">Take-home pay</div></div></a>
+      <a href="gosi-calculator.html"><div class="tool-mini"><div class="t-icon">🏛️</div><div class="t-name">GOSI Calculator</div><div class="t-desc">Insurance deductions</div></div></a>
+      <a href="exit-reentry-calculator.html"><div class="tool-mini"><div class="t-icon">✈️</div><div class="t-name">Exit Visa Cost</div><div class="t-desc">Single & multiple</div></div></a>
+      <a href="vat-calculator.html"><div class="tool-mini"><div class="t-icon">🧾</div><div class="t-name">VAT Calculator</div><div class="t-desc">Saudi 15% VAT</div></div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Saudi Utility Hub — Estimates only. Always verify fees at absher.sa or moi.gov.sa</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function fmt(n){return n.toLocaleString('en-SA',{minimumFractionDigits:0,maximumFractionDigits:0})+' SAR';}
+  function calculate(){
+    const expDate=document.getElementById('expiry-date').value;
+    if(!expDate){alert('Please enter your Iqama expiry date');return;}
+    const exp=new Date(expDate);
+    const today=new Date();
+    today.setHours(0,0,0,0);
+    const diffMs=exp-today;
+    const days=Math.ceil(diffMs/(1000*60*60*24));
+    const weeks=Math.floor(Math.abs(days)/7);
+    const duration=parseInt(document.getElementById('renewal-duration').value);
+    const type=document.getElementById('iqama-type').value;
+    const deps=parseInt(document.getElementById('dep-count').value)||0;
+
+    const fees={work:{1:1000,2:2000},family:{1:700,2:1400},domestic:{1:400,2:800}};
+    const iqamaFee=fees[type][duration];
+    const levyAnnual=deps*400*12;
+    const totalCost=iqamaFee+levyAnnual;
+
+    const totalDays=duration*365;
+    const usedDays=totalDays-days;
+    const pct=Math.min(100,Math.max(0,Math.round((usedDays/totalDays)*100)));
+
+    const banner=document.getElementById('status-banner');
+    banner.className='status-banner';
+    let icon,alertClass,alertMsg;
+
+    if(days<0){
+      banner.classList.add('expired');
+      icon='🚨';
+      alertClass='alert-urgent';
+      alertMsg='⚠️ <strong>Your Iqama has EXPIRED.</strong> You are currently overstaying. Fines of SAR 100/day are accumulating. Contact your employer and visit the nearest Jawazat office immediately.';
+    } else if(days<=30){
+      banner.classList.add('urgent');
+      icon='🔴';
+      alertClass='alert-urgent';
+      alertMsg='🚨 <strong>URGENT:</strong> Your Iqama expires in less than 30 days. Start renewal immediately through Absher or contact your employer/HR today.';
+    } else if(days<=90){
+      banner.classList.add('warning');
+      icon='🟡';
+      alertClass='alert-warning';
+      alertMsg='⚠️ <strong>Action Required:</strong> Your Iqama expires in less than 90 days. You can begin renewal now. Contact your HR department to start the process.';
+    } else {
+      banner.classList.add('safe');
+      icon='✅';
+      alertClass='alert-safe';
+      alertMsg='✅ <strong>You\'re in good standing.</strong> Your Iqama is valid for more than 90 days. Set a reminder to renew 2–3 months before the expiry date.';
+    }
+
+    document.getElementById('s-icon').textContent=icon;
+    document.getElementById('s-days').textContent=days<0?'EXPIRED':days;
+    document.getElementById('s-label').textContent=days<0?'Days Overdue':'Days Remaining';
+    document.getElementById('s-date').textContent='Expiry: '+exp.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('pct-label').textContent=pct+'% of renewal period used';
+    document.getElementById('progress-fill').style.width=pct+'%';
+    document.getElementById('progress-fill').style.background=days<0?'#dc2626':days<=30?'#dc2626':days<=90?'#f59e0b':'#1B6B3A';
+    document.getElementById('r-expiry').textContent=exp.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('r-days').textContent=days<0?Math.abs(days)+' days overdue':days+' days';
+    document.getElementById('r-weeks').textContent=weeks+' weeks';
+    document.getElementById('r-period').textContent=duration+' year renewal';
+    document.getElementById('r-iqama-fee').textContent=fmt(iqamaFee)+' (est.)';
+    document.getElementById('r-levy').textContent=deps>0?fmt(levyAnnual):'No dependents';
+    document.getElementById('r-total').textContent=fmt(totalCost);
+    const ab=document.getElementById('alert-box');
+    ab.className='alert-box '+alertClass;
+    ab.innerHTML=alertMsg;
+
+    const r=document.getElementById('results');
+    r.classList.add('show');
+    r.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>
