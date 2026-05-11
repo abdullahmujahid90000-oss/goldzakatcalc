@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compare money transfer fees from Saudi Arabia 2026. Find the cheapest way to send SAR to Pakistan, India, Bangladesh, Egypt, Philippines. Compare Wise, Western Union, STC Pay, Al Rajhi and more.">
+<meta name="keywords" content="remittance comparison saudi arabia, cheapest money transfer ksa, wise vs western union saudi, send money saudi arabia 2026, SAR to PKR best rate, تحويل الأموال السعودية">
+<title>Best Money Transfer from Saudi Arabia 2026 — Compare Fees | Saudi Utility Hub</title>
+<link rel="canonical" href="https://saudiutilityhub.com/remittance-fee-compare.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#1B6B3A;--green-dark:#0f4a28;--green-light:#e8f5ee;--gold:#C9A227;--gold-light:#fdf4dc;--bg:#f4f6f5;--white:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e2e8e4;--radius:12px;--radius-sm:8px;--shadow:0 2px 12px rgba(27,107,58,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+  header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+  .header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-icon{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .logo-text strong{font-size:15px;font-weight:700;color:var(--green);display:block;line-height:1.2;}
+  .logo-text span{font-size:11px;color:var(--muted);}
+  .back-btn{font-size:13px;color:var(--green);font-weight:600;padding:8px 16px;background:var(--green-light);border-radius:var(--radius-sm);}
+  .page-hero{background:linear-gradient(135deg,var(--green-dark),var(--green));color:white;padding:40px 20px 32px;text-align:center;}
+  .badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;margin-bottom:14px;}
+  .page-hero h1{font-size:clamp(22px,4vw,36px);font-weight:700;margin-bottom:10px;}
+  .page-hero h1 span{color:#ffd166;}
+  .page-hero p{font-size:15px;color:rgba(255,255,255,0.8);max-width:540px;margin:0 auto;font-weight:300;}
+  .ad-zone{max-width:1100px;margin:0 auto;padding:20px 20px 0;}
+  .ad-placeholder{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);text-align:center;padding:14px;color:var(--muted);font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+
+  /* FILTER BAR */
+  .filter-wrap{max-width:1100px;margin:0 auto;padding:24px 20px 0;}
+  .filter-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:20px 24px;box-shadow:var(--shadow);}
+  .filter-card h2{font-size:16px;font-weight:700;margin-bottom:16px;}
+  .filter-row{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;}
+  @media(max-width:768px){.filter-row{grid-template-columns:1fr 1fr;}}
+  @media(max-width:480px){.filter-row{grid-template-columns:1fr;}}
+  .field-group{display:flex;flex-direction:column;gap:6px;}
+  .field-group label{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.4px;}
+  .field-group input,.field-group select{padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--text);transition:border-color 0.2s;}
+  .field-group input:focus,.field-group select:focus{outline:none;border-color:var(--green);}
+  .compare-btn{padding:12px 24px;background:var(--green);color:white;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;}
+  .compare-btn:hover{background:var(--green-dark);}
+
+  /* RESULTS */
+  .results-wrap{max-width:1100px;margin:0 auto;padding:24px 20px;}
+  .results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;}
+  .results-header h2{font-size:18px;font-weight:700;}
+  .results-header p{font-size:13px;color:var(--muted);}
+
+  /* PROVIDER CARD */
+  .provider-list{display:flex;flex-direction:column;gap:14px;}
+  .provider-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:20px;transition:all 0.2s;position:relative;}
+  .provider-card:hover{border-color:var(--green);box-shadow:var(--shadow);}
+  .provider-card.best{border:2px solid var(--green);}
+  @media(max-width:640px){.provider-card{grid-template-columns:auto 1fr;}.provider-cta,.provider-rate{grid-column:1/-1;}}
+  .best-badge{position:absolute;top:-12px;left:20px;background:var(--green);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:0.3px;}
+  .provider-logo{width:52px;height:52px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:26px;background:var(--bg);flex-shrink:0;}
+  .provider-info h3{font-size:15px;font-weight:700;margin-bottom:3px;}
+  .provider-info .p-speed{font-size:12px;color:var(--muted);}
+  .provider-info .p-tags{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
+  .p-tag{font-size:10px;font-weight:600;padding:3px 8px;border-radius:50px;}
+  .p-tag-green{background:var(--green-light);color:var(--green);}
+  .p-tag-gold{background:var(--gold-light);color:#92620a;}
+  .p-tag-blue{background:#eef2ff;color:#3730a3;}
+  .provider-rate{text-align:right;}
+  .provider-rate .rate-amount{font-size:22px;font-weight:700;color:var(--green);}
+  .provider-rate .rate-fee{font-size:12px;color:var(--muted);margin-top:3px;}
+  .provider-rate .rate-recv{font-size:13px;font-weight:600;color:var(--text);margin-top:4px;}
+  .provider-cta a{display:inline-block;padding:10px 22px;background:var(--green);color:white;border-radius:var(--radius-sm);font-size:13px;font-weight:700;transition:background 0.2s;}
+  .provider-cta a:hover{background:var(--green-dark);}
+  .provider-cta .p-note{font-size:10px;color:var(--muted);text-align:center;margin-top:5px;}
+
+  /* DISCLAIMER */
+  .disclaimer{background:var(--gold-light);border:1px solid #e6c84a;border-radius:var(--radius-sm);padding:12px 16px;font-size:12px;color:#7a4f00;margin-bottom:20px;line-height:1.6;}
+
+  /* COUNTRY QUICK LINKS */
+  .country-wrap{max-width:1100px;margin:0 auto;padding:0 20px 20px;}
+  .country-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+  .country-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;transition:all 0.2s;cursor:pointer;}
+  .country-card:hover{border-color:var(--green);transform:translateY(-2px);}
+  .country-card .c-flag{font-size:28px;margin-bottom:8px;}
+  .country-card .c-name{font-size:13px;font-weight:600;}
+  .country-card .c-pair{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  /* CONTENT */
+  .content-section{max-width:1100px;margin:0 auto;padding:0 20px 20px;}
+  .content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px;}
+  .content-card h2{font-size:20px;font-weight:700;margin-bottom:16px;}
+  .content-card h3{font-size:16px;font-weight:700;margin:20px 0 10px;color:var(--green);}
+  .content-card p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
+  .faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q .arrow{font-size:18px;color:var(--green);transition:transform 0.3s;}
+  .faq-a{font-size:14px;color:var(--muted);line-height:1.8;margin-top:10px;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  .faq-item.open .arrow{transform:rotate(180deg);}
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+  .tool-mini{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:all 0.2s;}
+  .tool-mini:hover{border-color:var(--green);transform:translateY(-2px);}
+  .tool-mini .t-icon{font-size:24px;margin-bottom:8px;}
+  .tool-mini .t-name{font-size:13px;font-weight:600;}
+  .tool-mini .t-desc{font-size:11px;color:var(--muted);margin-top:3px;}
+  footer{background:var(--green-dark);color:rgba(255,255,255,0.8);padding:32px 20px 20px;margin-top:40px;}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
+  .footer-inner p{font-size:12px;color:rgba(255,255,255,0.5);}
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,0.5);}
+  .footer-links a:hover{color:white;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🇸🇦</div>
+      <div class="logo-text"><strong>Saudi Utility Hub</strong><span>Free KSA Tools</span></div>
+    </a>
+    <a href="index.html" class="back-btn">← All Tools</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="badge">💸 Remittance Tool</div>
+  <h1>Best Money Transfer from <span>Saudi Arabia</span></h1>
+  <p>Compare fees, exchange rates and transfer speeds from SAR to Pakistan, India, Bangladesh, Egypt, Philippines and more</p>
+</div>
+
+<div class="ad-zone"><div class="ad-placeholder">📢 Advertisement</div></div>
+
+<!-- FILTER -->
+<div class="filter-wrap">
+  <div class="filter-card">
+    <h2>🔍 Find the Cheapest Transfer</h2>
+    <div class="filter-row">
+      <div class="field-group">
+        <label>SEND AMOUNT (SAR)</label>
+        <input type="number" id="send-amount" placeholder="e.g. 1000" value="1000" min="1">
+      </div>
+      <div class="field-group">
+        <label>SEND FROM</label>
+        <select id="send-from">
+          <option value="SAR">🇸🇦 Saudi Riyal (SAR)</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label>SEND TO</label>
+        <select id="send-to" onchange="updateResults()">
+          <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+          <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+          <option value="BDT">🇧🇩 Bangladeshi Taka (BDT)</option>
+          <option value="EGP">🇪🇬 Egyptian Pound (EGP)</option>
+          <option value="PHP">🇵🇭 Philippine Peso (PHP)</option>
+          <option value="NPR">🇳🇵 Nepalese Rupee (NPR)</option>
+          <option value="LKR">🇱🇰 Sri Lankan Rupee (LKR)</option>
+          <option value="IDR">🇮🇩 Indonesian Rupiah (IDR)</option>
+        </select>
+      </div>
+      <button class="compare-btn" onclick="updateResults()">Compare Now →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="results-wrap">
+  <div class="disclaimer">
+    ℹ️ <strong>Disclaimer:</strong> Exchange rates and fees shown are estimates based on typical market rates and may vary. Always verify the exact amount on the provider's website before transferring. Affiliate links marked with ★ may earn us a small commission at no cost to you.
+  </div>
+
+  <div class="results-header">
+    <div>
+      <h2 id="results-title">Best Ways to Send SAR to PKR</h2>
+      <p id="results-sub">Comparing 1,000 SAR — rates updated May 2026</p>
+    </div>
+  </div>
+
+  <div class="provider-list" id="provider-list">
+    <!-- Populated by JS -->
+  </div>
+</div>
+
+<!-- COUNTRY QUICK LINKS -->
+<div class="country-wrap">
+  <div class="content-card" style="margin-bottom:0;">
+    <h2>Popular Transfer Corridors from Saudi Arabia</h2>
+    <div class="country-grid" style="margin-top:16px;">
+      <div class="country-card" onclick="setDestination('PKR')"><div class="c-flag">🇵🇰</div><div class="c-name">Pakistan</div><div class="c-pair">SAR → PKR</div></div>
+      <div class="country-card" onclick="setDestination('INR')"><div class="c-flag">🇮🇳</div><div class="c-name">India</div><div class="c-pair">SAR → INR</div></div>
+      <div class="country-card" onclick="setDestination('BDT')"><div class="c-flag">🇧🇩</div><div class="c-name">Bangladesh</div><div class="c-pair">SAR → BDT</div></div>
+      <div class="country-card" onclick="setDestination('EGP')"><div class="c-flag">🇪🇬</div><div class="c-name">Egypt</div><div class="c-pair">SAR → EGP</div></div>
+      <div class="country-card" onclick="setDestination('PHP')"><div class="c-flag">🇵🇭</div><div class="c-name">Philippines</div><div class="c-pair">SAR → PHP</div></div>
+      <div class="country-card" onclick="setDestination('NPR')"><div class="c-flag">🇳🇵</div><div class="c-name">Nepal</div><div class="c-pair">SAR → NPR</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:20px auto;padding:0 20px;">
+  <div class="ad-placeholder">📢 Advertisement</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-section">
+  <div class="content-card">
+    <h2>How to Send Money from Saudi Arabia Cheaply</h2>
+    <p>Saudi Arabia is one of the world's largest remittance-sending countries, with millions of expatriates sending money home each month. Choosing the right service can save you hundreds of SAR per year.</p>
+
+    <h3>What to Look For When Comparing Services</h3>
+    <p><strong>Exchange Rate Margin:</strong> The biggest hidden cost. A provider might charge zero fees but give you a worse exchange rate than the mid-market rate. Always check the total amount your recipient gets.</p>
+    <p><strong>Transfer Fee:</strong> Flat fee charged per transaction. Can range from SAR 0 to SAR 50+. Some services waive fees for first-time users.</p>
+    <p><strong>Transfer Speed:</strong> Urgent transfers cost more. Bank transfers can take 1–3 days. Instant services (STC Pay, Wise) can deliver in minutes.</p>
+    <p><strong>Delivery Method:</strong> Bank deposit, cash pickup, mobile wallet. Cash pickup is faster but more expensive in most cases.</p>
+
+    <h3>Best Services for Pakistani Expats</h3>
+    <p>For SAR to PKR transfers, Al Rajhi Bank, STC Pay, and Wise consistently offer competitive rates. Al Rajhi has the widest branch network across Saudi Arabia making cash pickup easy.</p>
+
+    <h3>Best Services for Indian Expats</h3>
+    <p>For SAR to INR transfers, Wise offers some of the best exchange rates, while Al Rajhi and Western Union are good for cash pickup options. STC Pay is popular for instant mobile wallet delivery.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">What is the cheapest way to send money from Saudi Arabia? <span class="arrow">▾</span></div>
+      <div class="faq-a">Generally, online transfer services like Wise and STC Pay offer the best combination of low fees and competitive exchange rates. Traditional banks (Al Rajhi, SNB) are convenient but often charge higher margins. Always compare before sending — rates vary by up to 5% between providers.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Is there a limit on how much I can send from Saudi Arabia? <span class="arrow">▾</span></div>
+      <div class="faq-a">Saudi Arabia allows expatriates to remit their full salary abroad. There are no official caps for personal remittances for expats. However, individual transfer services have their own limits (typically SAR 10,000–50,000 per transaction). For large transfers, banks are generally best.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">How long does an international transfer from Saudi Arabia take? <span class="arrow">▾</span></div>
+      <div class="faq-a">Transfer times vary: STC Pay and Wise can be near-instant (minutes), Western Union offers same-day cash pickup, while bank transfers typically take 1–3 business days. During Saudi holidays (Eid, National Day), processing may be delayed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Do I need an Iqama to send money internationally? <span class="arrow">▾</span></div>
+      <div class="faq-a">Yes. All major money transfer services in Saudi Arabia require a valid Iqama or Saudi ID for KYC (Know Your Customer) compliance. Make sure your Iqama is valid before attempting large transfers.</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>More Free KSA Tools</h2>
+    <div class="tools-grid">
+      <a href="currency-converter.html"><div class="tool-mini"><div class="t-icon">💱</div><div class="t-name">Currency Converter</div><div class="t-desc">SAR to 150+ currencies</div></div></a>
+      <a href="pakistan-remittance.html"><div class="tool-mini"><div class="t-icon">🇵🇰</div><div class="t-name">SAR → PKR</div><div class="t-desc">Pakistan remittance</div></div></a>
+      <a href="india-remittance.html"><div class="tool-mini"><div class="t-icon">🇮🇳</div><div class="t-name">SAR → INR</div><div class="t-desc">India remittance</div></div></a>
+      <a href="salary-calculator.html"><div class="tool-mini"><div class="t-icon">💼</div><div class="t-name">Salary Calculator</div><div class="t-desc">Take-home pay</div></div></a>
+      <a href="dependent-levy-calculator.html"><div class="tool-mini"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">Dependent Levy</div><div class="t-desc">Family fees 2026</div></div></a>
+      <a href="iqama-expiry-calculator.html"><div class="tool-mini"><div class="t-icon">🪪</div><div class="t-name">Iqama Tracker</div><div class="t-desc">Expiry & renewal</div></div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Saudi Utility Hub — Rates are estimates only. Verify on provider websites before transferring.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const rates = {
+    PKR:{mid:74.5,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.6,speed:'Within minutes',tags:['Best Rate','Low Fees'],affiliate:'https://wise.com',best:true},
+      {name:'STC Pay',logo:'🟢',fee:0,margin:1.2,speed:'Instant',tags:['No Fee','Instant'],affiliate:'#'},
+      {name:'Al Rajhi Bank',logo:'🏦',fee:15,margin:1.5,speed:'Same day',tags:['Trusted','Cash Pickup'],affiliate:'#'},
+      {name:'Western Union',logo:'🟡',fee:20,margin:2.0,speed:'Minutes (cash)',tags:['Cash Pickup','Reliable'],affiliate:'https://westernunion.com'},
+      {name:'Remitly',logo:'💚',fee:5,margin:1.8,speed:'1–2 hours',tags:['Fast','App Only'],affiliate:'https://remitly.com'},
+    ]},
+    INR:{mid:22.2,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.5,speed:'Within minutes',tags:['Best Rate','Low Fees'],affiliate:'https://wise.com',best:true},
+      {name:'STC Pay',logo:'🟢',fee:0,margin:1.1,speed:'Instant',tags:['No Fee','Instant'],affiliate:'#'},
+      {name:'Al Rajhi Bank',logo:'🏦',fee:15,margin:1.4,speed:'Same day',tags:['Trusted','Reliable'],affiliate:'#'},
+      {name:'Western Union',logo:'🟡',fee:18,margin:1.9,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+      {name:'Remitly',logo:'💚',fee:5,margin:1.6,speed:'1–2 hours',tags:['Fast','App Only'],affiliate:'https://remitly.com'},
+    ]},
+    BDT:{mid:29.8,providers:[
+      {name:'STC Pay',logo:'🟢',fee:0,margin:1.3,speed:'Instant',tags:['No Fee','Popular'],affiliate:'#',best:true},
+      {name:'Wise',logo:'💙',fee:8,margin:0.7,speed:'Within minutes',tags:['Best Rate'],affiliate:'https://wise.com'},
+      {name:'Al Rajhi Bank',logo:'🏦',fee:15,margin:1.6,speed:'Same day',tags:['Trusted'],affiliate:'#'},
+      {name:'Western Union',logo:'🟡',fee:22,margin:2.2,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+    ]},
+    EGP:{mid:13.4,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.6,speed:'Within minutes',tags:['Best Rate','Low Fees'],affiliate:'https://wise.com',best:true},
+      {name:'Western Union',logo:'🟡',fee:20,margin:1.8,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+      {name:'Al Rajhi Bank',logo:'🏦',fee:18,margin:1.7,speed:'1–2 days',tags:['Trusted'],affiliate:'#'},
+    ]},
+    PHP:{mid:14.9,providers:[
+      {name:'Remitly',logo:'💚',fee:5,margin:1.4,speed:'1–2 hours',tags:['Popular','Fast'],affiliate:'https://remitly.com',best:true},
+      {name:'Wise',logo:'💙',fee:8,margin:0.6,speed:'Within minutes',tags:['Best Rate'],affiliate:'https://wise.com'},
+      {name:'Western Union',logo:'🟡',fee:20,margin:1.9,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+    ]},
+    NPR:{mid:34.2,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.7,speed:'Within minutes',tags:['Best Rate'],affiliate:'https://wise.com',best:true},
+      {name:'Western Union',logo:'🟡',fee:22,margin:2.1,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+      {name:'Al Rajhi Bank',logo:'🏦',fee:15,margin:1.7,speed:'Same day',tags:['Trusted'],affiliate:'#'},
+    ]},
+    LKR:{mid:89.5,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.7,speed:'Within minutes',tags:['Best Rate'],affiliate:'https://wise.com',best:true},
+      {name:'Western Union',logo:'🟡',fee:20,margin:2.0,speed:'Minutes (cash)',tags:['Cash Pickup'],affiliate:'https://westernunion.com'},
+    ]},
+    IDR:{mid:4350,providers:[
+      {name:'Wise',logo:'💙',fee:8,margin:0.6,speed:'Within minutes',tags:['Best Rate'],affiliate:'https://wise.com',best:true},
+      {name:'Remitly',logo:'💚',fee:5,margin:1.5,speed:'1–2 hours',tags:['Fast'],affiliate:'https://remitly.com'},
+    ]},
+  };
+
+  const currencyNames={PKR:'Pakistani Rupee',INR:'Indian Rupee',BDT:'Bangladeshi Taka',EGP:'Egyptian Pound',PHP:'Philippine Peso',NPR:'Nepalese Rupee',LKR:'Sri Lankan Rupee',IDR:'Indonesian Rupiah'};
+  const flags={PKR:'🇵🇰',INR:'🇮🇳',BDT:'🇧🇩',EGP:'🇪🇬',PHP:'🇵🇭',NPR:'🇳🇵',LKR:'🇱🇰',IDR:'🇮🇩'};
+
+  function setDestination(currency){
+    document.getElementById('send-to').value=currency;
+    updateResults();
+    document.getElementById('provider-list').scrollIntoView({behavior:'smooth'});
+  }
+
+  function updateResults(){
+    const amount=parseFloat(document.getElementById('send-amount').value)||1000;
+    const dest=document.getElementById('send-to').value;
+    const data=rates[dest];
+    if(!data)return;
+
+    document.getElementById('results-title').textContent='Best Ways to Send SAR to '+dest;
+    document.getElementById('results-sub').textContent='Comparing '+amount.toLocaleString()+' SAR → '+flags[dest]+' '+currencyNames[dest]+' — rates May 2026';
+
+    const list=document.getElementById('provider-list');
+    list.innerHTML='';
+
+    const sorted=[...data.providers].sort((a,b)=>{
+      const recvA=(amount-a.fee)*data.mid*(1-a.margin/100);
+      const recvB=(amount-b.fee)*data.mid*(1-b.margin/100);
+      return recvB-recvA;
+    });
+
+    sorted.forEach((p,i)=>{
+      const netSend=amount-p.fee;
+      const recv=netSend*data.mid*(1-p.margin/100);
+      const rate=(data.mid*(1-p.margin/100)).toFixed(2);
+      const isBest=i===0;
+
+      const tags=p.tags.map(t=>`<span class="p-tag ${t==='Best Rate'?'p-tag-green':t==='No Fee'?'p-tag-gold':'p-tag-blue'}">${t}</span>`).join('');
+      const card=document.createElement('div');
+      card.className='provider-card'+(isBest?' best':'');
+      card.innerHTML=`
+        ${isBest?'<div class="best-badge">⭐ BEST VALUE</div>':''}
+        <div class="provider-logo">${p.logo}</div>
+        <div class="provider-info">
+          <h3>${p.name}</h3>
+          <div class="p-speed">⏱ ${p.speed}</div>
+          <div class="p-tags">${tags}</div>
+        </div>
+        <div class="provider-rate">
+          <div class="rate-amount">${Math.round(recv).toLocaleString()} ${dest}</div>
+          <div class="rate-fee">Fee: ${p.fee===0?'<span style="color:var(--green)">FREE</span>':'SAR '+p.fee}</div>
+          <div class="rate-recv">Rate: 1 SAR = ${rate} ${dest}</div>
+        </div>
+        <div class="provider-cta">
+          <a href="${p.affiliate}" target="_blank" rel="nofollow noopener">${isBest?'✅ Transfer Now →':'Send Money →'}</a>
+          <div class="p-note">${p.affiliate!=='#'?'★ Affiliate link':''}</div>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  updateResults();
+</script>
+</body>
+</html>
