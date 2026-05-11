@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Saudi Arabia net salary calculator 2026. Calculate your take-home pay after GOSI deductions, housing allowance, transport allowance and other KSA salary components.">
+<meta name="keywords" content="saudi salary calculator, ksa net salary, take home pay saudi arabia, gosi deduction calculator, saudi payslip calculator 2026">
+<meta property="og:title" content="Saudi Net Salary Calculator 2026 — KSA Take-Home Pay">
+<meta property="og:description" content="Calculate your exact take-home salary in Saudi Arabia after GOSI, housing and transport allowances.">
+<title>Saudi Net Salary Calculator 2026 — KSA Take-Home Pay | Saudi Utility Hub</title>
+<link rel="canonical" href="https://saudiutilityhub.com/salary-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Saudi Net Salary Calculator",
+  "description": "Calculate your take-home salary in Saudi Arabia after GOSI deductions and allowances",
+  "url": "https://saudiutilityhub.com/salary-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+}
+</script>
+<style>
+  :root {
+    --green: #1B6B3A; --green-dark: #0f4a28; --green-light: #e8f5ee;
+    --gold: #C9A227; --gold-light: #fdf4dc;
+    --bg: #f4f6f5; --white: #ffffff; --text: #1a1a2e;
+    --muted: #6b7280; --border: #e2e8e4;
+    --radius: 12px; --radius-sm: 8px;
+    --shadow: 0 2px 12px rgba(27,107,58,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* HEADER */
+  header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 36px; height: 36px; background: var(--green); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .logo-text strong { font-size: 15px; font-weight: 700; color: var(--green); display: block; line-height: 1.2; }
+  .logo-text span { font-size: 11px; color: var(--muted); }
+  .back-btn { font-size: 13px; color: var(--green); font-weight: 600; padding: 8px 16px; background: var(--green-light); border-radius: var(--radius-sm); }
+
+  /* PAGE HERO */
+  .page-hero { background: linear-gradient(135deg, var(--green-dark), var(--green)); color: white; padding: 40px 20px 32px; text-align: center; }
+  .page-hero .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 50px; padding: 5px 14px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+  .page-hero h1 { font-size: clamp(22px, 4vw, 36px); font-weight: 700; margin-bottom: 10px; }
+  .page-hero h1 span { color: #ffd166; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto; font-weight: 300; }
+
+  /* AD ZONE */
+  .ad-zone { max-width: 1100px; margin: 0 auto; padding: 20px 20px 0; }
+  .ad-placeholder { background: var(--white); border: 1px dashed var(--border); border-radius: var(--radius-sm); text-align: center; padding: 14px; color: var(--muted); font-size: 12px; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+
+  /* MAIN LAYOUT */
+  .main-wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 40px; display: grid; grid-template-columns: 1fr 340px; gap: 24px; }
+  @media (max-width: 768px) { .main-wrap { grid-template-columns: 1fr; } }
+
+  /* CALCULATOR CARD */
+  .calc-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow); }
+  .calc-header { background: var(--green); color: white; padding: 20px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 4px; }
+  .calc-body { padding: 24px; }
+
+  /* FORM ELEMENTS */
+  .field-group { margin-bottom: 18px; }
+  .field-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 7px; }
+  .field-group label span { font-weight: 400; color: var(--muted); font-size: 12px; }
+  .field-group input, .field-group select {
+    width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm); font-size: 14px; font-family: inherit;
+    color: var(--text); background: var(--white); transition: border-color 0.2s;
+  }
+  .field-group input:focus, .field-group select:focus { outline: none; border-color: var(--green); }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+  .section-label { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 14px; }
+
+  /* TOGGLE */
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; padding: 12px 14px; background: var(--bg); border-radius: var(--radius-sm); }
+  .toggle-label { font-size: 13px; font-weight: 500; }
+  .toggle-sub { font-size: 11px; color: var(--muted); display: block; margin-top: 2px; }
+  .toggle { position: relative; width: 42px; height: 24px; flex-shrink: 0; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider { position: absolute; cursor: pointer; inset: 0; background: #cbd5e1; border-radius: 50px; transition: 0.3s; }
+  .toggle-slider:before { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: 0.3s; }
+  .toggle input:checked + .toggle-slider { background: var(--green); }
+  .toggle input:checked + .toggle-slider:before { transform: translateX(18px); }
+
+  /* CALCULATE BUTTON */
+  .calc-btn { width: 100%; padding: 14px; background: var(--green); color: white; border: none; border-radius: var(--radius-sm); font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background 0.2s; margin-top: 6px; }
+  .calc-btn:hover { background: var(--green-dark); }
+
+  /* RESULTS */
+  .results-section { margin-top: 24px; display: none; }
+  .results-section.show { display: block; }
+  .result-hero { background: var(--green); color: white; border-radius: var(--radius); padding: 24px; text-align: center; margin-bottom: 16px; }
+  .result-hero .label { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 6px; }
+  .result-hero .amount { font-size: 42px; font-weight: 700; color: #ffd166; line-height: 1; }
+  .result-hero .sub { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; }
+
+  .result-breakdown { background: var(--bg); border-radius: var(--radius); overflow: hidden; }
+  .result-row { display: flex; justify-content: space-between; align-items: center; padding: 13px 16px; border-bottom: 1px solid var(--border); }
+  .result-row:last-child { border-bottom: none; }
+  .result-row .r-label { font-size: 13px; color: var(--muted); }
+  .result-row .r-value { font-size: 14px; font-weight: 600; }
+  .result-row.positive .r-value { color: var(--green); }
+  .result-row.negative .r-value { color: #dc2626; }
+  .result-row.total-row { background: var(--green-light); }
+  .result-row.total-row .r-label { font-weight: 700; color: var(--text); font-size: 14px; }
+  .result-row.total-row .r-value { font-size: 16px; color: var(--green); }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .side-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .side-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .info-row:last-child { border-bottom: none; }
+  .info-row span:first-child { color: var(--muted); }
+  .info-row span:last-child { font-weight: 600; }
+
+  .tip-list { list-style: none; }
+  .tip-list li { font-size: 13px; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border); padding-left: 18px; position: relative; line-height: 1.5; }
+  .tip-list li:before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  .tip-list li:last-child { border-bottom: none; }
+
+  .affiliate-card { background: var(--gold-light); border: 1px solid #e6c84a; border-radius: var(--radius); padding: 20px; }
+  .affiliate-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #7a4f00; }
+  .affiliate-card p { font-size: 12px; color: #92620a; margin-bottom: 14px; line-height: 1.5; }
+  .affiliate-btn { display: block; text-align: center; background: var(--gold); color: white; border-radius: var(--radius-sm); padding: 10px; font-size: 13px; font-weight: 700; }
+
+  /* CONTENT SECTION */
+  .content-section { max-width: 1100px; margin: 0 auto; padding: 0 20px 20px; }
+  .content-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px; }
+  .content-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+  .content-card h3 { font-size: 16px; font-weight: 700; margin: 20px 0 10px; color: var(--green); }
+  .content-card p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+  .content-card ul { margin: 10px 0 12px 20px; }
+  .content-card ul li { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 4px; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-size: 15px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.3s; }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.8; margin-top: 10px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .arrow { transform: rotate(180deg); }
+
+  /* RELATED TOOLS */
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .tool-mini { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; transition: all 0.2s; }
+  .tool-mini:hover { border-color: var(--green); transform: translateY(-2px); }
+  .tool-mini .t-icon { font-size: 24px; margin-bottom: 8px; }
+  .tool-mini .t-name { font-size: 13px; font-weight: 600; }
+  .tool-mini .t-desc { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+  /* FOOTER */
+  footer { background: var(--green-dark); color: rgba(255,255,255,0.8); padding: 32px 20px 20px; margin-top: 40px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .footer-inner p { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .footer-links a:hover { color: white; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🇸🇦</div>
+      <div class="logo-text">
+        <strong>Saudi Utility Hub</strong>
+        <span>Free KSA Tools</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-btn">← All Tools</a>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="badge">💼 Finance Tool</div>
+  <h1>Saudi <span>Net Salary</span> Calculator</h1>
+  <p>Calculate your exact take-home pay in Saudi Arabia — including GOSI, housing & transport allowances</p>
+</div>
+
+<!-- TOP AD -->
+<div class="ad-zone">
+  <div class="ad-placeholder">
+    <!-- Google AdSense: 728x90 leaderboard -->
+    📢 Advertisement
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+
+  <!-- CALCULATOR -->
+  <div>
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>💼 Net Salary Calculator — KSA 2026</h2>
+        <p>Enter your salary details below to see your full breakdown</p>
+      </div>
+      <div class="calc-body">
+
+        <div class="section-label">Basic Information</div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Basic Salary <span>(SAR/month)</span></label>
+            <input type="number" id="basic" placeholder="e.g. 8000" min="0">
+          </div>
+          <div class="field-group">
+            <label>Nationality</label>
+            <select id="nationality">
+              <option value="expat">Non-Saudi (Expat)</option>
+              <option value="saudi">Saudi National</option>
+            </select>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-label">Allowances</div>
+
+        <div class="toggle-row">
+          <div>
+            <span class="toggle-label">Housing Allowance</span>
+            <span class="toggle-sub">Typically 25% of basic salary</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="housing-toggle" checked onchange="toggleHousing()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="field-group" id="housing-field">
+          <label>Housing Allowance Amount <span>(SAR/month)</span></label>
+          <input type="number" id="housing" placeholder="e.g. 2000" min="0">
+        </div>
+
+        <div class="toggle-row">
+          <div>
+            <span class="toggle-label">Transport Allowance</span>
+            <span class="toggle-sub">Typically 10% of basic salary</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="transport-toggle" checked onchange="toggleTransport()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="field-group" id="transport-field">
+          <label>Transport Allowance Amount <span>(SAR/month)</span></label>
+          <input type="number" id="transport" placeholder="e.g. 800" min="0">
+        </div>
+
+        <div class="field-group">
+          <label>Other Allowances <span>(SAR/month, optional)</span></label>
+          <input type="number" id="other" placeholder="e.g. 500" min="0">
+        </div>
+
+        <hr class="divider">
+        <div class="section-label">Deductions</div>
+
+        <div class="toggle-row">
+          <div>
+            <span class="toggle-label">GOSI Deduction</span>
+            <span class="toggle-sub">Saudis: 10% | Expats: typically exempt</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="gosi-toggle" onchange="toggleGosi()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="field-group" id="gosi-field" style="display:none;">
+          <label>GOSI Rate <span>(%)</span></label>
+          <select id="gosi-rate">
+            <option value="10">10% (Saudi Employee)</option>
+            <option value="9">9% (Some companies)</option>
+            <option value="0">0% (Exempt)</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Other Deductions <span>(SAR/month, optional)</span></label>
+          <input type="number" id="other-deduct" placeholder="e.g. 0" min="0">
+        </div>
+
+        <button class="calc-btn" onclick="calculateSalary()">Calculate My Take-Home Pay →</button>
+
+        <!-- RESULTS -->
+        <div class="results-section" id="results">
+          <div class="result-hero">
+            <div class="label">Your Monthly Take-Home Pay</div>
+            <div class="amount" id="net-amount">0 SAR</div>
+            <div class="sub" id="net-sub">After all deductions</div>
+          </div>
+
+          <div class="result-breakdown">
+            <div class="result-row positive">
+              <span class="r-label">Basic Salary</span>
+              <span class="r-value" id="r-basic">0 SAR</span>
+            </div>
+            <div class="result-row positive" id="r-housing-row">
+              <span class="r-label">Housing Allowance</span>
+              <span class="r-value" id="r-housing">0 SAR</span>
+            </div>
+            <div class="result-row positive" id="r-transport-row">
+              <span class="r-label">Transport Allowance</span>
+              <span class="r-value" id="r-transport">0 SAR</span>
+            </div>
+            <div class="result-row positive" id="r-other-row">
+              <span class="r-label">Other Allowances</span>
+              <span class="r-value" id="r-other">0 SAR</span>
+            </div>
+            <div class="result-row positive">
+              <span class="r-label">Gross Total</span>
+              <span class="r-value" id="r-gross">0 SAR</span>
+            </div>
+            <div class="result-row negative" id="r-gosi-row">
+              <span class="r-label">GOSI Deduction</span>
+              <span class="r-value" id="r-gosi">- 0 SAR</span>
+            </div>
+            <div class="result-row negative" id="r-otherdeduct-row">
+              <span class="r-label">Other Deductions</span>
+              <span class="r-value" id="r-otherdeduct">- 0 SAR</span>
+            </div>
+            <div class="result-row total-row">
+              <span class="r-label">✅ Net Take-Home Pay</span>
+              <span class="r-value" id="r-net">0 SAR</span>
+            </div>
+          </div>
+
+          <div style="margin-top:16px; padding:14px; background:#e8f5ee; border-radius:var(--radius-sm); font-size:13px; color:#1B6B3A;">
+            💡 <strong>Annual take-home:</strong> <span id="r-annual">0 SAR</span> per year
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MID AD -->
+    <div style="margin: 20px 0;">
+      <div class="ad-placeholder">
+        <!-- Google AdSense: 336x280 rectangle -->
+        📢 Advertisement
+      </div>
+    </div>
+
+    <!-- CONTENT: HOW TO USE -->
+    <div class="content-card">
+      <h2>How to Calculate Your Saudi Net Salary</h2>
+      <p>Your salary in Saudi Arabia is made up of several components. Understanding each one helps you plan your finances better — especially as an expat sending money home.</p>
+
+      <h3>What is Basic Salary?</h3>
+      <p>The basic salary is the fixed amount agreed in your employment contract before any allowances. In Saudi Arabia, GOSI contributions and End of Service (EOS) gratuity are calculated based on your basic salary, not your total package.</p>
+
+      <h3>Housing Allowance (بدل السكن)</h3>
+      <p>Most employers in Saudi Arabia provide a housing allowance of 25% of basic salary. Some companies provide company accommodation instead. Housing allowance is not subject to GOSI deductions.</p>
+
+      <h3>Transport Allowance (بدل المواصلات)</h3>
+      <p>Transport allowance is typically 10–15% of basic salary. Like housing, it is not subject to GOSI. Many employees receive SAR 800–1,500 per month as transport allowance.</p>
+
+      <h3>GOSI Deductions</h3>
+      <p>GOSI (General Organization for Social Insurance) applies only to Saudi nationals. As a Saudi employee, your contribution is 10% of your basic salary, with the employer contributing an additional 12%. Most expats are not subject to GOSI deductions.</p>
+
+      <ul>
+        <li>Saudi employee contribution: 10% of basic salary</li>
+        <li>Employer contribution: 12% of basic salary</li>
+        <li>Non-Saudi (expat) employees: generally exempt from GOSI</li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="content-card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do expats pay any tax on salary in Saudi Arabia?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">No — Saudi Arabia does not have personal income tax. Expatriates keep their full salary minus any agreed deductions like GOSI (for eligible employees) or company deductions. This makes KSA one of the most tax-friendly countries for workers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is housing allowance included in EOS calculation?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">No. End of Service (gratuity) is calculated on your basic salary only, not on housing or transport allowances. This is defined by the Saudi Labour Law.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What is the minimum wage in Saudi Arabia 2026?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">For Saudi nationals, the minimum wage is SAR 4,000 per month. There is no official minimum wage for expatriate workers, though market rates vary by industry and nationality.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can my employer deduct money from my salary?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Under Saudi Labour Law, deductions are only allowed for GOSI contributions, agreed loans, and disciplinary deductions (limited to 5 days' salary per month). Unauthorized deductions are illegal.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How is overtime calculated in Saudi Arabia?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Overtime in Saudi Arabia is paid at 150% of your hourly basic rate for hours beyond 8 per day or 48 per week. During Ramadan, working hours are reduced to 6 hours per day for Muslim employees.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="side-card">
+      <h3>📊 KSA Salary Benchmarks 2026</h3>
+      <div class="info-row"><span>Entry Level</span><span>SAR 4,000–7,000</span></div>
+      <div class="info-row"><span>Mid Level</span><span>SAR 8,000–15,000</span></div>
+      <div class="info-row"><span>Senior Level</span><span>SAR 16,000–30,000</span></div>
+      <div class="info-row"><span>Management</span><span>SAR 25,000–60,000</span></div>
+      <div class="info-row"><span>GOSI Rate (Saudi)</span><span>10%</span></div>
+      <div class="info-row"><span>Typical Housing</span><span>25% of basic</span></div>
+      <div class="info-row"><span>Typical Transport</span><span>10% of basic</span></div>
+    </div>
+
+    <!-- SIDEBAR AD -->
+    <div class="ad-placeholder" style="min-height:250px;">
+      <!-- Google AdSense: 300x250 rectangle -->
+      📢 Advertisement
+    </div>
+
+    <div class="side-card">
+      <h3>✅ Know Your Rights</h3>
+      <ul class="tip-list">
+        <li>No income tax in Saudi Arabia</li>
+        <li>EOS based on basic salary only</li>
+        <li>Expats generally exempt from GOSI</li>
+        <li>30 days annual leave after 1 year</li>
+        <li>Salary must be paid within 10 days of due date</li>
+        <li>Unauthorized deductions are illegal</li>
+      </ul>
+    </div>
+
+    <div class="affiliate-card">
+      <h3>💸 Send Money Home?</h3>
+      <p>Compare the best remittance rates from Saudi Arabia to Pakistan, India, Egypt and more.</p>
+      <a href="remittance-fee-compare.html" class="affiliate-btn">Compare Transfer Fees →</a>
+    </div>
+
+    <div class="side-card">
+      <h3>🔗 Related Tools</h3>
+      <div class="tools-grid" style="grid-template-columns: 1fr;">
+        <a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">EOS Calculator</div><div class="t-desc">Calculate your gratuity</div></div></a>
+        <a href="gosi-calculator.html"><div class="tool-mini"><div class="t-icon">🏛️</div><div class="t-name">GOSI Calculator</div><div class="t-desc">Social insurance deductions</div></div></a>
+        <a href="working-hours-calculator.html"><div class="tool-mini"><div class="t-icon">⏰</div><div class="t-name">Working Hours Calc</div><div class="t-desc">Overtime & Labour Law</div></div></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RELATED TOOLS ROW -->
+<div class="content-section">
+  <div class="content-card">
+    <h2>More Free KSA Tools</h2>
+    <div class="tools-grid">
+      <a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">End of Service</div><div class="t-desc">KSA Labour Law gratuity</div></div></a>
+      <a href="dependent-levy-calculator.html"><div class="tool-mini"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">Dependent Levy</div><div class="t-desc">Family fee calculator</div></div></a>
+      <a href="iqama-expiry-calculator.html"><div class="tool-mini"><div class="t-icon">🪪</div><div class="t-name">Iqama Tracker</div><div class="t-desc">Expiry & renewal cost</div></div></a>
+      <a href="vat-calculator.html"><div class="tool-mini"><div class="t-icon">🧾</div><div class="t-name">VAT Calculator</div><div class="t-desc">Saudi 15% VAT</div></div></a>
+      <a href="currency-converter.html"><div class="tool-mini"><div class="t-icon">💱</div><div class="t-name">Currency Converter</div><div class="t-desc">SAR to 150+ currencies</div></div></a>
+      <a href="car-finance-calculator.html"><div class="tool-mini"><div class="t-icon">🚗</div><div class="t-name">Car Finance</div><div class="t-desc">Monthly installments</div></div></a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Saudi Utility Hub — Calculations are estimates only. Verify with your employer or HR department.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleHousing() {
+    document.getElementById('housing-field').style.display =
+      document.getElementById('housing-toggle').checked ? 'block' : 'none';
+  }
+  function toggleTransport() {
+    document.getElementById('transport-field').style.display =
+      document.getElementById('transport-toggle').checked ? 'block' : 'none';
+  }
+  function toggleGosi() {
+    document.getElementById('gosi-field').style.display =
+      document.getElementById('gosi-toggle').checked ? 'block' : 'none';
+  }
+  function toggleFaq(el) {
+    el.closest('.faq-item').classList.toggle('open');
+  }
+
+  function fmt(n) { return n.toLocaleString('en-SA', {minimumFractionDigits: 0, maximumFractionDigits: 0}) + ' SAR'; }
+
+  function calculateSalary() {
+    const basic = parseFloat(document.getElementById('basic').value) || 0;
+    const housingOn = document.getElementById('housing-toggle').checked;
+    const transportOn = document.getElementById('transport-toggle').checked;
+    const gosiOn = document.getElementById('gosi-toggle').checked;
+
+    const housing = housingOn ? (parseFloat(document.getElementById('housing').value) || 0) : 0;
+    const transport = transportOn ? (parseFloat(document.getElementById('transport').value) || 0) : 0;
+    const other = parseFloat(document.getElementById('other').value) || 0;
+    const gosiRate = gosiOn ? (parseFloat(document.getElementById('gosi-rate').value) / 100) : 0;
+    const otherDeduct = parseFloat(document.getElementById('other-deduct').value) || 0;
+
+    if (basic === 0) {
+      alert('Please enter your basic salary');
+      return;
+    }
+
+    const gross = basic + housing + transport + other;
+    const gosiDeduct = basic * gosiRate;
+    const totalDeduct = gosiDeduct + otherDeduct;
+    const net = gross - totalDeduct;
+    const annual = net * 12;
+
+    document.getElementById('net-amount').textContent = fmt(net);
+    document.getElementById('net-sub').textContent = 'from gross of ' + fmt(gross);
+    document.getElementById('r-basic').textContent = fmt(basic);
+    document.getElementById('r-housing').textContent = fmt(housing);
+    document.getElementById('r-transport').textContent = fmt(transport);
+    document.getElementById('r-other').textContent = fmt(other);
+    document.getElementById('r-gross').textContent = fmt(gross);
+    document.getElementById('r-gosi').textContent = '- ' + fmt(gosiDeduct);
+    document.getElementById('r-otherdeduct').textContent = '- ' + fmt(otherDeduct);
+    document.getElementById('r-net').textContent = fmt(net);
+    document.getElementById('r-annual').textContent = fmt(annual);
+
+    document.getElementById('r-housing-row').style.display = housingOn ? 'flex' : 'none';
+    document.getElementById('r-transport-row').style.display = transportOn ? 'flex' : 'none';
+    document.getElementById('r-other-row').style.display = other > 0 ? 'flex' : 'none';
+    document.getElementById('r-gosi-row').style.display = gosiOn ? 'flex' : 'none';
+    document.getElementById('r-otherdeduct-row').style.display = otherDeduct > 0 ? 'flex' : 'none';
+
+    const resultsEl = document.getElementById('results');
+    resultsEl.classList.add('show');
+    resultsEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
