@@ -1,0 +1,111 @@
+<!--
+=====================================================================
+  COOKIE CONSENT BANNER — Saudi Utility Hub
+  =====================================================================
+  ADD THIS: Paste the <div id="cookie-banner">...</div> and the
+  <style> and <script> blocks just before </body> on EVERY page.
+  
+  This fixes the #1 AdSense approval gap for GDPR/privacy compliance.
+  The banner links to your privacy.html and only shows once per user.
+=====================================================================
+-->
+
+<!-- PASTE THIS ENTIRE BLOCK BEFORE </body> ON EVERY PAGE -->
+
+<style>
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  z-index: 9999;
+  font-size: 13px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  border-top: 2px solid #1a5276;
+}
+#cookie-banner p {
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+  min-width: 220px;
+}
+#cookie-banner a {
+  color: #5dade2;
+  text-decoration: underline;
+}
+.cookie-btn-group {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+#cookie-accept {
+  background: #1a5276;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#cookie-accept:hover { background: #154360; }
+#cookie-decline {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #555;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+#cookie-decline:hover { color: #ccc; border-color: #aaa; }
+</style>
+
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>
+    🍪 We use cookies to serve ads via Google AdSense and to analyse site usage.
+    We never sell your personal data.
+    <a href="https://www.saudiutilityhub.com/privacy.html" target="_blank">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.saudiutilityhub.com/terms.html" target="_blank">Terms</a>
+  </p>
+  <div class="cookie-btn-group">
+    <button id="cookie-decline" onclick="cookieChoice('declined')">Decline non-essential</button>
+    <button id="cookie-accept" onclick="cookieChoice('accepted')">Accept & Continue</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var consent = localStorage.getItem('suh_cookie_consent');
+  if (consent) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+})();
+
+function cookieChoice(choice) {
+  localStorage.setItem('suh_cookie_consent', choice);
+  localStorage.setItem('suh_cookie_date', new Date().toISOString());
+  document.getElementById('cookie-banner').style.display = 'none';
+  if (choice === 'accepted') {
+    // Fire Google consent signal if using Consent Mode v2
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted'
+      });
+    }
+  }
+}
+</script>
+<!-- END COOKIE BANNER -->
