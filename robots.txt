@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saudiutilityhub.com/sitemap.xml
+# Block AdSense crawler from crawling ad scripts directly
+Disallow: /cdn-cgi/
+
+# Sitemap location
+Sitemap: https://www.saudiutilityhub.com/sitemap.xml

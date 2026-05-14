@@ -1,0 +1,133 @@
+<!-- ============================================================
+     GOSI RATE FIX — salary-calculator.html
+     ============================================================
+     PROBLEM: Shows 10% as Saudi GOSI rate — INCORRECT
+     FIX:     Correct rate is 9.75% (9% pension + 0.75% SANED)
+              Employer rate is 11.75% (not 12%)
+     ============================================================ -->
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 1 — Replace the GOSI dropdown options                  -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- FIND this HTML block in salary-calculator.html: -->
+<!--
+<select id="gosiRate">
+  <option value="10">10% (Saudi Employee)</option>
+  <option value="9">9% (Some companies)</option>
+  <option value="0">0% (Exempt)</option>
+</select>
+-->
+
+<!-- REPLACE WITH: -->
+<select id="gosiRate">
+  <option value="9.75">9.75% (Saudi Employee — standard 2026)</option>
+  <option value="0">0% (Non-Saudi / Expat / Exempt)</option>
+</select>
+
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 2 — Fix the info text / tooltip near GOSI label        -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- FIND: -->
+<!--
+GOSI Deduction Saudis: 10% | Expats: typically exempt
+-->
+
+<!-- REPLACE WITH: -->
+<!-- GOSI Deduction — Saudis: 9.75% (9% pension + 0.75% SANED) | Expats: typically exempt -->
+
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 3 — Fix the FAQ answer about GOSI                      -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- FIND this FAQ section: -->
+<!--
+<li>Saudi employee contribution: 10% of basic salary</li>
+<li>Employer contribution: 12% of basic salary</li>
+<li>Non-Saudi (expat) employees: generally exempt from GOSI</li>
+-->
+
+<!-- REPLACE WITH: -->
+<ul>
+  <li>Saudi employee contribution: 9.75% of (basic salary + housing allowance), capped at SAR 45,000</li>
+  <li>Breakdown: 9% Pension (Annuities) + 0.75% SANED (Unemployment Insurance)</li>
+  <li>Employer contribution: 11.75% (9% pension + 0.75% SANED + 2% Occupational Hazards)</li>
+  <li>Non-Saudi (expat) employees: 0% employee contribution. Employer pays 2% for Occupational Hazards only</li>
+  <li>GOSI cap: contributions are not calculated on salary above SAR 45,000/month</li>
+</ul>
+
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 4 — Fix the KSA Salary Benchmarks table               -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- FIND: -->
+<!-- <td>GOSI Rate (Saudi)</td><td>10%</td> -->
+
+<!-- REPLACE WITH: -->
+<!-- <td>GOSI Rate (Saudi employee)</td><td>9.75%</td> -->
+<!-- <td>GOSI Rate (Employer, Saudi)</td><td>11.75%</td> -->
+<!-- <td>GOSI Cap</td><td>SAR 45,000/month</td> -->
+
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 5 — Fix the JavaScript calculation logic               -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- FIND in the <script> section — the GOSI calculation line.  -->
+<!-- It likely looks like: -->
+<!-- const gosiDeduction = (basicSalary * gosiRate) / 100; -->
+
+<!-- The correct 2026 GOSI base is basic salary + housing allowance -->
+<!-- (NOT total salary, NOT transport, NOT other allowances)        -->
+<!-- Subject to SAR 45,000 cap                                      -->
+
+<!-- REPLACE the JS calculation with: -->
+<script>
+function calculateSalary() {
+  const basicSalary      = parseFloat(document.getElementById('basicSalary').value) || 0;
+  const housingAllowance = parseFloat(document.getElementById('housingAllowance').value) || 0;
+  const transportAllowance = parseFloat(document.getElementById('transportAllowance').value) || 0;
+  const otherAllowances  = parseFloat(document.getElementById('otherAllowances').value) || 0;
+  const gosiRate         = parseFloat(document.getElementById('gosiRate').value) || 0;
+  const otherDeductions  = parseFloat(document.getElementById('otherDeductions').value) || 0;
+
+  // GOSI base = Basic + Housing ONLY, capped at SAR 45,000
+  // (Transport and other allowances are excluded from GOSI base)
+  const GOSI_CAP = 45000;
+  const gosiBase = Math.min(basicSalary + housingAllowance, GOSI_CAP);
+  const gosiDeduction = (gosiBase * gosiRate) / 100;
+
+  const grossTotal = basicSalary + housingAllowance + transportAllowance + otherAllowances;
+  const netSalary  = grossTotal - gosiDeduction - otherDeductions;
+
+  // Update UI
+  document.getElementById('result-basic').textContent     = basicSalary.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-housing').textContent   = housingAllowance.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-transport').textContent = transportAllowance.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-other').textContent     = otherAllowances.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-gross').textContent     = grossTotal.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-gosi').textContent      = '- ' + gosiDeduction.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-other-ded').textContent = '- ' + otherDeductions.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+  document.getElementById('result-net').textContent       = netSalary.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+
+  // Annual
+  const annual = netSalary * 12;
+  document.getElementById('result-annual').textContent = annual.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' SAR';
+}
+</script>
+
+
+<!-- ──────────────────────────────────────────────────────────── -->
+<!-- STEP 6 — Add "Last updated" date for E-E-A-T               -->
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<!-- Add this just below the H1 heading: -->
+<p style="font-size:12px; color:#888; margin-top:4px;">
+  <i>Last reviewed: May 2026 — Rates verified against GOSI.gov.sa</i>
+  &nbsp;·&nbsp;
+  <a href="https://gosi.gov.sa" target="_blank" rel="noopener noreferrer" style="color:#888;">Source: gosi.gov.sa</a>
+</p>

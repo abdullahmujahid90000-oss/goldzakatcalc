@@ -1,0 +1,341 @@
+<!--
+=====================================================================
+  SCHEMA.ORG JSON-LD SNIPPETS — saudiutilityhub.com
+  Copy each block into the <head> of the relevant page
+  These unlock Google Rich Results: FAQ boxes, app cards, sitelinks
+=====================================================================
+-->
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 1. HOMEPAGE — Organization + WebSite + Sitelinks Searchbox -->
+<!-- Add to: index.html                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.saudiutilityhub.com/#organization",
+      "name": "Saudi Utility Hub",
+      "url": "https://www.saudiutilityhub.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.saudiutilityhub.com/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Free online calculators and tools for expats and residents of Saudi Arabia. Zakat, salary, GOSI, Iqama, remittance, VAT and more.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@saudiutilityhub.com",
+        "contactType": "customer support"
+      },
+      "sameAs": [
+        "https://twitter.com/saudiutilityhub",
+        "https://www.facebook.com/saudiutilityhub"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.saudiutilityhub.com/#website",
+      "url": "https://www.saudiutilityhub.com",
+      "name": "Saudi Utility Hub — Free KSA Expat Tools",
+      "description": "20+ free calculators for Saudi Arabia expats and residents",
+      "publisher": { "@id": "https://www.saudiutilityhub.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.saudiutilityhub.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 2. SALARY CALCULATOR — WebApplication + FAQ Schema         -->
+<!-- Add to: salary-calculator.html                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Saudi Net Salary Calculator 2026",
+      "description": "Free Saudi Arabia net salary calculator. Calculate take-home pay after GOSI deductions, housing and transport allowances. Updated for 2026 rates.",
+      "url": "https://www.saudiutilityhub.com/salary-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SAR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Saudi Utility Hub",
+        "url": "https://www.saudiutilityhub.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do expats pay any tax on salary in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Saudi Arabia does not have personal income tax. Expatriates keep their full salary minus any agreed deductions. GOSI contributions apply to Saudi nationals only (9.75%). This makes KSA one of the most tax-friendly countries for workers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the GOSI rate in Saudi Arabia 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The GOSI contribution rate for Saudi employees in 2026 is 9.75% (9% Annuities/Pension + 0.75% SANED unemployment insurance). The employer contributes 11.75%. Non-Saudi (expat) employees pay 0%; the employer pays 2% for Occupational Hazards only. GOSI is calculated on basic salary + housing allowance, capped at SAR 45,000/month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is housing allowance included in GOSI calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. GOSI in Saudi Arabia is calculated on basic salary PLUS housing allowance combined, subject to a cap of SAR 45,000 per month. Transport allowance and other allowances are excluded from the GOSI base."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is housing allowance included in EOS calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. End of Service (gratuity) is calculated on basic salary only, not on housing or transport allowances. This is defined by Saudi Labour Law Article 84."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum wage in Saudi Arabia 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Saudi nationals, the minimum wage is SAR 4,000 per month. There is no official minimum wage for expatriate workers, though market rates vary by industry and nationality."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Salary Calculator", "item": "https://www.saudiutilityhub.com/salary-calculator.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 3. GOSI CALCULATOR — WebApplication + FAQ                  -->
+<!-- Add to: gosi-calculator.html                               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "GOSI Calculator Saudi Arabia 2026",
+      "description": "Calculate GOSI social insurance contributions for Saudi nationals and expats. Includes employee and employer contribution breakdown with SAR 45,000 cap.",
+      "url": "https://www.saudiutilityhub.com/gosi-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is GOSI in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GOSI (General Organization for Social Insurance) is Saudi Arabia's mandatory social insurance system. It provides retirement pensions, unemployment insurance (SANED), and occupational hazards coverage. Saudi employees contribute 9.75% of their GOSI salary (basic + housing, capped at SAR 45,000). Employers contribute 11.75% for Saudi staff and 2% for non-Saudi staff."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the GOSI contribution cap in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The GOSI salary cap in 2026 is SAR 45,000 per month. Contributions are not calculated on any salary amount exceeding this limit."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "GOSI Calculator", "item": "https://www.saudiutilityhub.com/gosi-calculator.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 4. GOLD ZAKAT CALCULATOR — WebApplication + FAQ            -->
+<!-- Add to: gold-zakat-calculator.html                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Gold Zakat Calculator Saudi Arabia 2026",
+      "description": "Calculate Zakat on 24K, 22K, 21K, 18K gold with live Saudi gold prices. Nisab check included. Updated for Ramadan 2026.",
+      "url": "https://www.saudiutilityhub.com/gold-zakat-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate Zakat on gold in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zakat on gold is 2.5% of the total gold value if it meets or exceeds the Nisab threshold (the value of 85 grams of gold or 595 grams of silver, whichever is lower) and has been owned for a full Hijri year (Haul). Multiply your gold weight in grams by the current SAR price per gram, then multiply by 2.5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Nisab for gold Zakat in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Nisab for gold Zakat is 85 grams of pure (24K) gold. At current Saudi gold prices, this equates to approximately SAR 24,000–26,000. If your total gold value exceeds Nisab and you have owned it for one lunar year, Zakat of 2.5% is due."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Gold Zakat Calculator", "item": "https://www.saudiutilityhub.com/gold-zakat-calculator.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 5. IQAMA EXPIRY TRACKER — WebApplication + FAQ             -->
+<!-- Add to: iqama-expiry-calculator.html                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Iqama Expiry Tracker — Saudi Arabia 2026",
+      "description": "Track days remaining on your Iqama residency permit. Renewal cost estimate and color-coded status alert. Free, no login required.",
+      "url": "https://www.saudiutilityhub.com/iqama-expiry-calculator.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does Iqama renewal cost in Saudi Arabia 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Iqama renewal fees in Saudi Arabia vary based on profession and Saudization requirements. The standard renewal fee is SAR 650 per year. Additional fees apply for late renewal (SAR 500 penalty) and for dependent visa holders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if your Iqama expires in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An expired Iqama can result in fines (SAR 500 per month late fee), inability to use government services, and in severe cases deportation. It is important to renew your Iqama before the expiry date via the Absher platform or through your employer (kafeel)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Iqama Expiry Tracker", "item": "https://www.saudiutilityhub.com/iqama-expiry-calculator.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 6. EOS CALCULATOR — WebApplication + FAQ                   -->
+<!-- Add to: ksa-eos-calculator.html                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Saudi End of Service (EOS) Gratuity Calculator 2026",
+      "description": "Calculate your end of service gratuity under Saudi Labour Law Article 84. Covers termination, resignation, and all scenarios.",
+      "url": "https://www.saudiutilityhub.com/ksa-eos-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is End of Service calculated in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Saudi Labour Law Article 84: For the first 5 years, you receive half a month's basic salary per year. After 5 years, you receive one full month's basic salary per year. EOS is calculated on basic salary only — housing and transport allowances are excluded. Resignation before 2 years earns no EOS. Resignation between 2–5 years earns one-third. Between 5–10 years earns two-thirds. After 10 years you receive the full amount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do expats get end of service in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Both Saudi nationals and expatriates are entitled to End of Service gratuity (EOS) under Saudi Labour Law, provided they complete at least 2 years of continuous service. The calculation is the same for both nationalities."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/" },
+        { "@type": "ListItem", "position": 2, "name": "EOS Calculator", "item": "https://www.saudiutilityhub.com/ksa-eos-calculator.html" }
+      ]
+    }
+  ]
+}
+</script>
