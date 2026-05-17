@@ -1,264 +1,300 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contact Saudi Utility Hub — Report an Error or Ask a Question</title>
-<meta name="description" content="Contact Saudi Utility Hub. Report calculator errors, suggest new tools, or ask about our free KSA expat calculators.">
-<link rel="canonical" href="https://www.saudiutilityhub.com/contact.html">
-<meta property="og:title" content="Contact Saudi Utility Hub — Report an Error or Ask a Question"><meta property="og:url" content="https://www.saudiutilityhub.com/contact.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact Saudi Utility Hub","url":"https://www.saudiutilityhub.com/contact.html","email":"hello@saudiutilityhub.com"}</script>
-<style>
-:root{--navy:#1a5276;--navy-dark:#0f2233;--navy-mid:#154360;--accent:#f7dc6f;--bg:#f5f7fa;--white:#fff;--text:#1a1a1a;--muted:#888;--border:#e0e8f0;--card-shadow:0 2px 10px rgba(0,0,0,0.06);}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;}
-.site-nav{background:var(--navy);padding:0 20px;display:flex;align-items:center;flex-wrap:wrap;gap:2px;}
-.site-nav .brand{color:#fff;font-weight:800;font-size:17px;text-decoration:none;padding:14px 0;margin-right:14px;white-space:nowrap;letter-spacing:-0.3px;}
-.site-nav a{color:rgba(255,255,255,0.82);text-decoration:none;font-size:13px;padding:12px 9px;transition:color 0.1s;}
-.site-nav a:hover{color:#fff;}
-.page-wrap{max-width:860px;margin:0 auto;padding:22px 16px 48px;}
-.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
-.breadcrumb a{color:var(--muted);text-decoration:none;}
-.breadcrumb a:hover{color:var(--navy);}
-h1{font-size:27px;font-weight:800;line-height:1.25;margin-bottom:5px;letter-spacing:-0.4px;}
-h2{font-size:20px;font-weight:700;margin:28px 0 11px;color:var(--navy);}
-h3{font-size:16px;font-weight:600;margin:18px 0 7px;color:#1a3a5c;}
-p{margin-bottom:13px;font-size:15px;line-height:1.75;}
-ul,ol{padding-left:22px;margin-bottom:13px;}
-li{margin-bottom:6px;font-size:15px;line-height:1.65;}
-a{color:var(--navy);}
-a:hover{color:var(--navy-mid);}
-.page-meta{color:var(--muted);font-size:13px;margin-bottom:20px;}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Contact Us — Saudi Utility Hub</title>
+  <meta name="description" content="Contact Saudi Utility Hub. Report a calculation error, suggest a new tool, ask a question, or enquire about advertising." />
+  <link rel="canonical" href="https://www.saudiutilityhub.com/contact.html" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f8fafc; }
+    a { color: #166534; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { background: #14532d; padding: 0 20px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 10px 0; }
+    .nav-brand { color: #fff; font-weight: 800; font-size: 1rem; margin-right: 12px; white-space: nowrap; }
+    .nav-inner a { color: #d1fae5; font-size: 0.82rem; padding: 4px 8px; border-radius: 6px; white-space: nowrap; }
+    .nav-inner a:hover { background: #166534; color: #fff; text-decoration: none; }
+    .breadcrumb { max-width: 680px; margin: 20px auto 0; padding: 0 20px; font-size: 0.78rem; color: #64748b; }
+    .breadcrumb a { color: #166534; }
+    main { max-width: 680px; margin: 0 auto; padding: 24px 20px 80px; }
+    h1 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+    .subtitle { color: #64748b; font-size: 0.92rem; margin-bottom: 32px; }
 
-/* AD SLOTS */
-.ad-slot{min-height:90px;background:#eef2f7;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:11px;margin:18px 0;text-align:center;border:1px dashed #d0dce8;}
-.ad-slot-rect{min-height:280px;}
+    /* REASON CARDS */
+    .reason-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 36px; }
+    .reason-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; cursor: pointer; transition: border-color 0.15s; }
+    .reason-card:hover { border-color: #86efac; }
+    .reason-card.selected { border-color: #22c55e; background: #f0fdf4; }
+    .reason-card .icon { font-size: 1.4rem; margin-bottom: 6px; }
+    .reason-card strong { display: block; font-size: 0.85rem; color: #0f172a; margin-bottom: 3px; }
+    .reason-card span { font-size: 0.75rem; color: #64748b; }
 
-/* CALCULATOR CARD */
-.calc-card{background:var(--white);border-radius:16px;border:1px solid var(--border);padding:24px;margin-bottom:18px;box-shadow:var(--card-shadow);}
-.tab-row{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap;}
-.tab{padding:8px 16px;border-radius:8px;border:1.5px solid var(--border);font-size:13px;font-weight:700;cursor:pointer;background:#f8fafc;color:#555;transition:all 0.15s;font-family:inherit;}
-.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.field label{display:block;font-size:11px;font-weight:700;color:#666;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.5px;}
-.field input,.field select{width:100%;padding:11px 13px;border:1.5px solid #cdd8e5;border-radius:9px;font-size:15px;font-family:inherit;color:var(--text);background:var(--white);transition:border-color 0.15s,box-shadow 0.15s;}
-.field input:focus,.field select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,82,118,0.12);}
-.field-hint{font-size:11px;color:#aaa;margin-top:3px;}
-.calc-btn{width:100%;margin-top:16px;background:var(--navy);color:#fff;border:none;padding:14px 20px;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;transition:background 0.15s,transform 0.1s;font-family:inherit;letter-spacing:0.2px;}
-.calc-btn:hover{background:var(--navy-mid);transform:translateY(-1px);}
-.calc-btn:active{transform:translateY(0);}
+    /* FORM */
+    .form-section { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px; }
+    .form-section h2 { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; font-size: 0.83rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+    label .req { color: #ef4444; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px;
+      font-size: 0.9rem; font-family: inherit; color: #0f172a; background: #f8fafc;
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #22c55e; background: #fff; }
+    textarea { resize: vertical; min-height: 130px; }
+    .char-count { font-size: 0.72rem; color: #94a3b8; text-align: right; margin-top: 4px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-/* RESULTS */
-.results{margin-top:18px;display:none;}
-.results.show{display:block;}
-.result-hero{background:linear-gradient(135deg,#1a5276 0%,#1f618d 60%,#2471a3 100%);color:#fff;border-radius:14px;padding:22px 20px;margin-bottom:14px;text-align:center;}
-.rh-label{font-size:13px;opacity:0.82;letter-spacing:0.3px;}
-.rh-val{font-size:42px;font-weight:900;display:block;margin:8px 0 4px;letter-spacing:-1px;}
-.rh-sub{font-size:12px;opacity:0.75;}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
-.rg-item{background:#f8fafc;border:1px solid #e5edf5;border-radius:10px;padding:13px 14px;}
-.rg-label{font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:4px;font-weight:700;}
-.rg-val{font-size:19px;font-weight:800;color:#1a3a5c;}
-.rg-sub{font-size:11px;color:#aaa;margin-top:2px;}
-.rg-item.neg .rg-val{color:#c0392b;}
-.rg-item.pos .rg-val{color:#1e8449;}
-.rg-item.highlight{background:#eaf2ff;border-color:#aed6f1;}
-.rg-item.highlight .rg-val{color:var(--navy);}
+    .submit-btn {
+      width: 100%; padding: 14px; background: #14532d; color: #fff; border: none;
+      border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer;
+      transition: background 0.15s; margin-top: 6px;
+    }
+    .submit-btn:hover { background: #166534; }
+    .submit-btn:disabled { background: #94a3b8; cursor: not-allowed; }
 
-/* INFO BOXES */
-.info-box{background:#eaf2ff;border-left:4px solid var(--navy);padding:13px 16px;border-radius:0 8px 8px 0;font-size:14px;margin:14px 0;line-height:1.6;}
-.warn-box{background:#fef9e7;border:1px solid #f0c040;border-radius:8px;padding:13px 16px;font-size:14px;color:#7d6608;margin:14px 0;line-height:1.6;}
-.success-box{background:#eafaf1;border:1px solid #82e0aa;border-radius:8px;padding:13px 16px;font-size:14px;color:#1e8449;margin:14px 0;line-height:1.6;}
+    .success-box { display: none; background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #22c55e; border-radius: 12px; padding: 20px 24px; text-align: center; }
+    .success-box .icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .success-box h3 { color: #14532d; font-size: 1.1rem; margin-bottom: 6px; }
+    .success-box p { font-size: 0.88rem; color: #15803d; }
 
-/* TABLES */
-.data-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:12px;overflow:hidden;margin:14px 0;box-shadow:0 1px 6px rgba(0,0,0,0.07);}
-.data-table thead th{background:var(--navy);color:#fff;padding:11px 14px;text-align:left;font-size:13px;font-weight:700;}
-.data-table tbody td{padding:10px 14px;border-bottom:1px solid #f0f4f8;font-size:14px;vertical-align:top;}
-.data-table tbody tr:last-child td{border-bottom:none;}
-.data-table tbody tr:hover{background:#f8fbff;}
-.data-table .total-row td{background:#eaf2ff;font-weight:800;color:var(--navy);}
+    .privacy-note { font-size: 0.75rem; color: #94a3b8; text-align: center; margin-top: 14px; }
+    .privacy-note a { color: #64748b; }
 
-/* FAQ */
-.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--white);overflow:hidden;}
-.faq-q{padding:14px 16px;font-weight:700;cursor:pointer;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:background 0.1s;}
-.faq-q:hover{background:#f5f8ff;}
-.faq-icon{font-size:18px;color:var(--navy);flex-shrink:0;transition:transform 0.2s;}
-.faq-a{display:none;padding:13px 16px 15px;border-top:1px solid #eef2f7;font-size:14px;color:#444;background:#fafbff;line-height:1.7;}
-.faq-a.open{display:block;}
-.faq-q.open .faq-icon{transform:rotate(45deg);}
+    /* INFO PANEL */
+    .info-panel { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .info-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+    .info-card strong { font-size: 0.85rem; color: #0f172a; display: block; margin-bottom: 4px; }
+    .info-card span { font-size: 0.78rem; color: #64748b; line-height: 1.5; }
+    .info-card .badge { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
 
-/* TOOL CARDS */
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px;margin:13px 0;}
-.tool-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:11px 13px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:700;display:block;transition:background 0.1s,box-shadow 0.1s;}
-.tool-card:hover{background:#eaf2ff;box-shadow:0 2px 8px rgba(26,82,118,0.15);}
+    footer { background: #0f172a; color: #94a3b8; padding: 40px 20px; margin-top: 60px; font-size: 0.82rem; }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px; }
+    .footer-col h4 { color: #e2e8f0; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .footer-col a { display: block; color: #94a3b8; margin-bottom: 6px; font-size: 0.8rem; }
+    .footer-col a:hover { color: #4ade80; text-decoration: none; }
+    .footer-bottom { max-width: 1100px; margin: 24px auto 0; border-top: 1px solid #1e293b; padding-top: 16px; text-align: center; font-size: 0.75rem; color: #64748b; }
 
-/* BLOG CARDS */
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:13px 0;}
-.blog-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;color:var(--text);transition:box-shadow 0.15s,transform 0.1s;}
-.blog-card:hover{box-shadow:0 4px 14px rgba(0,0,0,0.10);transform:translateY(-2px);}
-.bc-cat{font-size:11px;color:var(--navy);font-weight:800;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;}
-.bc-title{font-size:14px;font-weight:700;color:#1a3a5c;line-height:1.4;margin-bottom:6px;}
-.bc-desc{font-size:12px;color:#666;line-height:1.5;margin-bottom:8px;}
-.bc-meta{font-size:11px;color:#aaa;}
-.bc-cta{font-size:12px;color:var(--navy);font-weight:700;display:inline-block;margin-top:4px;}
+    @media (max-width: 560px) {
+      .reason-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .info-panel { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
-/* SHARE ROW */
-.share-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
-.share-btn{background:#f5f8fc;border:1px solid var(--border);color:var(--navy);padding:7px 14px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;font-family:inherit;}
-.share-btn:hover{background:#eaf2ff;}
-
-/* FOOTER */
-.site-footer{background:var(--navy-dark);color:#aaa;padding:40px 20px 20px;margin-top:50px;}
-.footer-inner{max-width:960px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:22px;margin-bottom:26px;}
-.footer-grid .fl{font-weight:800;color:#fff;font-size:12px;margin-bottom:9px;text-transform:uppercase;letter-spacing:0.5px;}
-.footer-grid a{display:block;color:#9aabbf;text-decoration:none;font-size:12px;padding:2px 0;line-height:1.7;}
-.footer-grid a:hover{color:#fff;}
-.footer-disclosure{font-size:12px;color:#6a7f8e;border-top:1px solid #1a3a5c;border-bottom:1px solid #1a3a5c;padding:14px 0;margin-bottom:16px;line-height:1.6;}
-.footer-disclosure strong{color:#8aabb8;}
-.footer-bottom{text-align:center;font-size:11px;color:#4a6070;line-height:1.7;}
-.footer-bottom a{color:#6a8a9a;}
-.footer-bottom a:hover{color:#aaa;}
-
-@media(max-width:580px){
-  h1{font-size:21px;}
-  .fields{grid-template-columns:1fr;}
-  .result-grid{grid-template-columns:1fr;}
-  .rh-val{font-size:32px;}
-  .site-nav a{font-size:12px;padding:10px 6px;}
-  .site-nav .brand{font-size:15px;}
-}
-</style>
-</head><body>
-<nav class="site-nav">
-  <a class="brand" href="https://www.saudiutilityhub.com/">🇸🇦 Saudi Utility Hub</a>
-  <a href="https://www.saudiutilityhub.com/">Home</a>
-  <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a>
-  <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI</a>
-  <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
-  <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a>
-  <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
-  <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
-  <a href="https://www.saudiutilityhub.com/blog/" style="color:#f7dc6f;font-weight:700;">Blog</a>
-  <a href="https://www.saudiutilityhub.com/ar/" style="color:#f0d060;">عربي</a>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">🇸🇦 Saudi Utility Hub</span>
+    <a href="https://www.saudiutilityhub.com/">Home</a>
+    <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a>
+    <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI</a>
+    <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
+    <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a>
+    <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
+    <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
+    <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
+    <a href="https://www.saudiutilityhub.com/ar/">عربي</a>
+  </div>
 </nav>
-<div class="page-wrap"><nav class="breadcrumb"><a href="/">Home</a> › Contact</nav>
-<h1>✉️ Contact Saudi Utility Hub</h1>
-<p class="page-meta">We respond to all messages within 48 hours</p>
 
-<div class="info-box">📧 <strong>Email us directly:</strong> <a href="mailto:hello@saudiutilityhub.com">hello@saudiutilityhub.com</a></div>
-
-<h2>When to Contact Us</h2>
-<div class="tools-mega" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
-  <div class="tm-card"><span class="tm-icon">🐛</span><div><div class="tm-name">Report a Calculator Error</div><div class="tm-desc">Wrong result, broken button, outdated rate</div></div></div>
-  <div class="tm-card"><span class="tm-icon">💡</span><div><div class="tm-name">Suggest a New Tool</div><div class="tm-desc">A calculator you'd find useful</div></div></div>
-  <div class="tm-card"><span class="tm-icon">📝</span><div><div class="tm-name">Content Correction</div><div class="tm-desc">An article fact that needs updating</div></div></div>
-  <div class="tm-card"><span class="tm-icon">🤝</span><div><div class="tm-name">Partnership Enquiry</div><div class="tm-desc">Advertising or integration enquiries</div></div></div>
+<div class="breadcrumb">
+  <a href="https://www.saudiutilityhub.com/">Home</a> › Contact Us
 </div>
 
-<h2>Before You Contact</h2>
-<p>Check if your question is answered on our blog:</p>
-<div class="blog-grid">
-  <a class="blog-card" href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html"><div class="bc-cat">Finance</div><div class="bc-title">GOSI Calculator Guide 2026</div></a>
-  <a class="blog-card" href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html"><div class="bc-cat">Labour Law</div><div class="bc-title">End of Service Guide 2026</div></a>
-  <a class="blog-card" href="https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html"><div class="bc-cat">Expat Life</div><div class="bc-title">Iqama Renewal Guide 2026</div></a>
-</div>
+<main>
+  <h1>📬 Contact Us</h1>
+  <p class="subtitle">We read every message and typically respond within 48 hours. Select what brings you here:</p>
 
-<h2>Response Times</h2>
-<p>We typically respond within 48 hours on business days. For urgent matters, please include "URGENT" in your subject line.</p>
-<p><strong>We cannot provide:</strong> personalised legal or financial advice, GOSI/ZATCA account help (contact those agencies directly), or immigration case assistance.</p>
+  <div class="reason-grid">
+    <div class="reason-card" data-value="error" onclick="selectReason(this)">
+      <div class="icon">🔢</div>
+      <strong>Report a Calculation Error</strong>
+      <span>Something doesn't add up on one of our tools</span>
+    </div>
+    <div class="reason-card" data-value="suggestion" onclick="selectReason(this)">
+      <div class="icon">💡</div>
+      <strong>Suggest a New Tool</strong>
+      <span>We're always building — tell us what you need</span>
+    </div>
+    <div class="reason-card" data-value="question" onclick="selectReason(this)">
+      <div class="icon">❓</div>
+      <strong>General Question</strong>
+      <span>Something about GOSI, Iqama, EOS, Zakat etc.</span>
+    </div>
+    <div class="reason-card" data-value="advertising" onclick="selectReason(this)">
+      <div class="icon">📢</div>
+      <strong>Advertising / Partnership</strong>
+      <span>Sponsorship, affiliate, or media enquiry</span>
+    </div>
+  </div>
 
-<div class="info-box">
-  📌 <strong>Official Saudi government contacts:</strong><br>
-  GOSI: <a href="https://gosi.gov.sa" target="_blank" rel="noopener">gosi.gov.sa</a> · 
-  ZATCA: <a href="https://zatca.gov.sa" target="_blank" rel="noopener">zatca.gov.sa</a> · 
-  HRSD: <a href="https://hrsd.gov.sa" target="_blank" rel="noopener">hrsd.gov.sa</a> · 
-  Jawazat: <a href="https://jawazat.gov.sa" target="_blank" rel="noopener">jawazat.gov.sa</a>
-</div></div>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="fl">💼 Finance Tools</div>
-        <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
-        <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
-        <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
-        <a href="https://www.saudiutilityhub.com/working-hours-calculator.html">Overtime Calculator</a>
-        <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT Calculator</a>
-        <a href="https://www.saudiutilityhub.com/car-finance-calculator.html">Car Finance</a>
+  <div class="form-section">
+    <h2>Send us a message</h2>
+
+    <!-- 
+      =====================================================
+      FORMSPREE SETUP INSTRUCTIONS (for site owner):
+      =====================================================
+      1. Go to https://formspree.io and create a FREE account
+      2. Create a new form and get your form ID (looks like: xabc1234)
+      3. Replace YOUR_FORMSPREE_ID below with your actual form ID
+      4. Formspree will email all submissions to the address you register with
+      5. Free tier: 50 submissions/month — more than enough to start
+      =====================================================
+    -->
+    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <input type="hidden" name="reason" id="hiddenReason" value="general" />
+      <input type="hidden" name="_subject" value="New message from Saudi Utility Hub contact form" />
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name <span class="req">*</span></label>
+          <input type="text" id="fname" name="first_name" placeholder="e.g. Ahmed" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="last_name" placeholder="Optional" />
+        </div>
       </div>
-      <div>
-        <div class="fl">🪪 Expat Tools</div>
-        <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a>
-        <a href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Dependent Levy</a>
-        <a href="https://www.saudiutilityhub.com/exit-reentry-calculator.html">Exit Visa Cost</a>
-        <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance Compare</a>
-        <a href="https://www.saudiutilityhub.com/currency-converter.html">Currency Converter</a>
+
+      <div class="form-group">
+        <label for="email">Your Email Address <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
       </div>
-      <div>
-        <div class="fl">🌙 Zakat &amp; Gold</div>
-        <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a>
-        <a href="https://www.saudiutilityhub.com/zakat-calculator.html">Cash Zakat</a>
-        <a href="https://www.saudiutilityhub.com/gold-prices.html">Live Gold Prices</a>
+
+      <div class="form-group">
+        <label for="subject">Subject <span class="req">*</span></label>
+        <input type="text" id="subject" name="subject" placeholder="Brief description of your message" required />
       </div>
-      <div>
-        <div class="fl">📝 Blog Guides</div>
-        <a href="https://www.saudiutilityhub.com/blog/">All Articles</a>
-        <a href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html">GOSI Guide 2026</a>
-        <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html">EOS Guide 2026</a>
-        <a href="https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html">Iqama Renewal</a>
-        <a href="https://www.saudiutilityhub.com/blog/gold-zakat-guide-2026.html">Gold Zakat Guide</a>
-        <a href="https://www.saudiutilityhub.com/blog/vat-saudi-guide-2026.html">VAT Guide</a>
-        <a href="https://www.saudiutilityhub.com/blog/dependent-levy-guide-2026.html">Dependent Levy</a>
-        <a href="https://www.saudiutilityhub.com/blog/send-money-saudi-arabia-to-pakistan-2026.html">SAR to PKR</a>
-        <a href="https://www.saudiutilityhub.com/blog/send-money-saudi-india-2026.html">SAR to INR</a>
+
+      <div class="form-group">
+        <label for="message">Your Message <span class="req">*</span></label>
+        <textarea id="message" name="message" placeholder="Please include as much detail as possible. For calculation errors, tell us which tool, what inputs you used, and what result you expected." required maxlength="2000" oninput="updateCount(this)"></textarea>
+        <div class="char-count"><span id="charCount">0</span> / 2000</div>
       </div>
-      <div>
-        <div class="fl">ℹ️ About</div>
-        <a href="https://www.saudiutilityhub.com/about.html">About Us</a>
-        <a href="https://www.saudiutilityhub.com/contact.html">Contact</a>
-        <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
-        <a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a>
-        <a href="https://www.saudiutilityhub.com/ar/">عربي — Arabic</a>
-      </div>
+
+      <!-- Honeypot spam protection -->
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button type="submit" class="submit-btn" id="submitBtn">Send Message →</button>
+    </form>
+
+    <div class="success-box" id="successBox">
+      <div class="icon">✅</div>
+      <h3>Message received — thank you!</h3>
+      <p>We aim to respond within 48 hours. If your question is urgent, the official Saudi government hotlines are available 24/7:<br><br>
+        <strong>HRSD (Labour):</strong> 19911 &nbsp;·&nbsp; <strong>GOSI:</strong> 8001245050 &nbsp;·&nbsp; <strong>MOI / Jawazat:</strong> 920004444
+      </p>
     </div>
-    <div class="footer-disclosure">
-      📢 <strong>Advertising &amp; Affiliate Disclosure:</strong> This site displays Google AdSense ads. We may earn commissions on remittance service sign-ups. This never affects our calculations or rankings. All tools are free, always.
+
+    <p class="privacy-note">
+      Your information is used only to respond to your message and is never shared with third parties.
+      Read our <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+
+  <div class="info-panel">
+    <div class="info-card">
+      <span class="badge">⏱️ Response Time</span>
+      <strong>Within 48 hours</strong>
+      <span>We read every message personally. Complex technical questions may take a little longer — we'd rather give you a correct answer than a fast one.</span>
     </div>
-    <div class="footer-bottom">
-      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Calculations are estimates — verify with 
-      <a href="https://gosi.gov.sa" target="_blank" rel="noopener">GOSI</a>, 
-      <a href="https://zatca.gov.sa" target="_blank" rel="noopener">ZATCA</a>, 
-      <a href="https://hrsd.gov.sa" target="_blank" rel="noopener">HRSD</a> &amp; 
-      <a href="https://jawazat.gov.sa" target="_blank" rel="noopener">Jawazat</a> ·
-      <a href="mailto:hello@saudiutilityhub.com">hello@saudiutilityhub.com</a>
+    <div class="info-card">
+      <span class="badge">🏛️ Official Sources</span>
+      <strong>Government hotlines</strong>
+      <span>For urgent legal or immigration matters, always contact official authorities:<br>
+      <strong>HRSD:</strong> 19911<br>
+      <strong>GOSI:</strong> 8001245050<br>
+      <strong>Jawazat:</strong> 920004444<br>
+      <strong>ZATCA:</strong> 19993</span>
     </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>💼 Finance Tools</h4>
+      <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
+      <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
+      <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
+      <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>🪪 Expat Tools</h4>
+      <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a>
+      <a href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Dependent Levy</a>
+      <a href="https://www.saudiutilityhub.com/exit-reentry-calculator.html">Exit Visa Cost</a>
+      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
+    </div>
+    <div class="footer-col">
+      <h4>📝 Blog Guides</h4>
+      <a href="https://www.saudiutilityhub.com/blog/">All Articles</a>
+      <a href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html">GOSI Guide</a>
+      <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html">EOS Guide</a>
+      <a href="https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html">Iqama Renewal</a>
+    </div>
+    <div class="footer-col">
+      <h4>ℹ️ About</h4>
+      <a href="https://www.saudiutilityhub.com/about.html">About Us</a>
+      <a href="https://www.saudiutilityhub.com/contact.html">Contact</a>
+      <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
+      <a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a>
+      <a href="https://www.saudiutilityhub.com/ar/">عربي</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia
+    <br><br>
+    📢 This site displays Google AdSense ads and may earn affiliate commissions on remittance sign-ups. This never affects our calculations or rankings.
   </div>
 </footer>
-<div id="ck" role="dialog" aria-label="Cookie consent">
-  <div class="ck-inner">
-    <div class="ck-text">
-      🍪 We use cookies to serve Google AdSense ads and measure traffic. We never sell your data.
-      <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
-    </div>
-    <div class="ck-btns">
-      <button onclick="ckSet('no')" class="ck-no">Decline non-essential</button>
-      <button onclick="ckSet('yes')" class="ck-yes">Accept &amp; Continue</button>
-    </div>
-  </div>
-</div>
-<style>
-#ck{position:fixed;bottom:0;left:0;right:0;background:#0d1b2a;border-top:3px solid #1a5276;z-index:9999;padding:0;}
-.ck-inner{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.ck-text{color:#ccc;font-size:13px;flex:1;min-width:200px;line-height:1.5;}
-.ck-text a{color:#5dade2;}
-.ck-btns{display:flex;gap:8px;flex-shrink:0;}
-.ck-yes{background:#1a5276;color:#fff;border:none;padding:9px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;}
-.ck-yes:hover{background:#154360;}
-.ck-no{background:transparent;color:#aaa;border:1px solid #555;padding:9px 14px;border-radius:6px;cursor:pointer;font-size:13px;}
-.ck-no:hover{color:#ddd;}
-</style>
+
 <script>
-(function(){if(localStorage.getItem('suh_cc'))document.getElementById('ck').style.display='none';})();
-function ckSet(c){localStorage.setItem('suh_cc',c);document.getElementById('ck').style.display='none';if(c==='yes'&&typeof gtag==='function')gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted'});}
+  function selectReason(card) {
+    document.querySelectorAll('.reason-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    document.getElementById('hiddenReason').value = card.dataset.value;
+  }
+
+  function updateCount(el) {
+    document.getElementById('charCount').textContent = el.value.length;
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const formData = new FormData(this);
+      const response = await fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        this.style.display = 'none';
+        document.getElementById('successBox').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+        alert('Something went wrong. Please try again in a moment.');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+      alert('Network error. Please check your connection and try again.');
+    }
+  });
 </script>
-<script>function faq(el){var a=el.nextElementSibling;var o=a.classList.toggle('open');el.classList.toggle('open',o);}</script>
-</body></html>
+
+</body>
+</html>
