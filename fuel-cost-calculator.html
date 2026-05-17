@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Saudi Arabia Fuel Price & Trip Cost Calculator 2026 — Petrol Prices KSA | Saudi Utility Hub</title>
+<meta name="description" content="Free Saudi Arabia fuel price calculator 2026. Current Aramco petrol prices — 91, 95, Diesel per litre. Calculate trip fuel cost, monthly fuel budget, and compare petrol grades. Updated May 2026.">
+<meta property="og:title" content="Saudi Arabia Fuel Price & Trip Cost Calculator 2026 | Saudi Utility Hub">
+<meta property="og:description" content="Current Saudi petrol prices 2026 — 91, 95, Diesel. Calculate trip fuel cost and monthly driving budget. Free, instant, updated with Aramco official prices.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.saudiutilityhub.com/fuel-cost-calculator.html">
+<link rel="canonical" href="https://www.saudiutilityhub.com/fuel-cost-calculator.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --green:#16a34a;--green-dark:#15803d;--green-light:#dcfce7;--green-mid:#bbf7d0;
+    --gray:#6b7280;--gray-light:#f9fafb;--gray-border:#e5e7eb;
+    --text:#111827;--text-soft:#374151;
+    --shadow:0 1px 3px rgba(0,0,0,.1);--shadow-md:0 4px 6px rgba(0,0,0,.07);
+    --radius:10px;--radius-sm:6px;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:#fff;line-height:1.6;font-size:16px}
+  a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}
+
+  nav{background:var(--green);padding:0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:4px;padding:0 16px;overflow-x:auto;scrollbar-width:none}
+  .nav-inner::-webkit-scrollbar{display:none}
+  .nav-brand{font-weight:700;font-size:1rem;color:#fff;white-space:nowrap;padding:14px 8px 14px 0;margin-right:8px;border-right:1px solid rgba(255,255,255,.3)}
+  .nav-inner a{color:rgba(255,255,255,.9);font-size:.85rem;padding:14px 10px;white-space:nowrap;font-weight:500}
+  .nav-inner a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+
+  .container{max-width:860px;margin:0 auto;padding:0 16px}
+  .wide{max-width:1100px;margin:0 auto;padding:0 16px}
+
+  .breadcrumb{background:var(--gray-light);border-bottom:1px solid var(--gray-border);padding:8px 0;font-size:.82rem;color:var(--gray)}
+  .breadcrumb a{color:var(--green)}
+  .breadcrumb span{margin:0 4px}
+
+  .hero{padding:32px 0 8px;text-align:center}
+  .hero h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2}
+  .hero .subtitle{color:var(--gray);font-size:.95rem}
+  .hero .subtitle span{margin:0 6px;color:var(--green);font-weight:600}
+
+  /* LIVE PRICE CARDS */
+  .price-banner{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+  @media(max-width:480px){.price-banner{grid-template-columns:1fr 1fr;}.price-banner .diesel{grid-column:1/-1}}
+  .price-card{background:#fff;border:2px solid var(--gray-border);border-radius:var(--radius);padding:16px;text-align:center;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+  .price-card:hover,.price-card.selected{border-color:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.15)}
+  .price-card.selected{background:var(--green-light)}
+  .price-card .grade{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:4px}
+  .price-card .price{font-size:2rem;font-weight:800;color:var(--green-dark)}
+  .price-card .price-sub{font-size:.75rem;color:var(--gray);margin-top:2px}
+  .price-card .badge-grade{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.7rem;font-weight:700;margin-bottom:6px}
+  .badge-91{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+  .badge-95{background:#dbeafe;color:#1e40af;border:1px solid #bfdbfe}
+  .badge-diesel{background:#f3e8ff;color:#6b21a8;border:1px solid #e9d5ff}
+  .updated-tag{font-size:.72rem;color:var(--gray);text-align:center;margin-top:-8px;margin-bottom:16px}
+
+  .ad-slot{background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);padding:12px;text-align:center;margin:20px 0;font-size:.75rem;color:var(--gray);min-height:90px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+
+  .calc-tabs{display:flex;gap:0;border:1px solid var(--gray-border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:20px}
+  .tab-btn{flex:1;padding:10px;font-size:.85rem;font-weight:600;border:none;background:var(--gray-light);color:var(--gray);cursor:pointer;transition:background .2s,color .2s}
+  .tab-btn.active{background:var(--green);color:#fff}
+  .tab-content{display:none}.tab-content.active{display:block}
+
+  .calc-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:28px;margin:24px 0}
+  .calc-card h2{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--text)}
+
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  @media(max-width:560px){.field-row{grid-template-columns:1fr}}
+  .field-group{margin-bottom:16px}
+  .field-group label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px;color:var(--text-soft)}
+  .field-group small{display:block;color:var(--gray);font-size:.78rem;margin-top:4px}
+
+  input[type=number],select{width:100%;padding:11px 14px;border:1.5px solid var(--gray-border);border-radius:var(--radius-sm);font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s}
+  input:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.1)}
+  select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+
+  .btn-calc{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
+  .btn-calc:hover{background:var(--green-dark)}
+
+  .result-hidden{display:none}
+  .result-card{background:var(--green-light);border:2px solid var(--green-mid);border-radius:var(--radius);padding:24px;margin-top:20px}
+  .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px}
+  .result-box{background:#fff;border-radius:var(--radius-sm);padding:14px;border:1px solid var(--green-mid);text-align:center}
+  .result-box .label{font-size:.72rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+  .result-box .value{font-size:1.4rem;font-weight:800;color:var(--green-dark)}
+  .result-box .sub{font-size:.72rem;color:var(--gray);margin-top:2px}
+
+  .section{margin:36px 0}
+  .section h2{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--green-light)}
+  .section h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:20px 0 10px}
+  .section p{color:var(--text-soft);margin-bottom:12px;font-size:.95rem}
+
+  .note-bar{background:var(--green-light);border:1px solid var(--green-mid);border-radius:var(--radius-sm);padding:12px 16px;margin:20px 0;font-size:.85rem;color:var(--green-dark)}
+
+  .table-wrap{overflow-x:auto;margin:16px 0;border-radius:var(--radius-sm);border:1px solid var(--gray-border)}
+  table{width:100%;border-collapse:collapse;font-size:.85rem}
+  thead th{background:var(--green);color:#fff;padding:10px 12px;text-align:left;font-weight:700;white-space:nowrap}
+  tbody tr:nth-child(odd){background:var(--gray-light)}
+  tbody tr:hover{background:var(--green-light)}
+  td{padding:9px 12px;border-bottom:1px solid var(--gray-border)}
+
+  /* CAR EFFICIENCY TABLE */
+  .car-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0}
+  .car-card{padding:14px;border:1px solid var(--gray-border);border-radius:var(--radius-sm);background:var(--gray-light)}
+  .car-card .model{font-weight:700;font-size:.88rem;color:var(--text)}
+  .car-card .eff{font-size:.78rem;color:var(--gray);margin-top:2px}
+  .car-card .cost{font-size:.95rem;font-weight:700;color:var(--green-dark);margin-top:6px}
+  .car-card .cost-sub{font-size:.72rem;color:var(--gray)}
+
+  .faq-item{border:1px solid var(--gray-border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
+  .faq-q{padding:14px 16px;font-weight:600;font-size:.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;user-select:none}
+  .faq-q:hover{background:var(--gray-light)}
+  .faq-q::after{content:"▼";font-size:.7rem;color:var(--gray);transition:transform .2s;flex-shrink:0;margin-left:8px}
+  .faq-item.open .faq-q::after{transform:rotate(180deg)}
+  .faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+  .faq-item.open .faq-a{max-height:300px;padding:0 16px 14px}
+  .faq-a p{font-size:.88rem;color:var(--text-soft);line-height:1.6}
+
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:12px}
+  .tool-card{display:flex;flex-direction:column;gap:4px;padding:14px;background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);text-decoration:none;transition:border-color .2s}
+  .tool-card:hover{border-color:var(--green);text-decoration:none}
+  .tool-card .tool-icon{font-size:1.3rem}
+  .tool-card .tool-name{font-size:.82rem;font-weight:700;color:var(--text)}
+  .tool-card .tool-desc{font-size:.72rem;color:var(--gray)}
+
+  .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
+  .blog-card{padding:16px;background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);text-decoration:none;transition:border-color .2s;display:block}
+  .blog-card:hover{border-color:var(--green);text-decoration:none}
+  .blog-card .cat{font-size:.7rem;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:4px}
+  .blog-card .title{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.35}
+  .blog-card .meta{font-size:.73rem;color:var(--gray);margin-top:6px}
+
+  footer{background:#111827;color:#9ca3af;padding:40px 0 20px;margin-top:48px;font-size:.82rem}
+  .footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px;margin-bottom:32px}
+  footer h4{color:#f9fafb;font-size:.82rem;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+  footer a{color:#9ca3af;display:block;margin-bottom:5px;font-size:.8rem}
+  footer a:hover{color:#f9fafb;text-decoration:none}
+  .footer-bottom{border-top:1px solid #1f2937;padding-top:16px;text-align:center;font-size:.75rem;color:#6b7280}
+  #cookie-bar{position:fixed;bottom:0;left:0;right:0;background:#111827;color:#d1d5db;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:999;font-size:.8rem;flex-wrap:wrap}
+  #cookie-bar a{color:#86efac}
+  .cookie-btns{display:flex;gap:8px;flex-shrink:0}
+  .btn-cookie{padding:7px 16px;border-radius:var(--radius-sm);border:none;cursor:pointer;font-size:.8rem;font-weight:600}
+  .btn-decline{background:transparent;color:#9ca3af;border:1px solid #374151}
+  .btn-accept{background:var(--green);color:#fff}
+  @media(max-width:600px){.hero{padding:20px 0 4px}.calc-card{padding:18px}.footer-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">🇸🇦 Saudi Utility Hub</div>
+    <a href="https://www.saudiutilityhub.com/">Home</a>
+    <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a>
+    <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI</a>
+    <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
+    <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a>
+    <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
+    <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
+    <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
+    <a href="https://www.saudiutilityhub.com/ar/">عربي</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://www.saudiutilityhub.com/">Home</a>
+    <span>›</span> Fuel Price & Trip Cost Calculator
+  </div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <h1>⛽ Saudi Arabia Fuel Price Calculator 2026</h1>
+    <p class="subtitle">
+      Current Aramco Petrol Prices
+      <span>·</span> Trip Cost Calculator
+      <span>·</span> Monthly Fuel Budget
+    </p>
+  </div>
+
+  <!-- LIVE PRICE CARDS -->
+  <div class="price-banner">
+    <div class="price-card selected" id="card-91" onclick="selectFuel('91')">
+      <span class="badge-grade badge-91">91 Octane</span>
+      <div class="grade">Premium 91</div>
+      <div class="price">0.67</div>
+      <div class="price-sub">SAR per litre</div>
+    </div>
+    <div class="price-card" id="card-95" onclick="selectFuel('95')">
+      <span class="badge-grade badge-95">95 Octane</span>
+      <div class="grade">Super 95</div>
+      <div class="price">0.90</div>
+      <div class="price-sub">SAR per litre</div>
+    </div>
+    <div class="price-card diesel" id="card-diesel" onclick="selectFuel('diesel')">
+      <span class="badge-grade badge-diesel">Diesel</span>
+      <div class="grade">Diesel</div>
+      <div class="price">0.32</div>
+      <div class="price-sub">SAR per litre</div>
+    </div>
+  </div>
+  <p class="updated-tag">📅 Prices set by Saudi Aramco — updated quarterly. Current prices effective Q2 2026.</p>
+
+  <div class="ad-slot">
+    <strong>Advertisement · Google AdSense</strong>
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <h2>⛽ Fuel Cost Calculator</h2>
+
+    <div class="calc-tabs">
+      <button class="tab-btn active" onclick="switchTab('trip',this)">🚗 Trip Cost</button>
+      <button class="tab-btn" onclick="switchTab('monthly',this)">📅 Monthly Budget</button>
+      <button class="tab-btn" onclick="switchTab('fillup',this)">🪣 Full Tank</button>
+    </div>
+
+    <!-- TRIP TAB -->
+    <div id="tab-trip" class="tab-content active">
+      <div class="field-row">
+        <div class="field-group" style="margin-bottom:0">
+          <label>Trip Distance (km)</label>
+          <input type="number" id="trip-distance" placeholder="e.g. 400" value="400" min="1">
+          <small>Riyadh→Dammam: 400 km · Riyadh→Jeddah: 950 km · Riyadh→Tabuk: 1,300 km</small>
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label>Fuel Consumption (L/100km)</label>
+          <input type="number" id="trip-consumption" placeholder="e.g. 10" value="10" min="1" max="30" step="0.5">
+          <small>Sedan: 8–10 · SUV: 12–15 · Pickup truck: 14–18</small>
+        </div>
+      </div>
+      <div class="field-group" style="margin-top:16px">
+        <label>Fuel Type</label>
+        <select id="trip-fuel">
+          <option value="0.67" selected>Premium 91 — SAR 0.67/L</option>
+          <option value="0.90">Super 95 — SAR 0.90/L</option>
+          <option value="0.32">Diesel — SAR 0.32/L</option>
+        </select>
+      </div>
+      <button class="btn-calc" onclick="calcTrip()">Calculate Trip Cost →</button>
+
+      <div id="result-trip" class="result-card result-hidden" style="margin-top:16px">
+        <div class="result-grid">
+          <div class="result-box"><div class="label">Fuel Needed</div><div class="value" id="trip-litres">—</div><div class="sub">litres</div></div>
+          <div class="result-box"><div class="label">Total Fuel Cost</div><div class="value" id="trip-cost">—</div><div class="sub">SAR</div></div>
+          <div class="result-box"><div class="label">Cost per km</div><div class="value" id="trip-perkm">—</div><div class="sub">SAR/km</div></div>
+          <div class="result-box"><div class="label">Return Journey</div><div class="value" id="trip-return">—</div><div class="sub">SAR both ways</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONTHLY TAB -->
+    <div id="tab-monthly" class="tab-content">
+      <div class="field-row">
+        <div class="field-group" style="margin-bottom:0">
+          <label>Daily Driving Distance (km)</label>
+          <input type="number" id="monthly-km" placeholder="e.g. 60" value="60" min="1">
+          <small>Average Saudi commuter drives 50–80 km/day</small>
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label>Driving Days per Month</label>
+          <input type="number" id="monthly-days" placeholder="e.g. 22" value="22" min="1" max="31">
+          <small>Working days + weekend trips</small>
+        </div>
+      </div>
+      <div class="field-row" style="margin-top:16px">
+        <div class="field-group" style="margin-bottom:0">
+          <label>Fuel Consumption (L/100km)</label>
+          <input type="number" id="monthly-consumption" placeholder="e.g. 10" value="10" min="1" step="0.5">
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label>Fuel Type</label>
+          <select id="monthly-fuel">
+            <option value="0.67" selected>Premium 91 — SAR 0.67/L</option>
+            <option value="0.90">Super 95 — SAR 0.90/L</option>
+            <option value="0.32">Diesel — SAR 0.32/L</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn-calc" style="margin-top:16px" onclick="calcMonthly()">Calculate Monthly Budget →</button>
+
+      <div id="result-monthly" class="result-card result-hidden" style="margin-top:16px">
+        <div class="result-grid">
+          <div class="result-box"><div class="label">Monthly km</div><div class="value" id="m-km">—</div><div class="sub">kilometres</div></div>
+          <div class="result-box"><div class="label">Litres/Month</div><div class="value" id="m-litres">—</div><div class="sub">litres</div></div>
+          <div class="result-box"><div class="label">Monthly Cost</div><div class="value" id="m-cost">—</div><div class="sub">SAR/month</div></div>
+          <div class="result-box"><div class="label">Annual Cost</div><div class="value" id="m-annual">—</div><div class="sub">SAR/year</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL TANK TAB -->
+    <div id="tab-fillup" class="tab-content">
+      <div class="field-row">
+        <div class="field-group" style="margin-bottom:0">
+          <label>Tank Size (litres)</label>
+          <input type="number" id="tank-size" placeholder="e.g. 60" value="60" min="10">
+          <small>Corolla: 50L · Camry: 60L · Land Cruiser: 93–110L · Fortuner: 80L</small>
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label>Tank Level Now</label>
+          <select id="tank-level">
+            <option value="0">Empty (0%)</option>
+            <option value="0.125">⅛ full</option>
+            <option value="0.25" selected>¼ full</option>
+            <option value="0.375">⅜ full</option>
+            <option value="0.5">½ full</option>
+            <option value="0.625">⅝ full</option>
+            <option value="0.75">¾ full</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-group" style="margin-top:16px">
+        <label>Fuel Type</label>
+        <select id="tank-fuel">
+          <option value="0.67" selected>Premium 91 — SAR 0.67/L</option>
+          <option value="0.90">Super 95 — SAR 0.90/L</option>
+          <option value="0.32">Diesel — SAR 0.32/L</option>
+        </select>
+      </div>
+      <button class="btn-calc" onclick="calcTank()">Calculate Fill-Up Cost →</button>
+
+      <div id="result-tank" class="result-card result-hidden" style="margin-top:16px">
+        <div class="result-grid">
+          <div class="result-box"><div class="label">Litres Needed</div><div class="value" id="t-litres">—</div><div class="sub">to fill up</div></div>
+          <div class="result-box"><div class="label">Fill-Up Cost</div><div class="value" id="t-cost">—</div><div class="sub">SAR</div></div>
+          <div class="result-box"><div class="label">Range (10L/100km)</div><div class="value" id="t-range">—</div><div class="sub">kilometres</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-bar">
+    📌 <strong>Saudi Aramco Fuel Prices 2026:</strong> Premium 91 = SAR 0.67/L · Super 95 = SAR 0.90/L · Diesel = SAR 0.32/L. Prices are set quarterly by Saudi Aramco and the Ministry of Energy. Diesel is subsidised and available at all petrol stations.
+  </div>
+
+  <div class="ad-slot">
+    <strong>Advertisement · Google AdSense</strong>
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <!-- FUEL PRICE TABLE -->
+  <div class="section">
+    <h2>⛽ Saudi Arabia Official Petrol Prices 2026</h2>
+    <p>Fuel prices in Saudi Arabia are set by Saudi Aramco in coordination with the Ministry of Energy and reviewed quarterly. Prices are among the lowest in the world due to the Kingdom's vast oil reserves.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fuel Grade</th><th>Price (SAR/Litre)</th><th>Price (USD/Litre)</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td>🟡 Premium 91 Octane</td><td><strong>SAR 0.67</strong></td><td>~USD 0.18</td><td>Regular sedans, older vehicles</td></tr>
+          <tr><td>🔵 Super 95 Octane</td><td><strong>SAR 0.90</strong></td><td>~USD 0.24</td><td>Modern engines, turbo, performance cars</td></tr>
+          <tr><td>🟣 Diesel</td><td><strong>SAR 0.32</strong></td><td>~USD 0.09</td><td>Trucks, SUVs, commercial vehicles</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.82rem;color:var(--gray)">Source: Saudi Aramco official pricing — Q2 2026. Prices reviewed quarterly every January, April, July, October.</p>
+  </div>
+
+  <!-- POPULAR ROUTES -->
+  <div class="section">
+    <h2>🗺️ Popular Saudi Road Trips — Fuel Cost Guide</h2>
+    <p>Planning a road trip across Saudi Arabia? Here are the fuel costs for popular routes using a typical sedan (10L/100km) at the current 91 octane price of SAR 0.67/L.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Route</th><th>Distance</th><th>91 (SAR)</th><th>95 (SAR)</th><th>Return (91)</th></tr></thead>
+        <tbody>
+          <tr><td>🏙️ Riyadh → Dammam</td><td>410 km</td><td>27.5</td><td>36.9</td><td>55.0</td></tr>
+          <tr><td>🕌 Riyadh → Makkah</td><td>870 km</td><td>58.3</td><td>78.3</td><td>116.6</td></tr>
+          <tr><td>🌊 Riyadh → Jeddah</td><td>950 km</td><td>63.7</td><td>85.5</td><td>127.4</td></tr>
+          <tr><td>🏔️ Riyadh → Abha</td><td>930 km</td><td>62.3</td><td>83.7</td><td>124.6</td></tr>
+          <tr><td>🌴 Riyadh → Al Ula</td><td>1,150 km</td><td>77.1</td><td>103.5</td><td>154.2</td></tr>
+          <tr><td>⛺ Riyadh → Tabuk</td><td>1,320 km</td><td>88.5</td><td>118.8</td><td>177.0</td></tr>
+          <tr><td>🏖️ Jeddah → Yanbu</td><td>360 km</td><td>24.1</td><td>32.4</td><td>48.2</td></tr>
+          <tr><td>🕌 Jeddah → Madinah</td><td>420 km</td><td>28.2</td><td>37.8</td><td>56.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.82rem;color:var(--gray)">Based on sedan consuming 10L/100km. SUV costs approximately 40–50% more.</p>
+  </div>
+
+  <!-- CAR EFFICIENCY -->
+  <div class="section">
+    <h2>🚗 Fuel Cost by Car — Monthly Estimates</h2>
+    <p>Based on 1,500 km/month (average Saudi driver), using Premium 91 at SAR 0.67/litre.</p>
+    <div class="car-grid">
+      <div class="car-card"><div class="model">Toyota Corolla</div><div class="eff">8–9 L/100km</div><div class="cost">SAR 80–90/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+      <div class="car-card"><div class="model">Toyota Camry</div><div class="eff">9–11 L/100km</div><div class="cost">SAR 90–110/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+      <div class="car-card"><div class="model">Toyota Fortuner</div><div class="eff">12–14 L/100km</div><div class="cost">SAR 120–141/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+      <div class="car-card"><div class="model">Toyota Land Cruiser</div><div class="eff">14–18 L/100km</div><div class="cost">SAR 141–181/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+      <div class="car-card"><div class="model">Hyundai Tucson</div><div class="eff">9–11 L/100km</div><div class="cost">SAR 90–110/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+      <div class="car-card"><div class="model">GMC Yukon / Tahoe</div><div class="eff">15–20 L/100km</div><div class="cost">SAR 151–201/month</div><div class="cost-sub">~1,500 km, 91 octane</div></div>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <strong>Advertisement · Google AdSense</strong>
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the current petrol price in Saudi Arabia 2026?</div>
+      <div class="faq-a"><p>As of Q2 2026: <strong>Premium 91 = SAR 0.67/litre</strong>, <strong>Super 95 = SAR 0.90/litre</strong>, <strong>Diesel = SAR 0.32/litre</strong>. Prices are set by Saudi Aramco quarterly (January, April, July, October) based on international oil prices.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I use 91 or 95 octane petrol in Saudi Arabia?</div>
+      <div class="faq-a"><p>Check your car manual. Most modern cars and turbocharged engines require <strong>95 octane</strong> minimum. Using 91 in a 95-rated engine can cause engine knocking and long-term damage. Older and simpler engines (many Japanese sedans made before 2015) run fine on <strong>91 octane</strong> and it saves SAR 0.23/litre.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How often do Saudi Arabia fuel prices change?</div>
+      <div class="faq-a"><p>Saudi Aramco reviews and potentially adjusts fuel prices every quarter — in <strong>January, April, July, and October</strong>. Prices are linked to global oil markets but remain among the lowest in the world due to government policy on energy subsidies.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is diesel cheaper than petrol in Saudi Arabia?</div>
+      <div class="faq-a"><p>Yes, significantly. Diesel costs only <strong>SAR 0.32/litre</strong> — less than half the price of 91 octane. Diesel is heavily subsidised in Saudi Arabia and is the most economical fuel for trucks, large SUVs, and commercial vehicles.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Where can I find petrol stations in Saudi Arabia?</div>
+      <div class="faq-a"><p>Saudi Aramco operates petrol stations under the <strong>SAPCO</strong> brand across KSA. Other brands include <strong>Al-Baik</strong> affiliated stations, independent local stations, and international brands. All sell the same Aramco-set fuel prices — there is no price variation between stations.</p></div>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="section">
+    <h2>🛠️ Related Calculators</h2>
+    <div class="tools-grid">
+      <a href="https://www.saudiutilityhub.com/car-finance-calculator.html" class="tool-card">
+        <span class="tool-icon">🚗</span>
+        <span class="tool-name">Car Finance Calc</span>
+        <span class="tool-desc">Monthly payments & total cost</span>
+      </a>
+      <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html" class="tool-card">
+        <span class="tool-icon">🚦</span>
+        <span class="tool-name">Traffic Fine Calc</span>
+        <span class="tool-desc">All Muroor fines 2026</span>
+      </a>
+      <a href="https://www.saudiutilityhub.com/vat-calculator.html" class="tool-card">
+        <span class="tool-icon">🧾</span>
+        <span class="tool-name">VAT Calculator</span>
+        <span class="tool-desc">Add or remove 15% VAT</span>
+      </a>
+      <a href="https://www.saudiutilityhub.com/salary-calculator.html" class="tool-card">
+        <span class="tool-icon">💼</span>
+        <span class="tool-name">Salary Calculator</span>
+        <span class="tool-desc">GOSI + take-home pay</span>
+      </a>
+      <a href="https://www.saudiutilityhub.com/currency-converter.html" class="tool-card">
+        <span class="tool-icon">💱</span>
+        <span class="tool-name">Currency Converter</span>
+        <span class="tool-desc">SAR to PKR, INR, USD</span>
+      </a>
+      <a href="/musaned-calculator.html" class="tool-card">
+        <span class="tool-icon">🏠</span>
+        <span class="tool-name">Musaned Calc</span>
+        <span class="tool-desc">Domestic worker cost</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📝 Guides & Blog Articles</h2>
+    <div class="blog-grid">
+      <a href="https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html" class="blog-card">
+        <div class="cat">🚦 Traffic Law</div>
+        <div class="title">Saudi Traffic Fines 2026 — Complete Guide</div>
+        <div class="meta">May 2026 · 8 min read</div>
+      </a>
+      <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html" class="blog-card">
+        <div class="cat">⚖️ Labour Law</div>
+        <div class="title">Saudi End of Service Gratuity 2026</div>
+        <div class="meta">May 2026 · 7 min read</div>
+      </a>
+      <a href="https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html" class="blog-card">
+        <div class="cat">🪪 Expat Life</div>
+        <div class="title">Iqama Renewal 2026 — Fees & Process</div>
+        <div class="meta">May 2026 · 6 min read</div>
+      </a>
+      <a href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html" class="blog-card">
+        <div class="cat">💼 Finance</div>
+        <div class="title">How to Calculate GOSI in Saudi Arabia 2026</div>
+        <div class="meta">May 2026 · 8 min read</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wide">
+    <div class="footer-grid">
+      <div>
+        <h4>💼 Finance Tools</h4>
+        <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
+        <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
+        <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
+        <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT Calculator</a>
+        <a href="https://www.saudiutilityhub.com/car-finance-calculator.html">Car Finance</a>
+      </div>
+      <div>
+        <h4>🚗 Driver Tools</h4>
+        <a href="/fuel-cost-calculator.html" style="color:#86efac">Fuel Cost Calc ✓</a>
+        <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic Fine Calc</a>
+        <a href="https://www.saudiutilityhub.com/exit-reentry-calculator.html">Exit Visa Cost</a>
+        <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a>
+        <a href="/musaned-calculator.html">Musaned Calc</a>
+      </div>
+      <div>
+        <h4>🌙 Zakat</h4>
+        <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a>
+        <a href="https://www.saudiutilityhub.com/zakat-calculator.html">Cash Zakat</a>
+        <a href="https://www.saudiutilityhub.com/gold-prices.html">Live Gold Prices</a>
+      </div>
+      <div>
+        <h4>📝 Blog</h4>
+        <a href="https://www.saudiutilityhub.com/blog/">All Articles</a>
+        <a href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html">GOSI Guide</a>
+        <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html">EOS Guide</a>
+        <a href="https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html">Traffic Fines</a>
+      </div>
+      <div>
+        <h4>ℹ️ Info</h4>
+        <a href="https://www.saudiutilityhub.com/about.html">About Us</a>
+        <a href="https://www.saudiutilityhub.com/contact.html">Contact</a>
+        <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
+        <a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a>
+        <a href="https://www.saudiutilityhub.com/ar/">عربي</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Saudi Utility Hub · Fuel prices from Saudi Aramco Q2 2026 — verify at <a href="https://www.aramco.com" target="_blank" style="color:#86efac">aramco.com</a> · <a href="mailto:hello@saudiutilityhub.com" style="color:#86efac">hello@saudiutilityhub.com</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-bar">
+  <span>🍪 We use cookies for Google AdSense and analytics. We never sell your data. <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a></span>
+  <div class="cookie-btns">
+    <button class="btn-cookie btn-decline" onclick="document.getElementById('cookie-bar').style.display='none'">Decline</button>
+    <button class="btn-cookie btn-accept" onclick="document.getElementById('cookie-bar').style.display='none'">Accept & Continue</button>
+  </div>
+</div>
+
+<script>
+const PRICES = { '91':0.67, '95':0.90, 'diesel':0.32 };
+let selectedFuel = '91';
+
+function selectFuel(g) {
+  selectedFuel = g;
+  ['91','95','diesel'].forEach(f => document.getElementById('card-'+f).classList.remove('selected'));
+  document.getElementById('card-'+g).classList.add('selected');
+}
+
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+function fmt(n, dec=2) { return 'SAR ' + n.toFixed(dec); }
+
+function calcTrip() {
+  const dist = parseFloat(document.getElementById('trip-distance').value) || 0;
+  const cons = parseFloat(document.getElementById('trip-consumption').value) || 0;
+  const price = parseFloat(document.getElementById('trip-fuel').value);
+  if (!dist || !cons) return;
+  const litres = (dist * cons) / 100;
+  const cost = litres * price;
+  document.getElementById('trip-litres').textContent = litres.toFixed(1) + 'L';
+  document.getElementById('trip-cost').textContent = fmt(cost);
+  document.getElementById('trip-perkm').textContent = fmt(cost / dist, 3).replace('SAR ','SAR ');
+  document.getElementById('trip-return').textContent = fmt(cost * 2);
+  document.getElementById('result-trip').classList.remove('result-hidden');
+}
+
+function calcMonthly() {
+  const km = parseFloat(document.getElementById('monthly-km').value) || 0;
+  const days = parseFloat(document.getElementById('monthly-days').value) || 0;
+  const cons = parseFloat(document.getElementById('monthly-consumption').value) || 0;
+  const price = parseFloat(document.getElementById('monthly-fuel').value);
+  if (!km || !days || !cons) return;
+  const totalKm = km * days;
+  const litres = (totalKm * cons) / 100;
+  const cost = litres * price;
+  document.getElementById('m-km').textContent = totalKm.toLocaleString() + ' km';
+  document.getElementById('m-litres').textContent = litres.toFixed(1) + 'L';
+  document.getElementById('m-cost').textContent = fmt(cost);
+  document.getElementById('m-annual').textContent = fmt(cost * 12);
+  document.getElementById('result-monthly').classList.remove('result-hidden');
+}
+
+function calcTank() {
+  const size = parseFloat(document.getElementById('tank-size').value) || 0;
+  const level = parseFloat(document.getElementById('tank-level').value);
+  const price = parseFloat(document.getElementById('tank-fuel').value);
+  if (!size) return;
+  const needed = size * (1 - level);
+  const cost = needed * price;
+  const range = (size / 10) * 100;
+  document.getElementById('t-litres').textContent = needed.toFixed(1) + 'L';
+  document.getElementById('t-cost').textContent = fmt(cost);
+  document.getElementById('t-range').textContent = Math.round(range) + ' km';
+  document.getElementById('result-tank').classList.remove('result-hidden');
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const was = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!was) item.classList.add('open');
+}
+
+if (localStorage.getItem('cookie_ok')) document.getElementById('cookie-bar').style.display = 'none';
+document.querySelector('.btn-accept').addEventListener('click', () => localStorage.setItem('cookie_ok', '1'));
+</script>
+</body>
+</html>
