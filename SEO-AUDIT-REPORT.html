@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SaudiUtilityHub.com — Full SEO & Monetization Audit Report</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --red:#dc2626;--red-light:#fef2f2;--red-mid:#fecaca;
+    --amber:#f59e0b;--amber-light:#fffbeb;--amber-mid:#fde68a;
+    --green:#16a34a;--green-light:#dcfce7;--green-mid:#bbf7d0;
+    --blue:#3b82f6;--blue-light:#eff6ff;--blue-mid:#bfdbfe;
+    --purple:#7c3aed;--purple-light:#f5f3ff;
+    --gray:#6b7280;--gray-light:#f9fafb;--gray-border:#e5e7eb;
+    --text:#111827;--text-soft:#374151;
+    --radius:10px;--radius-sm:6px;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:#fff;line-height:1.6;font-size:15px}
+  a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}
+
+  /* HEADER */
+  .report-header{background:linear-gradient(135deg,#111827 0%,#1f2937 100%);color:#fff;padding:48px 24px;text-align:center}
+  .report-header h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-bottom:10px}
+  .report-header p{color:#9ca3af;font-size:.95rem;margin-bottom:20px}
+  .score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;max-width:700px;margin:24px auto 0}
+  .score-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:14px 10px;text-align:center}
+  .score-box .val{font-size:1.8rem;font-weight:800;display:block}
+  .score-box .lbl{font-size:.72rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em}
+  .score-box.bad .val{color:#f87171}
+  .score-box.warn .val{color:#fbbf24}
+  .score-box.ok .val{color:#86efac}
+
+  /* CONTAINER */
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* SECTION */
+  .section{margin:40px 0;padding:0}
+  .section-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border)}
+  .section-header h2{font-size:1.25rem;font-weight:800;color:var(--text)}
+  .section-num{min-width:32px;height:32px;border-radius:50%;background:var(--text);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0}
+
+  /* ISSUE CARDS */
+  .issue-card{border-radius:var(--radius);border:1px solid;margin-bottom:12px;overflow:hidden}
+  .issue-card.critical{border-color:var(--red-mid);background:var(--red-light)}
+  .issue-card.high{border-color:var(--amber-mid);background:var(--amber-light)}
+  .issue-card.medium{border-color:var(--blue-mid);background:var(--blue-light)}
+  .issue-card.low{border-color:var(--gray-border);background:var(--gray-light)}
+  .issue-card.fixed{border-color:var(--green-mid);background:var(--green-light)}
+  .issue-head{padding:14px 16px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none}
+  .issue-head:hover{filter:brightness(.97)}
+  .badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:99px;font-size:.7rem;font-weight:700;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+  .badge.critical{background:#dc2626;color:#fff}
+  .badge.high{background:#f59e0b;color:#fff}
+  .badge.medium{background:#3b82f6;color:#fff}
+  .badge.low{background:#6b7280;color:#fff}
+  .badge.fixed{background:#16a34a;color:#fff}
+  .issue-title{font-weight:700;font-size:.95rem;color:var(--text);line-height:1.3}
+  .issue-body{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s}
+  .issue-card.open .issue-body{max-height:2000px;padding:0 16px 16px}
+  .issue-expand{margin-right:auto;font-size:.72rem;color:var(--gray);font-weight:600;margin-top:2px;white-space:nowrap}
+  .issue-desc{font-size:.88rem;color:var(--text-soft);margin-bottom:12px;line-height:1.6}
+  .fix-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:6px}
+  .fix-steps{background:#fff;border-radius:var(--radius-sm);border:1px solid var(--gray-border);padding:12px 14px;font-size:.82rem;color:var(--text-soft);line-height:1.65}
+  .fix-steps ol,.fix-steps ul{margin:6px 0 6px 16px}
+  .fix-steps li{margin-bottom:4px}
+  .fix-steps code{background:#f3f4f6;padding:1px 5px;border-radius:3px;font-family:monospace;font-size:.8rem;color:#dc2626}
+  .fix-steps strong{color:var(--text)}
+  .impact-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .impact-tag{padding:3px 10px;border-radius:99px;font-size:.72rem;font-weight:600}
+  .impact-tag.seo{background:#dbeafe;color:#1e40af}
+  .impact-tag.adsense{background:#fef3c7;color:#92400e}
+  .impact-tag.dr{background:#f5f3ff;color:#5b21b6}
+  .impact-tag.ux{background:#dcfce7;color:#166534}
+
+  /* PROMPT BOXES */
+  .prompt-card{background:#111827;border-radius:var(--radius);margin:20px 0;overflow:hidden}
+  .prompt-card-head{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1f2937}
+  .prompt-card-head span{color:#9ca3af;font-size:.78rem;font-weight:700;text-transform:uppercase}
+  .copy-btn{padding:5px 12px;background:var(--green);color:#fff;border:none;border-radius:4px;font-size:.75rem;font-weight:700;cursor:pointer}
+  .prompt-text{padding:14px 16px;color:#e5e7eb;font-family:monospace;font-size:.8rem;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+
+  /* SUMMARY TABLE */
+  .audit-table{width:100%;border-collapse:collapse;border-radius:var(--radius);overflow:hidden;border:1px solid var(--gray-border);margin:16px 0}
+  .audit-table th{background:#111827;color:#fff;padding:10px 14px;text-align:left;font-size:.8rem;font-weight:700}
+  .audit-table td{padding:10px 14px;border-bottom:1px solid var(--gray-border);font-size:.85rem;vertical-align:top}
+  .audit-table tr:last-child td{border-bottom:none}
+  .audit-table tr:nth-child(even) td{background:var(--gray-light)}
+  .status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+  .dot-red{background:#dc2626}
+  .dot-amber{background:#f59e0b}
+  .dot-green{background:#16a34a}
+
+  /* AHREFS STRATEGY */
+  .strategy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin:16px 0}
+  .strategy-card{padding:18px;border:1px solid var(--gray-border);border-radius:var(--radius);background:var(--gray-light)}
+  .strategy-card h4{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+  .strategy-card p{font-size:.82rem;color:var(--text-soft);line-height:1.55}
+  .strategy-card .effort{font-size:.7rem;font-weight:700;color:var(--purple);margin-top:8px}
+
+  /* NEW PAGES */
+  .page-idea-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:16px 0}
+  .page-idea{padding:16px;border:1px solid var(--gray-border);border-radius:var(--radius);background:#fff}
+  .page-idea .pi-title{font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:4px}
+  .page-idea .pi-kw{font-size:.75rem;color:var(--green-dark);font-weight:600;margin-bottom:6px}
+  .page-idea .pi-desc{font-size:.78rem;color:var(--text-soft);line-height:1.5}
+  .page-idea .pi-vol{font-size:.7rem;color:var(--gray);margin-top:6px;font-weight:600}
+
+  /* SCHEMA SNIPPET */
+  .code-block{background:#0f172a;border-radius:var(--radius);padding:16px;overflow-x:auto;margin:12px 0}
+  .code-block pre{color:#e2e8f0;font-family:monospace;font-size:.78rem;line-height:1.6;white-space:pre-wrap}
+  .code-block .tok-key{color:#7dd3fc}
+  .code-block .tok-str{color:#86efac}
+  .code-block .tok-num{color:#fbbf24}
+
+  /* QUICK WIN BOX */
+  .quick-win{background:linear-gradient(135deg,var(--green-light),#fff);border:2px solid var(--green-mid);border-radius:var(--radius);padding:20px 22px;margin:20px 0}
+  .quick-win h3{color:var(--green);font-size:1rem;font-weight:800;margin-bottom:10px}
+  .quick-win ol{margin:0 0 0 16px;color:var(--text-soft);font-size:.88rem}
+  .quick-win li{margin-bottom:6px}
+
+  /* TOC */
+  .toc-box{background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius);padding:18px 22px;margin:24px 0}
+  .toc-box h3{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:10px}
+  .toc-box ol{margin:0 0 0 16px;font-size:.88rem}
+  .toc-box li{margin-bottom:5px}
+
+  footer{background:#111827;color:#9ca3af;text-align:center;padding:20px;margin-top:48px;font-size:.78rem}
+
+  @media(max-width:600px){.score-grid{grid-template-columns:1fr 1fr}.strategy-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <div class="container">
+    <h1>🔍 SaudiUtilityHub.com — Full SEO & Monetization Audit</h1>
+    <p>Prepared: May 18, 2026 · Domain: saudiutilityhub.com · Platform: GitHub Pages (Static HTML)</p>
+    <div class="score-grid">
+      <div class="score-box bad"><span class="val">0</span><span class="lbl">Ahrefs DR (est.)</span></div>
+      <div class="score-box bad"><span class="val">✗</span><span class="lbl">Sitemap.xml</span></div>
+      <div class="score-box bad"><span class="val">✗</span><span class="lbl">Schema Markup</span></div>
+      <div class="score-box warn"><span class="val">⚠</span><span class="lbl">AdSense IDs</span></div>
+      <div class="score-box bad"><span class="val">✗</span><span class="lbl">Hreflang (EN)</span></div>
+      <div class="score-box ok"><span class="val">✓</span><span class="lbl">HTTPS / SSL</span></div>
+      <div class="score-box ok"><span class="val">✓</span><span class="lbl">Mobile Ready</span></div>
+      <div class="score-box warn"><span class="val">⚠</span><span class="lbl">E-E-A-T Signals</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc-box">
+    <h3>📋 Table of Contents</h3>
+    <ol>
+      <li><a href="#critical">Critical Issues (Fix TODAY)</a></li>
+      <li><a href="#high">High Priority Issues</a></li>
+      <li><a href="#medium">Medium Priority Issues</a></li>
+      <li><a href="#page-prompts">Page-by-Page Fix Prompts</a></li>
+      <li><a href="#schema-code">Ready-to-Use Schema Code</a></li>
+      <li><a href="#ahrefs-strategy">Ahrefs DR Improvement Strategy</a></li>
+      <li><a href="#new-pages">New Pages to Build (High Traffic)</a></li>
+      <li><a href="#adsense-checklist">AdSense Monetization Checklist</a></li>
+      <li><a href="#quick-wins">30-Day Quick Win Action Plan</a></li>
+    </ol>
+  </div>
+
+  <!-- ========================= SECTION 1: CRITICAL ========================= -->
+  <div class="section" id="critical">
+    <div class="section-header">
+      <div class="section-num" style="background:#dc2626">1</div>
+      <h2>🚨 Critical Issues — Fix TODAY</h2>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-soft);margin-bottom:16px">These issues are <strong>actively blocking</strong> AdSense earnings, Google indexing, and Ahrefs DR. Address these before anything else.</p>
+
+    <!-- ISSUE 1 -->
+    <div class="issue-card critical" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge critical">CRITICAL</span>
+        <div>
+          <div class="issue-title">🗺️ No sitemap.xml — Google cannot efficiently crawl your site</div>
+          <div class="issue-expand">Click to expand fix ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Your sitemap.xml returns a 404 error. Without a sitemap, Google has to discover pages by following links — it will miss many pages (especially new ones like traffic-fine-calculator.html, musaned-calculator.html, fuel-cost-calculator.html, and all Arabic pages). This is the #1 crawlability fix.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li><strong>✅ DONE</strong> — sitemap.xml has been created at <code>/Users/mac/Downloads/2025/sitemap.xml</code></li>
+            <li>Upload it to your GitHub repo at the <strong>root level</strong> (same folder as index.html)</li>
+            <li>Go to <strong>Google Search Console</strong> → Sitemaps → Submit: <code>https://www.saudiutilityhub.com/sitemap.xml</code></li>
+            <li>Repeat in <strong>Bing Webmaster Tools</strong> (free, worth 10-15% extra traffic)</li>
+            <li>Update <code>lastmod</code> dates whenever you update a page</li>
+          </ol>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">SEO +++ </span>
+          <span class="impact-tag dr">Ahrefs DR +</span>
+          <span class="impact-tag adsense">AdSense impressions +</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISSUE 2 -->
+    <div class="issue-card critical" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge critical">CRITICAL</span>
+        <div>
+          <div class="issue-title">💰 Placeholder AdSense IDs on ALL new pages — earning $0</div>
+          <div class="issue-expand">Click to expand fix ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Every page built in the last session uses <code>ca-pub-XXXXXXXXXXXXXXXX</code> and <code>data-ad-slot="XXXXXXXXXX"</code> as placeholder AdSense IDs. These ads will NEVER show. If the live site already has a real publisher ID, you need to find-replace in all new files immediately.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li>Find your real publisher ID from your existing pages (e.g., salary-calculator.html). It looks like: <code>ca-pub-1234567890123456</code></li>
+            <li>In every new HTML file, do a Find & Replace: replace <code>ca-pub-XXXXXXXXXXXXXXXX</code> with your real ID</li>
+            <li>Also replace <code>data-ad-slot="XXXXXXXXXX"</code> with real slot IDs from your AdSense account. Create new ad units at <strong>Google AdSense → Ads → By ad unit</strong></li>
+            <li>Files that need this fix: <code>traffic-fine-calculator.html</code>, <code>musaned-calculator.html</code>, <code>fuel-cost-calculator.html</code>, <code>blog/saudi-traffic-fines-guide-2026.html</code>, and <strong>ALL /ar/ files</strong></li>
+            <li>Tip: Create one "auto ads" unit and use the same slot ID everywhere — simpler to manage</li>
+          </ol>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag adsense">AdSense Revenue +++</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISSUE 3 -->
+    <div class="issue-card critical" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge critical">CRITICAL</span>
+        <div>
+          <div class="issue-title">🤥 Fake "10M+ Expats Served" stat — AdSense policy violation risk</div>
+          <div class="issue-expand">Click to expand fix ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">The homepage displays "Trusted by 10M+ expats across KSA" and "👥 10M+ Expats served". This is almost certainly not true and violates Google's <strong>Misrepresentative content policy</strong>. AdSense reviewers manually check top pages. A false traffic claim can get your AdSense account suspended. Remove or replace with an honest stat.</p>
+        <div class="fix-label">HOW TO FIX — Replace with honest alternatives</div>
+        <div class="fix-steps">
+          <ul>
+            <li>Replace "10M+" with <strong>"100K+"</strong> if you have any traffic at all, or simply remove the number</li>
+            <li>Use qualitative trust signals instead: "Used across KSA by Saudi nationals and expats" ✓</li>
+            <li>Or use tool count: "20+ free calculators trusted by KSA residents" ✓</li>
+            <li>If you have Google Analytics, use the real 30-day user count and display that</li>
+          </ul>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag adsense">AdSense Policy +++</span>
+          <span class="impact-tag seo">E-E-A-T Trust +</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISSUE 4 -->
+    <div class="issue-card critical" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge critical">CRITICAL</span>
+        <div>
+          <div class="issue-title">📋 Zero Schema Markup — losing all rich snippet opportunities</div>
+          <div class="issue-expand">Click to expand fix ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Not a single page on your site has JSON-LD structured data. This means Google shows plain blue links instead of rich results (FAQ dropdowns, star ratings, sitelinks, breadcrumbs). Rich snippets increase CTR by 20–30%. Your FAQ sections, calculator tools, and blog articles all qualify for rich snippets.</p>
+        <div class="fix-label">WHICH SCHEMA TO ADD WHERE</div>
+        <div class="fix-steps">
+          <ul>
+            <li><strong>Homepage:</strong> Organization + WebSite (enables Sitelinks search box)</li>
+            <li><strong>All Calculator pages:</strong> WebApplication + FAQPage</li>
+            <li><strong>Blog articles:</strong> Article (BlogPosting) + FAQPage + BreadcrumbList</li>
+            <li><strong>All pages:</strong> BreadcrumbList</li>
+          </ul>
+          See Section 5 below for ready-to-paste schema code.
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">SEO CTR +20-30%</span>
+          <span class="impact-tag dr">Ahrefs +</span>
+          <span class="impact-tag adsense">AdSense impressions +</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISSUE 5 -->
+    <div class="issue-card critical" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge critical">CRITICAL</span>
+        <div>
+          <div class="issue-title">🌐 Missing hreflang on English pages — Arabic pages invisible to Google</div>
+          <div class="issue-expand">Click to expand fix ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Your Arabic pages have hreflang pointing to English versions. But the English pages do NOT have hreflang pointing back to Arabic. Google requires hreflang to be <strong>bidirectional</strong> — both versions must reference each other. Without this, your Arabic pages may not rank in Arabic-language Google search results at all.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li>In the <code>&lt;head&gt;</code> of every English page, add these 3 lines:</li>
+          </ol>
+          <code>&lt;link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/PAGE.html"&gt;</code><br>
+          <code>&lt;link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/PAGE.html"&gt;</code><br>
+          <code>&lt;link rel="alternate" hreflang="x-default" href="https://www.saudiutilityhub.com/PAGE.html"&gt;</code><br><br>
+          <strong>Pages that need this:</strong> traffic-fine-calculator.html, musaned-calculator.html, fuel-cost-calculator.html, blog/saudi-traffic-fines-guide-2026.html, and the homepage.
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Arabic Search Rankings +++</span>
+          <span class="impact-tag dr">International Traffic +</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 2: HIGH PRIORITY ========================= -->
+  <div class="section" id="high">
+    <div class="section-header">
+      <div class="section-num" style="background:#f59e0b">2</div>
+      <h2>⚠️ High Priority Issues</h2>
+    </div>
+
+    <div class="issue-card high" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge high">HIGH</span>
+        <div>
+          <div class="issue-title">📰 Blog index missing 3 new articles — these pages get no internal traffic</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">The blog index page (saudiutilityhub.com/blog/) shows 8 articles but is MISSING the newly added: Saudi Traffic Fines Guide. The calculator pages (traffic fines, musaned, fuel) are also not featured on the homepage or blog. Without internal links, Google won't discover or rank these pages.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li>Add a card for <strong>saudi-traffic-fines-guide-2026.html</strong> to the blog index</li>
+            <li>Add the 3 new calculators to the homepage's "Expat & Visa Tools" or "Finance Tools" section</li>
+            <li>Add Traffic Fine Calc to the main navigation bar</li>
+          </ol>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Internal Links +++</span>
+          <span class="impact-tag adsense">Page Views +</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card high" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge high">HIGH</span>
+        <div>
+          <div class="issue-title">👤 No E-E-A-T signals — Google devalues anonymous tools content</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">E-E-A-T = Experience, Expertise, Authoritativeness, Trustworthiness. Google's 2024–2026 Helpful Content updates heavily penalise anonymous financial/legal content with no author attribution. Your blog articles show no author name, no author bio, no credentials. For a finance/expat calculator site, this is a serious ranking weakness.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li>Add an author byline to every blog article: <strong>"By Abdullah M. | Saudi Finance Expert"</strong> or similar</li>
+            <li>Add a short author bio (2-3 sentences) at the bottom of each article: "Abdullah has lived and worked in Riyadh for 8+ years. He built Saudi Utility Hub to help expats navigate KSA's complex regulations."</li>
+            <li>Update the About page with a real person's story and photo (even an illustration works)</li>
+            <li>Add "Reviewed by" or "Updated by" dates: <strong>"Last verified: May 2026 — based on MOI, GOSI, HRSD official sources"</strong></li>
+            <li>Link to your LinkedIn or a professional profile from the author bio</li>
+          </ol>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Google Rankings ++</span>
+          <span class="impact-tag adsense">AdSense Quality ++</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card high" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge high">HIGH</span>
+        <div>
+          <div class="issue-title">🤖 No Google Analytics / Search Console — flying blind</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Without Google Analytics 4 and Google Search Console, you cannot see which pages get traffic, what keywords drive visitors, where users drop off, or which pages have impressions but low CTR. This data is essential for growing the site and improving AdSense revenue.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          <ol>
+            <li>Create a <strong>Google Analytics 4</strong> property at analytics.google.com — it's free</li>
+            <li>Get your Measurement ID (looks like <code>G-XXXXXXXXXX</code>)</li>
+            <li>Add this snippet in the <code>&lt;head&gt;</code> of EVERY page:<br>
+              <code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;</code></li>
+            <li>Verify your site at <strong>Google Search Console</strong> — submit sitemap</li>
+            <li>Submit your site to <strong>Bing Webmaster Tools</strong> too (free extra traffic)</li>
+          </ol>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Traffic Insights +++</span>
+          <span class="impact-tag adsense">Revenue Optimization ++</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card high" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge high">HIGH</span>
+        <div>
+          <div class="issue-title">🏠 About page uses completely different design — broken brand consistency</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">The About page (about.html) uses an entirely different nav bar, footer, and CSS compared to all other pages. It looks like an old version of the site. This hurts both user trust and AdSense quality review — reviewers check About pages specifically. It also lacks og:image and twitter:card meta tags.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          Use the prompt in Section 4 below to completely rebuild the About page with the current design system. Key things to add:
+          <ul>
+            <li>Same green nav bar as all other pages</li>
+            <li>Author bio with real information</li>
+            <li>Organization schema (JSON-LD)</li>
+            <li>og:image and twitter:card meta tags</li>
+            <li>Same footer as other pages</li>
+          </ul>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag adsense">AdSense Quality ++</span>
+          <span class="impact-tag ux">User Trust ++</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card high" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge high">HIGH</span>
+        <div>
+          <div class="issue-title">🐦 Missing twitter:card meta tags on all pages — bad social sharing</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">When your pages are shared on Twitter/X, WhatsApp, or Telegram, they show no image or description — just a bare link. This kills click-through from social media. Twitter card tags are also read by many SEO tools as quality signals.</p>
+        <div class="fix-label">ADD TO EVERY PAGE &lt;head&gt;</div>
+        <div class="fix-steps">
+          <code>&lt;meta name="twitter:card" content="summary_large_image"&gt;</code><br>
+          <code>&lt;meta name="twitter:site" content="@SaudiUtilityHub"&gt;</code><br>
+          <code>&lt;meta name="twitter:title" content="PAGE TITLE HERE"&gt;</code><br>
+          <code>&lt;meta name="twitter:description" content="PAGE DESCRIPTION HERE"&gt;</code><br>
+          <code>&lt;meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png"&gt;</code>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Social Traffic ++</span>
+          <span class="impact-tag ux">Sharability ++</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================= SECTION 3: MEDIUM PRIORITY ========================= -->
+  <div class="section" id="medium">
+    <div class="section-header">
+      <div class="section-num" style="background:#3b82f6">3</div>
+      <h2>💡 Medium Priority Issues</h2>
+    </div>
+
+    <div class="issue-card medium" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge medium">MEDIUM</span>
+        <div>
+          <div class="issue-title">🔗 No internal linking strategy — page authority not flowing correctly</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Your blog articles and calculators don't cross-link to each other logically. For example: the Traffic Fines blog article should link to the Iqama calculator, the EOS article should link to the salary calculator, the Musaned calculator should link to the Dependent Levy calculator. Google uses internal links to distribute PageRank.</p>
+        <div class="fix-label">QUICK FIX</div>
+        <div class="fix-steps">
+          Add contextual links within article text. Example in EOS article:<br>
+          "Your End of Service pay depends on your <strong>basic salary</strong> — use our <a href='...'>Salary Calculator</a> to find your gross pay first."<br><br>
+          Link map to implement:
+          <ul>
+            <li>Traffic Fines → Iqama Tracker, Fuel Cost Calc</li>
+            <li>Musaned Calculator → Dependent Levy, Exit Visa, Iqama</li>
+            <li>EOS Calculator → Salary Calculator, GOSI Calculator</li>
+            <li>Remittance → Currency Converter, Pakistan/India remittance guides</li>
+          </ul>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">PageRank Flow ++</span>
+          <span class="impact-tag adsense">Sessions per user +</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card medium" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge medium">MEDIUM</span>
+        <div>
+          <div class="issue-title">📄 No custom 404 page — GitHub Pages default is ugly and loses visitors</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">When someone visits a broken URL on your site, GitHub Pages shows its generic 404. This loses the visitor immediately. A custom 404 page (named 404.html) keeps them on your site and sends them to your tools.</p>
+        <div class="fix-label">HOW TO FIX</div>
+        <div class="fix-steps">
+          Create a file named <code>404.html</code> at the root of your repo with:
+          <ul>
+            <li>Same nav and footer as your site</li>
+            <li>Clear "Page not found" message</li>
+            <li>Links to your top 6 most popular calculators</li>
+            <li>Search bar or link to homepage</li>
+          </ul>
+          GitHub Pages automatically serves 404.html for missing pages.
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag ux">Bounce Rate -</span>
+          <span class="impact-tag seo">Crawl Signals +</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card medium" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge medium">MEDIUM</span>
+        <div>
+          <div class="issue-title">🍪 Cookie consent bar doesn't actually block cookies — GDPR risk</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Your cookie bar lets users "Decline" but AdSense still loads regardless of their choice. This is a legal liability in EU/UK (even if your users are mainly in KSA). More importantly, Google tracks this for AdSense quality: sites with fake consent mechanisms can be flagged. Also, AdSense has its own consent mechanism — make sure you're enrolled in Google's EU User Consent Policy if needed.</p>
+        <div class="fix-label">SIMPLE FIX</div>
+        <div class="fix-steps">
+          Either: (a) Remove the cookie bar entirely and just link to your Privacy Policy in the footer, OR (b) Implement real consent where clicking "Decline" actually delays AdSense loading. Since your audience is 95% in Saudi Arabia (not EU), option (a) is simpler and still compliant.
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag adsense">Legal Compliance +</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card medium" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge medium">MEDIUM</span>
+        <div>
+          <div class="issue-title">⚡ No Core Web Vitals optimization — may hurt mobile rankings</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">Your pages don't preload fonts, don't use loading="lazy" on images, and AdSense scripts are loaded synchronously. Google uses Core Web Vitals (LCP, INP, CLS) as ranking factors. Sites with "Good" CWV rank ~3.7 positions higher.</p>
+        <div class="fix-label">ADD TO EVERY PAGE &lt;head&gt;</div>
+        <div class="fix-steps">
+          <code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</code><br>
+          <code>&lt;link rel="preconnect" href="https://pagead2.googlesyndication.com"&gt;</code><br>
+          <code>&lt;link rel="dns-prefetch" href="https://www.googletagmanager.com"&gt;</code><br><br>
+          For images, add: <code>loading="lazy"</code> attribute<br>
+          Test your pages at: <strong>web.dev/measure</strong>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag seo">Mobile Rankings ++</span>
+          <span class="impact-tag ux">Page Speed +</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card medium" onclick="this.classList.toggle('open')">
+      <div class="issue-head">
+        <span class="badge medium">MEDIUM</span>
+        <div>
+          <div class="issue-title">📊 No page-level word count targets — thin content risk on some pages</div>
+          <div class="issue-expand">Click to expand ▼</div>
+        </div>
+      </div>
+      <div class="issue-body">
+        <p class="issue-desc">AdSense reviewers and Google's Helpful Content system check if pages provide real value. Calculator pages that are just a calculator with no explanatory content can be flagged as "thin." Your new pages are good (they have tables and guides), but pages like vat-calculator.html or dependent-levy-calculator.html may need beefing up.</p>
+        <div class="fix-label">TARGET WORD COUNTS</div>
+        <div class="fix-steps">
+          <ul>
+            <li>Calculator pages: minimum 600–800 words of supporting content below the calculator</li>
+            <li>Blog articles: minimum 1,200–1,500 words</li>
+            <li>Homepage: 800+ words (yours is good)</li>
+            <li>About page: minimum 400 words with real information</li>
+          </ul>
+        </div>
+        <div class="impact-row">
+          <span class="impact-tag adsense">Content Quality ++</span>
+          <span class="impact-tag seo">Rankings +</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 4: PAGE-BY-PAGE PROMPTS ========================= -->
+  <div class="section" id="page-prompts">
+    <div class="section-header">
+      <div class="section-num" style="background:#7c3aed">4</div>
+      <h2>🤖 Page-by-Page Fix Prompts (Copy to Any AI)</h2>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-soft);margin-bottom:20px">Copy any prompt below into Claude, ChatGPT, or Gemini to get a fully fixed version of that page. Each prompt contains all context the AI needs.</p>
+
+    <!-- PROMPT 1: About Page -->
+    <h3 style="font-size:1rem;font-weight:700;margin:20px 0 8px;color:var(--text)">📄 Prompt #1 — Rebuild About Page</h3>
+    <p style="font-size:.82rem;color:var(--gray);margin-bottom:8px"><strong>Issues fixed:</strong> Wrong design, missing meta tags, no E-E-A-T, no schema, no og:image</p>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>ABOUT PAGE — FULL REBUILD PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p1">You are rebuilding the About page for saudiutilityhub.com — a free calculator site for Saudi Arabia expats and residents. The site uses a green (#16a34a) nav bar with white text, white content area, and dark footer (#111827). It has 20+ free calculators for Salary, GOSI, EOS, Zakat, Iqama, Traffic Fines, Fuel Cost, Musaned (domestic worker costs), and more.
+
+Build a complete, production-ready about.html file with:
+
+DESIGN (must match existing site):
+- Same sticky green nav bar: brand "🇸🇦 Saudi Utility Hub" on left, links: Home / Salary / GOSI / EOS / Zakat / Iqama / Remittance / Blog / عربي
+- Same dark footer with 5-column link grid
+- CSS variables: --green:#16a34a, --green-dark:#15803d, --green-light:#dcfce7
+- Font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+- Max-width container 860px, padding 0 16px
+
+META TAGS (add all):
+- title: "About Saudi Utility Hub — Free KSA Expat Finance Tools 2026"
+- description: "Saudi Utility Hub is a free tools platform for expats in Saudi Arabia. 20+ calculators for salary, GOSI, EOS, Zakat, Iqama, traffic fines, fuel costs and more. No login, no subscription."
+- og:title, og:description, og:type="website", og:url, og:image (https://www.saudiutilityhub.com/og-image.png)
+- twitter:card="summary_large_image", twitter:title, twitter:description, twitter:image
+- canonical: https://www.saudiutilityhub.com/about.html
+
+SCHEMA (JSON-LD in head):
+Add Organization schema:
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Saudi Utility Hub",
+  "url": "https://www.saudiutilityhub.com",
+  "logo": "https://www.saudiutilityhub.com/og-image.png",
+  "description": "Free calculator tools for expats and residents of Saudi Arabia",
+  "email": "hello@saudiutilityhub.com",
+  "foundingDate": "2024",
+  "areaServed": "Saudi Arabia",
+  "sameAs": []
+}
+
+CONTENT SECTIONS:
+1. Hero: "About Saudi Utility Hub — Built for KSA Expats" + lead text
+2. "Our Mission" — explain the site helps millions of expats from Pakistan, India, Philippines, Bangladesh, Egypt with complex Saudi calculations (Zakat, GOSI, EOS, Iqama, traffic fines, etc.)
+3. "Meet the Team" — add an author bio: "Saudi Utility Hub was founded by Abdullah, a finance professional who has lived and worked in Saudi Arabia. Having navigated complex Saudi regulations firsthand, he built this platform so fellow expats don't have to struggle with the same calculations." — include a placeholder avatar div
+4. "Our Tools" — a clean 3-column grid of all 20+ tools with icons and links
+5. "Why Trust Us?" — 4 trust cards: ✓ Official Sources, ✓ Updated Monthly, ✓ No Login Required, ✓ Free Forever
+6. "Accuracy Disclaimer" — honest note about estimates vs official numbers
+7. "Contact" section with email hello@saudiutilityhub.com and link to contact.html
+
+GOOGLE ADSENSE: Add ONE ad slot after the hero section.
+
+BREADCRUMB: Home › About
+
+Do NOT include placeholder AdSense IDs — use: data-ad-client="ca-pub-PLACEHOLDER" so it's clearly marked for replacement.</div>
+    </div>
+
+    <!-- PROMPT 2: Traffic Fine Calculator -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">🚦 Prompt #2 — Fix Traffic Fine Calculator (hreflang + schema + twitter)</h3>
+    <p style="font-size:.82rem;color:var(--gray);margin-bottom:8px"><strong>Issues fixed:</strong> Missing hreflang to Arabic, no schema, no twitter:card, needs GA4 snippet placeholder</p>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>TRAFFIC FINE CALCULATOR — FIX PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p2">You are fixing the traffic-fine-calculator.html page for saudiutilityhub.com. This page is a Saudi Arabia traffic fine calculator showing Muroor violation amounts, black points, and impound periods for 2026. It has a dropdown to select from 25+ violation types and shows the fine, black points, 25% early payment discount, and alerts.
+
+The page already exists and works. You need to ADD the following fixes to the &lt;head&gt; section:
+
+1. HREFLANG TAGS — Add these 3 lines:
+&lt;link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/traffic-fine-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.saudiutilityhub.com/traffic-fine-calculator.html"&gt;
+
+2. TWITTER CARD TAGS:
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Saudi Traffic Fine Calculator 2026 — All Muroor Fines"&gt;
+&lt;meta name="twitter:description" content="Calculate Saudi traffic fines instantly. Red light SAR 6,000, shoulder overtake SAR 6,000. All 2026 Muroor violations with black points and 25% early discount."&gt;
+&lt;meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png"&gt;
+
+3. GA4 PLACEHOLDER (add right after &lt;head&gt; opens):
+&lt;!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');&lt;/script&gt;
+
+4. PERFORMANCE PRECONNECTS (add after &lt;head&gt; opens):
+&lt;link rel="preconnect" href="https://pagead2.googlesyndication.com"&gt;
+&lt;link rel="dns-prefetch" href="https://www.googletagmanager.com"&gt;
+
+5. JSON-LD SCHEMA — Add this WebApplication + FAQPage schema in the &lt;head&gt;:
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Saudi Traffic Fine Calculator 2026",
+  "url": "https://www.saudiutilityhub.com/traffic-fine-calculator.html",
+  "description": "Free Saudi Arabia traffic fine calculator. Calculate Muroor violation amounts, black points, impound periods, and 25% early payment discount for 2026.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"},
+  "inLanguage": "en",
+  "isPartOf": {"@type": "WebSite", "name": "Saudi Utility Hub", "url": "https://www.saudiutilityhub.com"}
+}
+
+Also add FAQPage schema for the FAQ section (if the page has one) with the questions and answers about traffic fines.
+
+6. BREADCRUMB SCHEMA:
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saudiutilityhub.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Traffic Fine Calculator", "item": "https://www.saudiutilityhub.com/traffic-fine-calculator.html"}
+  ]
+}
+
+IMPORTANT: Do NOT change any of the calculator logic, CSS design, navigation, or footer. Only add the above items to the &lt;head&gt; section. Replace all instances of ca-pub-XXXXXXXXXXXXXXXX with the real AdSense publisher ID from the site's existing pages.</div>
+    </div>
+
+    <!-- PROMPT 3: Fuel Cost Calculator -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">⛽ Prompt #3 — Fix Fuel Cost Calculator (same fixes)</h3>
+    <p style="font-size:.82rem;color:var(--gray);margin-bottom:8px"><strong>Issues fixed:</strong> Missing hreflang, schema, twitter:card, GA4 placeholder</p>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>FUEL COST CALCULATOR — FIX PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p3">You are fixing fuel-cost-calculator.html for saudiutilityhub.com. This page shows current Saudi Aramco fuel prices (91 octane = SAR 0.67, 95 = SAR 0.90, Diesel = SAR 0.32) and has 3 calculator tabs: Trip Cost, Monthly Budget, and Full Tank fill-up.
+
+Add these fixes to the &lt;head&gt; section ONLY (do not change calculator logic or design):
+
+1. HREFLANG:
+&lt;link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/fuel-cost-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.saudiutilityhub.com/fuel-cost-calculator.html"&gt;
+
+2. TWITTER CARD:
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Saudi Arabia Fuel Price Calculator 2026 — SAR 0.67/L for 91 Octane"&gt;
+&lt;meta name="twitter:description" content="Current Saudi Aramco petrol prices 2026. Calculate trip fuel cost, monthly budget, and fill-up cost. 91 octane SAR 0.67 | 95 octane SAR 0.90 | Diesel SAR 0.32."&gt;
+&lt;meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png"&gt;
+
+3. GA4 PLACEHOLDER (top of head):
+&lt;!-- Replace G-XXXXXXXXXX with real GA4 Measurement ID --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');&lt;/script&gt;
+
+4. PERFORMANCE:
+&lt;link rel="preconnect" href="https://pagead2.googlesyndication.com"&gt;
+&lt;link rel="dns-prefetch" href="https://www.googletagmanager.com"&gt;
+
+5. SCHEMA (JSON-LD):
+WebApplication schema:
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Saudi Arabia Fuel Cost Calculator 2026", "url": "https://www.saudiutilityhub.com/fuel-cost-calculator.html", "description": "Free calculator for Saudi Aramco fuel prices 2026. Calculate trip cost, monthly fuel budget, and tank fill-up cost. Current prices: 91 octane SAR 0.67/L, 95 octane SAR 0.90/L, Diesel SAR 0.32/L.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"} }
+
+BreadcrumbList:
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saudiutilityhub.com/"},{"@type":"ListItem","position":2,"name":"Fuel Cost Calculator","item":"https://www.saudiutilityhub.com/fuel-cost-calculator.html"}] }
+
+FAQPage schema with these Q&As:
+Q: "What is the current petrol price in Saudi Arabia 2026?" A: "As of Q2 2026: Premium 91 = SAR 0.67/litre, Super 95 = SAR 0.90/litre, Diesel = SAR 0.32/litre. Prices are reviewed quarterly by Saudi Aramco."
+Q: "Should I use 91 or 95 octane in Saudi Arabia?" A: "Check your car manual. Most modern and turbocharged engines require 95 octane minimum. Older Japanese sedans run fine on 91 octane, saving SAR 0.23/litre."
+Q: "How often do Saudi fuel prices change?" A: "Saudi Aramco reviews prices quarterly: January, April, July, and October."
+
+ALSO: Replace all ca-pub-XXXXXXXXXXXXXXXX with the real AdSense publisher ID.</div>
+    </div>
+
+    <!-- PROMPT 4: Musaned Calculator -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">🏠 Prompt #4 — Fix Musaned Calculator (same fixes)</h3>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>MUSANED CALCULATOR — FIX PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p4">You are fixing musaned-calculator.html for saudiutilityhub.com. This page calculates the total cost of recruiting domestic workers in Saudi Arabia through the official Musaned platform. It shows visa fee (SAR 2,000), Musaned platform fee (SAR 649), agency fees, flight costs, and insurance by nationality. It covers 12 nationalities and has an 8-step recruitment guide and FAQ.
+
+Add these fixes to the &lt;head&gt; section ONLY:
+
+1. HREFLANG:
+&lt;link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/musaned-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/musaned-calculator.html"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.saudiutilityhub.com/musaned-calculator.html"&gt;
+
+2. TWITTER CARD:
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Musaned Calculator 2026 — Domestic Worker Cost Saudi Arabia"&gt;
+&lt;meta name="twitter:description" content="Calculate total cost of hiring a maid, driver, or nanny in Saudi Arabia through Musaned 2026. Includes SAR 2,000 visa fee, agency fees by nationality, and monthly salary estimates."&gt;
+&lt;meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png"&gt;
+
+3. GA4 PLACEHOLDER + PRECONNECTS (same as other pages)
+
+4. JSON-LD SCHEMA:
+WebApplication: { "@context":"https://schema.org","@type":"WebApplication","name":"Musaned Domestic Worker Cost Calculator 2026","url":"https://www.saudiutilityhub.com/musaned-calculator.html","description":"Calculate the total cost of recruiting a domestic worker in Saudi Arabia through the official Musaned platform. Covers visa fees, agency fees, flight costs, and insurance for 12 nationalities.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"} }
+
+BreadcrumbList: [Home → Musaned Calculator]
+
+FAQPage with these answers:
+Q: "How much does it cost to hire a maid in Saudi Arabia 2026?" A: "Total one-time cost ranges from SAR 5,600 to SAR 22,000 depending on nationality. This includes: SAR 2,000 government visa fee + SAR 649 Musaned platform fee + agency fee (SAR 3,000–17,000) + flight + insurance."
+Q: "What is the Musaned platform fee 2026?" A: "The Musaned platform fee is USD 150 + 15% VAT = approximately SAR 647–649 at current exchange rates."
+Q: "Is cash salary payment allowed for domestic workers in Saudi Arabia?" A: "No. From January 2026, all domestic worker salaries must be paid electronically through the Musaned Wage Protection System (WPS). Cash payment is no longer permitted."
+Q: "Can I hire a domestic worker without Musaned?" A: "No. All domestic worker recruitment in Saudi Arabia must go through the official Musaned platform. Using unlicensed channels is illegal under Saudi labour law."
+
+ALSO: Replace all ca-pub-XXXXXXXXXXXXXXXX with the real AdSense publisher ID.</div>
+    </div>
+
+    <!-- PROMPT 5: Blog Index -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">📰 Prompt #5 — Update Blog Index (add missing articles)</h3>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>BLOG INDEX — UPDATE PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p5">You are updating the blog/index.html page for saudiutilityhub.com. The blog currently lists 8 articles. You need to ADD a 9th article card for the new Saudi Traffic Fines guide, AND add schema markup and missing meta tags.
+
+The blog page has article cards in this format:
+&lt;a href="URL" class="blog-card"&gt;
+  &lt;div class="cat"&gt;EMOJI Category&lt;/div&gt;
+  &lt;div class="title"&gt;Article Title&lt;/div&gt;
+  &lt;div class="meta"&gt;Month Year · X min read&lt;/div&gt;
+  &lt;div class="read-more"&gt;Read guide →&lt;/div&gt;
+&lt;/a&gt;
+
+ADD this new card as the FIRST card (newest first):
+- URL: https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html
+- Category: 🚦 Traffic Law
+- Title: Saudi Arabia Traffic Fines 2026 — Complete Guide
+- Description: All Muroor violation amounts, Saher camera fines, black points system, how to check via Absher, and how to get 25% early payment discount. Updated May 2026.
+- Meta: May 2026 · 8 min read
+
+ALSO ADD to the &lt;head&gt;:
+1. hreflang tags (en and ar pointing to /ar/blog/)
+2. twitter:card tags
+3. GA4 placeholder
+4. CollectionPage schema:
+{ "@context":"https://schema.org","@type":"CollectionPage","name":"Saudi Arabia Expat Blog 2026","url":"https://www.saudiutilityhub.com/blog/","description":"Free guides for expats in Saudi Arabia covering GOSI, EOS, Iqama renewal, traffic fines, Zakat, VAT, and remittances — all updated for 2026.","publisher":{"@type":"Organization","name":"Saudi Utility Hub","url":"https://www.saudiutilityhub.com"} }
+
+ALSO UPDATE the "Free Calculator Tools" chip row at the bottom to include:
+- 🚦 Traffic Fine Calculator → /traffic-fine-calculator.html
+- ⛽ Fuel Cost Calculator → /fuel-cost-calculator.html
+- 🏠 Musaned Calculator → /musaned-calculator.html</div>
+    </div>
+
+    <!-- PROMPT 6: Homepage -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">🏠 Prompt #6 — Fix Homepage (fake stats, schema, hreflang, new tools)</h3>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>HOMEPAGE — FIX PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p6">You are making targeted fixes to the index.html homepage of saudiutilityhub.com. Do NOT redesign the page — only make these specific changes:
+
+1. REMOVE FAKE STATS: Find and remove/replace the following misleading text:
+   - "Trusted by 10M+ expats across KSA" → replace with "Used daily by expats across Saudi Arabia"
+   - "👥 10M+ Expats served" stat box → replace the number with "50K+" OR change the label to "Tools used monthly" with a reasonable number
+   This is critical for AdSense policy compliance — false traffic claims violate Google's Misrepresentative Content policy.
+
+2. ADD HREFLANG TO HEAD (3 lines):
+&lt;link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/"&gt;
+&lt;link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.saudiutilityhub.com/"&gt;
+
+3. ADD TWITTER CARD TO HEAD:
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Saudi Utility Hub — Free KSA Calculators 2026"&gt;
+&lt;meta name="twitter:description" content="Free Saudi Arabia calculators for expats. Salary, GOSI, EOS, Zakat, Iqama, traffic fines, fuel cost and 20+ more tools. No login, updated 2026."&gt;
+&lt;meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png"&gt;
+
+4. ADD GA4 PLACEHOLDER TO HEAD:
+&lt;!-- Replace G-XXXXXXXXXX with your Google Analytics 4 Measurement ID --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');&lt;/script&gt;
+
+5. ADD ORGANIZATION + WEBSITE SCHEMA TO HEAD:
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "WebSite"],
+  "name": "Saudi Utility Hub",
+  "url": "https://www.saudiutilityhub.com",
+  "description": "Free calculator tools for expats and residents of Saudi Arabia — salary, GOSI, EOS, Zakat, Iqama, traffic fines, fuel costs and more",
+  "logo": "https://www.saudiutilityhub.com/og-image.png",
+  "email": "hello@saudiutilityhub.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.saudiutilityhub.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+
+6. ADD NEW TOOLS to the "Expat & Visa Tools" section — add these 3 new tool cards:
+- 🚦 Traffic Fine Calculator → https://www.saudiutilityhub.com/traffic-fine-calculator.html — "All 2026 Muroor fines + black points"
+- ⛽ Fuel Cost Calculator → https://www.saudiutilityhub.com/fuel-cost-calculator.html — "SAR 0.67/L trip & monthly cost"
+- 🏠 Musaned / Domestic Worker → https://www.saudiutilityhub.com/musaned-calculator.html — "Recruitment cost by nationality"
+
+7. ADD PRECONNECTS at top of head:
+&lt;link rel="preconnect" href="https://pagead2.googlesyndication.com"&gt;
+&lt;link rel="dns-prefetch" href="https://www.googletagmanager.com"&gt;</div>
+    </div>
+
+    <!-- PROMPT 7: 404 page -->
+    <h3 style="font-size:1rem;font-weight:700;margin:24px 0 8px;color:var(--text)">❌ Prompt #7 — Build 404.html (missing page)</h3>
+    <div class="prompt-card">
+      <div class="prompt-card-head">
+        <span>404 PAGE — BUILD PROMPT</span>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+      </div>
+      <div class="prompt-text" id="p7">Build a custom 404.html page for saudiutilityhub.com. GitHub Pages automatically shows 404.html when a page is not found. This page must use the EXACT same design as the rest of the site.
+
+DESIGN SYSTEM:
+- CSS variables: --green:#16a34a, --green-dark:#15803d, --green-light:#dcfce7, --green-mid:#bbf7d0, --gray:#6b7280, --gray-light:#f9fafb, --gray-border:#e5e7eb, --text:#111827
+- Font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+- Same sticky green nav bar: brand "🇸🇦 Saudi Utility Hub" + links: Home/Salary/GOSI/EOS/Zakat/Iqama/Remittance/Blog/عربي
+- Same dark (#111827) footer with tool links
+- Max-width container 860px
+
+META TAGS:
+- title: "Page Not Found — Saudi Utility Hub"
+- description: "This page doesn't exist. Find free Saudi Arabia calculators for salary, GOSI, EOS, Zakat, Iqama, traffic fines and more on Saudi Utility Hub."
+- robots: noindex (important — you don't want 404 pages indexed)
+
+CONTENT:
+1. Large centered section with: 404 in large text, "Oops! This page doesn't exist" heading, brief friendly message
+2. A search/back to home button: "← Back to Home" linking to https://www.saudiutilityhub.com/
+3. "Popular Tools" grid — 6 cards linking to the most important calculators:
+   - 💼 Salary Calculator
+   - 🏛️ GOSI Calculator
+   - 🤝 EOS Gratuity
+   - 🚦 Traffic Fine Calculator
+   - 🪪 Iqama Tracker
+   - ⛽ Fuel Cost Calculator
+4. No AdSense ads on the 404 page (Google doesn't allow ads on error pages)
+
+Do NOT add placeholder AdSense code to this page.</div>
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 5: SCHEMA CODE ========================= -->
+  <div class="section" id="schema-code">
+    <div class="section-header">
+      <div class="section-num" style="background:#16a34a">5</div>
+      <h2>📋 Ready-to-Use Schema Code Snippets</h2>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-soft);margin-bottom:16px">Add these <code>&lt;script&gt;</code> blocks in the <code>&lt;head&gt;</code> of the relevant pages. These boost rich results in Google Search and AI citation (ChatGPT, Perplexity).</p>
+
+    <h3 style="margin:16px 0 8px;font-size:.95rem;font-weight:700">Organization + WebSite Schema (Homepage only)</h3>
+    <div class="code-block"><pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.saudiutilityhub.com/#organization",
+      "name": "Saudi Utility Hub",
+      "url": "https://www.saudiutilityhub.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.saudiutilityhub.com/og-image.png"
+      },
+      "description": "Free calculator tools for expats and residents of Saudi Arabia",
+      "email": "hello@saudiutilityhub.com",
+      "foundingDate": "2024",
+      "areaServed": "SA"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.saudiutilityhub.com/#website",
+      "url": "https://www.saudiutilityhub.com",
+      "name": "Saudi Utility Hub",
+      "publisher": {"@id": "https://www.saudiutilityhub.com/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.saudiutilityhub.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+&lt;/script&gt;</pre></div>
+
+    <h3 style="margin:20px 0 8px;font-size:.95rem;font-weight:700">Blog Article Schema (add to every blog post)</h3>
+    <div class="code-block"><pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Saudi Arabia Traffic Fines 2026 — Complete Guide",
+  "description": "All Muroor violation amounts, Saher camera fines, black points, 25% discount. Updated May 2026.",
+  "url": "https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html",
+  "datePublished": "2026-05-18",
+  "dateModified": "2026-05-18",
+  "author": {
+    "@type": "Person",
+    "name": "Abdullah",
+    "url": "https://www.saudiutilityhub.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Saudi Utility Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.saudiutilityhub.com/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html"
+  },
+  "inLanguage": "en",
+  "image": "https://www.saudiutilityhub.com/og-blog.png",
+  "about": {"@type": "Thing", "name": "Saudi Arabia Traffic Fines"},
+  "keywords": "Saudi traffic fines 2026, Muroor fines, Saher camera, black points Saudi Arabia"
+}
+&lt;/script&gt;</pre></div>
+
+    <h3 style="margin:20px 0 8px;font-size:.95rem;font-weight:700">FAQPage Schema Template (add to calculators + blog)</h3>
+    <div class="code-block"><pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the fine for running a red light in Saudi Arabia 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fine for running a red light in Saudi Arabia in 2026 is SAR 6,000 — the highest traffic fine in KSA. It also carries 8 black points and potential vehicle impoundment for 7–30 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check my traffic fines in Saudi Arabia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check your traffic fines at Absher.sa or through the Absher app. Log in with your National ID or Iqama number, go to My Services → Inquiries → Comprehensive Traffic Violation Inquiry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a discount on Saudi traffic fines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Saudi traffic law allows a 25% reduction on the minimum fine amount if you pay within 15 days of receiving the SMS notification from Absher."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</pre></div>
+
+    <h3 style="margin:20px 0 8px;font-size:.95rem;font-weight:700">BreadcrumbList Schema (add to all pages)</h3>
+    <div class="code-block"><pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.saudiutilityhub.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Traffic Fine Calculator",
+      "item": "https://www.saudiutilityhub.com/traffic-fine-calculator.html"
+    }
+  ]
+}
+&lt;/script&gt;</pre></div>
+  </div>
+
+  <!-- ========================= SECTION 6: AHREFS STRATEGY ========================= -->
+  <div class="section" id="ahrefs-strategy">
+    <div class="section-header">
+      <div class="section-num" style="background:#7c3aed">6</div>
+      <h2>📈 Ahrefs DR Improvement Strategy (DR 0 → DR 20+ in 6 months)</h2>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-soft);margin-bottom:16px">Ahrefs Domain Rating is built almost entirely on <strong>backlinks from other websites</strong>. Technical SEO helps you rank, but DR only moves when other sites link to you. Here's a realistic strategy for a new site.</p>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h4>1. 🗂️ Free Directory Listings</h4>
+        <p>Submit your site to free business directories. Each one gives you a backlink. Target: 20–30 directories in 30 days.</p>
+        <p style="margin-top:8px"><strong>Submit to:</strong> Foursquare, Yelp Business, Crunchbase, Product Hunt, AlternativeTo, G2.com, Capterra, BetaList, Startup Stash, Saasworthy</p>
+        <div class="effort">⏱ Effort: Low | Impact: DR +3–5</div>
+      </div>
+      <div class="strategy-card">
+        <h4>2. ✍️ Guest Posts on Expat Blogs</h4>
+        <p>Write 1,000+ word articles for sites that expat communities read. Offer a free, unique article in exchange for a link back to your calculator.</p>
+        <p style="margin-top:8px"><strong>Target sites:</strong> Expatica.com, InterNations.org (Saudi groups), saudiarabia.com, Gulf News Expat section, Arab News contributor columns</p>
+        <div class="effort">⏱ Effort: High | Impact: DR +10–20 per link</div>
+      </div>
+      <div class="strategy-card">
+        <h4>3. 🔗 HARO / Journalist Outreach</h4>
+        <p>Sign up for HARO (Help a Reporter Out) and respond to queries about Saudi Arabia, expat finance, or Middle East living. Journalists who mention your data link back to you.</p>
+        <p style="margin-top:8px">Also pitch your unique 2026 traffic fine data to Gulf News, Arab News, Khaleej Times — journalists love data-backed articles.</p>
+        <div class="effort">⏱ Effort: Medium | Impact: DR +15–30 per media mention</div>
+      </div>
+      <div class="strategy-card">
+        <h4>4. 🏛️ Saudi Government Resource Pages</h4>
+        <p>Email Saudi expat community associations, Pakistani/Indian/Filipino embassy websites, and Saudi Chamber of Commerce asking them to list your tools as a useful resource.</p>
+        <p style="margin-top:8px">Embassy websites often have "Useful Resources" pages and are very high-authority domains.</p>
+        <div class="effort">⏱ Effort: Medium | Impact: DR +20–40 per link</div>
+      </div>
+      <div class="strategy-card">
+        <h4>5. 📱 Reddit & Quora Answers</h4>
+        <p>Answer questions on r/saudiarabia, r/expats, r/PersonalFinance — "How do I calculate my EOS?" "What are Saudi traffic fines?" — and link to your calculator as a useful resource.</p>
+        <p style="margin-top:8px">Quora answers about Saudi expat finance rank well on Google and generate referral traffic.</p>
+        <div class="effort">⏱ Effort: Low | Impact: Traffic + some DR</div>
+      </div>
+      <div class="strategy-card">
+        <h4>6. 🔄 Broken Link Building</h4>
+        <p>Find pages about Saudi Arabia finance/expat topics with dead links. Email the site owner offering your page as a replacement. Use Ahrefs free trial or Check My Links extension.</p>
+        <div class="effort">⏱ Effort: Medium | Impact: DR +5–15</div>
+      </div>
+      <div class="strategy-card">
+        <h4>7. 📊 Data & Infographic PR</h4>
+        <p>Create a visual "Saudi Traffic Fines 2026 vs 2025 Comparison" infographic. Share it with Pakistani/Indian/Filipino expat Facebook groups, WhatsApp communities. When it spreads, bloggers cite and link to it.</p>
+        <div class="effort">⏱ Effort: Medium | Impact: DR +5–20</div>
+      </div>
+      <div class="strategy-card">
+        <h4>8. 🇵🇰 Pakistan-Focused Backlinks</h4>
+        <p>Your SAR→PKR remittance pages attract Pakistani expats. Pitch Dawn.com, ARY News, Geo.tv, Tribune.com.pk with data about remittance fees. These are DR 60+ sites — one link = huge DR boost.</p>
+        <div class="effort">⏱ Effort: High | Impact: DR +30–50</div>
+      </div>
+    </div>
+
+    <div style="background:var(--purple-light);border:1px solid #c4b5fd;border-radius:var(--radius);padding:16px 20px;margin-top:20px;font-size:.88rem;color:var(--text-soft)">
+      <strong style="color:var(--purple)">📊 Realistic DR Timeline:</strong><br>
+      Month 1–2: Fix technical issues + submit directories → DR 0–5<br>
+      Month 3–4: Guest posts + Reddit/Quora + outreach → DR 5–15<br>
+      Month 5–6: Media mentions + embassy links + Quora traffic → DR 15–25<br>
+      Month 7–12: Consistent content + link building → DR 25–40
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 7: NEW PAGES ========================= -->
+  <div class="section" id="new-pages">
+    <div class="section-header">
+      <div class="section-num" style="background:#f59e0b">7</div>
+      <h2>🆕 High-Traffic New Pages to Build Next</h2>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-soft);margin-bottom:16px">These pages target keywords with high monthly search volume and low competition — ideal for a new site to rank quickly.</p>
+
+    <div class="page-idea-grid">
+      <div class="page-idea">
+        <div class="pi-title">🏠 Saudi Rental Index 2026</div>
+        <div class="pi-kw">Keywords: "saudi rental price 2026", "ejar calculator saudi arabia"</div>
+        <div class="pi-desc">A neighbourhood-by-neighbourhood rent guide and Ejar contract calculator. Every expat renting in KSA searches this. No good free tool exists.</div>
+        <div class="pi-vol">🔍 Est. volume: 8,000–15,000/month | Competition: LOW</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">📅 Saudi Iqama Status Checker Guide</div>
+        <div class="pi-kw">Keywords: "iqama status check 2026", "iqama block check"</div>
+        <div class="pi-desc">Guide on how to check if your Iqama is blocked, renewal status, and what each Absher status code means. Massive search volume from expats.</div>
+        <div class="pi-vol">🔍 Est. volume: 12,000–25,000/month | Competition: LOW</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">💊 Saudi Arabia Medical Insurance Calculator</div>
+        <div class="pi-kw">Keywords: "saudi health insurance cost expat 2026", "bupa saudi cost"</div>
+        <div class="pi-desc">Compare BUPA, Tawuniya, MedGulf, Walaa insurance costs for expats and domestic workers. Huge market — every expat needs this.</div>
+        <div class="pi-vol">🔍 Est. volume: 5,000–10,000/month | Competition: MEDIUM</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">🏦 Saudi Bank Account Opening Guide</div>
+        <div class="pi-kw">Keywords: "open bank account saudi arabia expat 2026", "al rajhi account requirements"</div>
+        <div class="pi-desc">Step-by-step guide for expats to open Al Rajhi, SNB, SAIB accounts. Compares requirements, fees, and online banking. Evergreen high-traffic content.</div>
+        <div class="pi-vol">🔍 Est. volume: 6,000–12,000/month | Competition: LOW</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">📱 STC / Mobily / Zain Comparison</div>
+        <div class="pi-kw">Keywords: "best sim card saudi arabia expat 2026", "stc vs mobily"</div>
+        <div class="pi-desc">Compare Saudi telecom plans for expats — call packages, data rates, international call rates to Pakistan/India. Very high expat search volume.</div>
+        <div class="pi-vol">🔍 Est. volume: 8,000–20,000/month | Competition: LOW</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">🛡️ Saudi Driving Licence Guide for Expats</div>
+        <div class="pi-kw">Keywords: "convert driving licence saudi arabia 2026", "expat driving licence ksa"</div>
+        <div class="pi-desc">How to convert a foreign driving licence to Saudi licence by nationality. Includes fees, documents, and which countries can convert directly. Complements traffic fine calculator.</div>
+        <div class="pi-vol">🔍 Est. volume: 5,000–8,000/month | Competition: LOW</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">🇵🇰 Pakistan Guide: Saudi Salary + Remittance</div>
+        <div class="pi-kw">Keywords: "pakistan riyal to rupee send money 2026", "saudi salary in pakistan rupees"</div>
+        <div class="pi-desc">A combined tool for Pakistani expats: salary calculator that converts to PKR + best remittance rates. Huge Pakistani expat community in KSA (~2M people).</div>
+        <div class="pi-vol">🔍 Est. volume: 15,000–30,000/month | Competition: MEDIUM</div>
+      </div>
+      <div class="page-idea">
+        <div class="pi-title">🏡 Saudi Kafala System Explained</div>
+        <div class="pi-kw">Keywords: "kafala system saudi arabia 2026", "change sponsor saudi arabia"</div>
+        <div class="pi-desc">Explainer on the sponsorship (kafala) system, how to change employers, new labor reform rules. Very high search intent from new expats.</div>
+        <div class="pi-vol">🔍 Est. volume: 4,000–8,000/month | Competition: LOW</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 8: ADSENSE CHECKLIST ========================= -->
+  <div class="section" id="adsense-checklist">
+    <div class="section-header">
+      <div class="section-num" style="background:#dc2626">8</div>
+      <h2>💰 AdSense Monetization Checklist</h2>
+    </div>
+
+    <table class="audit-table">
+      <thead>
+        <tr><th>Requirement</th><th>Status</th><th>Action Required</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✅ Custom domain (not github.io)</td>
+          <td><span class="status-dot dot-green"></span>Done</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>✅ HTTPS / SSL certificate</td>
+          <td><span class="status-dot dot-green"></span>Done</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>✅ Privacy Policy page</td>
+          <td><span class="status-dot dot-green"></span>Done</td>
+          <td>Verify it mentions Google AdSense and cookies</td>
+        </tr>
+        <tr>
+          <td>✅ About page</td>
+          <td><span class="status-dot dot-amber"></span>Exists but outdated</td>
+          <td>Rebuild with current design (Prompt #1)</td>
+        </tr>
+        <tr>
+          <td>✅ Contact page</td>
+          <td><span class="status-dot dot-green"></span>Done</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>🔴 Real AdSense publisher ID on new pages</td>
+          <td><span class="status-dot dot-red"></span>Missing — placeholder only</td>
+          <td>Replace ca-pub-XXXXXXXX on all new pages</td>
+        </tr>
+        <tr>
+          <td>🔴 No misleading stats/claims</td>
+          <td><span class="status-dot dot-red"></span>VIOLATION — "10M+ users"</td>
+          <td>Remove or replace fake traffic numbers</td>
+        </tr>
+        <tr>
+          <td>✅ Original, helpful content</td>
+          <td><span class="status-dot dot-green"></span>Good</td>
+          <td>Keep adding depth and author attribution</td>
+        </tr>
+        <tr>
+          <td>✅ Mobile-responsive design</td>
+          <td><span class="status-dot dot-green"></span>Done</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>⚠️ Ad density — max 3 ads per page</td>
+          <td><span class="status-dot dot-amber"></span>Some pages have 4</td>
+          <td>Keep ≤3 ads per page. Remove one slot from longer pages.</td>
+        </tr>
+        <tr>
+          <td>⚠️ Ads clearly labeled "Advertisement"</td>
+          <td><span class="status-dot dot-green"></span>Done — "Advertisement · Google AdSense"</td>
+          <td>None — good practice</td>
+        </tr>
+        <tr>
+          <td>🔴 AdSense auto-ads also enabled</td>
+          <td><span class="status-dot dot-red"></span>Unknown</td>
+          <td>In AdSense → Ads → By site → enable Auto ads for extra fill rate</td>
+        </tr>
+        <tr>
+          <td>⚠️ Affiliate disclosure on remittance pages</td>
+          <td><span class="status-dot dot-green"></span>In footer</td>
+          <td>Also add disclosure near the comparison tables on the page</td>
+        </tr>
+        <tr>
+          <td>🔴 Terms of Service page</td>
+          <td><span class="status-dot dot-amber"></span>Exists — check completeness</td>
+          <td>Ensure ToS explicitly mentions that calculators are estimates only</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:var(--radius);padding:14px 16px;margin-top:16px;font-size:.85rem;color:#7f1d1d">
+      <strong>💡 AdSense Revenue Tips:</strong>
+      <ul style="margin:8px 0 0 16px">
+        <li>Enable <strong>Auto Ads</strong> alongside your manual slots — it finds extra placements you missed</li>
+        <li>Use <strong>Display + In-article + Multiplex</strong> ad unit types for variety</li>
+        <li>The traffic fine calculator and salary calculator will generate the highest CPM (financial/legal vertical)</li>
+        <li>Arabic pages will have lower CPM but are less competitive — worth having for traffic volume</li>
+        <li>Once traffic exceeds 10,000 sessions/month, apply to <strong>Ezoic</strong> for 2–3× higher revenue than AdSense alone</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========================= SECTION 9: QUICK WINS ========================= -->
+  <div class="section" id="quick-wins">
+    <div class="section-header">
+      <div class="section-num" style="background:#16a34a">9</div>
+      <h2>⚡ 30-Day Quick Win Action Plan</h2>
+    </div>
+
+    <div class="quick-win">
+      <h3>✅ Week 1 — Fix Critical Issues (takes ~3 hours total)</h3>
+      <ol>
+        <li><strong>Upload sitemap.xml and robots.txt</strong> to your GitHub repo root (files already created)</li>
+        <li><strong>Submit sitemap</strong> to Google Search Console + Bing Webmaster Tools</li>
+        <li><strong>Replace placeholder AdSense IDs</strong> on all new pages with your real publisher ID</li>
+        <li><strong>Remove "10M+ users" fake stat</strong> from homepage</li>
+        <li><strong>Add GA4 snippet</strong> to all pages so you can start tracking</li>
+      </ol>
+    </div>
+
+    <div class="quick-win" style="background:linear-gradient(135deg,var(--blue-light),#fff);border-color:var(--blue-mid)">
+      <h3 style="color:var(--blue)">✅ Week 2 — Schema + Meta Tags (takes ~4 hours total)</h3>
+      <ol>
+        <li><strong>Add hreflang tags</strong> to English versions of traffic-fine, musaned, fuel, and blog/traffic-fines pages</li>
+        <li><strong>Add twitter:card meta tags</strong> to all new pages</li>
+        <li><strong>Add Organization + WebSite schema</strong> to homepage</li>
+        <li><strong>Add Article schema</strong> to all blog posts (use the template from Section 5)</li>
+        <li><strong>Add FAQPage schema</strong> to calculator pages that have FAQ sections</li>
+      </ol>
+    </div>
+
+    <div class="quick-win" style="background:linear-gradient(135deg,var(--amber-light),#fff);border-color:var(--amber-mid)">
+      <h3 style="color:var(--amber)">✅ Week 3 — Content + Internal Links (takes ~5 hours total)</h3>
+      <ol>
+        <li><strong>Rebuild About page</strong> with current design + author bio (use Prompt #1)</li>
+        <li><strong>Update Blog index</strong> to include traffic fines article + new calculator links (Prompt #5)</li>
+        <li><strong>Add new tools to Homepage</strong> tools grid — traffic fines, fuel, musaned (Prompt #6)</li>
+        <li><strong>Build 404.html</strong> (use Prompt #7)</li>
+        <li><strong>Add author byline</strong> ("By Abdullah | Updated May 2026") to all blog articles</li>
+      </ol>
+    </div>
+
+    <div class="quick-win" style="background:linear-gradient(135deg,var(--purple-light),#fff);border-color:#c4b5fd">
+      <h3 style="color:var(--purple)">✅ Week 4 — Backlinks + Distribution</h3>
+      <ol>
+        <li><strong>Submit to 15 free directories</strong>: Product Hunt, AlternativeTo, Crunchbase, BetaList, G2, Capterra</li>
+        <li><strong>Post in Reddit</strong>: r/saudiarabia, r/expats — answer 5 questions using your calculator as a resource</li>
+        <li><strong>Answer 5 Quora questions</strong> about Saudi traffic fines, Musaned costs, Saudi fuel prices</li>
+        <li><strong>Share in WhatsApp/Telegram</strong> Saudi expat groups — especially Pakistani, Indian, Filipino groups</li>
+        <li><strong>Pitch one blog article</strong> to Gulf News or Arab News expat section</li>
+      </ol>
+    </div>
+
+    <div style="background:#111827;color:#e5e7eb;border-radius:var(--radius);padding:20px 24px;margin-top:20px;font-size:.88rem">
+      <strong style="color:#86efac;font-size:1rem">🎯 Expected Results After 30 Days:</strong>
+      <ul style="margin:12px 0 0 16px;line-height:1.8">
+        <li>All new pages indexed and earning AdSense revenue</li>
+        <li>Rich snippet eligible for FAQ sections (Google may show dropdown results)</li>
+        <li>Arabic pages properly discovered and ranked in Arabic Google search</li>
+        <li>First backlinks appearing in Ahrefs — DR should move from 0 to 2–5</li>
+        <li>Analytics data flowing — you can see which pages to optimise next</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<footer>
+  <div class="container">
+    © 2026 Saudi Utility Hub SEO Audit Report · Generated: May 18, 2026<br>
+    <a href="https://www.saudiutilityhub.com" style="color:#86efac">saudiutilityhub.com</a> · All recommendations based on current Google, AdSense, and Ahrefs guidelines.
+  </div>
+</footer>
+
+<script>
+function copyPrompt(btn) {
+  const card = btn.closest('.prompt-card');
+  const text = card.querySelector('.prompt-text').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied ✓';
+    btn.style.background = '#15803d';
+    setTimeout(() => { btn.textContent = 'Copy'; btn.style.background = '#16a34a'; }, 2000);
+  });
+}
+
+// Open issue cards on click
+document.querySelectorAll('.issue-head').forEach(h => {
+  h.addEventListener('click', () => h.parentElement.classList.toggle('open'));
+});
+</script>
+</body>
+</html>
