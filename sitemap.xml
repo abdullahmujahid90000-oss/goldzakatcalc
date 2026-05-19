@@ -1,66 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://www.saudiutilityhub.com/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/"/><xhtml:link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/"/><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/salary-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/salary-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/gosi-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/gosi-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ksa-eos-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/gold-zakat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/zakat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/zakat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/iqama-expiry-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/dependent-levy-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/dependent-levy-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/exit-reentry-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/exit-reentry-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/vat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/vat-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/remittance-fee-compare.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/remittance-fee-compare.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/pakistan-remittance.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/pakistan-remittance.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/india-remittance.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/india-remittance.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/currency-converter.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/currency-converter.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/traffic-fine-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/musaned-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/musaned-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/fuel-cost-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/working-hours-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/working-hours-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/car-finance-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/car-finance-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/mortgage-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/mortgage-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/gold-prices.html</loc><lastmod>2026-05-18</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/gold-prices.html</loc><lastmod>2026-05-18</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/zakat-nisab-gold.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/zakat-nisab-gold.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/bmi-health-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/bmi-health-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/pregnancy-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/pregnancy-calculator.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/ar/blog/</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/gosi-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/eos-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/gold-zakat-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/vat-saudi-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/saudi-traffic-fines-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/send-money-saudi-arabia-to-pakistan-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/send-money-saudi-india-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/blog/dependent-levy-guide-2026.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/about.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/contact.html</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/privacy.html</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://www.saudiutilityhub.com/terms.html</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== ENGLISH HOMEPAGE ===== -->
+  <url>
+    <loc>https://saudiutilityhub.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ===== ARABIC HOMEPAGE ===== -->
+  <url>
+    <loc>https://saudiutilityhub.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ===== EN CALCULATOR PAGES ===== -->
+  <url><loc>https://saudiutilityhub.com/salary-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/salary-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/salary-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/ksa-eos-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/ksa-eos-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/ksa-eos-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/gosi-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/gosi-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/gosi-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/gold-zakat-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/gold-zakat-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/gold-zakat-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/vat-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/vat-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/vat-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/iqama-expiry-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/iqama-expiry-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/iqama-expiry-calculator.html"/><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saudiutilityhub.com/dependent-levy-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/dependent-levy-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/dependent-levy-calculator.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/currency-converter.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/currency-converter.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/currency-converter.html"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/zakat-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/zakat-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/zakat-calculator.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/remittance-fee-compare.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/remittance-fee-compare.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/remittance-fee-compare.html"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/pakistan-remittance.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/pakistan-remittance.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/pakistan-remittance.html"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/india-remittance.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/india-remittance.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/india-remittance.html"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/traffic-fine-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/traffic-fine-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/traffic-fine-calculator.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/fuel-cost-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/fuel-cost-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/fuel-cost-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/working-hours-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/working-hours-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/working-hours-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/car-finance-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/car-finance-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/car-finance-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/mortgage-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/mortgage-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/mortgage-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/bmi-health-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/bmi-health-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/bmi-health-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/pregnancy-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/pregnancy-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/pregnancy-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/gold-prices.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/gold-prices.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/gold-prices.html"/><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/exit-reentry-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/exit-reentry-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/exit-reentry-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/musaned-calculator.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/musaned-calculator.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/musaned-calculator.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/zakat-nisab-gold.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/zakat-nisab-gold.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/zakat-nisab-gold.html"/><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ===== AR CALCULATOR PAGES ===== -->
+  <url><loc>https://saudiutilityhub.com/ar/salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/ksa-eos-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/gosi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/gold-zakat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/vat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/iqama-expiry-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/dependent-levy-calculator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/currency-converter.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/zakat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/remittance-fee-compare.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/pakistan-remittance.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/india-remittance.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/traffic-fine-calculator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/fuel-cost-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/working-hours-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/car-finance-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/mortgage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/bmi-health-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/pregnancy-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/gold-prices.html</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/exit-reentry-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/musaned-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/zakat-nisab-gold.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- ===== EN BLOG PAGES ===== -->
+  <url><loc>https://saudiutilityhub.com/blog/</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/eos-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/eos-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/eos-guide-ar.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/gosi-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/gosi-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/gosi-guide-ar.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/gold-zakat-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/gold-zakat-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/zakat-gold-guide-ar.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/expat-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/expat-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/expat-guide-ar.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/vat-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/vat-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/vat-guide-ar.html"/><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/remittance-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/remittance-guide.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/blog/remittance-guide-ar.html"/><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/salary-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/salary-guide.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/iqama-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/iqama-guide.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/blog/vision-2030-guide.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/blog/vision-2030-guide.html"/><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- ===== AR BLOG PAGES ===== -->
+  <url><loc>https://saudiutilityhub.com/ar/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/eos-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/gosi-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/zakat-gold-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/expat-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/vat-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/blog/remittance-guide-ar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- ===== UTILITY PAGES ===== -->
+  <url><loc>https://saudiutilityhub.com/about.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/about.html"/><xhtml:link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/about.html"/><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://saudiutilityhub.com/ar/about.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://saudiutilityhub.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://saudiutilityhub.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://saudiutilityhub.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
 </urlset>
