@@ -1,628 +1,176 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>حاسبة تكلفة الوقود في السعودية 2026 — أسعار البنزين أرامكو | سعودي يوتيليتي هب</title>
-<meta name="description" content="حاسبة مجانية لأسعار الوقود في السعودية 2026. أسعار بنزين أرامكو الحالية — 91، 95، ديزل للتر. احسب تكلفة رحلتك وميزانيتك الشهرية. محدّث مايو 2026.">
-<meta property="og:title" content="حاسبة تكلفة الوقود في السعودية 2026 | سعودي يوتيليتي هب">
-<meta property="og:description" content="أسعار البنزين السعودية 2026 — 91، 95، ديزل. احسب تكلفة وقود الرحلة وميزانيتك الشهرية للقيادة. مجانية وفورية بأسعار أرامكو الرسمية.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html">
-<link rel="canonical" href="https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html">
-<link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/fuel-cost-calculator.html">
-<link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{
-    --green:#16a34a;--green-dark:#15803d;--green-light:#dcfce7;--green-mid:#bbf7d0;
-    --gray:#6b7280;--gray-light:#f9fafb;--gray-border:#e5e7eb;
-    --text:#111827;--text-soft:#374151;
-    --shadow:0 1px 3px rgba(0,0,0,.1);--shadow-md:0 4px 6px rgba(0,0,0,.07);
-    --radius:10px;--radius-sm:6px;
-  }
-  body{font-family:'Segoe UI',Tahoma,'Cairo',Arial,sans-serif;color:var(--text);background:#fff;line-height:1.8;font-size:16px;direction:rtl;text-align:right}
-  a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}
-
-  nav{background:var(--green);padding:0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-  .nav-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:row-reverse;align-items:center;gap:4px;padding:0 16px;overflow-x:auto;scrollbar-width:none}
-  .nav-inner::-webkit-scrollbar{display:none}
-  .nav-brand{font-weight:700;font-size:1rem;color:#fff;white-space:nowrap;padding:14px 0 14px 8px;margin-left:8px;border-left:1px solid rgba(255,255,255,.3)}
-  .nav-inner a{color:rgba(255,255,255,.9);font-size:.85rem;padding:14px 10px;white-space:nowrap;font-weight:500}
-  .nav-inner a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
-
-  .container{max-width:860px;margin:0 auto;padding:0 16px}
-  .wide{max-width:1100px;margin:0 auto;padding:0 16px}
-
-  .breadcrumb{background:var(--gray-light);border-bottom:1px solid var(--gray-border);padding:8px 0;font-size:.82rem;color:var(--gray)}
-  .breadcrumb a{color:var(--green)}
-  .breadcrumb span{margin:0 4px}
-
-  .hero{padding:32px 0 8px;text-align:center}
-  .hero h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.3}
-  .hero .subtitle{color:var(--gray);font-size:.95rem}
-  .hero .subtitle span{margin:0 6px;color:var(--green);font-weight:600}
-
-  .price-banner{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
-  @media(max-width:480px){.price-banner{grid-template-columns:1fr 1fr;}.price-banner .diesel{grid-column:1/-1}}
-  .price-card{background:#fff;border:2px solid var(--gray-border);border-radius:var(--radius);padding:16px;text-align:center;cursor:pointer;transition:border-color .2s,box-shadow .2s}
-  .price-card:hover,.price-card.selected{border-color:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.15)}
-  .price-card.selected{background:var(--green-light)}
-  .price-card .grade{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:4px}
-  .price-card .price{font-size:2rem;font-weight:800;color:var(--green-dark)}
-  .price-card .price-sub{font-size:.75rem;color:var(--gray);margin-top:2px}
-  .price-card .badge-grade{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.7rem;font-weight:700;margin-bottom:6px}
-  .badge-91{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
-  .badge-95{background:#dbeafe;color:#1e40af;border:1px solid #bfdbfe}
-  .badge-diesel{background:#f3e8ff;color:#6b21a8;border:1px solid #e9d5ff}
-  .updated-tag{font-size:.72rem;color:var(--gray);text-align:center;margin-top:-8px;margin-bottom:16px}
-
-  .ad-slot{background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);padding:12px;text-align:center;margin:20px 0;font-size:.75rem;color:var(--gray);min-height:90px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px}
-
-  .calc-tabs{display:flex;gap:0;border:1px solid var(--gray-border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:20px;flex-direction:row-reverse}
-  .tab-btn{flex:1;padding:10px;font-size:.85rem;font-weight:600;border:none;background:var(--gray-light);color:var(--gray);cursor:pointer;transition:background .2s,color .2s}
-  .tab-btn.active{background:var(--green);color:#fff}
-  .tab-content{display:none}.tab-content.active{display:block}
-
-  .calc-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:28px;margin:24px 0}
-  .calc-card h2{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--text)}
-
-  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-  @media(max-width:560px){.field-row{grid-template-columns:1fr}}
-  .field-group{margin-bottom:16px}
-  .field-group label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px;color:var(--text-soft)}
-  .field-group small{display:block;color:var(--gray);font-size:.78rem;margin-top:4px}
-
-  input[type=number],select{width:100%;padding:11px 14px;border:1.5px solid var(--gray-border);border-radius:var(--radius-sm);font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s;text-align:right}
-  input:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.1)}
-  select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-left:36px}
-
-  .btn-calc{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
-  .btn-calc:hover{background:var(--green-dark)}
-
-  .result-hidden{display:none}
-  .result-card{background:var(--green-light);border:2px solid var(--green-mid);border-radius:var(--radius);padding:24px;margin-top:20px}
-  .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px}
-  .result-box{background:#fff;border-radius:var(--radius-sm);padding:14px;border:1px solid var(--green-mid);text-align:center}
-  .result-box .label{font-size:.72rem;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
-  .result-box .value{font-size:1.4rem;font-weight:800;color:var(--green-dark)}
-  .result-box .sub{font-size:.72rem;color:var(--gray);margin-top:2px}
-
-  .section{margin:36px 0}
-  .section h2{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--green-light)}
-  .section h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:20px 0 10px}
-  .section p{color:var(--text-soft);margin-bottom:12px;font-size:.95rem}
-
-  .note-bar{background:var(--green-light);border:1px solid var(--green-mid);border-radius:var(--radius-sm);padding:12px 16px;margin:20px 0;font-size:.85rem;color:var(--green-dark)}
-
-  .table-wrap{overflow-x:auto;margin:16px 0;border-radius:var(--radius-sm);border:1px solid var(--gray-border)}
-  table{width:100%;border-collapse:collapse;font-size:.85rem}
-  thead th{background:var(--green);color:#fff;padding:10px 12px;text-align:right;font-weight:700;white-space:nowrap}
-  tbody tr:nth-child(odd){background:var(--gray-light)}
-  tbody tr:hover{background:var(--green-light)}
-  td{padding:9px 12px;border-bottom:1px solid var(--gray-border);text-align:right}
-
-  .car-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0}
-  .car-card{padding:14px;border:1px solid var(--gray-border);border-radius:var(--radius-sm);background:var(--gray-light)}
-  .car-card .model{font-weight:700;font-size:.88rem;color:var(--text)}
-  .car-card .eff{font-size:.78rem;color:var(--gray);margin-top:2px}
-  .car-card .cost{font-size:.95rem;font-weight:700;color:var(--green-dark);margin-top:6px}
-  .car-card .cost-sub{font-size:.72rem;color:var(--gray)}
-
-  .faq-item{border:1px solid var(--gray-border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
-  .faq-q{padding:14px 16px;font-weight:600;font-size:.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;user-select:none}
-  .faq-q:hover{background:var(--gray-light)}
-  .faq-q::before{content:"▼";font-size:.7rem;color:var(--gray);transition:transform .2s;flex-shrink:0;margin-right:8px}
-  .faq-item.open .faq-q::before{transform:rotate(180deg)}
-  .faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
-  .faq-item.open .faq-a{max-height:300px;padding:0 16px 14px}
-  .faq-a p{font-size:.88rem;color:var(--text-soft);line-height:1.7}
-
-  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:12px}
-  .tool-card{display:flex;flex-direction:column;gap:4px;padding:14px;background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);text-decoration:none;transition:border-color .2s}
-  .tool-card:hover{border-color:var(--green);text-decoration:none}
-  .tool-card .tool-icon{font-size:1.3rem}
-  .tool-card .tool-name{font-size:.82rem;font-weight:700;color:var(--text)}
-  .tool-card .tool-desc{font-size:.72rem;color:var(--gray)}
-
-  .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
-  .blog-card{padding:16px;background:var(--gray-light);border:1px solid var(--gray-border);border-radius:var(--radius-sm);text-decoration:none;transition:border-color .2s;display:block}
-  .blog-card:hover{border-color:var(--green);text-decoration:none}
-  .blog-card .cat{font-size:.7rem;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:4px}
-  .blog-card .title{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.35}
-  .blog-card .meta{font-size:.73rem;color:var(--gray);margin-top:6px}
-
-  footer{background:#111827;color:#9ca3af;padding:40px 0 20px;margin-top:48px;font-size:.82rem}
-  .footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px;margin-bottom:32px}
-  footer h4{color:#f9fafb;font-size:.82rem;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
-  footer a{color:#9ca3af;display:block;margin-bottom:5px;font-size:.8rem}
-  footer a:hover{color:#f9fafb;text-decoration:none}
-  .footer-bottom{border-top:1px solid #1f2937;padding-top:16px;text-align:center;font-size:.75rem;color:#6b7280}
-  #cookie-bar{position:fixed;bottom:0;left:0;right:0;background:#111827;color:#d1d5db;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:999;font-size:.8rem;flex-wrap:wrap;flex-direction:row-reverse}
-  #cookie-bar a{color:#86efac}
-  .cookie-btns{display:flex;gap:8px;flex-shrink:0}
-  .btn-cookie{padding:7px 16px;border-radius:var(--radius-sm);border:none;cursor:pointer;font-size:.8rem;font-weight:600}
-  .btn-decline{background:transparent;color:#9ca3af;border:1px solid #374151}
-  .btn-accept{background:var(--green);color:#fff}
-  @media(max-width:600px){.hero{padding:20px 0 4px}.calc-card{padding:18px}.footer-grid{grid-template-columns:1fr 1fr}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة تكلفة الوقود في السعودية 2026 | Saudi Utility Hub</title>
+  <meta name="description" content="احسب تكلفة الوقود بأسعار أرامكو السعودية 2026 — بنزين 91، 95، وديزل. احسب تكلفة رحلتك الشهرية والسنوية.">
+  <link rel="canonical" href="https://saudiutilityhub.com/ar/fuel-cost-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/fuel-cost-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/fuel-cost-calculator.html">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <style>
+    :root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Tajawal',sans-serif;background:#f5f5f5;color:#222;direction:rtl;}
+    nav{background:var(--green);color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+    .logo{font-size:1.5rem;font-weight:800;text-decoration:none;color:#fff;}
+    .logo span{color:var(--gold);}
+    .nav-right{display:flex;align-items:center;gap:16px;}
+    .lang-btn{background:var(--gold);color:#fff;border:none;padding:7px 16px;border-radius:20px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;display:inline-block;}
+    .container{max-width:800px;margin:32px auto;padding:0 16px;}
+    h1{color:var(--green);font-size:1.8rem;font-weight:800;margin-bottom:8px;}
+    .subtitle{color:#666;margin-bottom:24px;font-size:1rem;}
+    .card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:24px;}
+    .card h2{color:var(--green);font-size:1.2rem;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green-light);}
+    .form-group{margin-bottom:18px;}
+    label{display:block;font-weight:700;margin-bottom:6px;color:#333;font-size:.95rem;}
+    select,input[type=number]{width:100%;padding:12px 14px;border:2px solid #ddd;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1rem;transition:border-color .2s;background:#fff;color:#222;direction:rtl;}
+    select:focus,input:focus{outline:none;border-color:var(--green);}
+    .fuel-prices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+    .price-badge{background:var(--green-light);border-radius:8px;padding:12px;text-align:center;}
+    .price-badge .type{font-size:.85rem;color:#666;font-weight:700;}
+    .price-badge .price{font-size:1.3rem;font-weight:800;color:var(--green);}
+    .price-badge .unit{font-size:.75rem;color:#888;}
+    .btn{background:var(--green);color:#fff;border:none;padding:14px 32px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%;transition:background .2s;}
+    .btn:hover{background:var(--green-dark);}
+    .results{display:none;}
+    .results.show{display:block;}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .result-card{background:var(--green-light);border-radius:10px;padding:18px;text-align:center;border:2px solid transparent;}
+    .result-card.highlight{border-color:var(--green);background:#fff;}
+    .result-card .label{font-size:.85rem;color:#555;font-weight:700;margin-bottom:6px;}
+    .result-card .value{font-size:1.6rem;font-weight:800;color:var(--green);}
+    .result-card .currency{font-size:.85rem;color:#888;}
+    .ad-slot{background:#f9f9f9;border:1px dashed #ccc;border-radius:8px;padding:20px;text-align:center;color:#999;font-size:.85rem;margin-bottom:24px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+    footer{background:var(--green-dark);color:#ccc;text-align:center;padding:20px;font-size:.9rem;margin-top:40px;}
+    footer a{color:var(--gold);text-decoration:none;}
+    @media(max-width:600px){.fuel-prices{grid-template-columns:repeat(3,1fr);}.result-grid{grid-template-columns:1fr;}.fuel-prices .price-badge .price{font-size:1rem;}h1{font-size:1.4rem;}}
+  </style>
 </head>
 <body>
-
 <nav>
-  <div class="nav-inner">
-    <div class="nav-brand">🇸🇦 سعودي يوتيليتي هب</div>
-    <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
-    <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
-    <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
-    <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
-    <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
-    <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
-    <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
-    <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
-    <a href="https://www.saudiutilityhub.com/fuel-cost-calculator.html">English</a>
+  <a class="logo" href="../index.html">Saudi<span>Hub</span> 🇸🇦</a>
+  <div class="nav-right">
+    <a class="lang-btn" href="../fuel-cost-calculator.html">🌐 English</a>
   </div>
 </nav>
 
-<div class="breadcrumb">
-  <div class="container">
-    <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
-    <span>›</span> حاسبة تكلفة الوقود
-  </div>
-</div>
-
 <div class="container">
-  <div class="hero">
-    <h1>⛽ حاسبة تكلفة الوقود في السعودية 2026</h1>
-    <p class="subtitle">
-      أسعار البنزين الحالية من أرامكو
-      <span>·</span> حاسبة تكلفة الرحلة
-      <span>·</span> ميزانية الوقود الشهرية
-    </p>
-  </div>
+  <h1>⛽ حاسبة تكلفة الوقود</h1>
+  <p class="subtitle">احسب تكلفة الوقود بأسعار أرامكو السعودية الرسمية لعام 2026</p>
 
-  <!-- بطاقات أسعار الوقود -->
-  <div class="price-banner">
-    <div class="price-card selected" id="card-91" onclick="selectFuel('91')">
-      <span class="badge-grade badge-91">أوكتان 91</span>
-      <div class="grade">بريميوم 91</div>
-      <div class="price">0.67</div>
-      <div class="price-sub">ريال للتر</div>
-    </div>
-    <div class="price-card" id="card-95" onclick="selectFuel('95')">
-      <span class="badge-grade badge-95">أوكتان 95</span>
-      <div class="grade">سوبر 95</div>
-      <div class="price">0.90</div>
-      <div class="price-sub">ريال للتر</div>
-    </div>
-    <div class="price-card diesel" id="card-diesel" onclick="selectFuel('diesel')">
-      <span class="badge-grade badge-diesel">ديزل</span>
-      <div class="grade">ديزل</div>
-      <div class="price">0.32</div>
-      <div class="price-sub">ريال للتر</div>
-    </div>
-  </div>
-  <p class="updated-tag">📅 الأسعار محددة من أرامكو السعودية — تُراجَع فصلياً. الأسعار الحالية سارية للربع الثاني 2026.</p>
-
+  <!-- AdSense Slot 1 -->
   <div class="ad-slot">
-    <strong>إعلان · Google AdSense</strong>
-    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
-      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 
-  <!-- الحاسبة -->
-  <div class="calc-card">
-    <h2>⛽ حاسبة تكلفة الوقود</h2>
-
-    <div class="calc-tabs">
-      <button class="tab-btn active" onclick="switchTab('trip',this)">🚗 تكلفة الرحلة</button>
-      <button class="tab-btn" onclick="switchTab('monthly',this)">📅 الميزانية الشهرية</button>
-      <button class="tab-btn" onclick="switchTab('fillup',this)">🪣 تعبئة كاملة</button>
-    </div>
-
-    <!-- تبويب الرحلة -->
-    <div id="tab-trip" class="tab-content active">
-      <div class="field-row">
-        <div class="field-group" style="margin-bottom:0">
-          <label>مسافة الرحلة (كم)</label>
-          <input type="number" id="trip-distance" placeholder="مثال: 400" value="400" min="1">
-          <small>الرياض←الدمام: 410 كم · الرياض←جدة: 950 كم · الرياض←تبوك: 1,320 كم</small>
-        </div>
-        <div class="field-group" style="margin-bottom:0">
-          <label>استهلاك الوقود (لتر/100كم)</label>
-          <input type="number" id="trip-consumption" placeholder="مثال: 10" value="10" min="1" max="30" step="0.5">
-          <small>سيدان: 8–10 · SUV: 12–15 · بيك أب: 14–18</small>
-        </div>
+  <div class="card">
+    <h2>أسعار الوقود الرسمية — أرامكو السعودية 2026</h2>
+    <div class="fuel-prices">
+      <div class="price-badge">
+        <div class="type">بنزين 91</div>
+        <div class="price">1.33</div>
+        <div class="unit">ريال / لتر</div>
       </div>
-      <div class="field-group" style="margin-top:16px">
-        <label>نوع الوقود</label>
-        <select id="trip-fuel">
-          <option value="0.67" selected>بريميوم 91 — 0.67 ريال/لتر</option>
-          <option value="0.90">سوبر 95 — 0.90 ريال/لتر</option>
-          <option value="0.32">ديزل — 0.32 ريال/لتر</option>
-        </select>
+      <div class="price-badge">
+        <div class="type">بنزين 95</div>
+        <div class="price">1.59</div>
+        <div class="unit">ريال / لتر</div>
       </div>
-      <button class="btn-calc" onclick="calcTrip()">احسب تكلفة الرحلة ←</button>
-
-      <div id="result-trip" class="result-card result-hidden" style="margin-top:16px">
-        <div class="result-grid">
-          <div class="result-box"><div class="label">الوقود المطلوب</div><div class="value" id="trip-litres">—</div><div class="sub">لتر</div></div>
-          <div class="result-box"><div class="label">إجمالي تكلفة الوقود</div><div class="value" id="trip-cost">—</div><div class="sub">ريال</div></div>
-          <div class="result-box"><div class="label">التكلفة لكل كم</div><div class="value" id="trip-perkm">—</div><div class="sub">ريال/كم</div></div>
-          <div class="result-box"><div class="label">رحلة العودة</div><div class="value" id="trip-return">—</div><div class="sub">ريال ذهاباً وإياباً</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- تبويب الشهري -->
-    <div id="tab-monthly" class="tab-content">
-      <div class="field-row">
-        <div class="field-group" style="margin-bottom:0">
-          <label>مسافة القيادة اليومية (كم)</label>
-          <input type="number" id="monthly-km" placeholder="مثال: 60" value="60" min="1">
-          <small>متوسط السائق السعودي يقطع 50–80 كم/يوم</small>
-        </div>
-        <div class="field-group" style="margin-bottom:0">
-          <label>أيام القيادة شهرياً</label>
-          <input type="number" id="monthly-days" placeholder="مثال: 22" value="22" min="1" max="31">
-          <small>أيام العمل + رحلات عطلة نهاية الأسبوع</small>
-        </div>
-      </div>
-      <div class="field-row" style="margin-top:16px">
-        <div class="field-group" style="margin-bottom:0">
-          <label>استهلاك الوقود (لتر/100كم)</label>
-          <input type="number" id="monthly-consumption" placeholder="مثال: 10" value="10" min="1" step="0.5">
-        </div>
-        <div class="field-group" style="margin-bottom:0">
-          <label>نوع الوقود</label>
-          <select id="monthly-fuel">
-            <option value="0.67" selected>بريميوم 91 — 0.67 ريال/لتر</option>
-            <option value="0.90">سوبر 95 — 0.90 ريال/لتر</option>
-            <option value="0.32">ديزل — 0.32 ريال/لتر</option>
-          </select>
-        </div>
-      </div>
-      <button class="btn-calc" style="margin-top:16px" onclick="calcMonthly()">احسب الميزانية الشهرية ←</button>
-
-      <div id="result-monthly" class="result-card result-hidden" style="margin-top:16px">
-        <div class="result-grid">
-          <div class="result-box"><div class="label">الكيلومترات شهرياً</div><div class="value" id="m-km">—</div><div class="sub">كيلومتر</div></div>
-          <div class="result-box"><div class="label">اللترات شهرياً</div><div class="value" id="m-litres">—</div><div class="sub">لتر</div></div>
-          <div class="result-box"><div class="label">التكلفة الشهرية</div><div class="value" id="m-cost">—</div><div class="sub">ريال/شهر</div></div>
-          <div class="result-box"><div class="label">التكلفة السنوية</div><div class="value" id="m-annual">—</div><div class="sub">ريال/سنة</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- تبويب التعبئة -->
-    <div id="tab-fillup" class="tab-content">
-      <div class="field-row">
-        <div class="field-group" style="margin-bottom:0">
-          <label>سعة خزان الوقود (لتر)</label>
-          <input type="number" id="tank-size" placeholder="مثال: 60" value="60" min="10">
-          <small>كورولا: 50 لتر · كامري: 60 لتر · لاند كروزر: 93–110 لتر · فورتشنر: 80 لتر</small>
-        </div>
-        <div class="field-group" style="margin-bottom:0">
-          <label>مستوى الخزان الحالي</label>
-          <select id="tank-level">
-            <option value="0">فارغ (0%)</option>
-            <option value="0.125">⅛ ممتلئ</option>
-            <option value="0.25" selected>¼ ممتلئ</option>
-            <option value="0.375">⅜ ممتلئ</option>
-            <option value="0.5">½ ممتلئ</option>
-            <option value="0.625">⅝ ممتلئ</option>
-            <option value="0.75">¾ ممتلئ</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-group" style="margin-top:16px">
-        <label>نوع الوقود</label>
-        <select id="tank-fuel">
-          <option value="0.67" selected>بريميوم 91 — 0.67 ريال/لتر</option>
-          <option value="0.90">سوبر 95 — 0.90 ريال/لتر</option>
-          <option value="0.32">ديزل — 0.32 ريال/لتر</option>
-        </select>
-      </div>
-      <button class="btn-calc" onclick="calcTank()">احسب تكلفة التعبئة ←</button>
-
-      <div id="result-tank" class="result-card result-hidden" style="margin-top:16px">
-        <div class="result-grid">
-          <div class="result-box"><div class="label">اللترات المطلوبة</div><div class="value" id="t-litres">—</div><div class="sub">للتعبئة الكاملة</div></div>
-          <div class="result-box"><div class="label">تكلفة التعبئة</div><div class="value" id="t-cost">—</div><div class="sub">ريال</div></div>
-          <div class="result-box"><div class="label">المدى (10 لتر/100كم)</div><div class="value" id="t-range">—</div><div class="sub">كيلومتر</div></div>
-        </div>
+      <div class="price-badge">
+        <div class="type">ديزل</div>
+        <div class="price">0.69</div>
+        <div class="unit">ريال / لتر</div>
       </div>
     </div>
   </div>
 
-  <div class="note-bar">
-    📌 <strong>أسعار وقود أرامكو السعودية 2026:</strong> بريميوم 91 = 0.67 ريال/لتر · سوبر 95 = 0.90 ريال/لتر · ديزل = 0.32 ريال/لتر. تُحدَّد الأسعار فصلياً من قبل أرامكو السعودية ووزارة الطاقة. الديزل مدعوم ومتوفر في جميع محطات الوقود.
+  <div class="card">
+    <h2>أدخل بيانات رحلتك</h2>
+    <div class="form-group">
+      <label for="fuelType">نوع الوقود</label>
+      <select id="fuelType">
+        <option value="1.33">بنزين 91 أوكتان — 1.33 ريال/لتر</option>
+        <option value="1.59">بنزين 95 أوكتان — 1.59 ريال/لتر</option>
+        <option value="0.69">ديزل — 0.69 ريال/لتر</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="distance">المسافة ذهاباً وإياباً (كم)</label>
+      <input type="number" id="distance" placeholder="مثال: 50" min="1" value="">
+    </div>
+    <div class="form-group">
+      <label for="consumption">استهلاك الوقود (لتر / 100 كم)</label>
+      <input type="number" id="consumption" placeholder="مثال: 10" min="1" step="0.1" value="">
+    </div>
+    <div class="form-group">
+      <label for="trips">عدد الرحلات في الشهر</label>
+      <input type="number" id="trips" placeholder="مثال: 22" min="1" value="">
+    </div>
+    <button class="btn" onclick="calculate()">احسب التكلفة</button>
   </div>
 
+  <!-- AdSense Slot 2 -->
   <div class="ad-slot">
-    <strong>إعلان · Google AdSense</strong>
-    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
-      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 
-  <!-- جدول أسعار الوقود -->
-  <div class="section">
-    <h2>⛽ أسعار الوقود الرسمية في السعودية 2026</h2>
-    <p>تُحدَّد أسعار الوقود في المملكة العربية السعودية من قِبل أرامكو السعودية بالتنسيق مع وزارة الطاقة وتُراجَع فصلياً. تُعدّ هذه الأسعار من أدنى الأسعار في العالم نظراً لاحتياطيات المملكة النفطية الهائلة.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>نوع الوقود</th><th>السعر (ريال/لتر)</th><th>السعر (دولار/لتر)</th><th>الأنسب لـ</th></tr></thead>
-        <tbody>
-          <tr><td>🟡 بريميوم أوكتان 91</td><td><strong>0.67 ريال</strong></td><td>~0.18 دولار</td><td>السيارات العادية والسيارات القديمة</td></tr>
-          <tr><td>🔵 سوبر أوكتان 95</td><td><strong>0.90 ريال</strong></td><td>~0.24 دولار</td><td>المحركات الحديثة والتيربو وسيارات الأداء العالي</td></tr>
-          <tr><td>🟣 ديزل</td><td><strong>0.32 ريال</strong></td><td>~0.09 دولار</td><td>الشاحنات والـ SUV والمركبات التجارية</td></tr>
-        </tbody>
-      </table>
+  <div class="card results" id="results">
+    <h2>📊 نتائج الحساب</h2>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="label">تكلفة الرحلة الواحدة</div>
+        <div class="value" id="tripCost">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+      <div class="result-card highlight">
+        <div class="label">التكلفة الشهرية</div>
+        <div class="value" id="monthlyCost">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+      <div class="result-card">
+        <div class="label">التكلفة السنوية</div>
+        <div class="value" id="yearlyCost">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
     </div>
-    <p style="font-size:.82rem;color:var(--gray)">المصدر: أسعار أرامكو السعودية الرسمية — الربع الثاني 2026. تُراجَع الأسعار فصلياً في يناير وأبريل ويوليو وأكتوبر.</p>
-  </div>
-
-  <!-- مسارات شهيرة -->
-  <div class="section">
-    <h2>🗺️ أبرز الرحلات البرية السعودية — دليل تكلفة الوقود</h2>
-    <p>تخطط لرحلة برية في السعودية؟ إليك تكاليف الوقود للمسارات الشهيرة باستخدام سيارة عادية (10 لتر/100 كم) بسعر أوكتان 91 الحالي (0.67 ريال/لتر).</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>المسار</th><th>المسافة</th><th>91 (ريال)</th><th>95 (ريال)</th><th>العودة (91)</th></tr></thead>
-        <tbody>
-          <tr><td>🏙️ الرياض ← الدمام</td><td>410 كم</td><td>27.5</td><td>36.9</td><td>55.0</td></tr>
-          <tr><td>🕌 الرياض ← مكة المكرمة</td><td>870 كم</td><td>58.3</td><td>78.3</td><td>116.6</td></tr>
-          <tr><td>🌊 الرياض ← جدة</td><td>950 كم</td><td>63.7</td><td>85.5</td><td>127.4</td></tr>
-          <tr><td>🏔️ الرياض ← أبها</td><td>930 كم</td><td>62.3</td><td>83.7</td><td>124.6</td></tr>
-          <tr><td>🌴 الرياض ← العُلا</td><td>1,150 كم</td><td>77.1</td><td>103.5</td><td>154.2</td></tr>
-          <tr><td>⛺ الرياض ← تبوك</td><td>1,320 كم</td><td>88.5</td><td>118.8</td><td>177.0</td></tr>
-          <tr><td>🏖️ جدة ← ينبع</td><td>360 كم</td><td>24.1</td><td>32.4</td><td>48.2</td></tr>
-          <tr><td>🕌 جدة ← المدينة المنورة</td><td>420 كم</td><td>28.2</td><td>37.8</td><td>56.4</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="font-size:.82rem;color:var(--gray)">مبني على سيارة بمعدل استهلاك 10 لتر/100 كم. السيارات الرياضية متعددة الاستخدام تستهلك ما يزيد بنسبة 40–50%.</p>
-  </div>
-
-  <!-- تكلفة حسب السيارة -->
-  <div class="section">
-    <h2>🚗 تكلفة الوقود حسب نوع السيارة — تقديرات شهرية</h2>
-    <p>بناءً على 1,500 كم/شهر (المعدل السعودي)، باستخدام بريميوم 91 بسعر 0.67 ريال/لتر.</p>
-    <div class="car-grid">
-      <div class="car-card"><div class="model">تويوتا كورولا</div><div class="eff">8–9 لتر/100 كم</div><div class="cost">80–90 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-      <div class="car-card"><div class="model">تويوتا كامري</div><div class="eff">9–11 لتر/100 كم</div><div class="cost">90–110 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-      <div class="car-card"><div class="model">تويوتا فورتشنر</div><div class="eff">12–14 لتر/100 كم</div><div class="cost">120–141 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-      <div class="car-card"><div class="model">تويوتا لاند كروزر</div><div class="eff">14–18 لتر/100 كم</div><div class="cost">141–181 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-      <div class="car-card"><div class="model">هيونداي توسان</div><div class="eff">9–11 لتر/100 كم</div><div class="cost">90–110 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-      <div class="car-card"><div class="model">GMC يوكون / تاهو</div><div class="eff">15–20 لتر/100 كم</div><div class="cost">151–201 ريال/شهر</div><div class="cost-sub">~1,500 كم، أوكتان 91</div></div>
-    </div>
-  </div>
-
-  <div class="ad-slot">
-    <strong>إعلان · Google AdSense</strong>
-    <ins class="adsbygoogle" style="display:block;width:100%;min-height:90px"
-      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-  </div>
-
-  <!-- الأسئلة الشائعة -->
-  <div class="section">
-    <h2>❓ الأسئلة الشائعة</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">ما هو سعر البنزين الحالي في السعودية 2026؟</div>
-      <div class="faq-a"><p>اعتباراً من الربع الثاني 2026: <strong>بريميوم 91 = 0.67 ريال/لتر</strong>، <strong>سوبر 95 = 0.90 ريال/لتر</strong>، <strong>ديزل = 0.32 ريال/لتر</strong>. تُحدَّد الأسعار من أرامكو السعودية فصلياً (يناير وأبريل ويوليو وأكتوبر) بناءً على أسعار النفط العالمية.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">هل أستخدم بنزين 91 أم 95 في السعودية؟</div>
-      <div class="faq-a"><p>راجع دليل مركبتك. معظم السيارات الحديثة والمحركات ذات الشاحن التيربيني تتطلب <strong>أوكتان 95</strong> كحد أدنى. استخدام 91 في محرك مُصنَّف 95 قد يُسبب طرقاً في المحرك وأضراراً طويلة الأمد. المحركات القديمة والبسيطة (كثير من السيارات اليابانية قبل 2015) تعمل جيداً بـ<strong>أوكتان 91</strong> مع توفير 0.23 ريال/لتر.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">كم مرة تتغير أسعار الوقود في السعودية؟</div>
-      <div class="faq-a"><p>تُراجَع أرامكو السعودية أسعار الوقود وتُعدّلها كل ثلاثة أشهر في <strong>يناير وأبريل ويوليو وأكتوبر</strong>. ترتبط الأسعار بالأسواق النفطية العالمية لكنها تبقى من بين الأدنى عالمياً بسبب سياسة الدعم الحكومي للطاقة.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">هل الديزل أرخص من البنزين في السعودية؟</div>
-      <div class="faq-a"><p>نعم، بفارق ملحوظ. الديزل بـ<strong>0.32 ريال/لتر</strong> فقط — أقل من نصف سعر أوكتان 91. الديزل مدعوم بشكل كبير في السعودية وهو الوقود الأوفر للشاحنات والـ SUV الكبيرة والمركبات التجارية.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">أين أجد محطات وقود في السعودية؟</div>
-      <div class="faq-a"><p>تشغّل أرامكو السعودية محطات وقود تحت علامة <strong>SAPCO</strong> في أنحاء المملكة. علامات أخرى تشمل المحطات المستقلة المحلية والعلامات الدولية. جميعها تبيع بنفس أسعار أرامكو المحددة — لا يوجد تفاوت في الأسعار بين المحطات.</p></div>
-    </div>
-  </div>
-
-  <!-- أدوات ذات صلة -->
-  <div class="section">
-    <h2>🛠️ حاسبات ذات صلة</h2>
-    <div class="tools-grid">
-      <a href="https://www.saudiutilityhub.com/ar/car-finance-calculator.html" class="tool-card">
-        <span class="tool-icon">🚗</span>
-        <span class="tool-name">حاسبة تمويل السيارة</span>
-        <span class="tool-desc">الأقساط الشهرية والتكلفة الإجمالية</span>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html" class="tool-card">
-        <span class="tool-icon">🚦</span>
-        <span class="tool-name">حاسبة المخالفات</span>
-        <span class="tool-desc">جميع مخالفات المرور 2026</span>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html" class="tool-card">
-        <span class="tool-icon">🧾</span>
-        <span class="tool-name">حاسبة ضريبة القيمة المضافة</span>
-        <span class="tool-desc">إضافة أو إزالة 15% ضريبة</span>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html" class="tool-card">
-        <span class="tool-icon">💼</span>
-        <span class="tool-name">حاسبة الراتب</span>
-        <span class="tool-desc">التأمينات + الراتب الصافي</span>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/currency-converter.html" class="tool-card">
-        <span class="tool-icon">💱</span>
-        <span class="tool-name">محول العملات</span>
-        <span class="tool-desc">ريال إلى روبية وجنيه ودولار</span>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/musaned-calculator.html" class="tool-card">
-        <span class="tool-icon">🏠</span>
-        <span class="tool-name">حاسبة مساند</span>
-        <span class="tool-desc">تكلفة استقدام العمالة المنزلية</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>📝 أدلة ومقالات المدونة</h2>
-    <div class="blog-grid">
-      <a href="https://www.saudiutilityhub.com/ar/blog/saudi-traffic-fines-guide-2026.html" class="blog-card">
-        <div class="cat">🚦 قانون المرور</div>
-        <div class="title">غرامات المرور السعودية 2026 — الدليل الشامل</div>
-        <div class="meta">مايو 2026 · 8 دقائق</div>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/blog/eos-guide-2026.html" class="blog-card">
-        <div class="cat">⚖️ قانون العمل</div>
-        <div class="title">مكافأة نهاية الخدمة السعودية 2026</div>
-        <div class="meta">مايو 2026 · 7 دقائق</div>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/blog/iqama-renewal-2026.html" class="blog-card">
-        <div class="cat">🪪 حياة المغترب</div>
-        <div class="title">تجديد الإقامة 2026 — الرسوم والإجراءات</div>
-        <div class="meta">مايو 2026 · 6 دقائق</div>
-      </a>
-      <a href="https://www.saudiutilityhub.com/ar/blog/gosi-guide-2026.html" class="blog-card">
-        <div class="cat">💼 المالية</div>
-        <div class="title">كيفية حساب التأمينات الاجتماعية 2026</div>
-        <div class="meta">مايو 2026 · 8 دقائق</div>
-      </a>
+    <div style="margin-top:16px;padding:14px;background:var(--green-light);border-radius:8px;font-size:.9rem;color:#555;">
+      <strong>ملاحظة:</strong> الأسعار المعروضة وفقاً لأسعار أرامكو السعودية الرسمية. قد تتغير الأسعار كل ربع سنة.
     </div>
   </div>
 </div>
 
 <footer>
-  <div class="wide">
-    <div class="footer-grid">
-      <div>
-        <h4>💼 أدوات مالية</h4>
-        <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">حاسبة الراتب</a>
-        <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
-        <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
-        <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة المضافة</a>
-      </div>
-      <div>
-        <h4>🚗 أدوات السائق</h4>
-        <a href="https://www.saudiutilityhub.com/ar/fuel-cost-calculator.html" style="color:#86efac">حاسبة الوقود ✓</a>
-        <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">حاسبة المخالفات</a>
-        <a href="https://www.saudiutilityhub.com/ar/exit-reentry-calculator.html">تكلفة الخروج والعودة</a>
-        <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">متتبع الإقامة</a>
-        <a href="https://www.saudiutilityhub.com/ar/musaned-calculator.html">حاسبة مساند</a>
-      </div>
-      <div>
-        <h4>🌙 الزكاة</h4>
-        <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">زكاة الذهب</a>
-        <a href="https://www.saudiutilityhub.com/ar/zakat-calculator.html">زكاة المال</a>
-        <a href="https://www.saudiutilityhub.com/ar/gold-prices.html">أسعار الذهب</a>
-      </div>
-      <div>
-        <h4>📝 المدونة</h4>
-        <a href="https://www.saudiutilityhub.com/ar/blog/">جميع المقالات</a>
-        <a href="https://www.saudiutilityhub.com/ar/blog/gosi-guide-2026.html">دليل التأمينات</a>
-        <a href="https://www.saudiutilityhub.com/ar/blog/eos-guide-2026.html">دليل نهاية الخدمة</a>
-        <a href="https://www.saudiutilityhub.com/ar/blog/saudi-traffic-fines-guide-2026.html">غرامات المرور</a>
-      </div>
-      <div>
-        <h4>ℹ️ معلومات</h4>
-        <a href="https://www.saudiutilityhub.com/ar/about.html">من نحن</a>
-        <a href="https://www.saudiutilityhub.com/ar/contact.html">اتصل بنا</a>
-        <a href="https://www.saudiutilityhub.com/ar/privacy.html">سياسة الخصوصية</a>
-        <a href="https://www.saudiutilityhub.com/ar/terms.html">شروط الاستخدام</a>
-        <a href="https://www.saudiutilityhub.com/fuel-cost-calculator.html">English</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2026 سعودي يوتيليتي هب · أسعار الوقود من أرامكو السعودية الربع الثاني 2026 — تحقق على <a href="https://www.aramco.com" target="_blank" style="color:#86efac">aramco.com</a> · <a href="mailto:hello@saudiutilityhub.com" style="color:#86efac">hello@saudiutilityhub.com</a>
-    </div>
-  </div>
+  <p>© 2026 Saudi Utility Hub | <a href="../about.html">من نحن</a> | <a href="../index.html">الرئيسية</a></p>
 </footer>
 
-<div id="cookie-bar">
-  <span>🍪 نستخدم ملفات تعريف الارتباط لـ Google AdSense والتحليلات. لا نبيع بياناتك أبداً. <a href="https://www.saudiutilityhub.com/ar/privacy.html">سياسة الخصوصية</a></span>
-  <div class="cookie-btns">
-    <button class="btn-cookie btn-decline" onclick="document.getElementById('cookie-bar').style.display='none'">رفض</button>
-    <button class="btn-cookie btn-accept" onclick="document.getElementById('cookie-bar').style.display='none'">قبول والمتابعة</button>
-  </div>
-</div>
-
 <script>
-const PRICES = { '91':0.67, '95':0.90, 'diesel':0.32 };
-let selectedFuel = '91';
-
-function selectFuel(g) {
-  selectedFuel = g;
-  ['91','95','diesel'].forEach(f => document.getElementById('card-'+f).classList.remove('selected'));
-  document.getElementById('card-'+g).classList.add('selected');
+function calculate(){
+  const price=parseFloat(document.getElementById('fuelType').value);
+  const distance=parseFloat(document.getElementById('distance').value);
+  const consumption=parseFloat(document.getElementById('consumption').value);
+  const trips=parseFloat(document.getElementById('trips').value);
+  if(!distance||!consumption||!trips||isNaN(distance)||isNaN(consumption)||isNaN(trips)){
+    alert('الرجاء إدخال جميع البيانات المطلوبة');return;
+  }
+  const litersPerTrip=(distance/100)*consumption;
+  const tripCost=litersPerTrip*price;
+  const monthlyCost=tripCost*trips;
+  const yearlyCost=monthlyCost*12;
+  document.getElementById('tripCost').textContent=tripCost.toFixed(2);
+  document.getElementById('monthlyCost').textContent=monthlyCost.toFixed(2);
+  document.getElementById('yearlyCost').textContent=yearlyCost.toFixed(2);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
-
-function switchTab(name, btn) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-  btn.classList.add('active');
-}
-
-function fmt(n, dec=2) { return n.toFixed(dec) + ' ريال'; }
-
-function calcTrip() {
-  const dist = parseFloat(document.getElementById('trip-distance').value) || 0;
-  const cons = parseFloat(document.getElementById('trip-consumption').value) || 0;
-  const price = parseFloat(document.getElementById('trip-fuel').value);
-  if (!dist || !cons) return;
-  const litres = (dist * cons) / 100;
-  const cost = litres * price;
-  document.getElementById('trip-litres').textContent = litres.toFixed(1) + ' لتر';
-  document.getElementById('trip-cost').textContent = fmt(cost);
-  document.getElementById('trip-perkm').textContent = fmt(cost / dist, 3);
-  document.getElementById('trip-return').textContent = fmt(cost * 2);
-  document.getElementById('result-trip').classList.remove('result-hidden');
-}
-
-function calcMonthly() {
-  const km = parseFloat(document.getElementById('monthly-km').value) || 0;
-  const days = parseFloat(document.getElementById('monthly-days').value) || 0;
-  const cons = parseFloat(document.getElementById('monthly-consumption').value) || 0;
-  const price = parseFloat(document.getElementById('monthly-fuel').value);
-  if (!km || !days || !cons) return;
-  const totalKm = km * days;
-  const litres = (totalKm * cons) / 100;
-  const cost = litres * price;
-  document.getElementById('m-km').textContent = totalKm.toLocaleString('ar-SA') + ' كم';
-  document.getElementById('m-litres').textContent = litres.toFixed(1) + ' لتر';
-  document.getElementById('m-cost').textContent = fmt(cost);
-  document.getElementById('m-annual').textContent = fmt(cost * 12);
-  document.getElementById('result-monthly').classList.remove('result-hidden');
-}
-
-function calcTank() {
-  const size = parseFloat(document.getElementById('tank-size').value) || 0;
-  const level = parseFloat(document.getElementById('tank-level').value);
-  const price = parseFloat(document.getElementById('tank-fuel').value);
-  if (!size) return;
-  const needed = size * (1 - level);
-  const cost = needed * price;
-  const range = (size / 10) * 100;
-  document.getElementById('t-litres').textContent = needed.toFixed(1) + ' لتر';
-  document.getElementById('t-cost').textContent = fmt(cost);
-  document.getElementById('t-range').textContent = Math.round(range) + ' كم';
-  document.getElementById('result-tank').classList.remove('result-hidden');
-}
-
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const was = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!was) item.classList.add('open');
-}
-
-if (localStorage.getItem('cookie_ok')) document.getElementById('cookie-bar').style.display = 'none';
-document.querySelector('.btn-accept').addEventListener('click', () => localStorage.setItem('cookie_ok', '1'));
 </script>
 </body>
 </html>

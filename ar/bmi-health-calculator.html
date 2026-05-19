@@ -1,176 +1,212 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="احسب مؤشر كتلة الجسم مع تصنيف الصحة ونطاق الوزن المثالي وفق معايير منظمة الصحة العالمية.">
-<meta name="keywords" content="حاسبة مؤشر كتلة الجسم, BMI عربي, الوزن الصحي, مؤشر كتلة الجسم السعودية">
-<title>حاسبة مؤشر كتلة الجسم 2026 — تقييم الوزن الصحي | مركز الأدوات السعودية</title>
-<link rel="canonical" href="https://www.saudiutilityhub.com/ar/bmi-health-calculator.html">
-<link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/bmi-health-calculator.html">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet"><style>
-:root{--green:#1B6B3A;--green-dark:#0f4a28;--green-light:#e8f5ee;--gold:#C9A227;--gold-light:#fdf4dc;--bg:#f4f6f5;--white:#fff;--text:#1a1a2e;--muted:#6b7280;--border:#e2e8e4;--radius:12px;--radius-sm:8px;--shadow:0 2px 12px rgba(27,107,58,.10);}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;direction:rtl;text-align:right;}
-a{text-decoration:none;color:inherit;}
-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo-icon{width:36px;height:36px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-.logo-text strong{font-size:16px;font-weight:700;color:var(--green);display:block;line-height:1.2;}
-.logo-text span{font-size:11px;color:var(--muted);}
-.back-btn{font-size:13px;color:var(--green);font-weight:700;padding:8px 16px;background:var(--green-light);border-radius:var(--radius-sm);}
-.page-hero{background:linear-gradient(135deg,var(--green-dark),var(--green));color:white;padding:40px 20px 32px;text-align:center;}
-.badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;margin-bottom:14px;}
-.page-hero h1{font-size:clamp(22px,4vw,38px);font-weight:800;margin-bottom:10px;}
-.page-hero h1 span{color:#ffd166;}
-.page-hero p{font-size:15px;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto;font-weight:400;}
-.ad-zone{max-width:1100px;margin:0 auto;padding:20px 20px 0;}
-.ad-placeholder{background:var(--white);border:1px dashed var(--border);border-radius:var(--radius-sm);text-align:center;padding:14px;color:var(--muted);font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
-.main-wrap{max-width:1100px;margin:0 auto;padding:28px 20px 40px;display:grid;grid-template-columns:1fr 320px;gap:24px;}
-@media(max-width:768px){.main-wrap{grid-template-columns:1fr;}}
-.calc-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);}
-.calc-header{background:var(--green);color:white;padding:20px 24px;}
-.calc-header h2{font-size:19px;font-weight:700;}
-.calc-header p{font-size:13px;color:rgba(255,255,255,.8);margin-top:4px;}
-.calc-body{padding:24px;}
-.field-group{margin-bottom:16px;}
-.field-group label{display:block;font-size:14px;font-weight:600;margin-bottom:7px;}
-.field-group label span{font-weight:400;color:var(--muted);font-size:12px;}
-.field-group input,.field-group select,.field-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:'Tajawal',sans-serif;color:var(--text);transition:border-color .2s;direction:rtl;}
-.field-group input:focus,.field-group select:focus{outline:none;border-color:var(--green);}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.section-label{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.5px;margin-bottom:14px;}
-.calc-btn{width:100%;padding:14px;background:var(--green);color:white;border:none;border-radius:var(--radius-sm);font-size:16px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;transition:background .2s;margin-top:6px;}
-.calc-btn:hover{background:var(--green-dark);}
-.results-section{margin-top:20px;display:none;}
-.results-section.show{display:block;}
-.result-hero{background:var(--green);color:white;border-radius:var(--radius);padding:22px;text-align:center;margin-bottom:14px;}
-.result-hero .label{font-size:14px;color:rgba(255,255,255,.8);margin-bottom:6px;}
-.result-hero .amount{font-size:36px;font-weight:800;color:#ffd166;line-height:1;}
-.result-hero .sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;}
-.result-breakdown{background:var(--bg);border-radius:var(--radius);overflow:hidden;margin-bottom:14px;}
-.result-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--border);}
-.result-row:last-child{border-bottom:none;}
-.result-row .r-label{font-size:13px;color:var(--muted);}
-.result-row .r-value{font-size:14px;font-weight:700;}
-.result-row.total-row{background:var(--green-light);}
-.result-row.total-row .r-label{font-weight:700;color:var(--text);}
-.result-row.total-row .r-value{color:var(--green);font-size:16px;}
-.sidebar{display:flex;flex-direction:column;gap:18px;}
-.side-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;}
-.side-card h3{font-size:16px;font-weight:700;margin-bottom:14px;}
-.info-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
-.info-row:last-child{border-bottom:none;}
-.info-row span:first-child{color:var(--muted);}
-.info-row span:last-child{font-weight:600;}
-.tip-list{list-style:none;}
-.tip-list li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);padding-right:18px;position:relative;line-height:1.6;}
-.tip-list li:before{content:"✓";position:absolute;right:0;color:var(--green);font-weight:700;}
-.tip-list li:last-child{border-bottom:none;}
-.content-section{max-width:1100px;margin:0 auto;padding:0 20px 20px;}
-.content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px;}
-.content-card h2{font-size:20px;font-weight:700;margin-bottom:16px;}
-.content-card h3{font-size:16px;font-weight:700;margin:20px 0 10px;color:var(--green);}
-.content-card p{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:12px;}
-.content-card ul{margin:10px 0 12px 0;padding-right:20px;}
-.content-card ul li{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:4px;}
-.faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
-.faq-item:last-child{border-bottom:none;}
-.faq-q{font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-q .arrow{font-size:18px;color:var(--green);transition:transform .3s;}
-.faq-a{font-size:14px;color:var(--muted);line-height:1.9;margin-top:10px;display:none;}
-.faq-item.open .faq-a{display:block;}
-.faq-item.open .arrow{transform:rotate(180deg);}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
-.tool-mini{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:all .2s;}
-.tool-mini:hover{border-color:var(--green);transform:translateY(-2px);}
-.tool-mini .t-icon{font-size:24px;margin-bottom:8px;}
-.tool-mini .t-name{font-size:13px;font-weight:600;}
-.tool-mini .t-desc{font-size:11px;color:var(--muted);margin-top:3px;}
-.lang-switch{display:flex;align-items:center;gap:8px;}
-.lang-btn{font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;}
-.lang-btn.active{background:var(--green);color:white;border-color:var(--green);}
-footer{background:var(--green-dark);color:rgba(255,255,255,.8);padding:32px 20px 20px;margin-top:40px;}
-.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
-.footer-inner p{font-size:12px;color:rgba(255,255,255,.5);}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
-.footer-links a{font-size:13px;color:rgba(255,255,255,.5);}
-.footer-links a:hover{color:white;}
-</style>
-</head><body>
-<header><div class="header-inner">
-<div class="logo"><div class="logo-icon">🇸🇦</div><div class="logo-text"><strong>مركز الأدوات السعودية</strong><span>أدوات مجانية للمقيمين</span></div></div>
-<div style="display:flex;gap:10px;align-items:center;">
-<a href="../bmi-health-calculator.html" style="font-size:12px;color:var(--muted);padding:6px 12px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);">🇬🇧 English</a>
-<a href="index.html" class="back-btn">← جميع الأدوات</a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة مؤشر كتلة الجسم BMI بالعربي 2026 | Saudi Utility Hub</title>
+  <meta name="description" content="احسب مؤشر كتلة الجسم BMI بالوحدات المترية أو الإمبراطورية. تعرف على تصنيف وزنك ونطاق الوزن المثالي.">
+  <link rel="canonical" href="https://saudiutilityhub.com/ar/bmi-health-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/bmi-health-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/bmi-health-calculator.html">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <style>
+    :root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Tajawal',sans-serif;background:#f5f5f5;color:#222;direction:rtl;}
+    nav{background:var(--green);color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+    .logo{font-size:1.5rem;font-weight:800;text-decoration:none;color:#fff;}
+    .logo span{color:var(--gold);}
+    .lang-btn{background:var(--gold);color:#fff;border:none;padding:7px 16px;border-radius:20px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;display:inline-block;}
+    .container{max-width:760px;margin:32px auto;padding:0 16px;}
+    h1{color:var(--green);font-size:1.8rem;font-weight:800;margin-bottom:8px;}
+    .subtitle{color:#666;margin-bottom:24px;font-size:1rem;}
+    .card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:24px;}
+    .card h2{color:var(--green);font-size:1.2rem;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green-light);}
+    .tabs{display:flex;gap:0;margin-bottom:24px;border-radius:8px;overflow:hidden;border:2px solid var(--green);}
+    .tab{flex:1;padding:12px;text-align:center;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;background:#fff;color:var(--green);border:none;transition:all .2s;}
+    .tab.active{background:var(--green);color:#fff;}
+    .tab-content{display:none;}
+    .tab-content.active{display:block;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .form-group{margin-bottom:18px;}
+    label{display:block;font-weight:700;margin-bottom:6px;color:#333;font-size:.95rem;}
+    input[type=number]{width:100%;padding:12px 14px;border:2px solid #ddd;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1rem;transition:border-color .2s;background:#fff;color:#222;direction:rtl;}
+    input:focus{outline:none;border-color:var(--green);}
+    .btn{background:var(--green);color:#fff;border:none;padding:14px 32px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%;transition:background .2s;}
+    .btn:hover{background:var(--green-dark);}
+    .results{display:none;}
+    .results.show{display:block;}
+    .bmi-display{text-align:center;padding:32px;border-radius:12px;margin-bottom:20px;}
+    .bmi-number{font-size:4rem;font-weight:800;line-height:1;}
+    .bmi-label{font-size:1.4rem;font-weight:700;margin-top:8px;}
+    .bmi-under{background:#e3f2fd;color:#1565c0;}
+    .bmi-normal{background:var(--green-light);color:var(--green);}
+    .bmi-over{background:#fff9c4;color:#f57f17;}
+    .bmi-obese{background:#ffebee;color:#c62828;}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+    .cat{border-radius:8px;padding:12px;text-align:center;}
+    .cat.under{background:#e3f2fd;color:#1565c0;}
+    .cat.normal{background:var(--green-light);color:var(--green);}
+    .cat.over{background:#fff9c4;color:#f57f17;}
+    .cat.obese{background:#ffebee;color:#c62828;}
+    .cat .range{font-size:.85rem;font-weight:700;}
+    .cat .name{font-size:.9rem;font-weight:800;margin-top:4px;}
+    .ideal-range{background:var(--green-light);border-radius:8px;padding:16px;text-align:center;}
+    .ideal-range .label{font-size:.9rem;color:#555;font-weight:700;}
+    .ideal-range .value{font-size:1.3rem;font-weight:800;color:var(--green);}
+    .ad-slot{background:#f9f9f9;border:1px dashed #ccc;border-radius:8px;padding:20px;text-align:center;color:#999;font-size:.85rem;margin-bottom:24px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+    footer{background:var(--green-dark);color:#ccc;text-align:center;padding:20px;font-size:.9rem;margin-top:40px;}
+    footer a{color:var(--gold);text-decoration:none;}
+    @media(max-width:600px){.categories{grid-template-columns:1fr 1fr;}.form-row{grid-template-columns:1fr;}h1{font-size:1.4rem;}.bmi-number{font-size:3rem;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="../index.html">Saudi<span>Hub</span> 🇸🇦</a>
+  <div>
+    <a class="lang-btn" href="../bmi-health-calculator.html">🌐 English</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>⚖️ حاسبة مؤشر كتلة الجسم</h1>
+  <p class="subtitle">احسب مؤشر كتلة الجسم BMI وتعرف على تصنيف وزنك ونطاق وزنك المثالي</p>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <h2>اختر نظام القياس</h2>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('metric',this)">متري (كم / كجم)</button>
+      <button class="tab" onclick="switchTab('imperial',this)">إمبراطوري (قدم / باوند)</button>
+    </div>
+
+    <!-- Metric -->
+    <div class="tab-content active" id="metricTab">
+      <div class="form-group">
+        <label>الطول (سم)</label>
+        <input type="number" id="heightCm" placeholder="مثال: 170" min="100" max="250">
+      </div>
+      <div class="form-group">
+        <label>الوزن (كجم)</label>
+        <input type="number" id="weightKg" placeholder="مثال: 70" min="20" max="300" step="0.1">
+      </div>
+      <button class="btn" onclick="calculateMetric()">احسب مؤشر كتلة الجسم</button>
+    </div>
+
+    <!-- Imperial -->
+    <div class="tab-content" id="imperialTab">
+      <div class="form-row">
+        <div class="form-group">
+          <label>الطول — قدم</label>
+          <input type="number" id="heightFt" placeholder="مثال: 5" min="1" max="8">
+        </div>
+        <div class="form-group">
+          <label>الطول — بوصة</label>
+          <input type="number" id="heightIn" placeholder="مثال: 7" min="0" max="11">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>الوزن (باوند)</label>
+        <input type="number" id="weightLbs" placeholder="مثال: 154" min="44" max="660" step="0.1">
+      </div>
+      <button class="btn" onclick="calculateImperial()">احسب مؤشر كتلة الجسم</button>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card results" id="results">
+    <h2>📊 نتيجة مؤشر كتلة الجسم</h2>
+    <div class="bmi-display" id="bmiDisplay">
+      <div class="bmi-number" id="bmiValue">0</div>
+      <div class="bmi-label" id="bmiLabel">—</div>
+    </div>
+    <div class="categories">
+      <div class="cat under">
+        <div class="range">أقل من 18.5</div>
+        <div class="name">نقص وزن</div>
+      </div>
+      <div class="cat normal">
+        <div class="range">18.5 — 24.9</div>
+        <div class="name">وزن طبيعي</div>
+      </div>
+      <div class="cat over">
+        <div class="range">25 — 29.9</div>
+        <div class="name">زيادة وزن</div>
+      </div>
+      <div class="cat obese">
+        <div class="range">30 أو أكثر</div>
+        <div class="name">سمنة</div>
+      </div>
+    </div>
+    <div class="ideal-range">
+      <div class="label">نطاق الوزن المثالي لطولك</div>
+      <div class="value" id="idealRange">—</div>
+    </div>
+    <p style="margin-top:14px;font-size:.85rem;color:#888;text-align:center;">هذه المعلومات للأغراض الاسترشادية فقط. استشر طبيبك لتقييم صحي دقيق.</p>
+  </div>
 </div>
-</div></header>
-<div class="page-hero"><div class="badge">🏥 الصحة</div><h1>حاسبة <span>مؤشر كتلة الجسم</span></h1><p>احسب مؤشر كتلة الجسم مع تصنيف الصحة وفق معايير منظمة الصحة العالمية</p></div>
-<div class="ad-zone"><div class="ad-placeholder">📢 إعلان — Google AdSense</div></div>
-<div class="main-wrap"><div>
-<div class="calc-card"><div class="calc-header"><h2>⚖️ حاسبة مؤشر كتلة الجسم</h2><p>تقييم الوزن الصحي وفق معايير منظمة الصحة العالمية</p></div>
-<div class="calc-body">
-<div class="field-row">
-<div class="field-group"><label>الوزن <span>(كيلوجرام)</span></label><input type="number" id="bw" placeholder="75" min="1" step="0.1"></div>
-<div class="field-group"><label>الطول <span>(سنتيمتر)</span></label><input type="number" id="bh" placeholder="175" min="50" step="0.1"></div>
-</div>
-<button class="calc-btn" onclick="calcBMI()">احسب المؤشر ←</button>
-<div class="results-section" id="bmi-r">
-<div class="result-hero"><div class="label">مؤشر كتلة الجسم</div><div class="amount" id="bmi-sc" style="font-size:52px;">0</div><div class="sub" id="bmi-cat"></div></div>
-<div class="result-breakdown">
-<div class="result-row"><span class="r-label">المؤشر</span><span class="r-value" id="br-bmi">—</span></div>
-<div class="result-row"><span class="r-label">التصنيف</span><span class="r-value" id="br-cat">—</span></div>
-<div class="result-row"><span class="r-label">نطاق الوزن الصحي</span><span class="r-value" id="br-ideal">—</span></div>
-<div class="result-row total-row"><span class="r-label">الحالة الصحية</span><span class="r-value" id="br-status">—</span></div>
-</div></div></div></div>
-<div style="margin:20px 0;"><div class="ad-zone"><div class="ad-placeholder">📢 إعلان — Google AdSense</div></div></div>
-<div class="content-card"><h2>الأسئلة الشائعة</h2><div class="faq-item"><div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">هل مؤشر كتلة الجسم دقيق للجميع؟<span class="arrow">▾</span></div><div class="faq-a">المؤشر أداة فحص عامة وله محدودية؛ إذ لا يأخذ بعين الاعتبار الكتلة العضلية أو توزيع الدهون. يُنصح باستشارة طبيب لتقييم صحي شامل.</div></div><div class="faq-item"><div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">ما مؤشر كتلة الجسم الصحي؟<span class="arrow">▾</span></div><div class="faq-a">تُصنّف منظمة الصحة العالمية المؤشر بين 18.5 و24.9 بوصفه نطاقاً صحياً للبالغين.</div></div></div><div class="content-card"><h2>أدوات مجانية أخرى</h2><div class="tools-grid"><a href="gold-zakat-calculator.html"><div class="tool-mini"><div class="t-icon">🌙</div><div class="t-name">حاسبة زكاة الذهب</div><div class="t-desc">احسب زكاة ذهبك</div></div></a><a href="vat-calculator.html"><div class="tool-mini"><div class="t-icon">🧾</div><div class="t-name">ضريبة القيمة المضافة</div><div class="t-desc">إضافة أو خصم الضريبة</div></div></a><a href="ksa-eos-calculator.html"><div class="tool-mini"><div class="t-icon">🤝</div><div class="t-name">مكافأة نهاية الخدمة</div><div class="t-desc">حساب المكافأة</div></div></a><a href="salary-calculator.html"><div class="tool-mini"><div class="t-icon">💼</div><div class="t-name">حاسبة الراتب الصافي</div><div class="t-desc">صافي الراتب</div></div></a><a href="gosi-calculator.html"><div class="tool-mini"><div class="t-icon">🏛️</div><div class="t-name">حاسبة التأمينات (GOSI)</div><div class="t-desc">الاشتراكات</div></div></a><a href="car-finance-calculator.html"><div class="tool-mini"><div class="t-icon">🚗</div><div class="t-name">تمويل السيارة</div><div class="t-desc">الأقساط الشهرية</div></div></a><a href="mortgage-calculator.html"><div class="tool-mini"><div class="t-icon">🏠</div><div class="t-name">حاسبة التمويل العقاري</div><div class="t-desc">قسط المنزل</div></div></a><a href="dependent-levy-calculator.html"><div class="tool-mini"><div class="t-icon">👨‍👩‍👧‍👦</div><div class="t-name">رسوم المرافقين</div><div class="t-desc">حساب الرسوم</div></div></a><a href="iqama-expiry-calculator.html"><div class="tool-mini"><div class="t-icon">🪪</div><div class="t-name">تتبع انتهاء الإقامة</div><div class="t-desc">تجديد الإقامة</div></div></a><a href="currency-converter.html"><div class="tool-mini"><div class="t-icon">💱</div><div class="t-name">محول العملات</div><div class="t-desc">أسعار صرف الريال</div></div></a><a href="remittance-fee-compare.html"><div class="tool-mini"><div class="t-icon">💸</div><div class="t-name">مقارنة التحويلات</div><div class="t-desc">أرخص تحويل</div></div></a><a href="bmi-health-calculator.html"><div class="tool-mini"><div class="t-icon">⚖️</div><div class="t-name">حاسبة مؤشر كتلة الجسم</div><div class="t-desc">الوزن والصحة</div></div></a></div></div>
-</div>
-<div class="sidebar">
-<div class="side-card"><h3>📊 تصنيفات منظمة الصحة العالمية</h3>
-<div class="info-row"><span>نحافة</span><span>أقل من 18.5</span></div>
-<div class="info-row"><span>وزن طبيعي</span><span style="color:var(--green)">18.5 – 24.9</span></div>
-<div class="info-row"><span>زيادة وزن</span><span>25.0 – 29.9</span></div>
-<div class="info-row"><span>سمنة درجة أولى</span><span>30.0 – 34.9</span></div>
-<div class="info-row"><span>سمنة درجة ثانية</span><span>35.0 – 39.9</span></div>
-<div class="info-row"><span>سمنة مفرطة</span><span style="color:#dc2626">40+</span></div>
-</div>
-<div class="ad-placeholder" style="min-height:250px;">📢 إعلان</div>
-</div></div>
+
+<footer>
+  <p>© 2026 Saudi Utility Hub | <a href="about.html">من نحن</a> | <a href="../index.html">الرئيسية</a></p>
+</footer>
+
 <script>
-function calcBMI(){
-  const w=parseFloat(document.getElementById('bw').value)||0;
-  const h=parseFloat(document.getElementById('bh').value)||0;
-  if(!w||!h){alert('الرجاء إدخال الوزن والطول');return;}
-  const bmi=w/((h/100)**2);
-  let cat,status;
-  if(bmi<18.5){cat='نحافة';status='⚠️ أقل من النطاق الصحي';}
-  else if(bmi<25){cat='وزن طبيعي';status='✅ نطاق صحي';}
-  else if(bmi<30){cat='زيادة وزن';status='⚠️ أعلى من النطاق الصحي';}
-  else if(bmi<35){cat='سمنة درجة أولى';status='🔴 خطر صحي';}
-  else if(bmi<40){cat='سمنة درجة ثانية';status='🔴 خطر صحي مرتفع';}
-  else{cat='سمنة مفرطة';status='🚨 خطر صحي مرتفع جداً';}
+let currentTab='metric';
+function switchTab(tab,btn){
+  currentTab=tab;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tab+'Tab').classList.add('active');
+}
+function showBMI(bmi,heightM){
+  const el=document.getElementById('bmiDisplay');
+  el.className='bmi-display';
+  let label='',cls='';
+  if(bmi<18.5){label='نقص الوزن';cls='bmi-under';}
+  else if(bmi<25){label='وزن طبيعي';cls='bmi-normal';}
+  else if(bmi<30){label='زيادة وزن';cls='bmi-over';}
+  else{label='سمنة';cls='bmi-obese';}
+  el.classList.add(cls);
+  document.getElementById('bmiValue').textContent=bmi.toFixed(1);
+  document.getElementById('bmiLabel').textContent=label;
+  const minIdeal=(18.5*heightM*heightM).toFixed(1);
+  const maxIdeal=(24.9*heightM*heightM).toFixed(1);
+  document.getElementById('idealRange').textContent=`${minIdeal} كجم — ${maxIdeal} كجم`;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+function calculateMetric(){
+  const h=parseFloat(document.getElementById('heightCm').value);
+  const w=parseFloat(document.getElementById('weightKg').value);
+  if(!h||!w||isNaN(h)||isNaN(w)){alert('الرجاء إدخال الطول والوزن');return;}
   const hm=h/100;
-  const lo=(18.5*hm*hm).toFixed(1),hi=(24.9*hm*hm).toFixed(1);
-  document.getElementById('bmi-sc').textContent=bmi.toFixed(1);
-  document.getElementById('bmi-cat').textContent=cat;
-  document.getElementById('br-bmi').textContent=bmi.toFixed(2);
-  document.getElementById('br-cat').textContent=cat;
-  document.getElementById('br-ideal').textContent=lo+' – '+hi+' كجم';
-  document.getElementById('br-status').textContent=status;
-  document.getElementById('bmi-r').classList.add('show');
+  const bmi=w/(hm*hm);
+  showBMI(bmi,hm);
+}
+function calculateImperial(){
+  const ft=parseFloat(document.getElementById('heightFt').value)||0;
+  const inn=parseFloat(document.getElementById('heightIn').value)||0;
+  const lbs=parseFloat(document.getElementById('weightLbs').value);
+  if(!lbs||isNaN(lbs)){alert('الرجاء إدخال الطول والوزن');return;}
+  const totalInches=ft*12+inn;
+  const hm=totalInches*0.0254;
+  const wKg=lbs*0.453592;
+  if(hm<=0){alert('الرجاء إدخال الطول');return;}
+  const bmi=wKg/(hm*hm);
+  showBMI(bmi,hm);
 }
 </script>
-<footer><div class="footer-inner"><p>© 2026 مركز الأدوات السعودية — النتائج تقديرية فقط.</p>
-<div class="footer-links">
-<a href="index.html">الرئيسية</a>
-<a href="gold-zakat-calculator.html">الزكاة</a>
-<a href="salary-calculator.html">الراتب</a>
-<a href="vat-calculator.html">ضريبة القيمة</a>
-<a href="ksa-eos-calculator.html">مكافأة نهاية الخدمة</a>
-<a href="../about.html">من نحن</a>
-<a href="../privacy.html">الخصوصية</a>
-</div></div></footer>
-<script>document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.closest('.faq-item').classList.toggle('open')));</script>
-</body></html>
+</body>
+</html>
