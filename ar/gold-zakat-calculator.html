@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة زكاة الذهب – Saudi Utility Hub</title>
+  <meta name="description" content="احسب زكاة الذهب بسهولة. أدخل الوزن والعيار ومعرفة هل بلغ النصاب وما مقدار الزكاة الواجبة.">
+  <link rel="canonical" href="https://saudiutilityhub.com/ar/gold-zakat-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/gold-zakat-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/gold-zakat-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+  <style>
+    :root { --green:#065a2d; --green-dark:#044020; --green-light:#e8f5ee; --gold:#c8972b; --radius:12px; --shadow:0 4px 20px rgba(6,90,45,0.10); }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Tajawal',sans-serif;background:#f7faf8;color:#1a2e22;min-height:100vh;}
+    
+    .logo{color:#fff;font-size:1.4rem;font-weight:400;text-decoration:none;}
+    .logo strong{font-weight:800;}
+    .lang-btn{background:var(--gold);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+    .lang-btn:hover{background:#a97820;}
+    main{max-width:720px;margin:0 auto;padding:32px 16px 60px;}
+    .page-header{text-align:center;margin-bottom:32px;}
+    .page-header h1{font-size:2rem;font-weight:800;color:var(--green);margin-bottom:8px;}
+    .page-header p{color:#556b5e;font-size:1.05rem;}
+    .ad-slot{background:#eef2ef;border:1px dashed #b0c4b8;border-radius:var(--radius);padding:16px;text-align:center;color:#8a9e92;font-size:0.85rem;margin-bottom:28px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:24px;}
+    .card h2{font-size:1.2rem;font-weight:800;color:var(--green);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--green-light);}
+    .form-group{margin-bottom:20px;}
+    label{display:block;font-weight:700;margin-bottom:8px;color:var(--green-dark);font-size:0.95rem;}
+    input[type="number"],select{width:100%;padding:14px 16px;border:2px solid #d0e4d8;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:1.05rem;color:#1a2e22;outline:none;transition:border 0.2s;background:#fafdfc;}
+    input[type="number"]:focus,select:focus{border-color:var(--green);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+    .calc-btn{width:100%;padding:15px;background:var(--green);color:#fff;border:none;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;transition:background 0.2s;margin-top:4px;}
+    .calc-btn:hover{background:var(--green-dark);}
+    .results{display:none;margin-top:24px;}
+    .results.show{display:block;}
+    .nisab-indicator{padding:14px 18px;border-radius:10px;font-weight:700;font-size:1rem;margin-bottom:16px;text-align:center;}
+    .nisab-yes{background:#e8f5ee;color:var(--green);border:2px solid var(--green);}
+    .nisab-no{background:#fff3e0;color:#e65100;border:2px solid #ff9800;}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:560px){.result-grid{grid-template-columns:1fr;}}
+    .result-item{background:var(--green-light);border-radius:10px;padding:20px 16px;text-align:center;}
+    .result-item.highlight{background:var(--green);color:#fff;}
+    .result-label{font-size:0.85rem;font-weight:500;margin-bottom:8px;color:#556b5e;}
+    .result-item.highlight .result-label{color:#c8f5d8;}
+    .result-value{font-size:1.35rem;font-weight:800;color:var(--green);}
+    .result-item.highlight .result-value{color:#fff;}
+    .result-unit{font-size:0.8rem;color:#8a9e92;margin-top:4px;}
+    .result-item.highlight .result-unit{color:#a8d8b8;}
+    .info-box{background:var(--green-light);border-right:4px solid var(--green);border-radius:8px;padding:16px 20px;margin-top:24px;font-size:0.92rem;color:#2d5a3d;line-height:1.7;}
+    footer{background:var(--green-dark);color:#a8c8b0;text-align:center;padding:24px;font-size:0.9rem;}
+    footer a{color:var(--gold);text-decoration:none;}
+  </style>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h1>حاسبة زكاة الذهب</h1>
+    <p>احسب الزكاة الواجبة على ذهبك بسهولة ودقة</p>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ بيانات الذهب</h2>
+
+    <div class="form-group">
+      <label for="gold-weight">وزن الذهب</label>
+      <input type="number" id="gold-weight" placeholder="مثال: 100" min="0" step="0.01">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="gold-karat">العيار</label>
+        <select id="gold-karat">
+          <option value="1.000">24 قيراط (ذهب خالص)</option>
+          <option value="0.875" selected>21 قيراط</option>
+          <option value="0.750">18 قيراط</option>
+          <option value="0.583">14 قيراط</option>
+          <option value="0.417">10 قيراط</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gold-unit">وحدة الوزن</label>
+        <select id="gold-unit">
+          <option value="1">جرام</option>
+          <option value="4.25">مثقال</option>
+          <option value="31.1035">أوقية (أونصة)</option>
+          <option value="1000">كيلوجرام</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gold-price">سعر الذهب عيار 24 (ريال/جرام)</label>
+      <input type="number" id="gold-price" value="320" min="0" step="0.01">
+    </div>
+
+    <button class="calc-btn" onclick="calcGoldZakat()">احسب الزكاة</button>
+
+    <div class="results" id="gold-results">
+      <div class="nisab-indicator" id="nisab-status"></div>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-label">الوزن الإجمالي (جرام)</div>
+          <div class="result-value" id="total-grams">0</div>
+          <div class="result-unit">جرام</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">وزن الذهب الخالص</div>
+          <div class="result-value" id="pure-grams">0</div>
+          <div class="result-unit">جرام</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">قيمة الذهب</div>
+          <div class="result-value" id="gold-value">0</div>
+          <div class="result-unit">ريال سعودي</div>
+        </div>
+        <div class="result-item highlight">
+          <div class="result-label">الزكاة الواجبة (2.5%)</div>
+          <div class="result-value" id="zakat-due">0</div>
+          <div class="result-unit">ريال سعودي</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>النصاب:</strong> نصاب زكاة الذهب هو 85 جرام من الذهب الخالص عيار 24، وبسعر 320 ريال للجرام يكون النصاب الحالي <strong>27,200 ريال</strong>. إذا بلغت قيمة ذهبك هذا المقدار وحال عليه الحول وجبت فيه الزكاة بمقدار 2.5%.
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Saudi Utility Hub · <a href="../index.html">الرئيسية</a></p>
+</footer>
+
+<script>
+  const NISAB_GRAMS = 85;
+  function fmt(n,d=2){ return n.toLocaleString('ar-SA',{minimumFractionDigits:d,maximumFractionDigits:d}); }
+
+  function calcGoldZakat(){
+    const weight = parseFloat(document.getElementById('gold-weight').value);
+    const purity = parseFloat(document.getElementById('gold-karat').value);
+    const unitFactor = parseFloat(document.getElementById('gold-unit').value);
+    const pricePerGram = parseFloat(document.getElementById('gold-price').value);
+
+    if(isNaN(weight)||weight<=0) return alert('يرجى إدخال وزن صحيح');
+    if(isNaN(pricePerGram)||pricePerGram<=0) return alert('يرجى إدخال سعر صحيح للذهب');
+
+    const totalGrams = weight * unitFactor;
+    const pureGrams = totalGrams * purity;
+    const goldValue = pureGrams * pricePerGram;
+    const nisabValue = NISAB_GRAMS * pricePerGram;
+    const reached = pureGrams >= NISAB_GRAMS;
+    const zakat = reached ? goldValue * 0.025 : 0;
+
+    document.getElementById('total-grams').textContent = fmt(totalGrams);
+    document.getElementById('pure-grams').textContent = fmt(pureGrams);
+    document.getElementById('gold-value').textContent = fmt(goldValue);
+    document.getElementById('zakat-due').textContent = fmt(zakat);
+
+    const status = document.getElementById('nisab-status');
+    if(reached){
+      status.className = 'nisab-indicator nisab-yes';
+      status.textContent = '✅ بلغ النصاب — الزكاة واجبة';
+    } else {
+      status.className = 'nisab-indicator nisab-no';
+      status.textContent = `❌ لم يبلغ النصاب — النصاب المطلوب: ${fmt(nisabValue)} ريال`;
+    }
+    document.getElementById('gold-results').classList.add('show');
+  }
+</script>
+</body>
+</html>

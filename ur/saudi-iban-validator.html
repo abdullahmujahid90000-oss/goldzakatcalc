@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سعودی IBAN ویلیڈیٹر | Saudi IBAN Validator اردو</title>
+<meta name="description" content="سعودی IBAN نمبر چیک کریں — درستگی، بینک کا نام اور برانچ معلوم کریں۔ Al Rajhi, SNB, Riyad Bank سمیت تمام سعودی بینک۔">
+<meta name="keywords" content="سعودی IBAN ویلیڈیٹر, saudi iban validator urdu, IBAN چیک, آئی بی اے این, سعودی بینک">
+<link rel="canonical" href="https://saudiutilityhub.com/ur/saudi-iban-validator">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/saudi-iban-validator">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/saudi-iban-validator">
+<link rel="alternate" hreflang="ur" href="https://saudiutilityhub.com/ur/saudi-iban-validator">
+<link rel="alternate" hreflang="x-default" href="https://saudiutilityhub.com/saudi-iban-validator">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Nastaliq Urdu','Gulzar','Jameel Noori Nastaleeq',serif;font-size:18px;line-height:2.2;background:#0f0f23;color:#e0e0e0;direction:rtl}
+
+.logo{color:#00d4aa;font-size:1.3em;font-weight:bold;text-decoration:none}
+.nav-links{display:flex;gap:15px;align-items:center;list-style:none}
+.nav-links a{color:#ccc;text-decoration:none;font-size:0.9em}
+.nav-links a:hover{color:#00d4aa}
+.lang-switch{display:flex;gap:6px}
+.lang-switch a{padding:4px 10px;border-radius:4px;font-size:0.85em;text-decoration:none;background:#2a2a4e;color:#ccc}
+.lang-switch a:hover{background:#00d4aa;color:#000}
+.active-lang{background:#00d4aa!important;color:#000!important}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:50px 20px 40px;text-align:center}
+.hero h1{font-size:2.2em;color:#fff;margin-bottom:15px}
+.hero p{color:#a0b4c8;font-size:1.1em;max-width:700px;margin:0 auto 20px}
+.badge{display:inline-block;background:rgba(0,212,170,0.15);border:1px solid #00d4aa;color:#00d4aa;padding:6px 18px;border-radius:20px;font-size:0.9em;margin:4px}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+.card{background:#1a1a2e;border-radius:12px;padding:30px;margin-bottom:25px;border:1px solid #2a2a4e}
+.card h2{color:#00d4aa;font-size:1.4em;margin-bottom:20px;border-bottom:1px solid #2a2a4e;padding-bottom:10px}
+.iban-input-wrap{position:relative;margin-bottom:20px}
+.iban-input{width:100%;padding:18px 20px;background:#16213e;border:2px solid #2a2a4e;border-radius:10px;color:#fff;font-size:1.2em;font-family:'Courier New',monospace;letter-spacing:2px;direction:ltr;text-align:left;text-transform:uppercase;transition:border-color 0.3s}
+.iban-input:focus{outline:none;border-color:#00d4aa}
+.iban-input.valid{border-color:#6bcb77}
+.iban-input.invalid{border-color:#ff6b6b}
+.iban-formatted{color:#a0b4c8;font-size:0.9em;margin-top:8px;font-family:'Courier New',monospace;direction:ltr;text-align:left;letter-spacing:3px}
+.validate-btn{width:100%;padding:15px;background:linear-gradient(135deg,#00d4aa,#00a884);border:none;border-radius:10px;color:#000;font-size:1.1em;font-weight:bold;cursor:pointer;font-family:inherit;margin-top:10px;transition:transform 0.2s}
+.validate-btn:hover{transform:translateY(-2px)}
+.result-panel{margin-top:20px;border-radius:10px;padding:20px;display:none}
+.result-panel.valid{background:rgba(107,203,119,0.1);border:2px solid #6bcb77}
+.result-panel.invalid{background:rgba(255,107,107,0.1);border:2px solid #ff6b6b}
+.result-icon{font-size:2em;margin-bottom:10px}
+.result-status{font-size:1.3em;font-weight:bold;margin-bottom:15px}
+.result-details{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.detail-item{background:#0f0f23;padding:12px 15px;border-radius:8px}
+.detail-label{color:#a0b4c8;font-size:0.85em;margin-bottom:3px}
+.detail-value{color:#fff;font-weight:bold;font-family:'Courier New',monospace;font-size:0.95em}
+.bank-table{width:100%;border-collapse:collapse;margin:15px 0}
+.bank-table th{background:#00d4aa;color:#000;padding:10px 15px;text-align:right;font-size:0.9em}
+.bank-table td{padding:10px 15px;border-bottom:1px solid #2a2a4e;font-size:0.9em}
+.bank-table tr:hover td{background:#16213e}
+.bank-code{font-family:'Courier New',monospace;color:#00d4aa;direction:ltr;text-align:center}
+.iban-structure{background:#16213e;border-radius:10px;padding:20px;margin:15px 0}
+.iban-parts{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0;direction:ltr;justify-content:flex-start}
+.iban-part{padding:8px 12px;border-radius:6px;font-family:'Courier New',monospace;font-size:0.9em;text-align:center}
+.part-country{background:#00d4aa30;border:1px solid #00d4aa;color:#00d4aa}
+.part-check{background:#ffd93d30;border:1px solid #ffd93d;color:#ffd93d}
+.part-bank{background:#ff6b6b30;border:1px solid #ff6b6b;color:#ff6b6b}
+.part-account{background:#6bcb7730;border:1px solid #6bcb77;color:#6bcb77}
+.iban-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:0.85em}
+.legend-item{display:flex;align-items:center;gap:5px}
+.info-box{background:#16213e;border-right:4px solid #00d4aa;border-radius:8px;padding:20px;margin:15px 0}
+.info-box h3{color:#00d4aa;margin-bottom:10px}
+.faq-item{border:1px solid #2a2a4e;border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{background:#16213e;padding:15px 20px;cursor:pointer;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.faq-q:hover{background:#1e2a4a}
+.faq-a{padding:15px 20px;color:#a0b4c8;display:none;border-top:1px solid #2a2a4e}
+.faq-a.open{display:block}
+footer{background:#1a1a2e;border-top:1px solid #2a2a4e;padding:30px 20px;text-align:center;color:#666;margin-top:50px}
+footer a{color:#00d4aa;text-decoration:none}
+@media(max-width:600px){
+  .hero h1{font-size:1.6em}
+  .result-details{grid-template-columns:1fr}
+  .iban-input{font-size:1em;letter-spacing:1px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "سعودی IBAN ویلیڈیٹر",
+  "description": "سعودی عرب کے IBAN نمبر کی درستگی چیک کریں اور بینک کا نام معلوم کریں",
+  "url": "https://saudiutilityhub.com/ur/saudi-iban-validator",
+  "applicationCategory": "FinanceApplication",
+  "inLanguage": "ur",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"SAR"},
+  "operatingSystem": "Any"
+}
+</script>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Gulzar&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ur/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ur/">ہوم</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-calculator.html">تنخواہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/gosi-calculator.html">گوسی</a>
+      <a href="https://www.saudiutilityhub.com/ur/eos-calculator.html">اختتامی سروس</a>
+      <a href="https://www.saudiutilityhub.com/ur/iqama-calculator.html">اقامہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-slip.html">تنخواہ سلپ</a>
+      <a href="https://www.saudiutilityhub.com/ur/noc-letter.html">این او سی</a>
+      <a href="https://www.saudiutilityhub.com/ur/remittance.html">رقم بھیجیں</a>
+      <a href="https://www.saudiutilityhub.com/ur/vat-calculator.html">ویٹ</a>
+      <a href="https://www.saudiutilityhub.com/ur/zakat-calculator.html">زکوۃ</a>
+      <a href="https://www.saudiutilityhub.com/ur/blog/">بلاگ</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ar/" class="nav-ar">عربي</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>🏦 سعودی IBAN ویلیڈیٹر</h1>
+  <p>سعودی بینک اکاؤنٹ نمبر (IBAN) کی درستگی چیک کریں اور بینک کا نام معلوم کریں</p>
+  <span class="badge">SA IBAN — 24 ہندسے</span>
+  <span class="badge">تمام سعودی بینک</span>
+</div>
+
+<div class="container">
+
+  <!-- Validator -->
+  <div class="card">
+    <h2>✅ IBAN چیک کریں</h2>
+    <p style="color:#a0b4c8;margin-bottom:20px">اپنا IBAN نمبر یہاں ٹائپ یا پیسٹ کریں — خود بخود چیک ہو جائے گا</p>
+
+    <div class="iban-input-wrap">
+      <input
+        type="text"
+        class="iban-input"
+        id="iban-input"
+        placeholder="SA00 0000 0000 0000 0000 0000"
+        maxlength="29"
+        oninput="onIbanInput()"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <div class="iban-formatted" id="iban-formatted"></div>
+    </div>
+
+    <button class="validate-btn" onclick="validateIBAN()">🔍 IBAN چیک کریں</button>
+
+    <div class="result-panel" id="result-panel">
+      <div class="result-icon" id="result-icon"></div>
+      <div class="result-status" id="result-status"></div>
+      <div class="result-details" id="result-details"></div>
+    </div>
+  </div>
+
+  <!-- IBAN Structure -->
+  <div class="card">
+    <h2>📐 سعودی IBAN کی ساخت</h2>
+    <p style="color:#a0b4c8;margin-bottom:15px">سعودی IBAN ہمیشہ <strong style="color:#fff">SA</strong> سے شروع ہوتا ہے اور ۲۴ ہندسوں پر مشتمل ہے:</p>
+
+    <div class="iban-structure">
+      <div class="iban-parts">
+        <div class="iban-part part-country">SA</div>
+        <div class="iban-part part-check">XX</div>
+        <div class="iban-part part-bank">XXXX</div>
+        <div class="iban-part part-account">XXXXXXXXXXXXXXXXXX</div>
+      </div>
+      <div class="iban-legend">
+        <div class="legend-item"><span style="background:#00d4aa;width:12px;height:12px;display:inline-block;border-radius:2px"></span> ملک کا کوڈ (SA)</div>
+        <div class="legend-item"><span style="background:#ffd93d;width:12px;height:12px;display:inline-block;border-radius:2px"></span> چیک ڈیجٹ (2 ہندسے)</div>
+        <div class="legend-item"><span style="background:#ff6b6b;width:12px;height:12px;display:inline-block;border-radius:2px"></span> بینک کوڈ (4 ہندسے)</div>
+        <div class="legend-item"><span style="background:#6bcb77;width:12px;height:12px;display:inline-block;border-radius:2px"></span> اکاؤنٹ نمبر (18 ہندسے)</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>📋 مثال</h3>
+      <p style="font-family:'Courier New',monospace;direction:ltr;text-align:left;color:#00d4aa;font-size:1.1em;letter-spacing:3px">SA44 2000 0001 2345 6789 1234</p>
+      <p style="color:#a0b4c8;margin-top:8px"><strong>SA</strong> = سعودی عرب | <strong>44</strong> = چیک ڈیجٹ | <strong>2000</strong> = Al Rajhi بینک | باقی = اکاؤنٹ نمبر</p>
+    </div>
+  </div>
+
+  <!-- Bank Codes -->
+  <div class="card">
+    <h2>🏛️ سعودی بینکوں کے IBAN کوڈ</h2>
+    <table class="bank-table">
+      <thead>
+        <tr>
+          <th>بینک کا نام</th>
+          <th style="text-align:center">IBAN کوڈ</th>
+          <th>مختصر نام</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Al Rajhi Bank — الراجحی بینک</td><td class="bank-code">2000</td><td>RJHI</td></tr>
+        <tr><td>Saudi National Bank — البنك الأهلي السعودي</td><td class="bank-code">1000</td><td>SNB</td></tr>
+        <tr><td>Riyad Bank — بنك الرياض</td><td class="bank-code">3000</td><td>RIBL</td></tr>
+        <tr><td>Saudi British Bank — البنك السعودي البريطاني (SABB)</td><td class="bank-code">4500</td><td>SABB</td></tr>
+        <tr><td>Banque Saudi Fransi — البنك السعودي الفرنسي</td><td class="bank-code">5500</td><td>BSFR</td></tr>
+        <tr><td>Arab National Bank — البنك العربي الوطني</td><td class="bank-code">6000</td><td>ARNB</td></tr>
+        <tr><td>Alinma Bank — مصرف الإنماء</td><td class="bank-code">8000</td><td>INMA</td></tr>
+        <tr><td>Al Jazira Bank — بنك الجزيرة</td><td class="bank-code">7000</td><td>BJAز</td></tr>
+        <tr><td>Saudi Investment Bank — البنك السعودي للاستثمار</td><td class="bank-code">6500</td><td>SSAB</td></tr>
+        <tr><td>Bank AlBilad — بنك البلاد</td><td class="bank-code">7500</td><td>ALBILAD</td></tr>
+        <tr><td>Gulf International Bank — بنك الخليج الدولي</td><td class="bank-code">5000</td><td>GISB</td></tr>
+        <tr><td>Emirates NBD (Saudi)</td><td class="bank-code">8200</td><td>ENBD</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- How to Find IBAN -->
+  <div class="card">
+    <h2>📍 اپنا IBAN کیسے معلوم کریں؟</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
+      <div class="info-box">
+        <h3>📱 موبائل ایپ سے</h3>
+        <p>بینک ایپ کھولیں → اکاؤنٹ → اکاؤنٹ ڈیٹیلز → IBAN دیکھیں</p>
+      </div>
+      <div class="info-box">
+        <h3>🏧 ATM سے</h3>
+        <p>کارڈ ڈالیں → Account Services → IBAN چیک کریں یا print کریں</p>
+      </div>
+      <div class="info-box">
+        <h3>🌐 آن لائن بینکنگ</h3>
+        <p>ویب پورٹل → My Accounts → Account Summary → IBAN</p>
+      </div>
+      <div class="info-box">
+        <h3>🏦 بینک برانچ</h3>
+        <p>اقامہ لے کر برانچ جائیں — کاؤنٹر پر IBAN print کروائیں</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>❓ اکثر پوچھے گئے سوالات</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>IBAN اور اکاؤنٹ نمبر میں کیا فرق ہے؟</span><span>+</span></div>
+      <div class="faq-a">اکاؤنٹ نمبر صرف آپ کے بینک کے اندر کام کرتا ہے۔ IBAN (International Bank Account Number) عالمی معیار ہے جو ملک کوڈ اور بینک کوڈ سمیت پورا ایڈریس دیتا ہے — خاص طور پر بین الاقوامی ترسیلات کے لیے ضروری ہے۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>پاکستان رقم بھیجنے کے لیے IBAN ضروری ہے؟</span><span>+</span></div>
+      <div class="faq-a">سعودی عرب سے باہر رقم بھیجنے کے لیے آپ کو اپنا سعودی IBAN دینا ہوگا (بھیجنے والے بینک کے لیے)۔ پاکستان میں وصول کنندہ کا بھی اکاؤنٹ نمبر یا IBAN چاہیے۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>IBAN نمبر شیئر کرنا محفوظ ہے؟</span><span>+</span></div>
+      <div class="faq-a">جی ہاں — IBAN صرف رقم وصول کرنے کے لیے استعمال ہوتا ہے، نکالنے کے لیے نہیں۔ آپ اپنا IBAN بے فکر ہو کر دے سکتے ہیں۔ تاہم CVV، PIN یا OTP کبھی کسی کو نہ دیں۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>غلط IBAN پر رقم بھیج دی — واپس آئے گی؟</span><span>+</span></div>
+      <div class="faq-a">اگر IBAN موجود نہ ہو تو رقم واپس آ جاتی ہے (۳–۵ دن)۔ اگر غلط لیکن valid IBAN ہو تو رقم کسی اور کے پاس جا سکتی ہے۔ فوری اپنے بینک سے رابطہ کریں — واپسی کا امکان تب بہتر ہوتا ہے جب جلد رپورٹ کریں۔</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© ۲۰۲۵ سعودی یوٹیلیٹی ہب — پاکستانی ورکرز کے لیے</p>
+  <p style="margin-top:10px">
+    <a href="/ur/">ہوم</a> |
+    <a href="/ur/remittance.html">رقم بھیجیں</a> |
+    <a href="/ur/salary-calculator.html">تنخواہ</a> |
+    <a href="/ur/vat-calculator.html">VAT</a>
+  </p>
+</footer>
+
+<script>
+const BANK_CODES = {
+  '1000': 'Saudi National Bank (SNB) — البنك الأهلي',
+  '2000': 'Al Rajhi Bank — الراجحي بنك',
+  '3000': 'Riyad Bank — بنك الرياض',
+  '4500': 'SABB — البنك السعودي البريطاني',
+  '5000': 'Gulf International Bank',
+  '5500': 'Banque Saudi Fransi — البنك السعودي الفرنسي',
+  '6000': 'Arab National Bank — البنك العربي الوطني',
+  '6500': 'Saudi Investment Bank',
+  '7000': 'Bank Al-Jazira — بنك الجزيرة',
+  '7500': 'Bank AlBilad — بنك البلاد',
+  '8000': 'Alinma Bank — مصرف الإنماء',
+  '8200': 'Emirates NBD Saudi Arabia',
+};
+
+function onIbanInput() {
+  const input = document.getElementById('iban-input');
+  let val = input.value.replace(/\s/g, '').toUpperCase();
+  // Auto-format with spaces every 4 chars
+  const formatted = val.match(/.{1,4}/g)?.join(' ') || val;
+  if (input.value !== formatted) {
+    const pos = input.selectionStart;
+    input.value = formatted;
+  }
+  // Update formatted display
+  document.getElementById('iban-formatted').textContent = val.length > 0 ? val : '';
+  // Reset result
+  document.getElementById('result-panel').style.display = 'none';
+  input.classList.remove('valid','invalid');
+}
+
+function validateIBAN() {
+  const input = document.getElementById('iban-input');
+  const rawVal = input.value.replace(/\s/g,'').toUpperCase();
+  const panel = document.getElementById('result-panel');
+  const icon = document.getElementById('result-icon');
+  const status = document.getElementById('result-status');
+  const details = document.getElementById('result-details');
+
+  panel.style.display = 'block';
+
+  // Basic checks
+  if (rawVal.length === 0) {
+    showError('IBAN نمبر داخل کریں', '');
+    return;
+  }
+  if (!rawVal.startsWith('SA')) {
+    showError('❌ غلط IBAN', 'سعودی IBAN ہمیشہ SA سے شروع ہوتا ہے');
+    input.classList.add('invalid');
+    return;
+  }
+  if (rawVal.length !== 24) {
+    showError('❌ غلط لمبائی', `سعودی IBAN ۲۴ ہندسوں کا ہوتا ہے — آپ نے ${rawVal.length} ہندسے ڈالے`);
+    input.classList.add('invalid');
+    return;
+  }
+
+  // MOD-97 check
+  const rearranged = rawVal.slice(4) + rawVal.slice(0,4);
+  const numericStr = rearranged.split('').map(c => c >= 'A' && c <= 'Z' ? (c.charCodeAt(0)-55).toString() : c).join('');
+  let remainder = 0;
+  for (let i = 0; i < numericStr.length; i++) {
+    remainder = (remainder * 10 + parseInt(numericStr[i])) % 97;
+  }
+
+  const bankCode = rawVal.slice(4,8);
+  const bankName = BANK_CODES[bankCode] || 'نامعلوم بینک (کوڈ: ' + bankCode + ')';
+  const accountPart = rawVal.slice(8);
+  const checkDigits = rawVal.slice(2,4);
+
+  if (remainder === 1) {
+    input.classList.add('valid');
+    panel.classList.remove('invalid');
+    panel.classList.add('valid');
+    icon.textContent = '✅';
+    status.innerHTML = '<span style="color:#6bcb77">IBAN درست ہے</span>';
+    details.innerHTML = `
+      <div class="detail-item">
+        <div class="detail-label">ملک</div>
+        <div class="detail-value">🇸🇦 Saudi Arabia</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">بینک</div>
+        <div class="detail-value" style="font-family:inherit;font-size:0.85em">${bankName}</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">بینک کوڈ</div>
+        <div class="detail-value">${bankCode}</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">چیک ڈیجٹ</div>
+        <div class="detail-value">${checkDigits}</div>
+      </div>
+      <div class="detail-item" style="grid-column:1/-1">
+        <div class="detail-label">اکاؤنٹ حصہ</div>
+        <div class="detail-value">${accountPart.match(/.{1,4}/g).join(' ')}</div>
+      </div>
+      <div class="detail-item" style="grid-column:1/-1">
+        <div class="detail-label">مکمل IBAN</div>
+        <div class="detail-value">${rawVal.match(/.{1,4}/g).join(' ')}</div>
+      </div>
+    `;
+  } else {
+    input.classList.add('invalid');
+    panel.classList.remove('valid');
+    panel.classList.add('invalid');
+    icon.textContent = '❌';
+    status.innerHTML = '<span style="color:#ff6b6b">IBAN غلط ہے — چیک ڈیجٹ ناکام</span>';
+    details.innerHTML = `
+      <div class="detail-item" style="grid-column:1/-1">
+        <div class="detail-label">مسئلہ</div>
+        <div class="detail-value" style="font-family:inherit;color:#ff6b6b;font-size:0.9em">IBAN نمبر درست نہیں۔ براہ کرم اپنے بینک اسٹیٹمنٹ یا ایپ سے دوبارہ چیک کریں۔</div>
+      </div>
+    `;
+  }
+}
+
+function showError(title, msg) {
+  const panel = document.getElementById('result-panel');
+  panel.classList.remove('valid');
+  panel.classList.add('invalid');
+  document.getElementById('result-icon').textContent = '⚠️';
+  document.getElementById('result-status').innerHTML = `<span style="color:#ff6b6b">${title}</span>`;
+  document.getElementById('result-details').innerHTML = msg ? `<div class="detail-item" style="grid-column:1/-1"><div class="detail-value" style="font-family:inherit;color:#a0b4c8">${msg}</div></div>` : '';
+}
+
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q span:last-child').forEach(s => s.textContent = '+');
+  if (!isOpen) { ans.classList.add('open'); el.querySelector('span:last-child').textContent = '−'; }
+}
+
+// Allow Enter key
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('iban-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') validateIBAN();
+  });
+});
+</script>
+</body>
+</html>

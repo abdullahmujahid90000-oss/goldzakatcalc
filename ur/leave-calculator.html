@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>سعودی چھٹی حساب کتاب 2026 — سالانہ، بیماری، زچگی، حج | Saudi Utility Hub</title>
+<meta name="description" content="سعودی عرب چھٹی حساب کتاب 2026 — سالانہ چھٹی (21-30 دن)، بیماری (120 دن)، زچگی، حج اور چھٹی کی ادائیگی۔ سعودی لیبر لا 2025۔">
+<link rel="canonical" href="https://www.saudiutilityhub.com/ur/leave-calculator.html">
+<link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/leave-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/leave-calculator.html">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Nastaliq Urdu','Arial Unicode MS',Tahoma,sans-serif;background:#f8f9fa;color:#333;line-height:2.2;direction:rtl}
+
+nav a{color:#fff;text-decoration:none;font-size:.9rem;opacity:.85}
+nav .logo{font-size:1.1rem;font-weight:700;color:#fff;opacity:1}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:1.8rem;margin-bottom:.8rem;line-height:1.5}
+.hero p{font-size:1rem;opacity:.9;max-width:680px;margin:0 auto}
+.badges{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+.badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:.3rem .8rem;font-size:.8rem}
+.container{max-width:900px;margin:0 auto;padding:2rem 1rem}
+.card{background:#fff;border-radius:12px;padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+h2{color:#1a1a2e;margin-bottom:1rem;font-size:1.2rem}
+label{display:block;font-weight:600;margin-bottom:.4rem;font-size:.88rem;color:#374151}
+input,select{width:100%;padding:.65rem .85rem;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;margin-bottom:1rem;background:#fff}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.grid-2{grid-template-columns:1fr}}
+.calc-btn{width:100%;padding:1rem;background:linear-gradient(135deg,#0f3460,#1a1a2e);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.5rem}
+.results{display:none}.results.show{display:block}
+.leave-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1.5rem}
+.leave-card{border-radius:10px;padding:1rem;text-align:center;border:1px solid #e5e7eb;background:#f8f9fa}
+.leave-card .lc-icon{font-size:1.6rem;margin-bottom:.2rem}
+.leave-card .lc-label{font-size:.75rem;color:#6b7280;margin-bottom:.2rem}
+.leave-card .lc-days{font-size:1.5rem;font-weight:700;color:#1a1a2e}
+.leave-card .lc-sub{font-size:.7rem;color:#9ca3af;margin-top:.2rem}
+.encash-hero{background:linear-gradient(135deg,#0f3460,#1a1a2e);color:#fff;border-radius:12px;padding:1.5rem;text-align:center;margin-bottom:1rem}
+.encash-hero .label{font-size:.88rem;opacity:.8;margin-bottom:.3rem}
+.encash-hero .amount{font-size:2.5rem;font-weight:700}
+.leave-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.leave-table th{background:#1a1a2e;color:#fff;padding:.6rem .8rem;text-align:right}
+.leave-table td{padding:.6rem .8rem;border-bottom:1px solid #eee;text-align:right}
+.leave-table tr:nth-child(even) td{background:#f9fafb}
+.leave-table .total-row td{font-weight:700;background:#f0fdf4;color:#166534}
+.info-box{background:#eff6ff;border-right:4px solid #3b82f6;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.85rem}
+.warn-box{background:#fef9c3;border-right:4px solid #eab308;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.85rem}
+.type-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.type-card{border:1px solid #e5e7eb;border-radius:10px;padding:1rem}
+.type-card .th{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.type-card h4{color:#1a1a2e;font-size:.9rem}
+.type-card p{font-size:.82rem;color:#555}
+.type-card .key{background:#eff6ff;border-radius:6px;padding:.3rem .6rem;font-size:.78rem;color:#1e40af;font-weight:600;margin-top:.4rem;display:inline-block}
+.pdf-btn{width:100%;padding:.9rem;background:#16a34a;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:1rem}
+.reset-btn{background:none;border:1px solid #d1d5db;color:#6b7280;padding:.5rem 1rem;border-radius:8px;cursor:pointer;font-size:.85rem;margin-top:.5rem}
+.faq-item{border-bottom:1px solid #eee;padding:.9rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:700;color:#1a1a2e;margin-bottom:.3rem;font-size:.88rem}
+.faq-a{color:#555;font-size:.84rem}
+footer{background:#1a1a2e;color:#aaa;text-align:center;padding:2rem;font-size:.85rem;margin-top:3rem}
+footer a{color:#60a5fa;text-decoration:none}
+</style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Gulzar&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ur/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ur/">ہوم</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-calculator.html">تنخواہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/gosi-calculator.html">گوسی</a>
+      <a href="https://www.saudiutilityhub.com/ur/eos-calculator.html">اختتامی سروس</a>
+      <a href="https://www.saudiutilityhub.com/ur/iqama-calculator.html">اقامہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-slip.html">تنخواہ سلپ</a>
+      <a href="https://www.saudiutilityhub.com/ur/noc-letter.html">این او سی</a>
+      <a href="https://www.saudiutilityhub.com/ur/remittance.html">رقم بھیجیں</a>
+      <a href="https://www.saudiutilityhub.com/ur/vat-calculator.html">ویٹ</a>
+      <a href="https://www.saudiutilityhub.com/ur/zakat-calculator.html">زکوۃ</a>
+      <a href="https://www.saudiutilityhub.com/ur/blog/">بلاگ</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ar/" class="nav-ar">عربي</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <h1>🏖️ سعودی چھٹی حساب کتاب 2026</h1>
+  <p>سالانہ چھٹی، بیماری، زچگی، حج اور ہنگامی چھٹی — استحقاق اور چھٹی کی ادائیگی ایک جگہ۔ سعودی لیبر لا 2025۔</p>
+  <div class="badges">
+    <span class="badge">📅 2025 لیبر لا</span>
+    <span class="badge">🏖️ 6 قسم کی چھٹی</span>
+    <span class="badge">💰 چھٹی ادائیگی</span>
+    <span class="badge">📥 PDF ڈاؤنلوڈ</span>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <h2>⚙️ اپنی تفصیلات</h2>
+    <div class="grid-2">
+      <div><label>بنیادی ماہانہ تنخواہ (ریال)</label><input type="number" id="basicSalary" placeholder="مثلاً 5000" min="0"></div>
+      <div><label>سروس کے مکمل سال</label><input type="number" id="yearsService" placeholder="مثلاً 3.5" min="0" step="0.1"></div>
+    </div>
+    <div class="grid-2">
+      <div><label>ہاؤسنگ الاؤنس (ریال/ماہ)</label><input type="number" id="housingAllowance" placeholder="مثلاً 1500" min="0" value="0"></div>
+      <div><label>ٹرانسپورٹ الاؤنس (ریال/ماہ)</label><input type="number" id="transportAllowance" placeholder="مثلاً 500" min="0" value="0"></div>
+    </div>
+    <div class="grid-2">
+      <div><label>اس سال لی گئی سالانہ چھٹی (دن)</label><input type="number" id="leaveTaken" placeholder="مثلاً 10" min="0" value="0"></div>
+      <div><label>اس سال لی گئی بیماری چھٹی (دن)</label><input type="number" id="sickTaken" placeholder="مثلاً 5" min="0" value="0"></div>
+    </div>
+    <div class="grid-2">
+      <div><label>جنس</label><select id="gender"><option value="male">مرد</option><option value="female">خاتون</option></select></div>
+      <div><label>بقایا ادائیگی کے دن (اگر ہوں)</label><input type="number" id="unpaidDays" placeholder="0" min="0" value="0"></div>
+    </div>
+    <button class="calc-btn" onclick="calculate()">🧮 میرے چھٹی کے حقوق حساب کریں</button>
+  </div>
+
+  <div class="results" id="results">
+    <div class="card">
+      <h2>📊 آپ کے چھٹی کے استحقاق</h2>
+      <div class="leave-cards" id="leaveCards"></div>
+      <h2 style="margin-top:1rem">💰 چھٹی ادائیگی (ملازمت چھوڑنے پر)</h2>
+      <div class="encash-hero"><div class="label">بقایا چھٹی کی ادائیگی قدر</div><div class="amount" id="encashTotal">0 ریال</div></div>
+      <table class="leave-table" id="leaveTable"></table>
+      <button class="pdf-btn" onclick="downloadPDF()">📥 PDF چھٹی بیان ڈاؤنلوڈ کریں</button>
+      <br><button class="reset-btn" onclick="resetCalc()">🔄 دوبارہ حساب کریں</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 تمام چھٹیاں — سعودی لیبر لا 2025</h2>
+    <div class="type-grid">
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">🏖️</span><h4>سالانہ چھٹی</h4></div><p>پہلے 5 سال: 21 دن/سال۔ 5 سال کے بعد: 30 دن/سال۔ ہفتہ آخر اور سرکاری تعطیلات شمار نہیں۔</p><span class="key">مکمل تنخواہ</span></div>
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">🤒</span><h4>بیماری چھٹی (120 دن)</h4></div><p>پہلے 30 دن: مکمل تنخواہ۔ اگلے 60 دن: نصف تنخواہ۔ آخری 30 دن: بغیر تنخواہ۔ ڈاکٹر سرٹیفکیٹ لازمی۔</p><span class="key">120 دن کل</span></div>
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">👶</span><h4>زچگی چھٹی</h4></div><p>10 ہفتے کل۔ ڈیلیوری کے بعد 6 ہفتے لازمی۔ ڈیلیوری سے 4 ہفتے پہلے شروع کر سکتی ہیں۔</p><span class="key">صرف خواتین · مکمل تنخواہ</span></div>
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">👨‍👶</span><h4>پتernity چھٹی</h4></div><p>بچے کی پیدائش پر باپ کو 3 دن کی تنخواہ دار چھٹی۔ فوری استعمال ضروری۔</p><span class="key">صرف مرد · 3 دن</span></div>
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">🕌</span><h4>حج چھٹی</h4></div><p>ایک آجر کے ساتھ ایک بار 10 دن تنخواہ دار حج چھٹی۔ پہلے سال نہیں۔</p><span class="key">ایک بار · مکمل تنخواہ</span></div>
+      <div class="type-card"><div class="th"><span style="font-size:1.3rem">🚨</span><h4>ہنگامی چھٹی</h4></div><p>قریبی رشتہ دار (والدین، شریک حیات، بچہ، بہن بھائی) کے انتقال پر 3 دن۔ سالانہ چھٹی سے الگ۔</p><span class="key">3 دن · مکمل تنخواہ</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>❓ اکثر پوچھے جانے والے سوالات</h2>
+    <div class="faq-item"><div class="faq-q">سعودی عرب میں کتنی سالانہ چھٹی ملتی ہے؟</div><div class="faq-a">پہلے 5 سال: 21 دن/سال۔ 5 سال مکمل ہونے پر 30 دن/سال۔ ہفتہ آخر (جمعہ-ہفتہ) اور سرکاری تعطیلات شمار نہیں ہوتیں۔</div></div>
+    <div class="faq-item"><div class="faq-q">کیا ملازمت چھوڑنے پر بقایا چھٹی کی ادائیگی ملتی ہے؟</div><div class="faq-a">جی ہاں۔ استعفیٰ یا برطرفی — دونوں صورتوں میں بقایا سالانہ چھٹی کی ادائیگی (روزانہ تنخواہ کی شرح سے) لازماً ملتی ہے۔</div></div>
+    <div class="faq-item"><div class="faq-q">کیا زچگی چھٹی غیر ملکی خواتین کو بھی ملتی ہے؟</div><div class="faq-a">جی ہاں۔ سعودی اور غیر ملکی دونوں ملازمہ خواتین کو 10 ہفتے (70 دن) کی زچگی چھٹی مکمل تنخواہ کے ساتھ ملتی ہے۔</div></div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="https://www.saudiutilityhub.com/ur/">سعودی یوٹیلیٹی ہب</a> · <a href="https://www.saudiutilityhub.com/leave-calculator.html">English</a> · <a href="https://www.saudiutilityhub.com/ar/leave-calculator.html">عربي</a></p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+function fmt(n){return n.toLocaleString('en-US',{maximumFractionDigits:2})+' ریال';}
+let calcData={};
+function calculate(){
+  const basic=parseFloat(document.getElementById('basicSalary').value)||0;
+  const years=parseFloat(document.getElementById('yearsService').value)||0;
+  const housing=parseFloat(document.getElementById('housingAllowance').value)||0;
+  const transport=parseFloat(document.getElementById('transportAllowance').value)||0;
+  const leaveTaken=parseFloat(document.getElementById('leaveTaken').value)||0;
+  const sickTaken=parseFloat(document.getElementById('sickTaken').value)||0;
+  const gender=document.getElementById('gender').value;
+  const unpaidDays=parseFloat(document.getElementById('unpaidDays').value)||0;
+  if(!basic||!years){alert('براہ کرم تنخواہ اور سروس کے سال درج کریں۔');return;}
+  const annualEnt=years>=5?30:21;
+  const annualRem=Math.max(0,annualEnt-leaveTaken);
+  const sickRem=Math.max(0,120-sickTaken);
+  const totalMonthly=basic+housing+transport;
+  const dailyRate=totalMonthly/30;
+  const encashDays=annualRem+unpaidDays;
+  const encashTotal=dailyRate*encashDays;
+  calcData={basic,years,housing,transport,gender,leaveTaken,sickTaken,annualEnt,annualRem,sickRem,totalMonthly,dailyRate,encashDays,encashTotal,unpaidDays};
+  const cards=[
+    {icon:'🏖️',label:'بقایا سالانہ چھٹی',days:annualRem,sub:`${annualEnt} دن کل استحقاق`},
+    {icon:'🤒',label:'بقایا بیماری چھٹی',days:sickRem,sub:'120 دن میں سے (اس سال)'},
+    gender==='female'?{icon:'👶',label:'زچگی چھٹی',days:70,sub:'10 ہفتے مکمل تنخواہ'}:{icon:'👨‍👶',label:'پترنٹی چھٹی',days:3,sub:'3 دن مکمل تنخواہ'},
+    {icon:'🕌',label:'حج چھٹی',days:10,sub:'ایک بار فی آجر'},
+    {icon:'🚨',label:'ہنگامی چھٹی',days:3,sub:'فی واقعہ'},
+    {icon:'💰',label:'چھٹی ادائیگی دن',days:encashDays,sub:fmt(encashTotal)},
+  ];
+  document.getElementById('leaveCards').innerHTML=cards.map(c=>`<div class="leave-card"><div class="lc-icon">${c.icon}</div><div class="lc-label">${c.label}</div><div class="lc-days">${c.days}</div><div class="lc-sub">${c.sub}</div></div>`).join('');
+  document.getElementById('encashTotal').textContent=fmt(encashTotal);
+  let rows=`<thead><tr><th>چھٹی کی قسم</th><th>استحقاق</th><th>لی گئی</th><th>بقایا</th><th>ادائیگی</th></tr></thead><tbody>`;
+  rows+=`<tr><td>🏖️ سالانہ چھٹی</td><td>${annualEnt} دن/سال</td><td>${leaveTaken} دن</td><td>${annualRem} دن</td><td>${fmt(annualRem*dailyRate)}</td></tr>`;
+  rows+=`<tr><td>🤒 بیماری چھٹی (مکمل تنخواہ)</td><td>30 دن</td><td>${Math.min(sickTaken,30)} دن</td><td>${Math.max(0,30-Math.min(sickTaken,30))} دن</td><td>قابل ادائیگی نہیں</td></tr>`;
+  rows+=`<tr><td>🤒 بیماری چھٹی (نصف تنخواہ)</td><td>60 دن</td><td>${Math.max(0,sickTaken-30)} دن</td><td>${Math.max(0,60-Math.max(0,sickTaken-30))} دن</td><td>قابل ادائیگی نہیں</td></tr>`;
+  rows+=gender==='female'?`<tr><td>👶 زچگی چھٹی</td><td>70 دن</td><td>—</td><td>70 دن</td><td>مکمل تنخواہ</td></tr>`:`<tr><td>👨‍👶 پترنٹی چھٹی</td><td>3 دن</td><td>—</td><td>3 دن</td><td>مکمل تنخواہ</td></tr>`;
+  rows+=`<tr><td>🕌 حج چھٹی</td><td>10 دن (ایک بار)</td><td>—</td><td>10 دن</td><td>مکمل تنخواہ</td></tr>`;
+  if(unpaidDays>0)rows+=`<tr><td>📋 بقایا بلامعاوضہ چھٹی</td><td>—</td><td>—</td><td>${unpaidDays} دن</td><td>${fmt(unpaidDays*dailyRate)}</td></tr>`;
+  rows+=`<tr class="total-row"><td colspan="3">💰 کل چھٹی ادائیگی</td><td>${encashDays} دن</td><td>${fmt(encashTotal)}</td></tr></tbody>`;
+  document.getElementById('leaveTable').innerHTML=rows;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetCalc(){document.getElementById('results').classList.remove('show');['basicSalary','yearsService'].forEach(id=>document.getElementById(id).value='');['housingAllowance','transportAllowance','leaveTaken','sickTaken','unpaidDays'].forEach(id=>document.getElementById(id).value='0');window.scrollTo({top:0,behavior:'smooth'});}
+function downloadPDF(){
+  const{jsPDF}=window.jspdf;const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const d=calcData;
+  doc.setFillColor(26,26,46);doc.rect(0,0,210,40,'F');doc.setTextColor(255,255,255);
+  doc.setFontSize(16);doc.setFont('helvetica','bold');doc.text('Saudi Leave Statement 2026 (Urdu)',105,18,{align:'center'});
+  doc.setFontSize(10);doc.setFont('helvetica','normal');doc.text('Saudi Utility Hub - saudiutilityhub.com/ur/',105,28,{align:'center'});
+  doc.text('Generated: '+new Date().toLocaleDateString('en-SA'),105,35,{align:'center'});
+  doc.setTextColor(0,0,0);let y=50;
+  [['Basic Salary','SAR '+d.basic.toLocaleString()],['Years of Service',d.years+' years'],['Annual Leave Remaining',d.annualRem+' days'],['Daily Rate','SAR '+d.dailyRate.toFixed(2)],['Leave Encashment Value','SAR '+d.encashTotal.toFixed(2)]].forEach(([k,v])=>{doc.setFont('helvetica','bold');doc.text(k+':',20,y);doc.setFont('helvetica','normal');doc.text(v,90,y);y+=8;});
+  doc.save('LeaveStatement_Urdu.pdf');
+}
+</script>
+</body>
+</html>

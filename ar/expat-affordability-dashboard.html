@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحمّل تكاليف المغترب السعودية 2025 | هل راتبك يكفي للعيش مع العائلة؟</title>
+<meta name="description" content="احسب تكاليف المعيشة الكاملة مع عائلتك في المملكة العربية السعودية — الإيجار والمدرسة والصحة والسيارة ورسوم المرافقين — واحصل على حكم أخضر أو أصفر أو أحمر.">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/expat-affordability-dashboard.html">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/expat-affordability-dashboard.html">
+<link rel="alternate" hreflang="ur" href="https://saudiutilityhub.com/ur/expat-affordability-dashboard.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Amiri','Noto Naskh Arabic','Arial',sans-serif;line-height:1.9;direction:rtl;background:#f8fafc;color:#1e293b;font-size:17px}
+  header{background:linear-gradient(135deg,#0c4a6e,#0369a1,#0ea5e9);color:#fff;padding:50px 20px;text-align:center}
+  header h1{font-size:2rem;margin-bottom:10px}
+  header p{font-size:1.1rem;opacity:.9}
+  .container{max-width:960px;margin:0 auto;padding:20px}
+  h2{font-size:1.4rem;color:#0c4a6e;margin:28px 0 14px;border-bottom:2px solid #e2e8f0;padding-bottom:8px}
+  p{margin-bottom:12px}
+  .form-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 16px rgba(0,0,0,.08);margin:24px 0}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+  label{display:block;font-weight:bold;margin-bottom:6px;color:#374151;font-size:.95rem}
+  input,select{width:100%;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;margin-bottom:4px;font-family:inherit;direction:rtl}
+  .section-title{font-weight:bold;color:#0369a1;margin:20px 0 10px;font-size:1.05rem;padding-bottom:4px;border-bottom:1px dashed #cbd5e1}
+  .btn{background:#0369a1;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:1.1rem;cursor:pointer;font-family:inherit;width:100%;margin-top:16px}
+  .btn:hover{background:#0284c7}
+  .results{display:none;margin-top:28px}
+  .verdict{border-radius:14px;padding:28px;text-align:center;margin-bottom:28px}
+  .verdict-green{background:linear-gradient(135deg,#dcfce7,#bbf7d0);border:3px solid #16a34a}
+  .verdict-amber{background:linear-gradient(135deg,#fef9c3,#fde68a);border:3px solid #ca8a04}
+  .verdict-red{background:linear-gradient(135deg,#fef2f2,#fecaca);border:3px solid #dc2626}
+  .verdict h2{border:none;font-size:1.8rem;margin:0 0 8px}
+  .verdict .sub{font-size:1.05rem;color:#374151;margin-bottom:16px}
+  .verdict .amounts{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+  .verdict .amounts .amt{text-align:center}
+  .verdict .amounts .amt .n{font-size:1.5rem;font-weight:bold;color:#0c4a6e}
+  .verdict .amounts .amt .l{font-size:.85rem;color:#64748b}
+  .cost-breakdown{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);overflow:hidden;margin-bottom:20px}
+  .cost-section{border-bottom:1px solid #e2e8f0}
+  .cost-section:last-child{border-bottom:none}
+  .cost-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;cursor:pointer;background:#f8fafc;transition:background .2s}
+  .cost-header:hover{background:#f1f5f9}
+  .cost-header .title{font-weight:bold;font-size:1rem}
+  .cost-header .amount{font-weight:bold;color:#0369a1;font-size:1.05rem}
+  .cost-rows{display:none;padding:12px 20px}
+  .cost-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f1f5f9;font-size:.9rem}
+  .cost-row:last-child{border:none}
+  .tips-box{background:#eff6ff;border-right:4px solid #3b82f6;border-radius:8px 0 0 8px;padding:20px;margin:20px 0}
+  .tips-box h3{color:#1d4ed8;margin-bottom:10px}
+  .tips-list{list-style:none;padding:0}
+  .tips-list li{padding:6px 0;border-bottom:1px solid #dbeafe;font-size:.95rem}
+  .tips-list li::before{content:"💡 ";margin-left:6px}
+  .btn-pdf{background:#ef4444;margin-top:12px}
+  .btn-pdf:hover{background:#dc2626}
+  .info-box{background:#eff6ff;border-right:4px solid #3b82f6;border-radius:8px 0 0 8px;padding:16px 20px;margin:20px 0;font-size:.95rem}
+</style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>🏠 لوحة تحمّل تكاليف المغترب</h1>
+  <p>هل راتبك يكفي للعيش مع عائلتك في المملكة؟ احصل على تقييم شامل فوري</p>
+</header>
+
+<div class="container">
+  <div class="info-box">
+    <strong>لماذا هذه الأداة مميزة؟</strong> هي الحاسبة العربية الوحيدة التي تجمع الإيجار والمدرسة ورسوم المرافقين (400 ريال/شهر) والتأمين الصحي والسيارة والبقالة وغيرها في مكان واحد — وتمنحك حكماً أخضر أو أصفر أو أحمر.
+  </div>
+
+  <div class="form-card">
+    <h2 style="margin-top:0">📋 أدخل بياناتك</h2>
+
+    <div class="section-title">💰 الدخل</div>
+    <div class="form-grid">
+      <div>
+        <label>إجمالي الراتب الشهري (ريال):</label>
+        <input type="number" id="totalSalary" placeholder="مثال: 15000">
+      </div>
+      <div>
+        <label>بدل السكن (ريال — اتركه فارغاً إن كان مدمجاً):</label>
+        <input type="number" id="housingAllowance" placeholder="مثال: 3000">
+      </div>
+    </div>
+
+    <div class="section-title">👨‍👩‍👧‍👦 الأسرة</div>
+    <div class="form-grid">
+      <div>
+        <label>الزوجة / الزوج:</label>
+        <select id="spouse">
+          <option value="0">لا</option>
+          <option value="1">نعم</option>
+        </select>
+      </div>
+      <div>
+        <label>عدد الأبناء:</label>
+        <select id="children">
+          <option value="0">لا يوجد</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section-title">🏘️ السكن</div>
+    <div class="form-grid">
+      <div>
+        <label>المدينة:</label>
+        <select id="city">
+          <option value="riyadh">الرياض</option>
+          <option value="jeddah">جدة</option>
+          <option value="dammam">الدمام</option>
+          <option value="makkah">مكة المكرمة</option>
+          <option value="medina">المدينة المنورة</option>
+        </select>
+      </div>
+      <div>
+        <label>نوع السكن:</label>
+        <select id="accType">
+          <option value="studio">ستوديو</option>
+          <option value="2br" selected>شقة 2 غرف</option>
+          <option value="3br">شقة 3 غرف</option>
+          <option value="villa">فيلا</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section-title">🎓 التعليم</div>
+    <label>نوع المدرسة (شهرياً لكل طالب):</label>
+    <select id="school">
+      <option value="none">الأبناء لم يبلغوا سن الدراسة</option>
+      <option value="public">مدرسة حكومية (مجاناً)</option>
+      <option value="affordable">مدرسة خاصة اقتصادية (500 ريال/شهر)</option>
+      <option value="mid" selected>مدرسة خاصة متوسطة (1,500 ريال/شهر)</option>
+      <option value="international">مدرسة دولية (4,000 ريال/شهر)</option>
+    </select>
+
+    <div class="section-title">🚗 المواصلات</div>
+    <label>وضع السيارة:</label>
+    <select id="carOption">
+      <option value="none">لا سيارة (تاكسي / أوبر)</option>
+      <option value="used" selected>سيارة مستعملة (بدون قسط)</option>
+      <option value="finance">سيارة جديدة بالتقسيط (1,500 ريال/شهر)</option>
+    </select>
+
+    <div class="section-title">💊 التأمين الصحي</div>
+    <label>التأمين الصحي:</label>
+    <select id="healthIns">
+      <option value="employer">يوفره صاحب العمل (مجاناً)</option>
+      <option value="self">على حسابي الخاص (200 ريال/فرد/شهر)</option>
+    </select>
+
+    <div class="section-title">💸 التحويلات والادخار</div>
+    <div class="form-grid">
+      <div>
+        <label>التحويلات الشهرية إلى الوطن (ريال):</label>
+        <input type="number" id="remittance" placeholder="مثال: 2000" value="2000">
+      </div>
+      <div>
+        <label>هدف الادخار الشهري (ريال):</label>
+        <input type="number" id="savings" placeholder="مثال: 500" value="500">
+      </div>
+    </div>
+
+    <button class="btn" onclick="calculate()">🔍 احسب واحكم عليّ</button>
+  </div>
+
+  <div class="results" id="results">
+    <div id="verdictBox" class="verdict">
+      <h2 id="verdictEmoji"></h2>
+      <div class="sub" id="verdictText"></div>
+      <div class="amounts">
+        <div class="amt"><div class="n" id="vSalary">—</div><div class="l">الدخل</div></div>
+        <div class="amt"><div class="n" id="vTotal">—</div><div class="l">إجمالي المصاريف</div></div>
+        <div class="amt"><div class="n" id="vBalance">—</div><div class="l">الرصيد المتبقي</div></div>
+      </div>
+    </div>
+
+    <h2>📊 تفصيل المصاريف</h2>
+    <div class="cost-breakdown" id="costBreakdown"></div>
+
+    <div id="tipsBox" class="tips-box">
+      <h3>💡 نصائح مخصصة لوضعك</h3>
+      <ul class="tips-list" id="tipsList"></ul>
+    </div>
+
+    <button class="btn btn-pdf" onclick="downloadPDF()">📄 تنزيل تقرير PDF</button>
+  </div>
+</div>
+
+<footer style="background:#1e293b;color:#94a3b8;text-align:center;padding:30px 20px;margin-top:40px">
+  <p>هذه الأداة تقدم تقديرات — قد تختلف المصاريف الفعلية. المزيد من الأدوات على saudiutilityhub.com</p>
+  <p style="margin-top:10px"><a href="/ar/" style="color:#7dd3fc;text-decoration:none">الأدوات العربية</a> | <a href="/" style="color:#7dd3fc;text-decoration:none">English</a> | <a href="/ur/" style="color:#7dd3fc;text-decoration:none">اردو</a></p>
+</footer>
+
+<script>
+const rentData={riyadh:{studio:1800,'2br':3500,'3br':5500,villa:10000},jeddah:{studio:1500,'2br':3000,'3br':5000,villa:9000},dammam:{studio:1300,'2br':2700,'3br':4500,villa:8000},makkah:{studio:1600,'2br':3200,'3br':5200,villa:9500},medina:{studio:1200,'2br':2500,'3br':4000,villa:7500}};
+const schoolFees={none:0,public:0,affordable:500,mid:1500,international:4000};
+const cityAr={riyadh:'الرياض',jeddah:'جدة',dammam:'الدمام',makkah:'مكة المكرمة',medina:'المدينة المنورة'};
+const accAr={studio:'ستوديو','2br':'شقة 2 غرف','3br':'شقة 3 غرف',villa:'فيلا'};
+
+function sar(n){return 'SAR '+Math.round(n).toLocaleString();}
+
+function calculate(){
+  const salary=parseFloat(document.getElementById('totalSalary').value)||0;
+  if(!salary){alert('الرجاء إدخال الراتب الشهري');return;}
+  const housingAllow=parseFloat(document.getElementById('housingAllowance').value)||0;
+  const spouse=parseInt(document.getElementById('spouse').value);
+  const children=parseInt(document.getElementById('children').value);
+  const city=document.getElementById('city').value;
+  const acc=document.getElementById('accType').value;
+  const school=document.getElementById('school').value;
+  const car=document.getElementById('carOption').value;
+  const health=document.getElementById('healthIns').value;
+  const remittance=parseFloat(document.getElementById('remittance').value)||0;
+  const savingsGoal=parseFloat(document.getElementById('savings').value)||0;
+  const dependents=spouse+children;
+
+  const rent=housingAllow>0?Math.max(0,rentData[city][acc]-housingAllow):rentData[city][acc];
+  const schoolTotal=schoolFees[school]*children;
+  const carCost=car==='none'?600:car==='used'?800:2100;
+  const carFinance=car==='finance'?1500:0;
+  const carRunning=car==='finance'?600:0;
+  const healthCost=health==='self'?200*(1+dependents):0;
+  const levyCost=400*dependents;
+  const groceries=800+(dependents*300);
+  const utilities=350;
+  const telecom=200+(spouse*100);
+  const dining=400+(dependents*100);
+  const sub=rent+schoolTotal+carCost+healthCost+levyCost+groceries+utilities+telecom+dining+remittance+savingsGoal;
+  const misc=Math.round(sub*0.05);
+  const totalExpenses=sub+misc;
+  const balance=salary-totalExpenses;
+  const ratio=totalExpenses/salary;
+
+  let verdictClass,verdictEmoji,verdictText;
+  if(ratio<=0.8){verdictClass='verdict-green';verdictEmoji='✅ قابل للتحقق!';verdictText='راتبك كافٍ لتغطية نفقات الأسرة — يمكنك استقدام عائلتك بثقة.';}
+  else if(ratio<=1.0){verdictClass='verdict-amber';verdictEmoji='⚠️ على الحافة';verdictText='راتبك يكفي لكن هامش الادخار ضيق جداً — خطط لتقليل بعض المصاريف.';}
+  else{verdictClass='verdict-red';verdictEmoji='❌ غير كافٍ حالياً';verdictText='المصاريف تتجاوز الدخل — اعمل على رفع الراتب أو تقليل التكاليف قبل استقدام الأسرة.';}
+
+  document.getElementById('verdictBox').className='verdict '+verdictClass;
+  document.getElementById('verdictEmoji').textContent=verdictEmoji;
+  document.getElementById('verdictText').textContent=verdictText;
+  document.getElementById('vSalary').textContent=sar(salary);
+  document.getElementById('vTotal').textContent=sar(totalExpenses);
+  document.getElementById('vBalance').textContent=(balance>=0?'+':'')+sar(balance);
+
+  const sections=[
+    {title:'🏠 السكن',total:rent+utilities,rows:[['الإيجار ('+accAr[acc]+' - '+cityAr[city]+')',sar(rentData[city][acc])],housingAllow>0?['خصم: بدل السكن','-'+sar(housingAllow)]:[],['الكهرباء والمياه والخدمات',sar(utilities)]]},
+    {title:'🎓 التعليم',total:schoolTotal,rows:[['رسوم المدرسة ('+children+' أبناء)',sar(schoolTotal)]]},
+    {title:'🚗 المواصلات',total:carCost,rows:car==='finance'?[['قسط السيارة',sar(carFinance)],['وقود وصيانة',sar(carRunning)]]:[[car==='none'?'تاكسي/أوبر':'وقود وصيانة',sar(carCost)]]},
+    {title:'💊 الصحة',total:healthCost,rows:[[health==='self'?'التأمين الصحي ('+(1+dependents)+' أفراد)':'يوفره صاحب العمل',health==='self'?sar(healthCost):'مجاناً']]},
+    {title:'👪 رسوم المرافقين',total:levyCost,rows:[['400 ريال × '+dependents+' مرافق',sar(levyCost)]]},
+    {title:'🛒 البقالة والطعام',total:groceries+dining,rows:[['البقالة',sar(groceries)],['الطعام خارج المنزل',sar(dining)]]},
+    {title:'📱 الاتصالات',total:telecom,rows:[['إنترنت وهاتف',sar(telecom)]]},
+    {title:'💸 التحويلات والادخار',total:remittance+savingsGoal,rows:[['تحويلات إلى الوطن',sar(remittance)],['هدف الادخار',sar(savingsGoal)]]},
+    {title:'🔆 احتياطي متفرق (5%)',total:misc,rows:[['مصاريف غير متوقعة',sar(misc)]]}
+  ];
+
+  let html='';
+  sections.forEach((s,i)=>{
+    if(s.total===0&&s.title.includes('التعليم'))return;
+    if(s.total===0&&s.title.includes('المرافقين'))return;
+    html+=`<div class="cost-section"><div class="cost-header" onclick="toggleSection(${i})"><span class="title">${s.title}</span><span class="amount">${sar(s.total)}</span></div><div class="cost-rows" id="sect${i}">${s.rows.filter(r=>r.length).map(r=>`<div class="cost-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('')}</div></div>`;
+  });
+  html+=`<div class="cost-section"><div class="cost-header" style="background:#f0fdf4;font-weight:bold"><span class="title" style="color:#15803d">💰 إجمالي المصاريف الشهرية</span><span class="amount" style="color:#15803d">${sar(totalExpenses)}</span></div></div>`;
+  document.getElementById('costBreakdown').innerHTML=html;
+
+  const tips=[];
+  if(levyCost>0)tips.push('رسوم المرافقين '+sar(levyCost)+'/شهر = '+sar(levyCost*12)+'/سنة — ضعها في أعلى الميزانية');
+  if(car==='finance')tips.push('استبدل قسط السيارة بسيارة مستعملة — ادخر 1,500 ريال شهرياً');
+  if(school==='international')tips.push('المدرسة الدولية مكلفة جداً — المدرسة الخاصة المتوسطة توفر 2,500 ريال/طالب/شهر');
+  if(ratio>1)tips.push('تفاوض على زيادة راتبك أو ابحث عن فرصة أفضل قبل الاستقدام');
+  if(health==='self')tips.push('اطلب من صاحب العمل تضمين الأسرة في التأمين الصحي الجماعي');
+  if(remittance>salary*0.2)tips.push('التحويلات تتجاوز 20% من راتبك — استخدم Wise أو STC Pay لتقليل رسوم التحويل');
+  if(balance<0)tips.push('فكر في مدينة أقل تكلفة أو شقة أصغر لتوفير الإيجار');
+  if(balance>2000)tips.push('لديك فائض — ادخره في بنك الراجحي أو بنك الإنماء للاستفادة من العوائد');
+  document.getElementById('tipsList').innerHTML=tips.map(t=>`<li>${t}</li>`).join('');
+
+  document.getElementById('results').style.display='block';
+  window._resultData={salary,totalExpenses,balance,city,acc,spouse,children,school,car,health,remittance,levyCost,ratio,misc,cityAr,accAr};
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+
+function toggleSection(i){
+  const el=document.getElementById('sect'+i);
+  el.style.display=el.style.display==='block'?'none':'block';
+}
+
+function downloadPDF(){
+  if(!window._resultData){alert('الرجاء إجراء الحساب أولاً');return;}
+  const {jsPDF}=window.jspdf;const doc=new jsPDF();
+  const d=window._resultData;
+  doc.setFontSize(16);doc.setTextColor(12,74,110);
+  doc.text('Expat Affordability Report - Saudi Arabia 2025',14,18);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('SaudiUtilityHub.com | '+new Date().toLocaleDateString(),14,26);
+  doc.setDrawColor(14,165,233);doc.line(14,30,196,30);
+  doc.setFontSize(12);doc.setTextColor(30);
+  doc.text('Monthly Income: SAR '+d.salary.toLocaleString(),14,40);
+  doc.text('Total Expenses: SAR '+d.totalExpenses.toLocaleString(),14,50);
+  doc.text('Balance: SAR '+(d.balance>=0?'+':'')+Math.round(d.balance).toLocaleString(),14,60);
+  doc.text('City: '+d.cityAr[d.city]+' | Accommodation: '+d.accAr[d.acc],14,70);
+  doc.text('Family: Spouse '+(d.spouse?'Yes':'No')+' | Children: '+d.children,14,80);
+  doc.text('School: '+d.school+' | Car: '+d.car+' | Health: '+d.health,14,90);
+  doc.text('Remittances: SAR '+d.remittance+' | Dependent Levy: SAR '+d.levyCost,14,100);
+  const r=d.ratio;
+  doc.setFontSize(13);doc.setTextColor(r<=0.8?22:r<=1?202:220,r<=0.8?163:r<=1?132:38,r<=0.8?74:r<=1?20:38);
+  doc.text(r<=0.8?'VERDICT: AFFORDABLE ✓':r<=1?'VERDICT: TIGHT':'VERDICT: NOT RECOMMENDED YET',14,118);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('Estimates based on 2025 market data. Actual costs may vary.',14,133);
+  doc.save('expat-affordability-report.pdf');
+}
+</script>
+</body>
+</html>

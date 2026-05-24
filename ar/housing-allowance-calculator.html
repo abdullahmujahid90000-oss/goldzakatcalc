@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة بدل السكن السعودي 2025 | هل بدلك يكفي؟</title>
+<meta name="description" content="احسب بدل السكن الخاص بك وقارنه بإيجار السوق في مدينتك — مع دليل إيجار وجدول الأسعار لعام 2025.">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/housing-allowance-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/housing-allowance-calculator.html">
+<link rel="alternate" hreflang="ur" href="https://saudiutilityhub.com/ur/housing-allowance-calculator.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Amiri','Noto Naskh Arabic','Arial',sans-serif;line-height:1.9;direction:rtl;background:#f8fafc;color:#1e293b;font-size:17px}
+  header{background:linear-gradient(135deg,#134e4a,#0f766e,#14b8a6);color:#fff;padding:44px 20px;text-align:center}
+  header h1{font-size:2rem;margin-bottom:10px}
+  header p{font-size:1.1rem;opacity:.9}
+  .container{max-width:900px;margin:0 auto;padding:20px}
+  .info-box{background:#f0fdfa;border-right:4px solid #14b8a6;border-radius:8px 0 0 8px;padding:16px 20px;margin:20px 0}
+  .info-box.warning{background:#fffbeb;border-right-color:#f59e0b}
+  .info-box.danger{background:#fef2f2;border-right-color:#ef4444}
+  .info-box.success{background:#f0fdf4;border-right-color:#22c55e}
+  h2{font-size:1.5rem;color:#134e4a;margin:30px 0 15px;border-bottom:2px solid #e2e8f0;padding-bottom:8px}
+  p{margin-bottom:12px}
+  .calc-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:24px 0}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+  label{display:block;font-weight:bold;margin-bottom:6px;color:#374151}
+  input,select{width:100%;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;margin-bottom:4px;font-family:inherit;direction:rtl}
+  .btn{background:#0f766e;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:1.05rem;cursor:pointer;font-family:inherit;width:100%;margin-top:12px}
+  .btn:hover{background:#0d6361}
+  .btn-pdf{background:#ef4444;margin-top:12px}
+  .results{display:none;margin-top:24px}
+  .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:16px}
+  .result-item{background:#f0fdfa;border-radius:10px;padding:16px;text-align:center}
+  .result-item .num{font-size:1.6rem;font-weight:bold;color:#0f766e}
+  .result-item .lbl{font-size:.82rem;color:#64748b;margin-top:4px}
+  .gap-bar-wrap{background:#e2e8f0;border-radius:8px;height:22px;overflow:hidden;margin:8px 0}
+  .gap-bar{height:100%;border-radius:8px;transition:width .5s;background:#14b8a6}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.93rem}
+  th,td{padding:12px;border:1px solid #e2e8f0;text-align:right}
+  th{background:#134e4a;color:#fff}
+  tr:nth-child(even){background:#f8fafc}
+  footer{background:#1e293b;color:#94a3b8;text-align:center;padding:30px 20px;margin-top:40px}
+  footer a{color:#2dd4bf;text-decoration:none}
+</style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>🏠 حاسبة بدل السكن</h1>
+  <p>قارن بدلك بإيجار السوق واعرف إذا كان يكفيك</p>
+</header>
+
+<div class="container">
+
+  <div class="info-box">
+    <strong>نظام العمل السعودي:</strong> يلزم صاحب العمل بتوفير السكن أو صرف بدل لا يقل عن 25% من الراتب الأساسي. معظم الشركات تصرف 25% لكن بعضها تتجاوز هذه النسبة.
+  </div>
+
+  <div class="calc-card">
+    <h2 style="margin-top:0">🧮 حاسبة بدل السكن</h2>
+    <div class="form-grid">
+      <div>
+        <label>الراتب الأساسي (ريال):</label>
+        <input type="number" id="basicSal" placeholder="مثال: 10000">
+      </div>
+      <div>
+        <label>نسبة البدل:</label>
+        <select id="allowPct">
+          <option value="25">25% (الافتراضي)</option>
+          <option value="30">30%</option>
+          <option value="33">33%</option>
+          <option value="50">50%</option>
+          <option value="custom">أدخل يدوياً</option>
+        </select>
+      </div>
+    </div>
+    <div id="customPct" style="display:none">
+      <label>النسبة المئوية:</label>
+      <input type="number" id="customPctInput" placeholder="مثال: 28" min="1" max="100">
+    </div>
+    <div class="form-grid">
+      <div>
+        <label>المدينة:</label>
+        <select id="city">
+          <option value="riyadh">الرياض</option>
+          <option value="jeddah">جدة</option>
+          <option value="dammam">الدمام</option>
+          <option value="makkah">مكة المكرمة</option>
+          <option value="medina">المدينة المنورة</option>
+        </select>
+      </div>
+      <div>
+        <label>نوع السكن:</label>
+        <select id="accType">
+          <option value="studio">ستوديو</option>
+          <option value="2br">شقة 2 غرف</option>
+          <option value="3br">شقة 3 غرف</option>
+          <option value="villa">فيلا</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" onclick="calcHousing()">احسب الآن</button>
+
+    <div class="results" id="results">
+      <div class="result-grid">
+        <div class="result-item"><div class="num" id="resAllowance">—</div><div class="lbl">البدل الشهري (ريال)</div></div>
+        <div class="result-item"><div class="num" id="resMarket">—</div><div class="lbl">إيجار السوق (ريال)</div></div>
+        <div class="result-item"><div class="num" id="resGap">—</div><div class="lbl">الفرق (ريال)</div></div>
+        <div class="result-item"><div class="num" id="resAnnual">—</div><div class="lbl">البدل السنوي (ريال)</div></div>
+      </div>
+      <div>
+        <strong>البدل مقابل الإيجار:</strong>
+        <div class="gap-bar-wrap"><div class="gap-bar" id="gapBar" style="width:0%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:.85rem;color:#64748b"><span>البدل</span><span id="coverPct">0%</span><span>الإيجار</span></div>
+      </div>
+      <div id="gapMsg" class="info-box" style="margin-top:12px"></div>
+      <button class="btn btn-pdf" onclick="downloadPDF()">📄 تنزيل تقرير PDF</button>
+    </div>
+  </div>
+
+  <h2>أسعار الإيجار بالمدن — 2025</h2>
+  <table>
+    <tr><th>المدينة</th><th>ستوديو</th><th>2 غرف</th><th>3 غرف</th><th>فيلا</th></tr>
+    <tr><td>الرياض</td><td>1,800 ريال</td><td>3,500 ريال</td><td>5,500 ريال</td><td>10,000 ريال</td></tr>
+    <tr><td>جدة</td><td>1,500 ريال</td><td>3,000 ريال</td><td>5,000 ريال</td><td>9,000 ريال</td></tr>
+    <tr><td>الدمام</td><td>1,300 ريال</td><td>2,700 ريال</td><td>4,500 ريال</td><td>8,000 ريال</td></tr>
+    <tr><td>مكة المكرمة</td><td>1,600 ريال</td><td>3,200 ريال</td><td>5,200 ريال</td><td>9,500 ريال</td></tr>
+    <tr><td>المدينة المنورة</td><td>1,200 ريال</td><td>2,500 ريال</td><td>4,000 ريال</td><td>7,500 ريال</td></tr>
+  </table>
+
+  <div class="info-box">
+    <strong>منصة إيجار (ejar.sa):</strong> يجب تسجيل جميع عقود الإيجار في المملكة عبر منصة إيجار. يوفر العقد المسجل:
+    <ul style="padding-right:20px;margin-top:6px">
+      <li>إثبات الإقامة لتجديد الإقامة</li>
+      <li>حماية قانونية في حالات النزاع</li>
+      <li>سجل المدفوعات الإلكتروني</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>بيانات الإيجار مستندة إلى متوسطات السوق لعام 2025. للأسعار الفعلية راجع إيجار أو وكيل عقاري محلي.</p>
+  <p style="margin-top:10px"><a href="/ar/">الأدوات العربية</a> | <a href="/">English</a> | <a href="/ur/">اردو</a></p>
+</footer>
+
+<script>
+const rentData={riyadh:{studio:1800,'2br':3500,'3br':5500,villa:10000},jeddah:{studio:1500,'2br':3000,'3br':5000,villa:9000},dammam:{studio:1300,'2br':2700,'3br':4500,villa:8000},makkah:{studio:1600,'2br':3200,'3br':5200,villa:9500},medina:{studio:1200,'2br':2500,'3br':4000,villa:7500}};
+const cityAr={riyadh:'الرياض',jeddah:'جدة',dammam:'الدمام',makkah:'مكة المكرمة',medina:'المدينة المنورة'};
+const accAr={studio:'ستوديو','2br':'شقة 2 غرف','3br':'شقة 3 غرف',villa:'فيلا'};
+
+document.getElementById('allowPct').addEventListener('change',function(){
+  document.getElementById('customPct').style.display=this.value==='custom'?'block':'none';
+});
+
+function calcHousing(){
+  const basic=parseFloat(document.getElementById('basicSal').value);
+  if(!basic||basic<=0){alert('الرجاء إدخال الراتب الأساسي');return;}
+  let pct=parseFloat(document.getElementById('allowPct').value);
+  if(isNaN(pct)){pct=parseFloat(document.getElementById('customPctInput').value);if(!pct||pct<=0||pct>100){alert('الرجاء إدخال نسبة صحيحة');return;}}
+  const city=document.getElementById('city').value;
+  const acc=document.getElementById('accType').value;
+  const allowance=Math.round(basic*pct/100);
+  const market=rentData[city][acc];
+  const gap=allowance-market;
+  const annual=allowance*12;
+  const cover=Math.min(100,Math.round(allowance/market*100));
+  document.getElementById('resAllowance').textContent='SAR '+allowance.toLocaleString();
+  document.getElementById('resMarket').textContent='SAR '+market.toLocaleString();
+  document.getElementById('resGap').textContent=(gap>=0?'+':'')+gap.toLocaleString();
+  document.getElementById('resAnnual').textContent='SAR '+annual.toLocaleString();
+  document.getElementById('gapBar').style.width=cover+'%';
+  document.getElementById('coverPct').textContent=cover+'% تغطية';
+  const gm=document.getElementById('gapMsg');
+  if(gap>=0){gm.className='info-box success';gm.innerHTML='✅ <strong>بدلك كافٍ!</strong> لديك فائض قدره SAR '+Math.abs(gap).toLocaleString()+' — يمكنك توفيره أو اختيار سكن أفضل.';}
+  else if(gap>-1000){gm.className='info-box warning';gm.innerHTML='⚠️ <strong>فرق بسيط:</strong> بدلك أقل من الإيجار بـ SAR '+Math.abs(gap).toLocaleString()+'. جرب موقعاً أقرب أو شقة أصغر أو تفاوض مع قسم الموارد البشرية.';}
+  else{gm.className='info-box danger';gm.innerHTML='❌ <strong>فرق كبير:</strong> البدل أقل من الإيجار بـ SAR '+Math.abs(gap).toLocaleString()+'. فكّر في مدينة أقل تكلفة أو سكن مشترك أو التفاوض على رفع البدل.';}
+  document.getElementById('results').style.display='block';
+  window._calcData={basic,pct,city,acc,allowance,market,gap,annual,cover};
+}
+
+function downloadPDF(){
+  if(!window._calcData){alert('الرجاء إجراء الحساب أولاً');return;}
+  const {jsPDF}=window.jspdf;const doc=new jsPDF();
+  const d=window._calcData;
+  doc.setFontSize(16);doc.setTextColor(19,78,74);
+  doc.text('Housing Allowance Report - Saudi Arabia 2025',14,18);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('SaudiUtilityHub.com | '+new Date().toLocaleDateString(),14,26);
+  doc.setDrawColor(20,184,166);doc.line(14,30,196,30);
+  doc.setFontSize(12);doc.setTextColor(30);
+  doc.text('Basic Salary: SAR '+d.basic.toLocaleString()+' | Rate: '+d.pct+'%',14,40);
+  doc.text('Monthly Allowance: SAR '+d.allowance.toLocaleString(),14,50);
+  doc.text('City: '+cityAr[d.city]+' | Type: '+accAr[d.acc],14,60);
+  doc.text('Market Rent: SAR '+d.market.toLocaleString(),14,70);
+  doc.text('Gap: SAR '+(d.gap>=0?'+':'')+d.gap.toLocaleString(),14,80);
+  doc.text('Annual Allowance: SAR '+d.annual.toLocaleString(),14,90);
+  doc.text('Coverage: '+d.cover+'%',14,100);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('Market rents are 2025 median estimates.',14,115);
+  doc.save('housing-allowance-report.pdf');
+}
+</script>
+</body>
+</html>

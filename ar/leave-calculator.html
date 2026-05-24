@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة الإجازات السعودية 2025 | احسب استحقاقات إجازتك</title>
+<meta name="description" content="احسب استحقاقات جميع أنواع الإجازات في المملكة العربية السعودية — السنوية والمرضية والأمومة والأبوة والحج وفق نظام العمل السعودي.">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/leave-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/leave-calculator.html">
+<link rel="alternate" hreflang="ur" href="https://saudiutilityhub.com/ur/leave-calculator.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Amiri','Noto Naskh Arabic','Arial',sans-serif;line-height:1.9;direction:rtl;background:#f8fafc;color:#1e293b;font-size:17px}
+  header{background:linear-gradient(135deg,#0c4a6e,#0369a1,#0ea5e9);color:#fff;padding:44px 20px;text-align:center}
+  header h1{font-size:2rem;margin-bottom:10px}
+  header p{font-size:1.1rem;opacity:.9}
+  .container{max-width:900px;margin:0 auto;padding:20px}
+  .info-box{background:#f0f9ff;border-right:4px solid #0369a1;border-radius:8px 0 0 8px;padding:16px 20px;margin:20px 0}
+  .info-box.success{background:#f0fdf4;border-right-color:#16a34a}
+  h2{font-size:1.5rem;color:#0c4a6e;margin:30px 0 15px;border-bottom:2px solid #e2e8f0;padding-bottom:8px}
+  p{margin-bottom:12px}
+  .calc-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:24px 0}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+  label{display:block;font-weight:bold;margin-bottom:6px;color:#374151}
+  input,select{width:100%;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;margin-bottom:4px;font-family:inherit;direction:rtl}
+  .btn{background:#0c4a6e;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:1.05rem;cursor:pointer;font-family:inherit;width:100%;margin-top:12px}
+  .btn:hover{background:#0369a1}
+  .btn-pdf{background:#ef4444;margin-top:12px}
+  .results{display:none;margin-top:24px}
+  .leave-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px}
+  .leave-item{background:#f0f9ff;border-radius:10px;padding:16px;text-align:center}
+  .leave-item .num{font-size:1.5rem;font-weight:bold;color:#0369a1}
+  .leave-item .lbl{font-size:.8rem;color:#64748b;margin-top:4px}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}
+  th,td{padding:12px;border:1px solid #e2e8f0;text-align:right}
+  th{background:#0c4a6e;color:#fff}
+  tr:nth-child(even){background:#f8fafc}
+  footer{background:#1e293b;color:#94a3b8;text-align:center;padding:30px 20px;margin-top:40px}
+  footer a{color:#38bdf8;text-decoration:none}
+</style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>🏖️ حاسبة الإجازات السعودية</h1>
+  <p>احسب جميع استحقاقات إجازتك وفق نظام العمل السعودي 2025</p>
+</header>
+
+<div class="container">
+
+  <div class="info-box">
+    <strong>نظام العمل السعودي يكفل الإجازات التالية:</strong> الإجازة السنوية (21 أو 30 يوماً)، المرضية (30+60+30 يوماً)، الأمومة (10 أسابيع)، الأبوة (3 أيام)، الحج (10 أيام مرة واحدة)، الطارئة (3 أيام).
+  </div>
+
+  <div class="calc-card">
+    <h2 style="margin-top:0">🧮 احسب استحقاقاتك</h2>
+    <div class="form-grid">
+      <div>
+        <label>الراتب الأساسي (ريال):</label>
+        <input type="number" id="basicSal" placeholder="مثال: 8000">
+      </div>
+      <div>
+        <label>بدل السكن (ريال):</label>
+        <input type="number" id="housingAll" placeholder="مثال: 2000">
+      </div>
+      <div>
+        <label>بدل النقل (ريال):</label>
+        <input type="number" id="transAll" placeholder="مثال: 800">
+      </div>
+      <div>
+        <label>سنوات الخدمة:</label>
+        <input type="number" id="serviceYears" placeholder="مثال: 3" min="0">
+      </div>
+      <div>
+        <label>الجنس:</label>
+        <select id="gender">
+          <option value="male">ذكر</option>
+          <option value="female">أنثى</option>
+        </select>
+      </div>
+      <div>
+        <label>الإجازة السنوية المتبقية غير المُستخدمة (أيام):</label>
+        <input type="number" id="unusedLeave" placeholder="مثال: 10" min="0">
+      </div>
+    </div>
+    <button class="btn" onclick="calcLeave()">احسب الآن</button>
+
+    <div class="results" id="results">
+      <div class="leave-grid">
+        <div class="leave-item"><div class="num" id="annualDays">—</div><div class="lbl">الإجازة السنوية (أيام)</div></div>
+        <div class="leave-item"><div class="num" id="sickDays">—</div><div class="lbl">الإجازة المرضية (أيام)</div></div>
+        <div class="leave-item"><div class="num" id="maternityDays">—</div><div class="lbl" id="matLbl">—</div></div>
+        <div class="leave-item"><div class="num" id="hajjDays">—</div><div class="lbl">إجازة الحج</div></div>
+        <div class="leave-item"><div class="num" id="leaveEncash">—</div><div class="lbl">استحقاق الإجازة غير المُستخدمة (ريال)</div></div>
+      </div>
+      <div id="leaveInfoBox" class="info-box success"></div>
+      <table>
+        <tr><th>نوع الإجازة</th><th>الاستحقاق</th><th>الراتب أثناء الإجازة</th><th>الأساس القانوني</th></tr>
+        <tbody id="leaveRows"></tbody>
+      </table>
+      <button class="btn btn-pdf" onclick="downloadPDF()">📄 تنزيل تقرير PDF</button>
+    </div>
+  </div>
+
+  <h2>جدول الإجازات وفق نظام العمل السعودي</h2>
+  <table>
+    <tr><th>نوع الإجازة</th><th>المدة</th><th>الشرط</th></tr>
+    <tr><td>السنوية (أقل من 5 سنوات)</td><td>21 يوماً</td><td>بعد سنة كاملة</td></tr>
+    <tr><td>السنوية (5 سنوات فأكثر)</td><td>30 يوماً</td><td>—</td></tr>
+    <tr><td>المرضية — مدفوعة بالكامل</td><td>30 يوماً</td><td>شهادة طبية</td></tr>
+    <tr><td>المرضية — مدفوعة بنصف</td><td>60 يوماً</td><td>تلي الـ 30 يوماً</td></tr>
+    <tr><td>المرضية — بدون راتب</td><td>30 يوماً</td><td>تلي الـ 60 يوماً</td></tr>
+    <tr><td>الأمومة</td><td>10 أسابيع (70 يوماً)</td><td>للموظفات فقط</td></tr>
+    <tr><td>الأبوة</td><td>3 أيام</td><td>عند الولادة</td></tr>
+    <tr><td>الحج</td><td>10 أيام</td><td>مرة واحدة في الخدمة</td></tr>
+    <tr><td>الطارئة</td><td>3 أيام</td><td>حالات استثنائية</td></tr>
+  </table>
+
+</div>
+
+<footer>
+  <p>المعلومات مستندة إلى نظام العمل السعودي لعام 2025.</p>
+  <p style="margin-top:10px"><a href="/ar/">الأدوات العربية</a> | <a href="/">English</a> | <a href="/ur/">اردو</a></p>
+</footer>
+
+<script>
+function calcLeave(){
+  const basic=parseFloat(document.getElementById('basicSal').value)||0;
+  const housing=parseFloat(document.getElementById('housingAll').value)||0;
+  const transport=parseFloat(document.getElementById('transAll').value)||0;
+  const years=parseFloat(document.getElementById('serviceYears').value)||0;
+  const gender=document.getElementById('gender').value;
+  const unused=parseFloat(document.getElementById('unusedLeave').value)||0;
+  if(!basic){alert('الرجاء إدخال الراتب الأساسي');return;}
+
+  const annualDays=years>=5?30:21;
+  const sickDays=120; // 30+60+30
+  const maternityDays=gender==='female'?70:3;
+  const matLabel=gender==='female'?'إجازة الأمومة (أيام)':'إجازة الأبوة (أيام)';
+  const hajjDays=10;
+  const dailyRate=(basic+housing+transport)/30;
+  const encashment=Math.round(dailyRate*unused);
+
+  document.getElementById('annualDays').textContent=annualDays;
+  document.getElementById('sickDays').textContent=sickDays;
+  document.getElementById('maternityDays').textContent=maternityDays;
+  document.getElementById('matLbl').textContent=matLabel;
+  document.getElementById('hajjDays').textContent=hajjDays;
+  document.getElementById('leaveEncash').textContent='SAR '+encashment.toLocaleString();
+
+  document.getElementById('leaveInfoBox').innerHTML=`✅ <strong>استحقاق الإجازة غير المُستخدمة:</strong> ${unused} يوم × ${dailyRate.toFixed(0)} ريال/يوم = <strong>SAR ${encashment.toLocaleString()}</strong>`;
+
+  const rows=[
+    ['السنوية',annualDays+' يوماً','راتب كامل','م. 109'],
+    ['المرضية','30+60+30 يوماً','كامل / نصف / بدون','م. 117'],
+    [gender==='female'?'الأمومة':'الأبوة',maternityDays+' يوماً','راتب كامل',gender==='female'?'م. 151':'م. 160'],
+    ['الحج',hajjDays+' أيام','راتب كامل','م. 113'],
+    ['الطارئة','3 أيام','راتب كامل','م. 113'],
+    ['غير مُستخدمة — صرف نقدي',unused+' يوم','SAR '+encashment,'م. 111']
+  ];
+  document.getElementById('leaveRows').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('');
+  document.getElementById('results').style.display='block';
+
+  window._leaveCalc={basic,housing,transport,years,gender,unused,annualDays,sickDays,maternityDays,encashment,dailyRate};
+}
+
+function downloadPDF(){
+  if(!window._leaveCalc){alert('الرجاء إجراء الحساب أولاً');return;}
+  const {jsPDF}=window.jspdf;const doc=new jsPDF();
+  const d=window._leaveCalc;
+  doc.setFontSize(16);doc.setTextColor(12,74,110);
+  doc.text('Leave Entitlements Report - Saudi Arabia 2025',14,18);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('SaudiUtilityHub.com | '+new Date().toLocaleDateString(),14,26);
+  doc.setDrawColor(3,105,161);doc.line(14,30,196,30);
+  doc.setFontSize(12);doc.setTextColor(30);
+  doc.text('Basic: SAR '+d.basic+' | Housing: SAR '+d.housing+' | Transport: SAR '+d.transport,14,40);
+  doc.text('Service: '+d.years+' yrs | Gender: '+d.gender,14,50);
+  doc.text('Annual Leave: '+d.annualDays+' days',14,62);
+  doc.text('Sick Leave: 30 (full) + 60 (half) + 30 (unpaid) = 120 days',14,72);
+  doc.text((d.gender==='female'?'Maternity':'Paternity')+' Leave: '+d.maternityDays+' days',14,82);
+  doc.text('Hajj Leave: 10 days (once per service)',14,92);
+  doc.text('Unused Leave ('+d.unused+' days × SAR '+d.dailyRate.toFixed(0)+'): SAR '+d.encashment.toLocaleString(),14,102);
+  doc.setFontSize(9);doc.setTextColor(100);
+  doc.text('Based on Saudi Labour Law 2025.',14,120);
+  doc.save('leave-entitlements-report.pdf');
+}
+</script>
+</body>
+</html>

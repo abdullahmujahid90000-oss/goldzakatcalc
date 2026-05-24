@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator Saudi Arabia 2026 | Body Mass Index KSA</title>
+<meta name="description" content="Calculate your BMI (Body Mass Index) and ideal weight. Free health calculator for residents in Saudi Arabia. Metric and imperial units supported.">
+<link rel="canonical" href="https://saudiutilityhub.com/bmi-health-calculator.html">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/bmi-health-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/bmi-health-calculator.html">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<style>
+:root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#4b5563;--gray-800:#1f2937;--radius:10px;--shadow:0 2px 12px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--gray-800);background:#fff}
+a{text-decoration:none;color:inherit}
+
+.nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:62px}
+.nav-logo{color:#fff;font-size:1.2rem;font-weight:800}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.88);font-size:.82rem;padding:6px 10px;border-radius:6px;transition:background .2s}
+.nav-links a:hover{background:rgba(255,255,255,.15)}
+.lang-btn{background:var(--gold);color:#fff!important;border-radius:6px;padding:6px 12px!important;font-weight:700}
+.page-hero{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:40px 20px;text-align:center}
+.page-hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:10px}
+.page-hero p{opacity:.88;font-size:.95rem;max-width:560px;margin:0 auto}
+.breadcrumb{font-size:.8rem;opacity:.7;margin-bottom:12px}
+.breadcrumb a{color:rgba(255,255,255,.8)}
+.main{max-width:780px;margin:0 auto;padding:32px 20px}
+.calc-card{background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:28px;box-shadow:var(--shadow);margin-bottom:24px}
+.tab-row{display:flex;border:2px solid var(--green);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.tab-btn{flex:1;padding:10px;font-size:.88rem;font-weight:700;cursor:pointer;border:none;background:#fff;color:var(--green);font-family:inherit}
+.tab-btn.active{background:var(--green);color:#fff}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;margin-bottom:5px}
+input[type="number"]{width:100%;padding:12px 14px;border:2px solid var(--gray-200);border-radius:8px;font-size:.95rem;outline:none;transition:border-color .2s;font-family:inherit}
+input[type="number"]:focus{border-color:var(--green)}
+.calc-btn{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:9px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.result-box{display:none;margin-top:20px}
+.result-box.show{display:block}
+.bmi-display{text-align:center;padding:24px;border-radius:12px;margin-bottom:16px}
+.bmi-num{font-size:3rem;font-weight:800}
+.bmi-cat{font-size:1.1rem;font-weight:700;margin-top:6px}
+.bmi-scale{display:flex;border-radius:8px;overflow:hidden;height:24px;margin:16px 0 8px}
+.scale-seg{flex:1;position:relative}
+.scale-label{font-size:.65rem;text-align:center;margin-top:4px}
+.bmi-underweight{background:#93c5fd}
+.bmi-normal{background:#86efac}
+.bmi-overweight{background:#fde68a}
+.bmi-obese{background:#fca5a5}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.result-item{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center}
+.r-label{font-size:.72rem;color:var(--gray-600);margin-bottom:5px;text-transform:uppercase}
+.r-val{font-size:1rem;font-weight:800}
+.ad-slot{background:var(--gray-100);border:1px dashed var(--gray-200);border-radius:10px;text-align:center;padding:20px;margin:24px 0;font-size:.8rem}
+.bmi-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:.85rem}
+.bmi-table th{background:var(--green);color:#fff;padding:10px 12px;text-align:left}
+.bmi-table td{padding:10px 12px;border-bottom:1px solid var(--gray-200)}
+footer{background:var(--green-dark);color:rgba(255,255,255,.7);text-align:center;padding:24px;font-size:.82rem;margin-top:40px}
+footer a{color:rgba(255,255,255,.8)}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}.nav-links{display:none}}
+</style>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/">Home</a>
+      <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a>
+      <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI</a>
+      <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
+      <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a>
+      <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
+      <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">Settlement</a>
+      <a href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">Nitaqat</a>
+      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
+      <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT</a>
+      <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic</a>
+      <a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visa</a>
+      <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
+      <a href="https://www.saudiutilityhub.com/ar/" class="nav-ar">عربي</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › BMI Calculator</div>
+  <h1>⚖️ BMI Calculator 2026</h1>
+  <p>Calculate your Body Mass Index, ideal weight range, and health category. Free and instant — no signup required.</p>
+</div>
+<div class="main">
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+  <div class="calc-card">
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="setUnit('metric',this)">Metric (cm / kg)</button>
+      <button class="tab-btn" onclick="setUnit('imperial',this)">Imperial (ft / lbs)</button>
+    </div>
+    <div id="metric-fields">
+      <div class="form-row">
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="height-cm" placeholder="170" min="50" max="250"></div>
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="weight-kg" placeholder="70" min="10" max="500"></div>
+      </div>
+    </div>
+    <div id="imperial-fields" style="display:none">
+      <div class="form-row">
+        <div class="form-group"><label>Height (feet)</label><input type="number" id="height-ft" placeholder="5" min="1" max="8"></div>
+        <div class="form-group"><label>Height (inches)</label><input type="number" id="height-in" placeholder="7" min="0" max="11"></div>
+      </div>
+      <div class="form-group"><label>Weight (lbs)</label><input type="number" id="weight-lbs" placeholder="155" min="20" max="1000"></div>
+    </div>
+    <div class="form-row" style="margin-top:4px">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="30" min="2" max="120">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select id="gender" style="width:100%;padding:12px 14px;border:2px solid var(--gray-200);border-radius:8px;font-size:.95rem;outline:none;font-family:inherit">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcBMI()">Calculate BMI →</button>
+    <div class="result-box" id="result-box">
+      <div class="bmi-display" id="bmi-display">
+        <div style="font-size:.85rem;font-weight:600;margin-bottom:8px">Your BMI</div>
+        <div class="bmi-num" id="bmi-num">—</div>
+        <div class="bmi-cat" id="bmi-cat">—</div>
+      </div>
+      <div class="bmi-scale">
+        <div class="scale-seg bmi-underweight"></div>
+        <div class="scale-seg bmi-normal"></div>
+        <div class="scale-seg bmi-overweight"></div>
+        <div class="scale-seg bmi-obese"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--gray-600);margin-bottom:16px">
+        <span>Underweight<br>&lt;18.5</span>
+        <span style="text-align:center">Normal<br>18.5–24.9</span>
+        <span style="text-align:center">Overweight<br>25–29.9</span>
+        <span style="text-align:right">Obese<br>≥30</span>
+      </div>
+      <div class="result-grid">
+        <div class="result-item"><div class="r-label">Ideal Weight Range</div><div class="r-val" id="ideal-weight">—</div></div>
+        <div class="result-item"><div class="r-label">Weight to Lose/Gain</div><div class="r-val" id="weight-diff">—</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--gray-50);border-radius:12px;padding:20px;margin-bottom:24px">
+    <h3 style="font-size:1rem;font-weight:700;color:var(--green);margin-bottom:12px">BMI Reference Table</h3>
+    <table class="bmi-table">
+      <thead><tr><th>BMI Range</th><th>Category</th><th>Health Risk</th></tr></thead>
+      <tbody>
+        <tr><td>&lt; 18.5</td><td>Underweight</td><td>Moderate</td></tr>
+        <tr><td>18.5 – 24.9</td><td>Normal weight</td><td>Low</td></tr>
+        <tr><td>25.0 – 29.9</td><td>Overweight</td><td>Increased</td></tr>
+        <tr><td>30.0 – 34.9</td><td>Obese Class I</td><td>High</td></tr>
+        <tr><td>35.0 – 39.9</td><td>Obese Class II</td><td>Very High</td></tr>
+        <tr><td>≥ 40.0</td><td>Obese Class III</td><td>Extremely High</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+<footer>
+  <p>© 2026 Saudi Utility Hub | <a href="index.html">Home</a> | <a href="pregnancy-calculator.html">Pregnancy Calculator</a> | <a href="ar/bmi-health-calculator.html">عربي</a></p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:6px">BMI is a screening tool, not a medical diagnosis. Consult a doctor for health advice.</p>
+</footer>
+<script>
+let unit = 'metric';
+function setUnit(u, btn){
+  unit = u;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('metric-fields').style.display = u==='metric'?'':'none';
+  document.getElementById('imperial-fields').style.display = u==='imperial'?'':'none';
+}
+function calcBMI(){
+  let heightM, weightKg;
+  if(unit==='metric'){
+    const hcm = parseFloat(document.getElementById('height-cm').value)||0;
+    weightKg = parseFloat(document.getElementById('weight-kg').value)||0;
+    heightM = hcm/100;
+  } else {
+    const ft = parseFloat(document.getElementById('height-ft').value)||0;
+    const inch = parseFloat(document.getElementById('height-in').value)||0;
+    const lbs = parseFloat(document.getElementById('weight-lbs').value)||0;
+    heightM = (ft*12+inch)*0.0254;
+    weightKg = lbs*0.453592;
+  }
+  if(!heightM||!weightKg){alert('Please enter height and weight.');return;}
+  const bmi = weightKg/(heightM*heightM);
+  let cat, color, bg;
+  if(bmi<18.5){cat='Underweight';color='#1d4ed8';bg='#dbeafe';}
+  else if(bmi<25){cat='Normal Weight ✅';color='#15803d';bg='#dcfce7';}
+  else if(bmi<30){cat='Overweight';color='#b45309';bg='#fef3c7';}
+  else{cat='Obese';color='#dc2626';bg='#fee2e2';}
+  const idealMin = 18.5*(heightM*heightM);
+  const idealMax = 24.9*(heightM*heightM);
+  const diff = weightKg - (weightKg<idealMin?idealMin:weightKg>idealMax?idealMax:weightKg);
+  document.getElementById('bmi-num').textContent = bmi.toFixed(1);
+  document.getElementById('bmi-cat').textContent = cat;
+  const display = document.getElementById('bmi-display');
+  display.style.background = bg;
+  display.style.color = color;
+  document.getElementById('ideal-weight').textContent = idealMin.toFixed(1)+'–'+idealMax.toFixed(1)+' kg';
+  const diffAbs = Math.abs(weightKg - (weightKg<idealMin?idealMin:idealMax));
+  document.getElementById('weight-diff').textContent = bmi>=18.5&&bmi<25 ? 'At ideal weight ✅' :
+    (weightKg<idealMin ? 'Gain '+diffAbs.toFixed(1)+' kg' : 'Lose '+diffAbs.toFixed(1)+' kg');
+  document.getElementById('result-box').classList.add('show');
+}
+</script>
+</body>
+</html>

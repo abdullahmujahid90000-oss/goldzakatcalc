@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة تمويل السيارة بالمرابحة الإسلامية 2026 | Saudi Utility Hub</title>
+  <meta name="description" content="احسب قسط تمويل السيارة بصيغة المرابحة الإسلامية. احسب القسط الشهري وإجمالي التمويل وجدول الاستهلاك.">
+  <link rel="canonical" href="https://saudiutilityhub.com/ar/car-finance-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/car-finance-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/car-finance-calculator.html">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+  <style>
+    :root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Tajawal',sans-serif;background:#f5f5f5;color:#222;direction:rtl;}
+    
+    .logo{font-size:1.5rem;font-weight:800;text-decoration:none;color:#fff;}
+    .logo span{color:var(--gold);}
+    .lang-btn{background:var(--gold);color:#fff;border:none;padding:7px 16px;border-radius:20px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;display:inline-block;}
+    .container{max-width:860px;margin:32px auto;padding:0 16px;}
+    h1{color:var(--green);font-size:1.8rem;font-weight:800;margin-bottom:8px;}
+    .subtitle{color:#666;margin-bottom:24px;font-size:1rem;}
+    .card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:24px;}
+    .card h2{color:var(--green);font-size:1.2rem;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green-light);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .form-group{margin-bottom:18px;}
+    label{display:block;font-weight:700;margin-bottom:6px;color:#333;font-size:.95rem;}
+    input[type=number]{width:100%;padding:12px 14px;border:2px solid #ddd;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1rem;transition:border-color .2s;background:#fff;color:#222;direction:rtl;}
+    input:focus{outline:none;border-color:var(--green);}
+    .btn{background:var(--green);color:#fff;border:none;padding:14px 32px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%;transition:background .2s;}
+    .btn:hover{background:var(--green-dark);}
+    .results{display:none;}
+    .results.show{display:block;}
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px;}
+    .result-card{background:var(--green-light);border-radius:10px;padding:18px;text-align:center;border:2px solid transparent;}
+    .result-card.highlight{border-color:var(--green);background:#fff;}
+    .result-card .label{font-size:.85rem;color:#555;font-weight:700;margin-bottom:6px;}
+    .result-card .value{font-size:1.6rem;font-weight:800;color:var(--green);}
+    .result-card .currency{font-size:.85rem;color:#888;}
+    table{width:100%;border-collapse:collapse;font-size:.9rem;}
+    thead th{background:var(--green);color:#fff;padding:10px 12px;text-align:right;}
+    tbody tr:nth-child(even){background:var(--green-light);}
+    tbody td{padding:9px 12px;border-bottom:1px solid #eee;text-align:right;}
+    .ad-slot{background:#f9f9f9;border:1px dashed #ccc;border-radius:8px;padding:20px;text-align:center;color:#999;font-size:.85rem;margin-bottom:24px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+    footer{background:var(--green-dark);color:#ccc;text-align:center;padding:20px;font-size:.9rem;margin-top:40px;}
+    footer a{color:var(--gold);text-decoration:none;}
+    .badge{display:inline-block;background:var(--gold);color:#fff;padding:4px 12px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:12px;}
+    @media(max-width:600px){.form-row{grid-template-columns:1fr;}.result-grid{grid-template-columns:1fr;}h1{font-size:1.4rem;}table{font-size:.8rem;}}
+  </style>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>🚗 حاسبة تمويل السيارة</h1>
+  <p class="subtitle">احسب أقساط تمويل السيارة بصيغة المرابحة الإسلامية — بدون فوائد ربوية</p>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <span class="badge">تمويل إسلامي — مرابحة</span>
+    <h2>أدخل بيانات التمويل</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="carPrice">سعر السيارة (ريال)</label>
+        <input type="number" id="carPrice" placeholder="مثال: 80000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="downPayment">الدفعة المقدمة (ريال)</label>
+        <input type="number" id="downPayment" placeholder="مثال: 10000" min="0" value="0">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="financeYears">مدة التمويل (سنوات)</label>
+        <input type="number" id="financeYears" placeholder="مثال: 5" min="1" max="7" value="5">
+      </div>
+      <div class="form-group">
+        <label for="profitRate">هامش الربح السنوي (%)</label>
+        <input type="number" id="profitRate" placeholder="مثال: 5" min="0" step="0.1" value="4">
+      </div>
+    </div>
+    <button class="btn" onclick="calculate()">احسب القسط الشهري</button>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card results" id="results">
+    <h2>📊 نتائج التمويل</h2>
+    <div class="result-grid">
+      <div class="result-card highlight">
+        <div class="label">القسط الشهري</div>
+        <div class="value" id="monthlyPayment">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+      <div class="result-card">
+        <div class="label">إجمالي مبلغ التمويل</div>
+        <div class="value" id="totalFinance">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+      <div class="result-card">
+        <div class="label">إجمالي هامش الربح</div>
+        <div class="value" id="totalProfit">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+      <div class="result-card">
+        <div class="label">إجمالي المدفوعات</div>
+        <div class="value" id="totalPayments">0</div>
+        <div class="currency">ريال سعودي</div>
+      </div>
+    </div>
+    <h2 style="margin-top:8px;">جدول الاستهلاك (السنة الأولى)</h2>
+    <div style="overflow-x:auto;">
+      <table id="amortTable">
+        <thead>
+          <tr><th>الشهر</th><th>القسط الشهري</th><th>جزء الأصل</th><th>جزء الربح</th><th>الرصيد المتبقي</th></tr>
+        </thead>
+        <tbody id="amortBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Saudi Utility Hub | <a href="about.html">من نحن</a> | <a href="../index.html">الرئيسية</a></p>
+</footer>
+
+<script>
+function fmt(n){return n.toLocaleString('ar-SA',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calculate(){
+  const price=parseFloat(document.getElementById('carPrice').value);
+  const down=parseFloat(document.getElementById('downPayment').value)||0;
+  const years=parseFloat(document.getElementById('financeYears').value)||5;
+  const profitPct=parseFloat(document.getElementById('profitRate').value)||4;
+  if(!price||isNaN(price)){alert('الرجاء إدخال سعر السيارة');return;}
+  const principal=price-down;
+  if(principal<=0){alert('الدفعة المقدمة أكبر من سعر السيارة');return;}
+  const profitRate=profitPct/100;
+  const totalProfit=principal*profitRate*years;
+  const totalPayable=principal+totalProfit;
+  const months=years*12;
+  const monthly=totalPayable/months;
+  document.getElementById('monthlyPayment').textContent=fmt(monthly);
+  document.getElementById('totalFinance').textContent=fmt(principal);
+  document.getElementById('totalProfit').textContent=fmt(totalProfit);
+  document.getElementById('totalPayments').textContent=fmt(totalPayable);
+  // Amortization for first 12 months
+  const tbody=document.getElementById('amortBody');
+  tbody.innerHTML='';
+  const monthlyProfit=totalProfit/months;
+  const monthlyPrincipal=principal/months;
+  let balance=principal;
+  for(let i=1;i<=12;i++){
+    balance-=monthlyPrincipal;
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${i}</td><td>${fmt(monthly)}</td><td>${fmt(monthlyPrincipal)}</td><td>${fmt(monthlyProfit)}</td><td>${fmt(Math.max(0,balance))}</td>`;
+    tbody.appendChild(tr);
+  }
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ڈیپینڈنٹ لیوی کیلکولیٹر | Dependent Levy Calculator اردو</title>
+<meta name="description" content="سعودی عرب میں ڈیپینڈنٹ (خاندان) فیس حساب کریں۔ ۲۰۲۵ کی تازہ ترین شرح کے مطابق — بیوی، بچے، والدین سمیت کل سالانہ فیس معلوم کریں۔">
+<meta name="keywords" content="ڈیپینڈنٹ لیوی, dependent levy saudi arabia urdu, خاندان فیس سعودی عرب, family fee iqama, رسوم مرافقين">
+<link rel="canonical" href="https://saudiutilityhub.com/ur/dependent-levy">
+<link rel="alternate" hreflang="en" href="https://saudiutilityhub.com/dependent-levy">
+<link rel="alternate" hreflang="ar" href="https://saudiutilityhub.com/ar/dependent-levy">
+<link rel="alternate" hreflang="ur" href="https://saudiutilityhub.com/ur/dependent-levy">
+<link rel="alternate" hreflang="x-default" href="https://saudiutilityhub.com/dependent-levy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Nastaliq Urdu','Gulzar','Jameel Noori Nastaleeq',serif;font-size:18px;line-height:2.2;background:#0f0f23;color:#e0e0e0;direction:rtl}
+
+.logo{color:#00d4aa;font-size:1.3em;font-weight:bold;text-decoration:none}
+.nav-links{display:flex;gap:15px;align-items:center;list-style:none}
+.nav-links a{color:#ccc;text-decoration:none;font-size:0.9em}
+.nav-links a:hover{color:#00d4aa}
+.lang-switch{display:flex;gap:6px}
+.lang-switch a{padding:4px 10px;border-radius:4px;font-size:0.85em;text-decoration:none;background:#2a2a4e;color:#ccc}
+.lang-switch a:hover{background:#00d4aa;color:#000}
+.active-lang{background:#00d4aa!important;color:#000!important}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:50px 20px 40px;text-align:center}
+.hero h1{font-size:2.2em;color:#fff;margin-bottom:15px}
+.hero p{color:#a0b4c8;font-size:1.1em;max-width:700px;margin:0 auto 20px}
+.badge{display:inline-block;background:rgba(0,212,170,0.15);border:1px solid #00d4aa;color:#00d4aa;padding:6px 18px;border-radius:20px;font-size:0.9em;margin:4px}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+.card{background:#1a1a2e;border-radius:12px;padding:30px;margin-bottom:25px;border:1px solid #2a2a4e}
+.card h2{color:#00d4aa;font-size:1.4em;margin-bottom:20px;border-bottom:1px solid #2a2a4e;padding-bottom:10px}
+.levy-rate-box{background:linear-gradient(135deg,#ff6b6b20,#ff6b6b05);border:2px solid #ff6b6b;border-radius:10px;padding:20px;margin-bottom:20px;text-align:center}
+.levy-rate-box h3{color:#ff6b6b;font-size:1.1em;margin-bottom:10px}
+.levy-rate{font-size:2.5em;color:#fff;font-weight:bold}
+.levy-rate span{font-size:0.5em;color:#a0b4c8}
+.dependent-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #2a2a4e}
+.dependent-row:last-child{border-bottom:none}
+.dep-info{flex:1}
+.dep-info strong{color:#fff;display:block}
+.dep-info small{color:#a0b4c8;font-size:0.85em}
+.dep-qty{display:flex;align-items:center;gap:12px}
+.qty-btn{background:#2a2a4e;border:none;color:#fff;width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:1.3em;line-height:1;transition:background 0.2s}
+.qty-btn:hover{background:#00d4aa;color:#000}
+.qty-num{min-width:35px;text-align:center;color:#00d4aa;font-weight:bold;font-size:1.2em}
+.dep-cost{color:#ffd93d;font-weight:bold;font-family:'Courier New',monospace;min-width:90px;text-align:center}
+.total-section{background:linear-gradient(135deg,#00d4aa15,#00d4aa05);border:2px solid #00d4aa;border-radius:12px;padding:25px;margin-top:20px}
+.total-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #2a2a4e20}
+.total-row:last-child{border-bottom:none;padding-top:15px;margin-top:10px}
+.total-row .label{color:#a0b4c8}
+.total-row .value{font-weight:bold;font-family:'Courier New',monospace;color:#00d4aa}
+.grand-total .value{font-size:1.8em;color:#ffd93d}
+.pkr-equiv{text-align:center;color:#a0b4c8;margin-top:10px;font-size:0.9em}
+.info-box{background:#16213e;border-right:4px solid #00d4aa;border-radius:8px;padding:20px;margin:15px 0}
+.info-box h3{color:#00d4aa;margin-bottom:10px}
+.warning-box{background:#16213e;border-right:4px solid #ffd93d;border-radius:8px;padding:20px;margin:15px 0}
+.warning-box h3{color:#ffd93d;margin-bottom:10px}
+.exemption-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
+.exemption-card{background:#16213e;padding:14px;border-radius:8px;border-right:3px solid #6bcb77}
+.exemption-card h4{color:#6bcb77;margin-bottom:5px;font-size:0.95em}
+.exemption-card p{color:#a0b4c8;font-size:0.85em}
+.faq-item{border:1px solid #2a2a4e;border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{background:#16213e;padding:15px 20px;cursor:pointer;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.faq-q:hover{background:#1e2a4a}
+.faq-a{padding:15px 20px;color:#a0b4c8;display:none;border-top:1px solid #2a2a4e}
+.faq-a.open{display:block}
+footer{background:#1a1a2e;border-top:1px solid #2a2a4e;padding:30px 20px;text-align:center;color:#666;margin-top:50px}
+footer a{color:#00d4aa;text-decoration:none}
+@media(max-width:600px){
+  .hero h1{font-size:1.6em}
+  .exemption-grid{grid-template-columns:1fr}
+  .levy-rate{font-size:1.8em}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ڈیپینڈنٹ لیوی کیلکولیٹر",
+  "description": "سعودی عرب میں خاندان کی اقامہ فیس کا حساب لگائیں",
+  "url": "https://saudiutilityhub.com/ur/dependent-levy",
+  "applicationCategory": "FinanceApplication",
+  "inLanguage": "ur",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"SAR"},
+  "operatingSystem": "Any"
+}
+</script>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Gulzar&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ur/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ur/">ہوم</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-calculator.html">تنخواہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/gosi-calculator.html">گوسی</a>
+      <a href="https://www.saudiutilityhub.com/ur/eos-calculator.html">اختتامی سروس</a>
+      <a href="https://www.saudiutilityhub.com/ur/iqama-calculator.html">اقامہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-slip.html">تنخواہ سلپ</a>
+      <a href="https://www.saudiutilityhub.com/ur/noc-letter.html">این او سی</a>
+      <a href="https://www.saudiutilityhub.com/ur/remittance.html">رقم بھیجیں</a>
+      <a href="https://www.saudiutilityhub.com/ur/vat-calculator.html">ویٹ</a>
+      <a href="https://www.saudiutilityhub.com/ur/zakat-calculator.html">زکوۃ</a>
+      <a href="https://www.saudiutilityhub.com/ur/blog/">بلاگ</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ar/" class="nav-ar">عربي</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>👨‍👩‍👧‍👦 ڈیپینڈنٹ لیوی کیلکولیٹر</h1>
+  <p>سعودی عرب میں خاندان کے ساتھ رہنے کی سالانہ فیس حساب کریں — بیوی، بچے، والدین سب</p>
+  <span class="badge">۲۰۲۵ شرح کے مطابق</span>
+  <span class="badge">SAR 400/ماہ فی فرد</span>
+</div>
+
+<div class="container">
+
+  <!-- Current Rate -->
+  <div class="levy-rate-box">
+    <h3>موجودہ ڈیپینڈنٹ لیوی کی شرح ۲۰۲۵</h3>
+    <div class="levy-rate">SAR 400 <span>فی ڈیپینڈنٹ فی ماہ</span></div>
+    <p style="color:#a0b4c8;margin-top:10px">= SAR 4,800 سالانہ فی ڈیپینڈنٹ</p>
+  </div>
+
+  <!-- Calculator -->
+  <div class="card">
+    <h2>🧮 اپنی کل فیس حساب کریں</h2>
+    <p style="color:#a0b4c8;margin-bottom:20px">اپنے ڈیپینڈنٹس کی تعداد چنیں — کل خرچ خود بخود نکل آئے گا</p>
+
+    <div class="dependent-row">
+      <div class="dep-info">
+        <strong>👩 بیوی / زوجہ</strong>
+        <small>SAR 400/ماہ — SAR 4,800 سالانہ</small>
+      </div>
+      <div class="dep-qty">
+        <button class="qty-btn" onclick="updateDep('wife',-1)">−</button>
+        <span class="qty-num" id="wife-num">0</span>
+        <button class="qty-btn" onclick="updateDep('wife',1)">+</button>
+      </div>
+      <div class="dep-cost" id="wife-cost">SAR 0</div>
+    </div>
+
+    <div class="dependent-row">
+      <div class="dep-info">
+        <strong>👦 بیٹا / بیٹی (۱۸ سال سے کم)</strong>
+        <small>SAR 400/ماہ — SAR 4,800 سالانہ</small>
+      </div>
+      <div class="dep-qty">
+        <button class="qty-btn" onclick="updateDep('children',-1)">−</button>
+        <span class="qty-num" id="children-num">0</span>
+        <button class="qty-btn" onclick="updateDep('children',1)">+</button>
+      </div>
+      <div class="dep-cost" id="children-cost">SAR 0</div>
+    </div>
+
+    <div class="dependent-row">
+      <div class="dep-info">
+        <strong>👴 والدین (والد / والدہ)</strong>
+        <small>SAR 400/ماہ — SAR 4,800 سالانہ</small>
+      </div>
+      <div class="dep-qty">
+        <button class="qty-btn" onclick="updateDep('parents',-1)">−</button>
+        <span class="qty-num" id="parents-num">0</span>
+        <button class="qty-btn" onclick="updateDep('parents',1)">+</button>
+      </div>
+      <div class="dep-cost" id="parents-cost">SAR 0</div>
+    </div>
+
+    <div class="dependent-row">
+      <div class="dep-info">
+        <strong>👤 دیگر رشتہ دار</strong>
+        <small>SAR 400/ماہ — SAR 4,800 سالانہ</small>
+      </div>
+      <div class="dep-qty">
+        <button class="qty-btn" onclick="updateDep('other',-1)">−</button>
+        <span class="qty-num" id="other-num">0</span>
+        <button class="qty-btn" onclick="updateDep('other',1)">+</button>
+      </div>
+      <div class="dep-cost" id="other-cost">SAR 0</div>
+    </div>
+
+    <!-- Totals -->
+    <div class="total-section">
+      <div class="total-row">
+        <span class="label">کل ڈیپینڈنٹس</span>
+        <span class="value" id="total-deps">0 افراد</span>
+      </div>
+      <div class="total-row">
+        <span class="label">ماہانہ فیس</span>
+        <span class="value" id="monthly-total">SAR 0</span>
+      </div>
+      <div class="total-row grand-total">
+        <span class="label" style="color:#fff;font-size:1.1em">سالانہ کل فیس</span>
+        <span class="value" id="annual-total">SAR 0</span>
+      </div>
+      <div class="pkr-equiv" id="pkr-equiv"></div>
+    </div>
+
+    <!-- Salary context -->
+    <div style="margin-top:20px">
+      <label style="color:#a0b4c8;display:block;margin-bottom:8px">اپنی ماہانہ تنخواہ داخل کریں (اختیاری — آمدن کا % دیکھنے کے لیے)</label>
+      <input type="number" id="salary-input" placeholder="مثلاً 3000" min="0"
+        style="width:100%;padding:12px 15px;background:#16213e;border:1px solid #2a2a4e;border-radius:8px;color:#fff;font-size:1em;font-family:inherit;direction:rtl"
+        oninput="updateTotal()">
+      <div id="salary-pct" style="margin-top:8px;color:#ffd93d"></div>
+    </div>
+  </div>
+
+  <!-- Exemptions -->
+  <div class="card">
+    <h2>✅ کون معاف ہے؟ — ڈیپینڈنٹ لیوی سے استثنیٰ</h2>
+    <div class="exemption-grid">
+      <div class="exemption-card">
+        <h4>سعودی شہری کی بیوی</h4>
+        <p>سعودی مرد سے شادی شدہ غیر ملکی خاتون پر فیس نہیں</p>
+      </div>
+      <div class="exemption-card">
+        <h4>سعودی ماں کے بچے</h4>
+        <p>سعودی والدہ کے غیر ملکی بچوں پر فیس نہیں</p>
+      </div>
+      <div class="exemption-card">
+        <h4>گھریلو ورکرز</h4>
+        <p>ملازم (driver, maid) پر ڈیپینڈنٹ لیوی نہیں — الگ فیس ہے</p>
+      </div>
+      <div class="exemption-card">
+        <h4>پہلا ڈیپینڈنٹ (کچھ شعبے)</h4>
+        <p>صحت اور تعلیم کے شعبوں میں پہلے ڈیپینڈنٹ پر چھوٹ تھی — ۲۰۲۳ کے بعد ختم</p>
+      </div>
+    </div>
+
+    <div class="warning-box" style="margin-top:15px">
+      <h3>⚠️ نوٹ: ۲۰۱۷ کے بعد کوئی عام چھوٹ نہیں</h3>
+      <p>حکومت نے ۲۰۱۷ میں ڈیپینڈنٹ لیوی شروع کی۔ ابتدا میں SAR 100/ماہ تھی، ۲۰۱۸ میں SAR 200، ۲۰۱۹ سے SAR 400 ہے اور ابھی تک یہی شرح ہے۔</p>
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="card">
+    <h2>📅 لیوی کی شرح — تاریخی جدول</h2>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="background:#00d4aa;color:#000;padding:10px 15px;text-align:right">سال</th>
+          <th style="background:#00d4aa;color:#000;padding:10px 15px;text-align:center">ماہانہ فیس (SAR)</th>
+          <th style="background:#00d4aa;color:#000;padding:10px 15px;text-align:center">سالانہ (SAR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e">۲۰۱۷</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#a0b4c8">100</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#a0b4c8">1,200</td></tr>
+        <tr><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e">۲۰۱۸</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#a0b4c8">200</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#a0b4c8">2,400</td></tr>
+        <tr><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e">۲۰۱۹ – ۲۰۲۵</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#ffd93d;font-weight:bold">400</td><td style="padding:10px 15px;border-bottom:1px solid #2a2a4e;text-align:center;font-family:monospace;color:#ffd93d;font-weight:bold">4,800</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>❓ اکثر پوچھے گئے سوالات</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>کیا ڈیپینڈنٹ لیوی کمپنی ادا کرتی ہے یا ورکر؟</span><span>+</span></div>
+      <div class="faq-a">قانوناً کمپنی اقامہ فیس ادا کرتی ہے، لیکن ڈیپینڈنٹ لیوی ورکر کی ذاتی ذمہ داری ہے۔ کچھ اچھی کمپنیاں یہ فیس بھی ادا کرتی ہیں — لیکن یہ معاہدے پر منحصر ہے۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>فیس ادا نہ کرنے پر کیا ہوگا؟</span><span>+</span></div>
+      <div class="faq-a">ڈیپینڈنٹس کا اقامہ تجدید نہیں ہوگا۔ وہ غیر قانونی مقیم ہو جائیں گے جس پر جرمانہ اور ملک بدری کا خطرہ ہے۔ آپ کی اپنی اقامہ تجدید پر بھی اثر پڑ سکتا ہے۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>فیس سالانہ ادا ہوتی ہے یا ماہانہ؟</span><span>+</span></div>
+      <div class="faq-a">فیس ماہانہ بنیاد پر حساب ہوتی ہے لیکن اقامہ تجدید کے وقت سالانہ یکمشت ادا کی جاتی ہے۔ مثلاً ۳ ڈیپینڈنٹس = SAR 400 × 3 × 12 = SAR 14,400 سالانہ۔</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>کیا بچوں پر بھی SAR 400 ہے؟</span><span>+</span></div>
+      <div class="faq-a">جی ہاں — ہر ڈیپینڈنٹ پر چاہے بچہ ہو یا بڑا، SAR 400/ماہ ہے۔ البتہ سعودی شہریت والی والدہ کے بچے معاف ہیں۔</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© ۲۰۲۵ سعودی یوٹیلیٹی ہب — پاکستانی ورکرز کے لیے</p>
+  <p style="margin-top:10px">
+    <a href="/ur/">ہوم</a> |
+    <a href="/ur/salary-calculator.html">تنخواہ</a> |
+    <a href="/ur/iqama-calculator.html">اقامہ فیس</a> |
+    <a href="/ur/remittance.html">رقم بھیجیں</a>
+  </p>
+  <p style="margin-top:10px;font-size:0.8em">سرکاری تصدیق کے لیے MOL یا MHRSD ویب سائٹ دیکھیں</p>
+</footer>
+
+<script>
+const deps = { wife:0, children:0, parents:0, other:0 };
+const MONTHLY_RATE = 400;
+
+function updateDep(key, delta) {
+  deps[key] = Math.max(0, deps[key] + delta);
+  document.getElementById(key+'-num').textContent = deps[key];
+  const annualCost = deps[key] * MONTHLY_RATE * 12;
+  document.getElementById(key+'-cost').textContent = annualCost > 0 ? 'SAR '+annualCost.toLocaleString() : 'SAR 0';
+  updateTotal();
+}
+
+function updateTotal() {
+  const totalDeps = deps.wife + deps.children + deps.parents + deps.other;
+  const monthly = totalDeps * MONTHLY_RATE;
+  const annual = monthly * 12;
+
+  document.getElementById('total-deps').textContent = totalDeps + ' افراد';
+  document.getElementById('monthly-total').textContent = 'SAR ' + monthly.toLocaleString();
+  document.getElementById('annual-total').textContent = 'SAR ' + annual.toLocaleString();
+
+  if (annual > 0) {
+    const pkr = Math.round(annual * 74.5);
+    document.getElementById('pkr-equiv').textContent = '≈ PKR ' + pkr.toLocaleString() + ' سالانہ (تخمینی)';
+  } else {
+    document.getElementById('pkr-equiv').textContent = '';
+  }
+
+  const salary = parseFloat(document.getElementById('salary-input').value) || 0;
+  if (salary > 0 && monthly > 0) {
+    const pct = ((monthly / salary) * 100).toFixed(1);
+    document.getElementById('salary-pct').textContent = `ڈیپینڈنٹ فیس آپ کی تنخواہ کا ${pct}٪ ہے`;
+  } else {
+    document.getElementById('salary-pct').textContent = '';
+  }
+}
+
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q span:last-child').forEach(s => s.textContent = '+');
+  if (!isOpen) { ans.classList.add('open'); el.querySelector('span:last-child').textContent = '−'; }
+}
+</script>
+</body>
+</html>

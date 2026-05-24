@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>سعودی فائنل سیٹلمنٹ حساب کتاب 2026 — EOS + چھٹی + نوٹس پے | Saudi Utility Hub</title>
+<meta name="description" content="سعودی عرب فائنل سیٹلمنٹ 2026 — سروس کا خاتمہ، بقایا چھٹی اور نوٹس پیریڈ تنخواہ ایک جگہ حساب کریں۔ استعفیٰ اور برطرفی دونوں۔">
+<link rel="canonical" href="https://www.saudiutilityhub.com/ur/final-settlement-calculator.html">
+<link rel="alternate" hreflang="en" href="https://www.saudiutilityhub.com/final-settlement-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://www.saudiutilityhub.com/ar/final-settlement-calculator.html">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Nastaliq Urdu','Arial Unicode MS',Tahoma,sans-serif;background:#f8f9fa;color:#333;line-height:2.2;direction:rtl}
+
+nav a{color:#fff;text-decoration:none;font-size:.9rem;opacity:.85}
+nav .logo{font-size:1.1rem;font-weight:700;color:#fff;opacity:1}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:1.8rem;margin-bottom:.8rem;line-height:1.5}
+.hero p{font-size:1rem;opacity:.9;max-width:680px;margin:0 auto}
+.badges{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+.badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:.3rem .8rem;font-size:.8rem}
+.container{max-width:900px;margin:0 auto;padding:2rem 1rem}
+.card{background:#fff;border-radius:12px;padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+h2{color:#1a1a2e;margin-bottom:1rem;font-size:1.2rem}
+label{display:block;font-weight:600;margin-bottom:.4rem;font-size:.88rem;color:#374151}
+input,select{width:100%;padding:.65rem .85rem;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;margin-bottom:1rem;background:#fff}
+input:focus,select:focus{outline:none;border-color:#0f3460}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.grid-2{grid-template-columns:1fr}}
+.toggle-group{display:flex;border:1.5px solid #d1d5db;border-radius:8px;overflow:hidden;margin-bottom:1rem}
+.toggle-group button{flex:1;padding:.65rem;border:none;background:#f9fafb;cursor:pointer;font-size:.88rem;font-weight:600;color:#6b7280;transition:all .2s}
+.toggle-group button.active{background:#1a1a2e;color:#fff}
+.calc-btn{width:100%;padding:1rem;background:linear-gradient(135deg,#0f3460,#1a1a2e);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.5rem}
+.results{display:none}.results.show{display:block}
+.result-hero{background:linear-gradient(135deg,#0f3460,#1a1a2e);color:#fff;border-radius:12px;padding:2rem;text-align:center;margin-bottom:1.5rem}
+.result-hero .label{font-size:.9rem;opacity:.8;margin-bottom:.4rem}
+.result-hero .amount{font-size:2.8rem;font-weight:700}
+.breakdown-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.5rem}
+.breakdown-item{background:#f8f9fa;border-radius:10px;padding:1.1rem;text-align:center;border:1px solid #e5e7eb}
+.breakdown-item .bi-label{font-size:.78rem;color:#6b7280;margin-bottom:.2rem}
+.breakdown-item .bi-amount{font-size:1.4rem;font-weight:700;color:#1a1a2e}
+.detail-table{width:100%;border-collapse:collapse;font-size:.86rem}
+.detail-table th{background:#1a1a2e;color:#fff;padding:.6rem .9rem;text-align:right}
+.detail-table td{padding:.6rem .9rem;border-bottom:1px solid #eee;text-align:right}
+.detail-table tr:nth-child(even) td{background:#f9fafb}
+.detail-table .subtotal td{font-weight:700;background:#eff6ff;color:#1e40af}
+.detail-table .total-row td{font-weight:700;background:#f0fdf4;color:#166534;font-size:.95rem}
+.info-box{background:#eff6ff;border-right:4px solid #3b82f6;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.86rem}
+.warn-box{background:#fef9c3;border-right:4px solid #eab308;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.86rem}
+.danger-box{background:#fef2f2;border-right:4px solid #ef4444;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.86rem}
+.success-box{background:#f0fdf4;border-right:4px solid #22c55e;border-radius:8px 0 0 8px;padding:.9rem 1.1rem;margin:1rem 0;font-size:.86rem}
+.pdf-btn{width:100%;padding:.9rem;background:#16a34a;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:1rem}
+.reset-btn{background:none;border:1px solid #d1d5db;color:#6b7280;padding:.5rem 1rem;border-radius:8px;cursor:pointer;font-size:.85rem;margin-top:.5rem}
+.eos-rule-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-top:.8rem}
+.eos-rule{border-radius:8px;padding:.9rem;text-align:center;border:1px solid #e5e7eb}
+.eos-rule h4{font-size:.8rem;margin-bottom:.3rem}
+.eos-rule .pct{font-size:1.3rem;font-weight:700}
+.eos-rule.zero{background:#fef2f2}.eos-rule.zero .pct{color:#dc2626}
+.eos-rule.third{background:#fef9c3}.eos-rule.third .pct{color:#d97706}
+.eos-rule.twothird{background:#eff6ff}.eos-rule.twothird .pct{color:#2563eb}
+.eos-rule.full{background:#f0fdf4}.eos-rule.full .pct{color:#16a34a}
+.faq-item{border-bottom:1px solid #eee;padding:.9rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:700;color:#1a1a2e;margin-bottom:.3rem;font-size:.88rem}
+.faq-a{color:#555;font-size:.85rem}
+footer{background:#1a1a2e;color:#aaa;text-align:center;padding:2rem;font-size:.85rem;margin-top:3rem}
+footer a{color:#60a5fa;text-decoration:none}
+</style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MX4J28KBE6');
+</script>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Gulzar&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ur/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ur/">ہوم</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-calculator.html">تنخواہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/gosi-calculator.html">گوسی</a>
+      <a href="https://www.saudiutilityhub.com/ur/eos-calculator.html">اختتامی سروس</a>
+      <a href="https://www.saudiutilityhub.com/ur/iqama-calculator.html">اقامہ</a>
+      <a href="https://www.saudiutilityhub.com/ur/salary-slip.html">تنخواہ سلپ</a>
+      <a href="https://www.saudiutilityhub.com/ur/noc-letter.html">این او سی</a>
+      <a href="https://www.saudiutilityhub.com/ur/remittance.html">رقم بھیجیں</a>
+      <a href="https://www.saudiutilityhub.com/ur/vat-calculator.html">ویٹ</a>
+      <a href="https://www.saudiutilityhub.com/ur/zakat-calculator.html">زکوۃ</a>
+      <a href="https://www.saudiutilityhub.com/ur/blog/">بلاگ</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ar/" class="nav-ar">عربي</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <h1>🧾 سعودی فائنل سیٹلمنٹ حساب کتاب 2026</h1>
+  <p>سروس کا خاتمہ (EOS) + بقایا چھٹی + نوٹس پیریڈ تنخواہ — ایک جگہ مکمل حساب۔ سعودی لیبر لا 2025۔</p>
+  <div class="badges">
+    <span class="badge">📅 2025 لیبر لا</span>
+    <span class="badge">✅ استعفیٰ اور برطرفی</span>
+    <span class="badge">📥 PDF ڈاؤنلوڈ</span>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <h2>⚙️ اپنی تفصیلات درج کریں</h2>
+    <label>ملازمت چھوڑنے کی وجہ</label>
+    <div class="toggle-group" id="reasonToggle">
+      <button class="active" onclick="setReason('resign')">👋 استعفیٰ</button>
+      <button onclick="setReason('terminate')">🚫 آجر کی برطرفی</button>
+    </div>
+    <div class="grid-2">
+      <div><label>بنیادی ماہانہ تنخواہ (ریال)</label><input type="number" id="basicSalary" placeholder="مثلاً 5000" min="0"></div>
+      <div><label>سروس کے سال</label><input type="number" id="yearsService" placeholder="مثلاً 6.5" min="0" step="0.1"></div>
+    </div>
+    <div class="grid-2">
+      <div><label>بقایا چھٹی کے دن</label><input type="number" id="leaveDays" placeholder="مثلاً 15" min="0" value="0"></div>
+      <div><label>نوٹس پیریڈ (دن) — اگر پورا نہیں کر رہے</label><input type="number" id="noticeDays" placeholder="مثلاً 30" min="0" value="0"></div>
+    </div>
+    <div class="grid-2">
+      <div><label>ہاؤسنگ الاؤنس (ریال/ماہ)</label><input type="number" id="housingAllowance" placeholder="مثلاً 1500" min="0" value="0"></div>
+      <div><label>ٹرانسپورٹ الاؤنس (ریال/ماہ)</label><input type="number" id="transportAllowance" placeholder="مثلاً 500" min="0" value="0"></div>
+    </div>
+    <div class="warn-box">⚠️ EOS صرف بنیادی تنخواہ پر حساب ہوتی ہے۔ ہاؤسنگ اور ٹرانسپورٹ الاؤنس شامل نہیں ہوتے۔ البتہ چھٹی کی ادائیگی میں یہ شامل ہوتے ہیں۔</div>
+    <button class="calc-btn" onclick="calculate()">🧮 فائنل سیٹلمنٹ حساب کریں</button>
+  </div>
+
+  <div class="results" id="results">
+    <div class="result-hero">
+      <div class="label">آپ کی مجموعی فائنل سیٹلمنٹ</div>
+      <div class="amount" id="totalAmount">0 ریال</div>
+    </div>
+    <div class="breakdown-grid">
+      <div class="breakdown-item"><div class="bi-label">🤝 EOS گریچویٹی</div><div class="bi-amount" id="eosAmount">0 ریال</div></div>
+      <div class="breakdown-item"><div class="bi-label">🏖️ چھٹی ادائیگی</div><div class="bi-amount" id="leaveAmount">0 ریال</div></div>
+      <div class="breakdown-item"><div class="bi-label">📋 نوٹس پیریڈ تنخواہ</div><div class="bi-amount" id="noticeAmount">0 ریال</div></div>
+    </div>
+    <div class="card" style="margin-top:0">
+      <h2>📊 تفصیلی حساب</h2>
+      <table class="detail-table" id="detailTable"></table>
+      <div id="eosNoteBox"></div>
+      <button class="pdf-btn" onclick="downloadPDF()">📥 PDF سیٹلمنٹ بیان ڈاؤنلوڈ کریں</button>
+      <br><button class="reset-btn" onclick="resetCalc()">🔄 دوبارہ حساب کریں</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 EOS قوانین — سعودی لیبر لا دفعہ 84</h2>
+    <p style="font-size:.88rem;color:#555;margin-bottom:.8rem"><strong>استعفیٰ کی صورت میں:</strong></p>
+    <div class="eos-rule-grid">
+      <div class="eos-rule zero"><h4>2 سال سے کم</h4><div class="pct">0%</div><div style="font-size:.72rem;color:#666">EOS نہیں ملتی</div></div>
+      <div class="eos-rule third"><h4>2 – 5 سال</h4><div class="pct">1/3</div><div style="font-size:.72rem;color:#666">ایک تہائی EOS</div></div>
+      <div class="eos-rule twothird"><h4>5 – 10 سال</h4><div class="pct">2/3</div><div style="font-size:.72rem;color:#666">دو تہائی EOS</div></div>
+      <div class="eos-rule full"><h4>10+ سال</h4><div class="pct">100%</div><div style="font-size:.72rem;color:#666">مکمل EOS</div></div>
+    </div>
+    <div class="success-box" style="margin-top:1rem">✅ <strong>آجر کی برطرفی:</strong> تمام سالوں کی مکمل EOS — چاہے کتنے بھی سال ہوں۔</div>
+  </div>
+
+  <div class="card">
+    <h2>❓ اکثر پوچھے جانے والے سوالات</h2>
+    <div class="faq-item"><div class="faq-q">کیا 2 سال سے پہلے استعفیٰ پر EOS ملتی ہے؟</div><div class="faq-a">نہیں۔ 2 سال سے کم سروس پر استعفیٰ کی صورت میں EOS نہیں ملتی۔ البتہ بقایا چھٹی کی ادائیگی ہمیشہ ملتی ہے۔</div></div>
+    <div class="faq-item"><div class="faq-q">کیا ہاؤسنگ الاؤنس EOS میں شامل ہوتا ہے؟</div><div class="faq-a">نہیں۔ EOS صرف بنیادی تنخواہ پر حساب ہوتی ہے۔ البتہ چھٹی کی روزانہ شرح میں بنیادی + ہاؤسنگ + ٹرانسپورٹ شامل ہوتے ہیں۔</div></div>
+    <div class="faq-item"><div class="faq-q">آجر کو کب ادائیگی کرنی ہوگی؟</div><div class="faq-a">سعودی لیبر لا کے مطابق آخری کاری دن کے 5 کاری دنوں کے اندر فائنل سیٹلمنٹ ادا کرنی ہوگی۔ تاخیر پر Qiwa پورٹل سے شکایت کی جا سکتی ہے۔</div></div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="https://www.saudiutilityhub.com/ur/">سعودی یوٹیلیٹی ہب</a> · <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">English</a> · <a href="https://www.saudiutilityhub.com/ar/final-settlement-calculator.html">عربي</a></p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+let reason='resign';let calcData={};
+function fmt(n){return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+' ریال';}
+function setReason(r){reason=r;document.querySelectorAll('#reasonToggle button').forEach((b,i)=>{b.classList.toggle('active',(r==='resign'&&i===0)||(r==='terminate'&&i===1));});}
+function calculate(){
+  const basic=parseFloat(document.getElementById('basicSalary').value)||0;
+  const years=parseFloat(document.getElementById('yearsService').value)||0;
+  const leaveDays=parseFloat(document.getElementById('leaveDays').value)||0;
+  const noticeDays=parseFloat(document.getElementById('noticeDays').value)||0;
+  const housing=parseFloat(document.getElementById('housingAllowance').value)||0;
+  const transport=parseFloat(document.getElementById('transportAllowance').value)||0;
+  if(!basic||!years){alert('براہ کرم تنخواہ اور سروس کے سال درج کریں۔');return;}
+  let fullEOS=years<=5?(basic*0.5)*years:(basic*0.5*5)+(basic*1*(years-5));
+  let eosFraction=1,eosNote='';
+  if(reason==='resign'){
+    if(years<2){eosFraction=0;eosNote='⚠️ 2 سال سے کم سروس — استعفیٰ پر EOS نہیں ملتی۔';}
+    else if(years<5){eosFraction=1/3;eosNote='📌 2-5 سال: مکمل EOS کا ایک تہائی۔';}
+    else if(years<10){eosFraction=2/3;eosNote='📌 5-10 سال: مکمل EOS کے دو تہائی۔';}
+    else{eosFraction=1;eosNote='✅ 10+ سال: مکمل EOS۔';}
+  }else{eosFraction=1;eosNote='✅ آجر کی برطرفی: تمام سالوں کی مکمل EOS۔';}
+  const eosPayable=fullEOS*eosFraction;
+  const totalMonthly=basic+housing+transport;
+  const dailyRate=totalMonthly/30;
+  const leavePayable=dailyRate*leaveDays;
+  const noticePayable=(basic/30)*noticeDays;
+  const total=eosPayable+leavePayable+noticePayable;
+  calcData={basic,years,leaveDays,noticeDays,housing,transport,reason,fullEOS,eosFraction,eosPayable,dailyRate,leavePayable,noticePayable,total,eosNote,totalMonthly};
+  document.getElementById('totalAmount').textContent=fmt(total);
+  document.getElementById('eosAmount').textContent=fmt(eosPayable);
+  document.getElementById('leaveAmount').textContent=fmt(leavePayable);
+  document.getElementById('noticeAmount').textContent=fmt(noticePayable);
+  let rows=`<thead><tr><th>مد</th><th>حساب</th><th>رقم</th></tr></thead><tbody>`;
+  rows+=`<tr><td colspan="3" style="font-weight:700;background:#f1f5f9;color:#1e40af;padding:.5rem">🤝 EOS گریچویٹی</td></tr>`;
+  if(years<=5)rows+=`<tr><td>EOS سال 1-${Math.min(years,5).toFixed(1)}</td><td>½ × ${basic} × ${Math.min(years,5).toFixed(2)}</td><td>${fmt(basic*0.5*Math.min(years,5))}</td></tr>`;
+  else{rows+=`<tr><td>EOS سال 1-5</td><td>½ × ${basic} × 5</td><td>${fmt(basic*0.5*5)}</td></tr>`;rows+=`<tr><td>EOS سال 6-${years.toFixed(1)}</td><td>1 × ${basic} × ${(years-5).toFixed(2)}</td><td>${fmt(basic*(years-5))}</td></tr>`;}
+  rows+=`<tr class="subtotal"><td colspan="2">مکمل EOS</td><td>${fmt(fullEOS)}</td></tr>`;
+  rows+=`<tr class="subtotal"><td colspan="2">قابل ادائیگی EOS</td><td>${fmt(eosPayable)}</td></tr>`;
+  rows+=`<tr><td colspan="3" style="font-weight:700;background:#f1f5f9;color:#1e40af;padding:.5rem">🏖️ چھٹی ادائیگی</td></tr>`;
+  rows+=`<tr><td>روزانہ شرح</td><td>${totalMonthly} ÷ 30</td><td>${fmt(dailyRate)}</td></tr>`;
+  rows+=`<tr class="subtotal"><td colspan="2">چھٹی ادائیگی (${leaveDays} دن)</td><td>${fmt(leavePayable)}</td></tr>`;
+  if(noticeDays>0){rows+=`<tr><td colspan="3" style="font-weight:700;background:#f1f5f9;color:#1e40af;padding:.5rem">📋 نوٹس پیریڈ تنخواہ</td></tr>`;rows+=`<tr class="subtotal"><td colspan="2">نوٹس ادائیگی (${noticeDays} دن)</td><td>${fmt(noticePayable)}</td></tr>`;}
+  rows+=`<tr class="total-row"><td colspan="2">🏆 کل فائنل سیٹلمنٹ</td><td>${fmt(total)}</td></tr></tbody>`;
+  document.getElementById('detailTable').innerHTML=rows;
+  if(eosNote){const cls=eosFraction===0?'danger-box':eosFraction<1?'warn-box':'success-box';document.getElementById('eosNoteBox').innerHTML=`<div class="${cls}">${eosNote}</div>`;}
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetCalc(){document.getElementById('results').classList.remove('show');['basicSalary','yearsService'].forEach(id=>document.getElementById(id).value='');['leaveDays','noticeDays','housingAllowance','transportAllowance'].forEach(id=>document.getElementById(id).value='0');window.scrollTo({top:0,behavior:'smooth'});}
+function downloadPDF(){
+  const{jsPDF}=window.jspdf;const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const d=calcData;
+  doc.setFillColor(26,26,46);doc.rect(0,0,210,40,'F');doc.setTextColor(255,255,255);
+  doc.setFontSize(16);doc.setFont('helvetica','bold');doc.text('Saudi Final Settlement Statement 2026',105,18,{align:'center'});
+  doc.setFontSize(10);doc.setFont('helvetica','normal');doc.text('Saudi Utility Hub - saudiutilityhub.com/ur/',105,28,{align:'center'});
+  doc.text('Generated: '+new Date().toLocaleDateString('en-SA'),105,35,{align:'center'});
+  doc.setTextColor(0,0,0);let y=50;
+  doc.setFontSize(10);
+  [['Reason',d.reason==='resign'?'Resignation':'Termination'],['Basic Salary','SAR '+d.basic.toLocaleString()],['Years of Service',d.years+' years'],['EOS Payable','SAR '+d.eosPayable.toFixed(2)],['Leave Encashment','SAR '+d.leavePayable.toFixed(2)],['Notice Pay','SAR '+d.noticePayable.toFixed(2)]].forEach(([k,v])=>{doc.setFont('helvetica','bold');doc.text(k+':',20,y);doc.setFont('helvetica','normal');doc.text(v,80,y);y+=8;});
+  y+=5;doc.setFillColor(15,52,96);doc.rect(15,y-6,180,14,'F');doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(13);doc.text('TOTAL: SAR '+d.total.toFixed(2),105,y+3,{align:'center'});
+  doc.save('FinalSettlement_Urdu.pdf');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# robots.txt — Saudi Utility Hub
+# https://www.saudiutilityhub.com/
+
+User-agent: *
+Allow: /
+
+# Block crawling of internal/admin paths
+Disallow: /cdn-cgi/
+
+# Sitemap location — critical for Google Search Console
+Sitemap: https://www.saudiutilityhub.com/sitemap.xml
