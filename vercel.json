@@ -1,0 +1,40 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/eos-calculator.html",         "destination": "/ksa-eos-calculator.html",         "permanent": true },
+    { "source": "/iqama-calculator.html",       "destination": "/iqama-expiry-calculator.html",    "permanent": true },
+    { "source": "/family-visa.html",            "destination": "/family-visit-visa-guide.html",    "permanent": true },
+    { "source": "/remittance.html",             "destination": "/remittance-fee-compare.html",     "permanent": true },
+    { "source": "/iqama-transfer.html",         "destination": "/iqama-transfer-calculator.html",  "permanent": true },
+    { "source": "/traffic-fines.html",          "destination": "/traffic-fine-calculator.html",    "permanent": true },
+    { "source": "/salary-calculator-ar.html",   "destination": "/ar/salary-calculator-ar.html",    "permanent": true },
+    { "source": "/gosi-calculator-ar.html",     "destination": "/ar/gosi-calculator-ar.html",      "permanent": true },
+    { "source": "/eos-calculator-ar.html",      "destination": "/ar/eos-calculator-ar.html",       "permanent": true },
+    { "source": "/iqama-expiry-ar.html",        "destination": "/ar/iqama-expiry-ar.html",         "permanent": true },
+    { "source": "/vat-calculator-ar.html",      "destination": "/ar/vat-calculator-ar.html",       "permanent": true },
+    { "source": "/zakat-calculator-ar.html",    "destination": "/ar/zakat-calculator-ar.html",     "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml" },
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
