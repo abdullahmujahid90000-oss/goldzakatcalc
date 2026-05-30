@@ -4,8 +4,16 @@
 User-agent: *
 Allow: /
 
-# Block crawling of internal/admin paths
+# Internal/admin
 Disallow: /cdn-cgi/
 
-# Sitemap location — critical for Google Search Console
+# Languages temporarily not indexed (will be re-enabled with proper hreflang)
+Disallow: /ar/
+Disallow: /ur/
+
+# Old/legacy URL patterns
+Disallow: /*-ar.html$
+Disallow: /*-ur.html$
+
+# Sitemap
 Sitemap: https://www.saudiutilityhub.com/sitemap.xml
