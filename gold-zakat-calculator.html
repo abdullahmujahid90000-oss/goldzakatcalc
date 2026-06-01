@@ -785,4 +785,30 @@
       
       <label for="goldPrice">Current Gold Price per Gram (SAR)</label>
       <input type="number" id="goldPrice" min="0" step="0.01" value="581" required>
+      <div class="input-hint">Current 24K gold price in Saudi Arabia (June 2026: ~SAR 581/gram)</div>
       
+      <label for="ownershipMonths">Months Owned (Optional)</label>
+      <input type="number" id="ownershipMonths" min="0" max="24" placeholder="e.g., 12">
+      <div class="input-hint">Zakat is due after 12 lunar months (354 days)</div>
+      
+      <button type="submit" class="btn">Calculate Zakat</button>
+      <button type="reset" class="btn btn-reset">Reset</button>
+    </form>
+    
+    <!-- RESULTS -->
+    <div id="results" class="results">
+      <div id="nisabStatus" class="nisab-status"></div>
+      
+      <h3 style="color:#065f46; margin-bottom:16px; font-size:1.3rem;">📊 Zakat Calculation Results</h3>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-label">Pure Gold Content</div>
+          <div class="result-value" id="pureGold">0g</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">Total Gold Value</div>
+          <div class="result-value" id="goldValue">SAR 0</div>
+        </div>
+        <div class="result-item result-highlight">
+          <div class="result-label">Zakat Due (2.5%)</div>
+          <div class="result-value" id="zakatAmount">SAR 
