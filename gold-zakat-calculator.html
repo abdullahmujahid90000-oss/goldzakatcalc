@@ -125,6 +125,14 @@
           "@type": "Answer",
           "text": "Zakat is only due after you've owned gold meeting the nisab threshold for one complete lunar year (354 days). If you acquired gold 6 months ago, wait until the full year passes. However, you can pay Zakat voluntarily earlier if you wish."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I check gold prices for Zakat calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gold prices change daily in Saudi Arabia. For accurate Zakat calculation, check the current price on the day you calculate. You can find live prices at Saudi Gold & Jewellery Group website or local gold souq markets in Riyadh, Jeddah, or Dammam."
+        }
       }
     ]
   }
@@ -291,6 +299,15 @@
       font-size: 0.82rem;
       color: #6b7280;
       margin-top: 4px;
+    }
+    .price-notice {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: #92400e;
     }
     
     /* BUTTONS */
@@ -581,6 +598,9 @@
     }
     
     /* FAQ SECTION */
+    .faq-section {
+      margin: 40px 0;
+    }
     details {
       border: 1px solid #e2e8f0;
       border-radius: 10px;
@@ -625,35 +645,85 @@
       font-size: 0.95rem;
     }
     
-    /* RELATED TOOLS */
-    .tool-grid {
+    /* RELATED TOOLS & BLOGS */
+    .related-section {
       background: #fff;
       border-radius: 12px;
-      padding: 28px;
-      margin: 28px 0;
+      padding: 32px;
+      margin: 40px 0;
       border: 1px solid #e2e8f0;
     }
-    .tool-grid h3 {
-      font-size: 1.2rem;
-      margin-bottom: 16px;
+    .related-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
       color: #1a202c;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
     }
-    .tool-link {
-      display: inline-block;
-      background: #f0fdfa;
-      color: #0d9488;
-      padding: 10px 16px;
-      border-radius: 6px;
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .tool-card {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
       text-decoration: none;
-      margin: 4px;
-      font-size: 0.9rem;
-      border: 1px solid #99f6e4;
-      transition: all 0.15s;
+      color: inherit;
+      transition: all 0.2s;
     }
-    .tool-link:hover {
-      background: #ccfbf1;
+    .tool-card:hover {
+      border-color: #0d9488;
       transform: translateY(-2px);
-      box-shadow: 0 2px 8px rgba(13,148,136,0.15);
+      box-shadow: 0 4px 12px rgba(13,148,136,0.15);
+    }
+    .tool-card h4 {
+      color: #0d9488;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .tool-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .blog-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: #1a56db;
+    }
+    .blog-card h4 {
+      color: #1a56db;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .blog-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: #94a3b8;
     }
     
     /* FOOTER */
@@ -700,7 +770,7 @@
     
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .calc-card, .guide-section, .tool-grid {
+      .calc-card, .guide-section, .related-section {
         padding: 20px;
       }
       .hero {
@@ -709,19 +779,8 @@
       .result-grid {
         grid-template-columns: 1fr;
       }
-      .karat-cards {
+      .karat-cards, .tools-grid, .blog-grid {
         grid-template-columns: 1fr;
-      }
-    }
-    
-    /* PRINT STYLES */
-    @media print {
-      nav, .hero, footer, .ad-slot, .btn, #cookie-bar {
-        display: none !important;
-      }
-      .results {
-        display: block !important;
-        border: 2px solid #000;
       }
     }
   </style>
@@ -739,12 +798,6 @@
       <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
       <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html" class="active">Zakat</a>
       <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
-      <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">Settlement</a>
-      <a href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">Nitaqat</a>
-      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
-      <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT</a>
-      <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic</a>
-      <a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visa</a>
       <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
     </div>
   </div>
@@ -778,7 +831,11 @@
       
       <label for="goldPrice">Current Gold Price per Gram (SAR)</label>
       <input type="number" id="goldPrice" min="0" step="0.01" value="581" required>
-      <div class="input-hint">Current 24K gold price in Saudi Arabia (June 2026: ~SAR 581/gram)</div>
+      <div class="price-notice">
+        <strong>📌 Note:</strong> Gold prices change daily. Current price: SAR 581/gram (as of June 2026). 
+        <a href="https://gold.sa" target="_blank" style="color:#0369a1; text-decoration:underline;">Check latest prices here</a>
+      </div>
+      <div class="input-hint">Update this field with today's price for accurate calculation</div>
       
       <label for="ownershipMonths">Months Owned (Optional)</label>
       <input type="number" id="ownershipMonths" min="0" max="24" placeholder="e.g., 12">
@@ -828,7 +885,7 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <!-- COMPREHENSIVE GUIDE CONTENT (1000+ WORDS) -->
+  <!-- COMPREHENSIVE GUIDE CONTENT -->
   
   <div class="guide-section">
     <h2>📖 How to Use This Gold Zakat Calculator</h2>
@@ -875,123 +932,322 @@
       </div>
     </div>
 
-    <h3><span class="step-number">3</span>Enter Current Gold Price</h3>
-    <p>The calculator pre-fills the current Saudi gold price (SAR 581/gram for 24K as of June 2026). You can update this if:</p>
+    <h3><span class="step-number">3</span>Check Current Gold Price</h3>
+    <p><strong>Important:</strong> Gold prices in Saudi Arabia change daily based on international markets. The calculator pre-fills SAR 581/gram (June 2026 average), but you should:</p>
     <ul style="margin:12px 0 12px 24px; line-height:2;">
-      <li>You purchased gold at a different rate and want historical calculation</li>
-      <li>Gold prices have changed significantly since you checked</li>
-      <li>You're calculating for a future date</li>
+      <li>Check today's price before calculating</li>
+      <li>Visit <a href="https://gold.sa" target="_blank" style="color:#0d9488;">Saudi Gold & Jewellery Group</a> for live rates</li>
+      <li>Call local gold souq in Riyadh, Jeddah, or Dammam</li>
+      <li>Update the price field in the calculator above</li>
     </ul>
-    <p>Check live prices at <a href="https://gold.sa" target="_blank" style="color:#0d9488;">Saudi Gold & Jewellery Group</a>.</p>
+    <p class="info-highlight"><strong>Pro Tip:</strong> Bookmark this page and check prices weekly if you're close to nisab threshold!</p>
 
-    <!-- ENHANCED SCREENSHOT PLACEHOLDER 1: INPUT FORM -->
-    <div class="screenshot-box" style="background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%); border: 2px solid #99f6e4; padding: 0; overflow: hidden;">
-      <div style="background: linear-gradient(90deg, #14b8a6 0%, #0d9488 100%); padding: 16px 24px; color: white; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 12px;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="18" height="18" rx="2"/>
-          <path d="M3 9h18M9 21V9"/>
-        </svg>
-        Gold Zakat Calculator — Input Form
-      </div>
-      <div style="padding: 32px; background: white;">
-        <div style="margin-bottom: 20px;">
-          <div style="background: #f1f5f9; height: 20px; width: 140px; border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="background: #e0f2fe; border: 2px solid #7dd3fc; padding: 12px 16px; border-radius: 8px; color: #0369a1; font-weight: 600;">125.50 grams</div>
-          <div style="background: #f8fafc; height: 16px; width: 280px; border-radius: 4px; margin-top: 6px;"></div>
-        </div>
-        
-        <div style="margin-bottom: 20px;">
-          <div style="background: #f1f5f9; height: 20px; width: 110px; border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="background: #fef3c7; border: 2px solid #fbbf24; padding: 12px 16px; border-radius: 8px; color: #92400e; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
-            <span>22 Karat (91.67%)</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </div>
-        </div>
-        
-        <div style="margin-bottom: 20px;">
-          <div style="background: #f1f5f9; height: 20px; width: 160px; border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="background: #e0f2fe; border: 2px solid #7dd3fc; padding: 12px 16px; border-radius: 8px; color: #0369a1; font-weight: 600;">SAR 581 / gram</div>
-        </div>
-        
-        <div style="background: linear-gradient(90deg, #10b981 0%, #059669 100%); padding: 14px; border-radius: 8px; text-align: center; color: white; font-weight: 700; margin-top: 24px; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);">
-          Calculate Zakat
-        </div>
-      </div>
-      <div class="screenshot-caption">
-        <em>Figure 1: Enter your gold details — weight in grams and karat purity</em>
-      </div>
-    </div>
+    <h3><span class="step-number">4</span>Enter Details & Calculate</h3>
+    <p>Fill in all fields accurately and click "Calculate Zakat" to see your results instantly.</p>
 
-    <h3><span class="step-number">4</span>Check Nisab Status</h3>
-    <p>The calculator instantly tells you if your gold meets or exceeds the nisab threshold:</p>
-    <ul style="margin:12px 0 12px 24px; line-height:2;">
-      <li><strong>Nisab Met:</strong> You own 87.48g+ of pure gold — Zakat is DUE</li>
-      <li><strong>Nisab Not Met:</strong> You own less than 87.48g — No Zakat due (yet)</li>
-    </ul>
-
-    <h3><span class="step-number">5</span>Calculate & Pay Zakat</h3>
-    <p>If you've met nisab and owned the gold for one lunar year (354 days), the calculator shows your exact Zakat obligation. Pay this amount to eligible recipients:</p>
+    <h3><span class="step-number">5</span>Pay Zakat to Eligible Recipients</h3>
+    <p>If you've met nisab and owned the gold for one lunar year (354 days), pay your Zakat to:</p>
     <ul style="margin:12px 0 12px 24px; line-height:2;">
       <li>The poor and needy</li>
       <li>Zakat collectors</li>
       <li>Those whose hearts are to be reconciled</li>
-      <li>Those in bondage (slaves/captives)</li>
       <li>Those in debt</li>
       <li>In the cause of Allah</li>
-      <li>The wayfarer (traveler in need)</li>
     </ul>
-    <p class="info-highlight"><strong>Pro Tip:</strong> Many Muslims pay Zakat during Ramadan for extra spiritual rewards. You can pay to registered Saudi charities like <a href="https://www.eksan.org" target="_blank" style="color:#0d9488;">Ehsan</a> or <a href="https://www.birr.com" target="_blank" style="color:#0d9488;">Birr</a>.</p>
+    <p class="info-highlight"><strong>Recommended:</strong> Pay during Ramadan for extra rewards. Use trusted Saudi charities like <a href="https://www.eksan.org" target="_blank" style="color:#0d9488;">Ehsan</a> or <a href="https://www.birr.com" target="_blank" style="color:#0d9488;">Birr</a>.</p>
+  </div>
 
-    <!-- ENHANCED SCREENSHOT PLACEHOLDER 2: RESULTS -->
-    <div class="screenshot-box" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #86efac; padding: 0; overflow: hidden;">
-      <div style="background: linear-gradient(90deg, #059669 0%, #047857 100%); padding: 16px 24px; color: white; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 12px;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        Calculation Results — Nisab Met ✓
-      </div>
-      <div style="padding: 32px; background: white;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
-          <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 20px; text-align: center;">
-            <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 8px;">Pure Gold Content</div>
-            <div style="color: #059669; font-size: 1.8rem; font-weight: 700;">115.21g</div>
-          </div>
-          <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 20px; text-align: center;">
-            <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 8px;">Total Value</div>
-            <div style="color: #0369a1; font-size: 1.8rem; font-weight: 700;">SAR 66,937</div>
-          </div>
-          <div style="background: linear-gradient(135deg, #fef9c3 0%, #fde047 100%); border: 3px solid #eab308; border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(234, 179, 8, 0.2);">
-            <div style="color: #854d0e; font-size: 0.9rem; margin-bottom: 8px; font-weight: 600;">Zakat Due (2.5%)</div>
-            <div style="color: #a16207; font-size: 2rem; font-weight: 800;">SAR 1,673.43</div>
-          </div>
-          <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 20px; text-align: center;">
-            <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 8px;">Nisab Threshold</div>
-            <div style="color: #475569; font-size: 1.8rem; font-weight: 700;">87.48g</div>
-          </div>
-        </div>
-        
-        <div style="background: #f8fafc; border-radius: 8px; padding: 16px; border-left: 4px solid #0d9488;">
-          <div style="color: #334155; font-weight: 600; margin-bottom: 12px; font-size: 0.95rem;">📊 Calculation Breakdown:</div>
-          <ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 2;">
-            <li>Gold weight: 115.21g × SAR 581.00/g = SAR 66,937</li>
-            <li>Zakat rate: 2.5% of total value = <strong>SAR 1,673.43</strong></li>
-            <li>Nisab threshold (87.48g gold) confirmed met ✓</li>
-          </ul>
-        </div>
-      </div>
-      <div class="screenshot-caption" style="background: #f0fdf4; border-top: 1px solid #bbf7d0; color: #166534;">
-        <em>Figure 2: Calculator shows nisab status and exact Zakat amount in Saudi Riyals</em>
-      </div>
+  <!-- WORKED EXAMPLES SECTION -->
+  <div class="guide-section">
+    <h2>📊 Worked Examples: Gold Zakat Calculations</h2>
+    
+    <p>Let's walk through real calculations for different scenarios common in Saudi Arabia:</p>
+    
+    <!-- EXAMPLE 1 -->
+    <div class="example-box">
+      <h4>Example 1: Saudi Resident — Mixed Gold Jewelry</h4>
+      <p><strong>Scenario:</strong> Fatima from Riyadh owns the following gold jewelry:</p>
+      <ul style="margin:12px 0 12px 20px; line-height:2;">
+        <li>Gold necklace: 45 grams (22K)</li>
+        <li>Wedding bangles: 85 grams (21K)</li>
+        <li>Rings and earrings: 30 grams (18K)</li>
+      </ul>
+    </div>
+
+    <h3>Step-by-Step Calculation:</h3>
+    
+    <table class="calculation-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Weight</th>
+          <th>Karat</th>
+          <th>Purity</th>
+          <th>Pure Gold Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Necklace</td>
+          <td>45g</td>
+          <td>22K</td>
+          <td>91.67%</td>
+          <td>45 × 0.9167 = <strong>41.25g</strong></td>
+        </tr>
+        <tr>
+          <td>Bangles</td>
+          <td>85g</td>
+          <td>21K</td>
+          <td>87.5%</td>
+          <td>85 × 0.875 = <strong>74.38g</strong></td>
+        </tr>
+        <tr>
+          <td>Rings & Earrings</td>
+          <td>30g</td>
+          <td>18K</td>
+          <td>75%</td>
+          <td>30 × 0.75 = <strong>22.50g</strong></td>
+        </tr>
+        <tr style="background:#f0fdfa;">
+          <td colspan="4"><strong>Total Pure Gold</strong></td>
+          <td><strong style="color:#059669;">138.13 grams</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-highlight">
+      <strong>Nisab Check:</strong> 138.13g > 87.48g nisab threshold ✅ <strong>Zakat is DUE</strong>
+    </div>
+
+    <h4>Final Zakat Calculation (using SAR 581/gram):</h4>
+    <ul style="line-height: 2.2; margin-left: 20px;">
+      <li>Total pure gold value: 138.13g × SAR 581 = <strong>SAR 80,253.53</strong></li>
+      <li>Zakat @ 2.5%: SAR 80,253.53 × 0.025 = <strong>SAR 2,006.34</strong></li>
+    </ul>
+    
+    <div class="success-box">
+      <strong>Result:</strong> Fatima must pay <strong>SAR 2,006.34</strong> in Zakat.
+    </div>
+
+    <!-- EXAMPLE 2 -->
+    <div class="example-box" style="margin-top:32px;">
+      <h4>Example 2: Pakistani Expat — Gold Investment</h4>
+      <p><strong>Scenario:</strong> Ahmed, working in Jeddah, owns:</p>
+      <ul style="margin:12px 0 12px 20px; line-height:2;">
+        <li>24K gold bars: 100 grams (investment)</li>
+        <li>22K gold coins: 50 grams (gifts for family)</li>
+      </ul>
+    </div>
+
+    <table class="calculation-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Weight</th>
+          <th>Karat</th>
+          <th>Pure Gold</th>
+          <th>Value (SAR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>24K Gold Bars</td>
+          <td>100g</td>
+          <td>24K (100%)</td>
+          <td>100g</td>
+          <td>100 × 581 = 58,100</td>
+        </tr>
+        <tr>
+          <td>22K Gold Coins</td>
+          <td>50g</td>
+          <td>22K (91.67%)</td>
+          <td>45.84g</td>
+          <td>45.84 × 581 = 26,633</td>
+        </tr>
+        <tr style="background:#f0fdfa;">
+          <td colspan="3"><strong>Total</strong></td>
+          <td><strong>145.84g</strong></td>
+          <td><strong>SAR 84,733</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul style="line-height: 2.2; margin: 16px 0 16px 20px;">
+      <li>Total value: SAR 84,733</li>
+      <li>Zakat @ 2.5%: SAR 84,733 × 0.025 = <strong>SAR 2,118.33</strong></li>
+    </ul>
+
+    <div class="success-box">
+      <strong>Result:</strong> Ahmed must pay <strong>SAR 2,118.33</strong> in Zakat.
     </div>
   </div>
 
-  <!-- [REST OF THE PAGE CONTINUES WITH EXAMPLES, ISLAMIC RULING, FAQ, ETC. - SAME AS BEFORE] -->
-  <!-- For brevity, I'm showing just the screenshot section replacement -->
-  <!-- The rest of your content (examples, FAQs, footer, JavaScript) remains the same -->
+  <!-- ISLAMIC RULING SECTION -->
+  <div class="guide-section">
+    <h2>⚖️ Islamic Ruling: Do You Pay Zakat on Jewelry?</h2>
+    
+    <p>This is a common question among Saudi residents. Here's what major Islamic scholars say:</p>
+    
+    <div class="step-box">
+      <h4 style="margin-bottom:8px;">Hanbali Madhab (Majority View in Saudi Arabia)</h4>
+      <p><strong>Zakat IS payable on ALL gold jewelry</strong> — whether worn regularly or kept in storage. The nisab is 87.48 grams of pure gold. This is the official position of Saudi Arabia's Permanent Committee for Islamic Research.</p>
+    </div>
+
+    <div class="step-box">
+      <h4 style="margin-bottom:8px;">Hanafi Madhab (Alternative View)</h4>
+      <p>Some scholars exempt jewelry worn for <strong>personal use</strong> from Zakat. However, investment gold, coins, and bars are always subject to Zakat. Since Saudi Arabia follows Hanbali fiqh, residents should pay Zakat on all gold holdings to be safe.</p>
+    </div>
+
+    <div class="warning-box">
+      <strong>Important:</strong> When in doubt, pay Zakat. It's better to give extra than to neglect an obligation.
+    </div>
+
+    <h3>When Zakat Becomes Obligatory:</h3>
+    <ol style="line-height: 2.2; margin-left: 20px;">
+      <li><strong>Nisab Threshold:</strong> You own 87.48g+ of pure gold (or equivalent value)</li>
+      <li><strong>Hawl (Lunar Year):</strong> One Islamic year (354 days) has passed since you reached nisab</li>
+      <li><strong>Complete Ownership:</strong> The gold is fully yours (not borrowed or pledged)</li>
+      <li><strong>Freedom from Debt:</strong> You don't owe debts that would reduce your wealth below nisab</li>
+    </ol>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="guide-section faq-section">
+    <h2>❓ Frequently Asked Questions About Gold Zakat</h2>
+    
+    <details>
+      <summary>What is the nisab for gold in 2026?</summary>
+      <div class="faq-answer">
+        The nisab for gold is 87.48 grams (7.5 tola) of pure 24K gold. At current Saudi gold prices (June 2026), this equals approximately SAR 50,826. If you own gold worth this amount or more for one lunar year, you must pay 2.5% Zakat.
+      </div>
+    </details>
+
+    <details>
+      <summary>How is Zakat calculated on gold?</summary>
+      <div class="faq-answer">
+        Zakat on gold is calculated at 2.5% (or 1/40th) of the total value of your gold holdings. First, determine the pure gold content based on karat (24K=100%, 22K=91.67%, 21K=87.5%, 18K=75%). Multiply by current market price per gram, then multiply by 2.5%.
+      </div>
+    </details>
+
+    <details>
+      <summary>Do I pay Zakat on gold jewelry?</summary>
+      <div class="faq-answer">
+        According to the majority of Islamic scholars (including Hanbali madhab followed in Saudi Arabia), Zakat is payable on all gold jewelry regardless of whether it's worn regularly. The nisab threshold is 87.48 grams of pure gold.
+      </div>
+    </details>
+
+    <details>
+      <summary>What is the Zakat rate for gold?</summary>
+      <div class="faq-answer">
+        The Zakat rate for gold is 2.5% (one-fortieth or 1/40) of the total value. This rate has been fixed since the time of Prophet Muhammad (PBUH) and applies to all Muslims who meet the nisab threshold.
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I use silver nisab instead of gold nisab?</summary>
+      <div class="faq-answer">
+        Yes, some scholars allow using the silver nisab (612.36 grams) which is lower in value (approximately SAR 6,742 in 2026). This benefits those with assets between the two thresholds. However, most Saudi scholars recommend using gold nisab for gold holdings.
+      </div>
+    </details>
+
+    <details>
+      <summary>Do expatriates in Saudi Arabia pay Zakat on gold?</summary>
+      <div class="faq-answer">
+        Yes, Zakat is obligatory on all Muslims regardless of nationality or residence. If you're a Muslim expatriate living in Saudi Arabia and own gold meeting the nisab threshold for one lunar year, you must pay 2.5% Zakat.
+      </div>
+    </details>
+
+    <details>
+      <summary>What if I own gold for less than a year?</summary>
+      <div class="faq-answer">
+        Zakat is only due after you've owned gold meeting the nisab threshold for one complete lunar year (354 days). If you acquired gold 6 months ago, wait until the full year passes. However, you can pay Zakat voluntarily earlier if you wish.
+      </div>
+    </details>
+
+    <details>
+      <summary>How often should I check gold prices for Zakat calculation?</summary>
+      <div class="faq-answer">
+        Gold prices change daily in Saudi Arabia. For accurate Zakat calculation, check the current price on the day you calculate. You can find live prices at Saudi Gold & Jewellery Group website or local gold souq markets in Riyadh, Jeddah, or Dammam.
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I pay Zakat in cash instead of gold?</summary>
+      <div class="faq-answer">
+        Yes, absolutely. You pay the CASH VALUE of 2.5% of your gold. You don't give actual gold pieces. Use our calculator to get the SAR amount, then donate that cash to eligible recipients or Islamic charities.
+      </div>
+    </details>
+
+    <details>
+      <summary>Where can I pay Zakat in Saudi Arabia?</summary>
+      <div class="faq-answer">
+        You can pay through: (1) Official Saudi charities like Ehsan (eksan.org) or Birr (birr.com), (2) Local mosques and Islamic centers, (3) Directly to poor and needy individuals, (4) ZATCA for official Zakat collection. Always get a receipt for your records.
+      </div>
+    </details>
+  </div>
+
+  <!-- RELATED TOOLS & BLOGS SECTION -->
+  <div class="related-section">
+    <h3> Related Free Tools</h3>
+    <div class="tools-grid">
+      <a href="/silver-zakat-calculator.html" class="tool-card">
+        <h4>💰 Silver Zakat Calculator</h4>
+        <p>Calculate Zakat on silver holdings. Nisab: 612.36g. Updated for 2026.</p>
+      </a>
+      <a href="/zakat-calculator.html" class="tool-card">
+        <h4>📊 Complete Zakat Calculator</h4>
+        <p>Calculate Zakat on cash, gold, silver, investments & business assets.</p>
+      </a>
+      <a href="/gold-prices.html" class="tool-card">
+        <h4>📈 Live Saudi Gold Prices</h4>
+        <p>Check today's gold prices in SAR for 24K, 22K, 21K, and 18K.</p>
+      </a>
+      <a href="/gosi-calculator.html" class="tool-card">
+        <h4>🏢 GOSI Calculator</h4>
+        <p>Calculate social insurance contributions for Saudi employees.</p>
+      </a>
+    </div>
+
+    <h3>📚 Related Blog Posts</h3>
+    <div class="blog-grid">
+      <a href="/blog/gold-zakat-guide-2026.html" class="blog-card">
+        <h4>Complete Guide to Gold Zakat in Saudi Arabia 2026</h4>
+        <p>Everything you need to know about calculating and paying Zakat on gold, including latest nisab rates and scholarly opinions.</p>
+        <div class="blog-meta">
+          <span>📅 June 2026</span>
+          <span>⏱️ 12 min read</span>
+        </div>
+      </a>
+      <a href="/blog/zakat-on-jewelry-ruling.html" class="blog-card">
+        <h4>Zakat on Jewelry: Scholarly Opinions Explained</h4>
+        <p>Detailed comparison of Hanbali, Hanafi, Shafi'i, and Maliki views on paying Zakat on personal jewelry.</p>
+        <div class="blog-meta">
+          <span>📅 May 2026</span>
+          <span>⏱️ 8 min read</span>
+        </div>
+      </a>
+      <a href="/blog/gold-prices-saudi-arabia.html" class="blog-card">
+        <h4>Gold Prices in Saudi Arabia: Trends & Forecast 2026</h4>
+        <p>Analysis of gold price trends in Saudi Arabia, factors affecting prices, and where to buy gold at best rates.</p>
+        <div class="blog-meta">
+          <span>📅 June 2026</span>
+          <span>⏱️ 10 min read</span>
+        </div>
+      </a>
+      <a href="/blog/zakat-calculation-examples.html" class="blog-card">
+        <h4>Zakat Calculation: 10 Real Examples for Expats</h4>
+        <p>Step-by-step Zakat calculations for different scenarios: salary earners, business owners, investors, and mixed assets.</p>
+        <div class="blog-meta">
+          <span>📅 April 2026</span>
+          <span>⏱️ 15 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
 </main>
 
-<!-- FOOTER & COOKIE CONSENT (Same as before) -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -1000,8 +1256,8 @@
         <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
         <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
         <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
-        <a href="https://www.saudiutilityhub.com/salary-slip-generator.html">Salary Slip</a>
-        <a href="https://www.saudiutilityhub.com/salary-certificate.html">Salary Certificate</a>
+        <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a>
+        <a href="https://www.saudiutilityhub.com/silver-zakat-calculator.html">Silver Zakat</a>
       </div>
       <div class="footer-col">
         <h4>🪪 Expat Tools</h4>
@@ -1015,6 +1271,13 @@
         <a href="https://www.saudiutilityhub.com/saudi-iban-validator.html">IBAN Validator</a>
         <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance Compare</a>
         <a href="https://www.saudiutilityhub.com/currency-converter.html">Currency Converter</a>
+      </div>
+      <div class="footer-col">
+        <h4>📚 Resources</h4>
+        <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
+        <a href="https://www.saudiutilityhub.com/blog/gold-zakat-guide-2026.html">Zakat Guide</a>
+        <a href="https://www.saudiutilityhub.com/blog/saudi-salary-guide.html">Salary Guide</a>
+        <a href="https://www.saudiutilityhub.com/blog/gosi-guide.html">GOSI Guide</a>
       </div>
       <div class="footer-col">
         <h4>ℹ️ About</h4>
