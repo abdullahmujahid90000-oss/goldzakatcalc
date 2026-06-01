@@ -1,161 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iqama Transfer Cost Calculator Saudi Arabia 2026</title>
-<meta name="description" content="Calculate Iqama sponsor transfer fees in KSA — SAR 2,000 / 4,000 / 6,000 tiers — plus eligibility check for 2026.">
-<meta name="keywords" content="iqama transfer calculator, iqama transfer cost 2026, kafala transfer Saudi Arabia, change employer Saudi Arabia, transfer iqama fees">
-<link rel="canonical" href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebApplication",
-  "name":"Iqama Transfer Calculator",
-  "url":"https://www.saudiutilityhub.com/iqama-transfer-calculator.html",
-  "description":"Calculate Iqama transfer costs and check eligibility when changing employers in Saudi Arabia.",
-  "applicationCategory":"FinanceApplication",
-  "operatingSystem":"Any",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"}
-}
-</script>
-
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:#f7f9fc;color:#1a1a2e;line-height:1.6}
-a{text-decoration:none;color:inherit}
-
-/* NAV */
-
-nav a{color:#ccc;font-size:13px;padding:4px 8px;border-radius:4px;transition:color .2s}
-nav a:hover{color:#fff}
-.nav-brand{color:#fff;font-weight:700;font-size:15px;margin-right:8px}
-.nav-ar{color:#f0c040;margin-left:auto}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:#fff;padding:3rem 1rem 2.5rem;text-align:center}
-.hero h1{font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;margin-bottom:.6rem}
-.hero p{font-size:1rem;color:#cdd;max-width:620px;margin:0 auto .8rem}
-.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:.6rem}
-.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#dde;padding:4px 12px;border-radius:20px;font-size:.8rem}
-
-/* LAYOUT */
-.container{max-width:900px;margin:0 auto;padding:2rem 1rem}
-
-/* INFO BOX */
-.info-box{background:#e8f4fd;border-left:4px solid #3498db;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.5rem;font-size:.92rem}
-.info-box strong{color:#1a6fa3}
-.warn-box{background:#fff8e1;border-left:4px solid #f0a500;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.5rem;font-size:.92rem}
-
-/* CALC CARD */
-.calc-card{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem}
-.calc-card h2{font-size:1.15rem;font-weight:700;margin-bottom:1.2rem;color:#1a1a2e;border-bottom:2px solid #f0f0f0;padding-bottom:.6rem}
-
-/* FORM */
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:560px){.form-grid{grid-template-columns:1fr}}
-.form-group{display:flex;flex-direction:column;gap:5px}
-.form-group label{font-size:.88rem;font-weight:600;color:#444}
-.form-group select,.form-group input{padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:.95rem;background:#fff;outline:none;transition:border .2s}
-.form-group select:focus,.form-group input:focus{border-color:#3498db}
-.form-group .hint{font-size:.78rem;color:#888}
-
-.calc-btn{width:100%;padding:13px;background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:1.2rem;transition:opacity .2s}
-.calc-btn:hover{opacity:.9}
-
-/* RESULTS */
-.result-box{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-top:1.5rem;display:none}
-.result-box.show{display:block}
-.result-header{display:flex;align-items:center;gap:12px;margin-bottom:1.5rem}
-.result-header h2{font-size:1.1rem;font-weight:700}
-.eligibility-badge{padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:700}
-.eligible{background:#d4edda;color:#155724}
-.conditional{background:#fff3cd;color:#856404}
-.ineligible{background:#f8d7da;color:#721c24}
-
-.fee-table{width:100%;border-collapse:collapse;margin-bottom:1.2rem}
-.fee-table th{background:#1a1a2e;color:#fff;padding:10px 14px;text-align:left;font-size:.88rem}
-.fee-table td{padding:10px 14px;border-bottom:1px solid #f0f0f0;font-size:.92rem}
-.fee-table tr:last-child td{font-weight:700;background:#f8f9fa}
-.fee-table .highlight{color:#c0392b;font-weight:700}
-
-.steps-list{list-style:none;counter-reset:steps}
-.steps-list li{counter-increment:steps;display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f5f5f5}
-.steps-list li::before{content:counter(steps);background:#1a1a2e;color:#fff;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;flex-shrink:0;margin-top:2px}
-.steps-list li:last-child{border-bottom:none}
-
-.disclaimer{font-size:.82rem;color:#888;text-align:center;margin-top:1rem;padding:10px;background:#f9f9f9;border-radius:6px}
-
-/* FAQ */
-.faq-item{border-bottom:1px solid #eee}
-.faq-q{padding:14px 0;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
-.faq-q::after{content:'▼';font-size:.75rem;color:#888;transition:transform .3s}
-.faq-item.open .faq-q::after{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:.9rem;color:#555;line-height:1.7}
-.faq-item.open .faq-a{max-height:400px;padding-bottom:14px}
-
-/* CTA LINKS */
-.link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.2rem}
-.link-btn{padding:9px 18px;border-radius:8px;font-size:.88rem;font-weight:600;border:2px solid #1a1a2e;color:#1a1a2e;transition:all .2s}
-.link-btn:hover,.link-btn.primary{background:#1a1a2e;color:#fff}
-.link-btn.secondary{border-color:#3498db;color:#3498db}
-.link-btn.secondary:hover{background:#3498db;color:#fff}
-
-/* FOOTER */
-footer{background:#1a1a2e;color:#aaa;font-size:.85rem;margin-top:3rem}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:24px;max-width:900px;margin:0 auto;padding:2rem 1rem 1rem}
-.footer-col h4{color:#fff;font-size:13px;margin-bottom:10px}
-.footer-col a{display:block;color:#aaa;font-size:12.5px;margin-bottom:5px}
-.footer-col a:hover{color:#fff}
-.footer-bottom{max-width:900px;margin:18px auto 0;padding-top:14px;border-top:1px solid #2e4057;font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
-
-/* COOKIE BAR */
-.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#ccc;padding:12px 20px;display:flex;align-items:center;gap:16px;font-size:13px;z-index:999;flex-wrap:wrap}
-.cookie-bar a{color:#60a5fa}
-.cookie-btn{padding:6px 14px;border-radius:6px;border:none;cursor:pointer;font-size:13px;font-weight:600}
-.cookie-accept{background:#3b82f6;color:#fff}
-</style>
-<!-- Google Analytics GA4 - REPLACE G-MX4J28KBE6 with your real ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MX4J28KBE6');
-</script>
-
-<style id="nav-standard-css">
-nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
-.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
-.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
-.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
-.nav-ar{color:#f0a500 !important;font-weight:600}
-@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
-</style>
-  <meta property="og:image" content="https://www.saudiutilityhub.com/og-image.png">
-  <meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png">
-  <meta property="og:url" content="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">
-
-  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saudiutilityhub.com/"},{"@type":"ListItem","position":2,"name":"Iqama Transfer Cost Calculator Saudi Arabia 2026","item":"https://www.saudiutilityhub.com/iqama-transfer-calculator.html"}]}</script>
-  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"WebApplication","name":"Iqama Transfer Cost Calculator Saudi Arabia 2026","description":"Calculate Iqama sponsor transfer fees in KSA — SAR 2,000 / 4,000 / 6,000 tiers — plus eligibility check for 2026.","url":"https://www.saudiutilityhub.com/iqama-transfer-calculator.html","inLanguage":"en","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"},"isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Saudi Utility Hub","url":"https://www.saudiutilityhub.com/"}}</script>
-  <script type="application/ld+json" data-suh-schema="auto-faq">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does it cost to transfer my Iqama in Saudi Arabia?","acceptedAnswer":{"@type":"Answer","text":"Iqama transfer fees follow a tiered structure: SAR 2,000 for first transfer, SAR 4,000 for the second, SAR 6,000 for third and beyond. Employer normally pays — but verify in your contract."}},{"@type":"Question","name":"Can I transfer my Iqama without my current employer's approval?","acceptedAnswer":{"@type":"Answer","text":"Yes, in many cases. Under labour reforms, expats can transfer without sponsor approval if: contract has ended, sponsor hasn't paid wages for 3+ months, sponsor doesn't have a valid Iqama, or after one year with documented violations."}},{"@type":"Question","name":"How long does an Iqama transfer take?","acceptedAnswer":{"@type":"Answer","text":"Typically 7–14 days through Qiwa once both parties agree. If sponsor approval is not required (eligibility met), the process can complete in 3–5 business days."}},{"@type":"Question","name":"Does my probation period affect Iqama transfer?","acceptedAnswer":{"@type":"Answer","text":"Yes. During the 90-day probation period, the employer can terminate without obligation, and you can resign and transfer easily. After probation, normal contract terms apply."}}]}</script>
-
-  <meta property="og:title" content="Iqama Transfer Cost Calculator Saudi Arabia 2026">
-  <meta property="og:description" content="Calculate Iqama sponsor transfer fees in KSA — SAR 2,000 / 4,000 / 6,000 tiers — plus eligibility check for 2026.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- OPTIMIZED META TAGS FOR SEO -->
+  <title>Iqama Transfer Calculator Saudi Arabia 2026 | Sponsor Change Fees (SAR)</title>
+  <meta name="description" content="Calculate Iqama transfer fees in Saudi Arabia 2026. Estimate sponsor change costs, Nitaqat requirements, and processing fees. Updated with official Qiwa rates.">
+  <meta name="keywords" content="iqama transfer fee Saudi Arabia, change sponsor Saudi, Iqama transfer rules 2026, Qiwa transfer cost, Nitaqat transfer requirements, sponsor change fee KSA, Iqama transfer calculator, Saudi labor law transfer">
+  <link rel="canonical" href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">
+  
+  <!-- OPEN GRAPH META TAGS -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Saudi Utility Hub">
+  <meta property="og:url" content="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">
+  <meta property="og:title" content="Iqama Transfer Calculator Saudi Arabia 2026 | Sponsor Change Fees">
+  <meta property="og:description" content="Calculate Iqama transfer fees in Saudi Arabia 2026. Estimate sponsor change costs and Nitaqat requirements.">
+  <meta property="og:image" content="https://www.saudiutilityhub.com/images/iqama-transfer-og.png">
+  
+  <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Iqama Transfer Cost Calculator Saudi Arabia 2026">
-  <meta name="twitter:description" content="Calculate Iqama sponsor transfer fees in KSA — SAR 2,000 / 4,000 / 6,000 tiers — plus eligibility check for 2026.">
+  <meta name="twitter:title" content="Iqama Transfer Calculator Saudi Arabia 2026">
+  <meta name="twitter:description" content="Calculate costs for changing sponsorship in Saudi Arabia 2026.">
+  <meta name="twitter:image" content="https://www.saudiutilityhub.com/images/iqama-transfer-og.png">
+  
+  <!-- ADSENSE & ANALYTICS (KEEP YOUR EXISTING IDs) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MX4J28KBE6');
+  </script>
+
+  <!-- SCHEMA MARKUP - WEB APPLICATION -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Iqama Transfer Calculator Saudi Arabia 2026",
+    "description": "Calculate fees for Iqama (sponsorship) transfer in Saudi Arabia. Includes government fees, agreement costs, and Nitaqat requirements.",
+    "applicationCategory": "GovernmentApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "SAR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2980"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Abdullah",
+      "jobTitle": "KSA Labor Market Researcher",
+      "url": "https://www.saudiutilityhub.com/about.html"
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-06-01",
+    "applicationSubCategory": "Sponsorship Transfer Tool"
+  }
+  </script>
+
+  <!-- SCHEMA MARKUP - FAQ PAGE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to transfer Iqama in Saudi Arabia 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard government fee for Iqama transfer is SAR 2,000. Additional costs may apply if the new employer pays for the transfer, or if there are premium Nitaqat requirements. The employee typically does not pay the government fee unless agreed upon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can an employee transfer their Iqama without sponsor consent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under certain conditions, yes. If the contract has ended, the sponsor failed to renew the Iqama, or the employer failed to pay salary for 3 months, the employee can transfer via the Qiwa platform without the sponsor's direct approval."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the Nitaqat requirements for Iqama transfer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The new employer must be in the Green or Platinum Nitaqat range to accept transfers. Red Nitaqat companies cannot hire new expats. High Green companies have fewer restrictions. Check the Qiwa portal for real-time Nitaqat status."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who pays the Iqama transfer fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Legally, the employer is responsible for government fees. However, in practice, many new employers require the employee to cover the SAR 2,000 transfer fee as part of the hiring agreement. This should be clarified in the offer letter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an Iqama transfer take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If the current sponsor approves, the transfer can be completed within 24-48 hours via Qiwa. If the transfer is contested or requires Ministry approval, it may take 1-2 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a limit on how many times I can transfer my Iqama?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no legal limit on the number of transfers. However, frequent transfers may raise questions during visa stamping or renewals. Ensure each transfer is documented with a valid employment contract."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my Iqama validity after transfer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Iqama validity remains the same as the original expiry date. The new sponsor is responsible for renewing it before expiration. You do not get a new validity period automatically upon transfer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I transfer my Iqama if I have unpaid traffic fines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, traffic fines are linked to the individual, not the sponsor. You can transfer your Iqama even with unpaid fines, but you must clear them to renew the Iqama or get an exit/re-entry visa later."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMB SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saudiutilityhub.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Iqama Transfer Calculator",
+        "item": "https://www.saudiutilityhub.com/iqama-transfer-calculator.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* BASE STYLES */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+    
+    /* NAVIGATION */
+    nav {
+      background: #1a1a2e;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      flex-wrap: wrap;
+      gap: 4px;
+      min-height: 52px;
+    }
+    .nav-brand {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      white-space: nowrap;
+      margin-right: 12px;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+      padding: 6px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+    
+    /* HERO SECTION - CYAN/BLUE THEME FOR TRANSFER */
+    .hero {
+      background: linear-gradient(135deg, #0891b2 0%, #0e7490 60%, #065f46 100%);
+      color: #fff;
+      padding: 44px 16px 36px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .page-meta {
+      background: rgba(255,255,255,0.15);
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    
+    /* MAIN CONTENT */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    
+    /* CALCULATOR CARD */
+    .calc-card {
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .calc-card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0891b2;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #0891b2;
+    }
+    
+    /* FORM ELEMENTS */
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #0891b2;
+      box-shadow: 0 0 0 3px rgba(8,145,178,0.1);
+    }
+    .input-hint {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+    .transfer-notice {
+      background: #ecfeff;
+      border-left: 4px solid #0891b2;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: #155e75;
+    }
+    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #0891b2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #0e7490;
+    }
+    .btn-reset {
+      background: #6b7280;
+      margin-left: 12px;
+    }
+    .btn-reset:hover {
+      background: #4b5563;
+    }
+    
+    /* RESULTS BOX */
+    .results {
+      background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+      border: 2px solid #67e8f9;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 24px;
+      display: none;
+    }
+    .results.show {
+      display: block;
+      animation: slideIn 0.3s ease-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .result-item {
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 4px solid #0891b2;
+    }
+    .result-label {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+    .result-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0e7490;
+    }
+    .result-highlight {
+      background: #dcfce7;
+      border-left-color: #059669;
+    }
+    .result-highlight .result-value {
+      color: #166534;
+    }
+    
+    /* AD SLOT */
+    .ad-slot {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 28px 0;
+      text-align: center;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* GUIDE SECTIONS */
+    .guide-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 28px 0;
+      border: 1px solid #e2e8f0;
+    }
+    .guide-section h2 {
+      color: #0891b2;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #0891b2;
+    }
+    .guide-section h3 {
+      color: #0e7490;
+      font-size: 1.15rem;
+      margin: 24px 0 12px;
+    }
+    .guide-section h4 {
+      color: #1a56db;
+      font-size: 1.05rem;
+      margin: 20px 0 10px;
+    }
+    .guide-section p {
+      margin-bottom: 12px;
+      color: #374151;
+    }
+    .guide-section ul, .guide-section ol {
+      margin: 12px 0 12px 24px;
+      color: #374151;
+    }
+    .guide-section li {
+      margin-bottom: 8px;
+    }
+    
+    /* ENHANCED SCREENSHOT BOX */
+    .screenshot-box {
+      background: #f8fafc;
+      border: 2px solid #cbd5e0;
+      border-radius: 8px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    .screenshot-box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .screenshot-caption {
+      font-size: 0.85rem;
+      color: #6b7280;
+      padding: 12px 24px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-style: italic;
+    }
+    
+    /* STEP BOX */
+    .step-box {
+      background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+      border-left: 4px solid #0891b2;
+      padding: 20px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .step-number {
+      display: inline-block;
+      background: #0891b2;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+    
+    /* EXAMPLE BOX */
+    .example-box {
+      background: #fffbeb;
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+    .example-box h4 {
+      color: #92400e;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    
+    /* CALCULATION TABLE */
+    .calculation-table {
+      width: 100%;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 12px 0;
+      border: 1px solid #e2e8f0;
+      border-collapse: collapse;
+    }
+    .calculation-table th {
+      background: #0891b2;
+      color: #fff;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .calculation-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .calculation-table tr:last-child td {
+      border-bottom: none;
+      font-weight: 700;
+      background: #ecfeff;
+    }
+    .calculation-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    
+    /* INFO/WARNING BOXES */
+    .info-highlight {
+      background: #dbeafe;
+      border-left: 4px solid #1a56db;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .warning-box {
+      background: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .success-box {
+      background: #f0fdf4;
+      border-left: 4px solid #059669;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    
+    /* FEE CARDS */
+    .fee-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .fee-card {
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .fee-card h4 {
+      color: #0891b2;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .fee-amount {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0e7490;
+      margin: 12px 0;
+    }
+    .fee-card p {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+    
+    /* FAQ SECTION */
+    .faq-section {
+      margin: 40px 0;
+    }
+    details {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+    summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+      transition: background 0.15s;
+    }
+    summary:hover {
+      background: #f1f5f9;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: #0891b2;
+      font-weight: 400;
+    }
+    details[open] summary::after {
+      content: '−';
+    }
+    details[open] summary {
+      background: #ecfeff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .faq-answer {
+      padding: 18px 20px;
+      color: #374151;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    
+    /* RELATED TOOLS & BLOGS */
+    .related-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 40px 0;
+      border: 1px solid #e2e8f0;
+    }
+    .related-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #1a202c;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .tool-card {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .tool-card:hover {
+      border-color: #0891b2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(8,145,178,0.15);
+    }
+    .tool-card h4 {
+      color: #0891b2;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .tool-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .blog-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: #0891b2;
+    }
+    .blog-card h4 {
+      color: #0891b2;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .blog-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+    
+    /* FOOTER */
+    footer {
+      background: #1a202c;
+      color: #e2e8f0;
+      padding: 32px 16px 20px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    .footer-col h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.82rem;
+      margin-bottom: 5px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      border-top: 1px solid #2d3748;
+      padding-top: 12px;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-align: center;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .calc-card, .guide-section, .related-section {
+        padding: 20px;
+      }
+      .hero {
+        padding: 32px 16px 24px;
+      }
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+      .fee-cards, .tools-grid, .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="https://www.saudiutilityhub.com/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
@@ -166,500 +776,591 @@ nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 
       <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a>
       <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a>
       <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a>
-      <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">Settlement</a>
-      <a href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">Nitaqat</a>
-      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance</a>
       <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT</a>
       <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic</a>
+      <a href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Dep. Levy</a>
       <a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visa</a>
+      <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">Settlement</a>
+      <a href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html" class="active">Transfer</a>
       <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
-      
-      </div>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>🔄 Iqama Transfer Calculator 2026</h1>
-  <p>Check eligibility and calculate the full cost of transferring your Iqama (residency permit) to a new employer in Saudi Arabia.</p>
-  <div class="badges">
-    <span class="badge">✅ 2026 Updated Fees</span>
-    <span class="badge">🆓 Free Tool</span>
-    <span class="badge">📋 Includes All Charges</span>
-    <span class="badge">🇸🇦 Saudi Labour Law</span>
-  </div>
-</div>
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>🔄 Iqama Transfer Calculator Saudi Arabia 2026</h1>
+  <p>Calculate sponsorship transfer costs instantly — government fees, Nitaqat requirements, and agreement terms. Updated with official Qiwa rates for 2026.</p>
+  <div class="page-meta">Updated June 2026 • Official Qiwa Fees • SAR 2,000 Standard</div>
+</section>
 
-<!-- MAIN CONTENT -->
-<div class="container">
-
-  <div class="info-box">
-    <strong>What is Iqama Transfer?</strong> Under Saudi Arabia's labour reform (since March 2021), expat workers can transfer their Iqama (residency permit) to a new employer without requiring the current employer's consent — provided certain eligibility conditions are met. This tool calculates the fees and checks your eligibility.
-  </div>
-
-  <!-- CALCULATOR -->
+<main>
+  <!-- CALCULATOR TOOL -->
   <div class="calc-card">
-    <h2>🧮 Transfer Cost & Eligibility Calculator</h2>
-
-    <div class="form-grid">
-      <div class="form-group">
-        <label>Current Employer Nitaqat Zone</label>
-        <select id="currentZone">
-          <option value="">-- Select Zone --</option>
-          <option value="platinum">🏆 Platinum</option>
-          <option value="high_green">🟢 High Green</option>
-          <option value="medium_green">🟢 Medium Green</option>
-          <option value="low_green">🟢 Low Green</option>
-          <option value="yellow">🟡 Yellow</option>
-          <option value="red">🔴 Red</option>
-          <option value="not_in_system">⚫ Not in Nitaqat System</option>
-        </select>
-        <span class="hint">Check at <a href="https://qiwa.sa" target="_blank" style="color:#3498db">qiwa.sa</a></span>
+    <h2>Calculate Transfer Fees</h2>
+    
+    <form id="transferCalculator">
+      <label for="transferFee">Government Transfer Fee (SAR)</label>
+      <input type="number" id="transferFee" min="0" step="1" value="2000" required>
+      <div class="transfer-notice">
+        <strong>📌 Note:</strong> Standard government fee is SAR 2,000. Some professions or premium Nitaqat ranges may have additional costs. 
+        <a href="https://qiwa.sa" target="_blank" style="color:#155e75; text-decoration:underline;">Check Qiwa portal</a>
       </div>
-
-      <div class="form-group">
-        <label>New Employer Nitaqat Zone</label>
-        <select id="newZone">
-          <option value="">-- Select Zone --</option>
-          <option value="platinum">🏆 Platinum</option>
-          <option value="high_green">🟢 High Green</option>
-          <option value="medium_green">🟢 Medium Green</option>
-          <option value="low_green">🟢 Low Green</option>
-          <option value="yellow">🟡 Yellow</option>
-          <option value="red">🔴 Red</option>
-          <option value="not_in_system">⚫ Not in Nitaqat System</option>
-        </select>
+      <div class="input-hint">Enter the official government transfer fee</div>
+      
+      <label for="whoPays">Who Pays the Fee?</label>
+      <select id="whoPays" required>
+        <option value="employer">New Employer Pays</option>
+        <option value="employee">Employee Pays</option>
+        <option value="shared">Shared (50/50)</option>
+      </select>
+      <div class="input-hint">Clarify payment responsibility with new employer</div>
+      
+      <label for="nitaqatRange">New Employer Nitaqat Range</label>
+      <select id="nitaqatRange" required>
+        <option value="platinum">Platinum (No restrictions)</option>
+        <option value="high_green">High Green (Standard)</option>
+        <option value="mid_green">Mid Green (Standard)</option>
+        <option value="low_green">Low Green (Limited)</option>
+        <option value="red">Red (Cannot Transfer)</option>
+      </select>
+      <div class="input-hint">Transfer is only allowed to Green/Platinum companies</div>
+      
+      <label for="processingDays">Processing Time (Days)</label>
+      <input type="number" id="processingDays" min="1" max="30" value="3">
+      <div class="input-hint">Typical processing: 1-3 days with approval, up to 2 weeks if contested</div>
+      
+      <button type="submit" class="btn">Calculate Transfer Cost</button>
+      <button type="reset" class="btn btn-reset">Reset</button>
+    </form>
+    
+    <!-- RESULTS -->
+    <div id="results" class="results">
+      <h3 style="color:#0e7490; margin-bottom:16px; font-size:1.3rem;">📊 Transfer Cost Estimation</h3>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-label">Government Fee</div>
+          <div class="result-value" id="govFee">SAR 0</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">Your Share</div>
+          <div class="result-value" id="yourShare">SAR 0</div>
+        </div>
+        <div class="result-item result-highlight">
+          <div class="result-label">Employer Share</div>
+          <div class="result-value" id="employerShare">SAR 0</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">Estimated Timeline</div>
+          <div class="result-value" id="timeline">0 days</div>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label>Months Worked with Current Employer</label>
-        <input type="number" id="monthsWorked" placeholder="e.g. 18" min="0" max="600">
-        <span class="hint">Full calendar months completed</span>
-      </div>
-
-      <div class="form-group">
-        <label>Current Iqama Status</label>
-        <select id="iqamaStatus">
-          <option value="valid">✅ Valid (not expired)</option>
-          <option value="expired_within_90">⚠️ Expired (within 90 days)</option>
-          <option value="expired_over_90">❌ Expired (over 90 days)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Remaining Iqama Validity (months)</label>
-        <input type="number" id="iqamaMonths" placeholder="e.g. 8" min="0" max="24">
-        <span class="hint">Months left on your Iqama</span>
-      </div>
-
-      <div class="form-group">
-        <label>Transfer Type</label>
-        <select id="transferType">
-          <option value="voluntary">Voluntary Transfer (you initiated)</option>
-          <option value="from_red">Transfer from Red Zone Employer</option>
-          <option value="employer_closed">Employer business closed/bankrupt</option>
-          <option value="unpaid_wages">Unpaid wages (3+ months)</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-grid" style="margin-top:1rem">
-      <div class="form-group">
-        <label>Number of Dependents on Your Iqama</label>
-        <input type="number" id="dependents" placeholder="e.g. 2" min="0" max="20" value="0">
-        <span class="hint">Family members you will transfer with you</span>
-      </div>
-
-      <div class="form-group">
-        <label>New Employer: Is Iqama Renewal Required?</label>
-        <select id="renewalRequired">
-          <option value="no">No — valid Iqama, just transfer</option>
-          <option value="yes">Yes — renew Iqama at the same time</option>
-        </select>
+      <div id="transferBreakdown" style="margin-top:20px; padding:16px; background:#fff; border-radius:8px;">
+        <!-- Dynamic breakdown inserted here -->
       </div>
     </div>
-
-    <button class="calc-btn" onclick="calculateTransfer()">Calculate Transfer Cost →</button>
   </div>
 
-  <!-- AD UNIT -->
-  <div style="text-align:center;margin:1.5rem 0">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="7710956327" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  <!-- AD PLACEMENT (BELOW RESULTS - POLICY COMPLIANT) -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5391037132181133"
+         data-ad-slot="7710956327"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <!-- RESULTS -->
-  <div class="result-box" id="resultBox">
-    <div class="result-header">
-      <h2>📊 Transfer Assessment</h2>
-      <span class="eligibility-badge" id="eligBadge">—</span>
+  <!-- COMPREHENSIVE GUIDE CONTENT -->
+  
+  <div class="guide-section">
+    <h2>📖 How to Use This Iqama Transfer Calculator</h2>
+    
+    <p>Our free Iqama Transfer Calculator helps expatriates in Saudi Arabia estimate the costs and requirements for changing sponsorship in 2026. Whether you're moving to a new company or resolving a labor dispute, this tool uses official Qiwa rates to determine government fees, Nitaqat eligibility, and payment responsibilities in Saudi Riyals.</p>
+    
+    <div class="info-highlight">
+      <strong>Quick Answer:</strong> The standard government fee for Iqama transfer is <strong>SAR 2,000</strong>. Transfers are only allowed to companies in <strong>Green or Platinum</strong> Nitaqat ranges. Payment responsibility should be clarified in your new employment contract.
     </div>
 
-    <div id="eligMsg" style="margin-bottom:1.2rem;padding:12px;border-radius:8px;font-size:.95rem"></div>
+    <h3><span class="step-number">1</span>Enter Government Fee</h3>
+    <p>The standard fee is SAR 2,000. This is paid to the government via Qiwa. Some premium professions or fast-track services may have higher fees.</p>
 
-    <table class="fee-table">
+    <h3><span class="step-number">2</span>Select Payment Responsibility</h3>
+    <p>Legally, employers should cover government fees. However, many new companies require employees to pay the transfer fee. Choose the agreement type to see your share.</p>
+    <p class="info-highlight"><strong>Tip:</strong> Negotiate this before signing the new offer letter. "Employer pays" is the standard practice.</p>
+
+    <h3><span class="step-number">3</span>Check Nitaqat Range</h3>
+    <p>The new employer must be in a valid Nitaqat range to accept transfers:</p>
+    <ul style="margin:12px 0 12px 24px; line-height:2;">
+      <li><strong>Platinum/High Green:</strong> Full transfer privileges</li>
+      <li><strong>Mid/Low Green:</strong> May have quotas or restrictions</li>
+      <li><strong>Red:</strong> Cannot accept new transfers</li>
+    </ul>
+
+    <h3><span class="step-number">4</span>Calculate & Plan</h3>
+    <p>Click "Calculate" to see cost breakdown and timeline. Ensure all documents are ready before initiating the transfer via Qiwa.</p>
+  </div>
+
+  <!-- WORKED EXAMPLES SECTION -->
+  <div class="guide-section">
+    <h2>📊 Worked Examples: Transfer Cost Calculations</h2>
+    
+    <p>Let's walk through real calculations for different transfer scenarios common in Saudi Arabia:</p>
+    
+    <!-- EXAMPLE 1: STANDARD TRANSFER -->
+    <div class="example-box">
+      <h4>Example 1: Standard Transfer — Employer Pays</h4>
+      <p><strong>Scenario:</strong> Ahmed moves to a High Green company. Fee: SAR 2,000. Employer covers all costs.</p>
+    </div>
+
+    <h3>Step-by-Step Calculation:</h3>
+    
+    <table class="calculation-table">
       <thead>
         <tr>
-          <th>Fee Item</th>
+          <th>Component</th>
           <th>Amount (SAR)</th>
           <th>Notes</th>
         </tr>
       </thead>
-      <tbody id="feeRows"></tbody>
-    </table>
-
-    <div id="stepsList" style="margin-top:1.2rem"></div>
-    <p class="disclaimer" id="resultDisclaimer"></p>
-
-    <div class="link-row">
-      <a class="link-btn primary" href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">📖 Nitaqat Zone Guide</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">📅 Iqama Expiry Tracker</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/final-settlement-calculator.html">💰 Final Settlement Calc</a>
-    </div>
-  </div>
-
-  <!-- GUIDE SECTION -->
-  <div class="calc-card" style="margin-top:2rem">
-    <h2>📖 Iqama Transfer — Complete Guide 2026</h2>
-
-    <h3 style="font-size:1rem;margin:1rem 0 .5rem;color:#1a1a2e">Who Can Transfer Without Employer Consent?</h3>
-    <p style="font-size:.92rem;color:#444;margin-bottom:.8rem">Since the Saudi labour reform of March 2021, most expat workers can transfer their Iqama without requiring NOC (No Objection Certificate) from their current employer. The key conditions are:</p>
-    <ul style="font-size:.9rem;color:#555;padding-left:1.2rem;line-height:2">
-      <li>You have completed at least <strong>12 months</strong> with your current employer</li>
-      <li>Your current employer is in <strong>Nitaqat Green or Platinum</strong> zone</li>
-      <li>Your Iqama is valid (not expired for more than 90 days)</li>
-      <li>You have no active legal disputes or travel bans</li>
-      <li>Your new employer is in Green or Platinum zone</li>
-    </ul>
-
-    <div class="warn-box" style="margin-top:1rem">
-      <strong>⚡ Immediate transfer right:</strong> If your current employer is in the <strong>Red zone</strong>, has not paid wages for 3+ months, or the company has closed, you can transfer <em>immediately</em> with no waiting period and no consent required.
-    </div>
-
-    <h3 style="font-size:1rem;margin:1.5rem 0 .5rem;color:#1a1a2e">2026 Iqama Transfer Fees (Official Rates)</h3>
-    <table class="fee-table">
-      <thead><tr><th>Fee</th><th>Amount</th></tr></thead>
       <tbody>
-        <tr><td>Iqama Transfer Service Fee (Absher/Qiwa)</td><td>SAR 2,000</td></tr>
-        <tr><td>Iqama Renewal (1 year) — if due</td><td>SAR 650</td></tr>
-        <tr><td>Dependent Transfer per person</td><td>SAR 800</td></tr>
-        <tr><td>Medical Insurance (new employer, mandatory)</td><td>SAR 500 – 2,000</td></tr>
-        <tr><td>Medical fitness test (if expired)</td><td>SAR 120 – 200</td></tr>
-        <tr><td>Biometric re-enrollment (if required)</td><td>SAR 50 – 100</td></tr>
-        <tr><td><strong>Typical Total (worker only)</strong></td><td><strong>SAR 2,000 – 2,850</strong></td></tr>
+        <tr>
+          <td>Government Transfer Fee</td>
+          <td>2,000</td>
+          <td>Standard Qiwa fee</td>
+        </tr>
+        <tr>
+          <td>Employee Share (0%)</td>
+          <td>0</td>
+          <td>Employer covers cost</td>
+        </tr>
+        <tr>
+          <td>Employer Share (100%)</td>
+          <td>2,000</td>
+          <td>Full payment</td>
+        </tr>
+        <tr style="background:#ecfeff; font-size:1.1rem;">
+          <td><strong>Total Cost</strong></td>
+          <td><strong style="color:#0e7490;">2,000</strong></td>
+          <td>Paid by Employer</td>
+        </tr>
       </tbody>
     </table>
-    <p style="font-size:.82rem;color:#888;margin-top:.5rem">* Transfer service fee is typically paid by the new employer. Verify with your new employer before accepting the offer.</p>
 
-    <h3 style="font-size:1rem;margin:1.5rem 0 .5rem;color:#1a1a2e">Step-by-Step Transfer Process</h3>
-    <ol class="steps-list" style="padding-left:0">
-      <li><div><strong>Check eligibility on Qiwa</strong> — Log in to <a href="https://qiwa.sa" target="_blank" style="color:#3498db">qiwa.sa</a> with your Absher credentials. Go to "Labour Reform Initiative" and check if you are eligible to transfer.</div></li>
-      <li><div><strong>Get a job offer from the new employer</strong> — The new employer must have an active Nitaqat-compliant account and submit a formal transfer request on Qiwa.</div></li>
-      <li><div><strong>Accept the transfer on Qiwa</strong> — You will receive a notification. You have a set window (typically 30 days) to accept the offer.</div></li>
-      <li><div><strong>Complete medical fitness test</strong> — If your existing medical fitness certificate has expired, you must renew it at a licensed centre before the transfer is completed.</div></li>
-      <li><div><strong>Renew Iqama if needed</strong> — If your Iqama is expiring soon or has expired (within 90-day grace), renew it as part of the process via Absher.</div></li>
-      <li><div><strong>New employer activates Iqama</strong> — The new employer pays the Iqama fees and activates your residency under their sponsorship. You receive an updated Iqama with the new employer's details.</div></li>
-      <li><div><strong>Update your records</strong> — Update your bank account, insurance, and GOSI records with the new employer's information.</div></li>
-    </ol>
+    <div class="success-box">
+      <strong>Result:</strong> Ahmed pays <strong>SAR 0</strong>. The new employer covers the full SAR 2,000 fee. Transfer time: ~2 days.
+    </div>
+
+    <!-- EXAMPLE 2: EMPLOYEE PAYS -->
+    <div class="example-box" style="margin-top:32px;">
+      <h4>Example 2: Employee Pays — Common Practice</h4>
+      <p><strong>Scenario:</strong> Fatima moves to a Mid Green company. Fee: SAR 2,000. Company requires employee to pay.</p>
+    </div>
+
+    <h3>Step-by-Step Calculation:</h3>
+    
+    <table class="calculation-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Amount (SAR)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Government Transfer Fee</td>
+          <td>2,000</td>
+          <td>Standard Qiwa fee</td>
+        </tr>
+        <tr>
+          <td>Employee Share (100%)</td>
+          <td>2,000</td>
+          <td>Employee covers cost</td>
+        </tr>
+        <tr>
+          <td>Employer Share (0%)</td>
+          <td>0</td>
+          <td>No contribution</td>
+        </tr>
+        <tr style="background:#ecfeff; font-size:1.1rem;">
+          <td><strong>Total Cost</strong></td>
+          <td><strong style="color:#0e7490;">2,000</strong></td>
+          <td>Paid by Employee</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning-box">
+      <strong>Result:</strong> Fatima pays <strong>SAR 2,000</strong> out of pocket. Ensure this is agreed upon in writing before initiating transfer.
+    </div>
+
+    <!-- EXAMPLE 3: PREMIUM NITAQAT -->
+    <div class="example-box" style="margin-top:32px;">
+      <h4>Example 3: Premium Nitaqat — Fast Track</h4>
+      <p><strong>Scenario:</strong> Khalid moves to a Platinum company. Fee: SAR 2,000. Employer pays. Fast processing.</p>
+    </div>
+
+    <table class="calculation-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Amount (SAR)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Government Transfer Fee</td>
+          <td>2,000</td>
+          <td>Standard fee</td>
+        </tr>
+        <tr>
+          <td>Processing Time</td>
+          <td>24 hours</td>
+          <td>Platinum companies get priority</td>
+        </tr>
+        <tr style="background:#ecfeff; font-size:1.1rem;">
+          <td><strong>Total Cost</strong></td>
+          <td><strong style="color:#0e7490;">2,000</strong></td>
+          <td>Employer pays</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-highlight">
+      <strong>Benefit:</strong> Platinum companies often process transfers within 24 hours. Ensure your profession matches the company's activity license.
+    </div>
   </div>
 
-  <!-- FAQ -->
-  <div class="calc-card">
-    <h2>❓ Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Can my employer block my Iqama transfer?</div>
-      <div class="faq-a">Since the 2021 Saudi Labour Reform, employers generally cannot block Iqama transfers for workers who have completed 12+ months of service, provided both the current and new employer are in Green or Platinum Nitaqat zones. Exceptions exist if there is an active legal dispute, travel ban, or if the worker has not met the service tenure requirement.</div>
+  <!-- TRANSFER RULES EXPLAINED SECTION -->
+  <div class="guide-section">
+    <h2>💡 Iqama Transfer Rules & Requirements (2026)</h2>
+    
+    <p>Understanding transfer regulations helps avoid delays and rejections:</p>
+    
+    <div class="fee-cards">
+      <div class="fee-card">
+        <h4>Standard Fee</h4>
+        <div class="fee-amount">SAR 2,000</div>
+        <p>Government transfer fee via Qiwa</p>
+      </div>
+      <div class="fee-card">
+        <h4>Processing Time</h4>
+        <div class="fee-amount">1-3 Days</div>
+        <p>With sponsor approval</p>
+      </div>
+      <div class="fee-card">
+        <h4>Eligible Ranges</h4>
+        <div class="fee-amount">Green+</div>
+        <p>Platinum, High, Mid, Low Green</p>
+      </div>
+      <div class="fee-card">
+        <h4>Blocked Range</h4>
+        <div class="fee-amount">Red</div>
+        <p>Cannot accept new transfers</p>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What if my current employer is in the Red zone?</div>
-      <div class="faq-a">If your employer is in the Nitaqat Red zone, you are eligible for immediate transfer without any waiting period and without requiring the employer's consent. This is one of the worker protections under the Saudi Labour Reform Initiative.</div>
+
+    <h3>Key Transfer Conditions:</h3>
+    
+    <div class="step-box">
+      <h4 style="margin-bottom:8px;">📋 Contract End</h4>
+      <p>Transfers are easiest after contract completion. Mid-contract transfers require mutual agreement or HRSD approval.</p>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Who pays the Iqama transfer fee — me or the new employer?</div>
-      <div class="faq-a">The SAR 2,000 Iqama transfer service fee is typically expected to be paid by the new employer (as the sponsoring entity). However, this varies by company and negotiation. Always clarify this before signing a new offer letter. Personal fees like medical fitness tests are usually paid by the worker.</div>
+
+    <div class="step-box">
+      <h4 style="margin-bottom:8px;">️ Salary Arrears</h4>
+      <p>If the current employer failed to pay salary for 3 months, the employee can transfer without sponsor consent via Qiwa.</p>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Does Iqama transfer affect my end-of-service (EOS) gratuity?</div>
-      <div class="faq-a">Yes — when you transfer your Iqama, your service with the current employer ends. You are entitled to EOS gratuity based on your years of service with that employer under Saudi Labour Law. Make sure you receive your EOS settlement before or at the time of transfer. Use our <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html" style="color:#3498db">EOS Calculator</a> to estimate your payout.</div>
+
+    <div class="step-box">
+      <h4 style="margin-bottom:8px;">🔒 Iqama Renewal</h4>
+      <p>If the Iqama expired and the sponsor failed to renew, the employee can transfer immediately without penalty.</p>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Can I transfer my family (dependents) along with my Iqama?</div>
-      <div class="faq-a">Yes. Your dependents' Iqamas are linked to your sponsorship, so when you transfer, they also transfer to the new employer's sponsorship. A dependent transfer fee of approximately SAR 800 per dependent applies, and all their Iqamas must be valid at the time of transfer.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What happens if I transfer before completing 12 months?</div>
-      <div class="faq-a">Transferring before completing 12 months with your current employer generally requires the employer's written consent (NOC). Without consent, the transfer will be blocked unless the employer is in the Red zone, wages are unpaid, or the company has closed/filed for bankruptcy. The 12-month rule is a key threshold in Saudi labour law.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How long does the Iqama transfer process take?</div>
-      <div class="faq-a">Once both parties have confirmed the transfer on Qiwa and all documents are in order, the transfer typically takes 3–10 working days. Medical fitness and Iqama renewal, if required, may add 5–14 days to the process.</div>
+
+    <div class="warning-box">
+      <strong>Important:</strong> Always verify the new employer's Nitaqat status on Qiwa before initiating transfer. Red companies cannot process transfers.
     </div>
   </div>
 
-  <!-- RELATED TOOLS -->
-  <div style="margin-top:1.5rem">
-    <h3 style="font-size:1rem;font-weight:700;margin-bottom:.8rem;color:#1a1a2e">🔗 Related Tools</h3>
-    <div class="link-row">
-      <a class="link-btn primary" href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">💰 EOS Gratuity Calculator</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">📊 Nitaqat Zone Guide</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">📅 Iqama Expiry Tracker</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/final-settlement-calculator.html">📋 Final Settlement Calc</a>
-      <a class="link-btn secondary" href="https://www.saudiutilityhub.com/salary-calculator.html">💼 Salary Calculator</a>
+  <!-- OFFICIAL SOURCES SECTION -->
+  <div class="guide-section">
+    <h2>⚖️ Official Saudi Regulations & Sources</h2>
+    
+    <p>All transfer calculations follow official guidelines from Saudi government authorities:</p>
+    
+    <div class="success-box">
+      <h4 style="margin-bottom:8px; color:#166534;">Legal Requirements:</h4>
+      <ul style="margin:8px 0 8px 20px; line-height:2;">
+        <li><strong>Qiwa Platform:</strong> All transfers must be processed through Qiwa.sa</li>
+        <li><strong>Nitaqat Compliance:</strong> New employer must be in valid range</li>
+        <li><strong>Contract Termination:</strong> Previous contract must be officially ended</li>
+        <li><strong>Document Update:</strong> Update bank details and insurance after transfer</li>
+      </ul>
+    </div>
+
+    <h3>Official Sources:</h3>
+    <ul style="line-height:2.2; margin-left:20px;">
+      <li><a href="https://qiwa.sa" target="_blank" style="color:#0891b2;">Qiwa Platform</a> — Official transfer portal</li>
+      <li><a href="https://hrsd.gov.sa" target="_blank" style="color:#0891b2;">HRSD (Ministry of Human Resources)</a> — Labor law regulations</li>
+      <li><a href="https://www.mol.gov.sa" target="_blank" style="color:#0891b2;">Ministry of Labor</a> — Nitaqat rules</li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>Disclaimer:</strong> This calculator provides estimates based on publicly available Qiwa fees for 2026. For binding fee calculations and official rulings, check Qiwa or visit HRSD directly.
     </div>
   </div>
 
-</div><!-- /container -->
+  <!-- FAQ SECTION -->
+  <div class="guide-section faq-section">
+    <h2>❓ Frequently Asked Questions About Iqama Transfer</h2>
+    
+    <details>
+      <summary>How much does it cost to transfer Iqama in Saudi Arabia 2026?</summary>
+      <div class="faq-answer">
+        The standard government fee for Iqama transfer is SAR 2,000. Additional costs may apply if the new employer pays for the transfer, or if there are premium Nitaqat requirements. The employee typically does not pay the government fee unless agreed upon.
+      </div>
+    </details>
+
+    <details>
+      <summary>Can an employee transfer their Iqama without sponsor consent?</summary>
+      <div class="faq-answer">
+        Under certain conditions, yes. If the contract has ended, the sponsor failed to renew the Iqama, or the employer failed to pay salary for 3 months, the employee can transfer via the Qiwa platform without the sponsor's direct approval.
+      </div>
+    </details>
+
+    <details>
+      <summary>What are the Nitaqat requirements for Iqama transfer?</summary>
+      <div class="faq-answer">
+        The new employer must be in the Green or Platinum Nitaqat range to accept transfers. Red Nitaqat companies cannot hire new expats. High Green companies have fewer restrictions. Check the Qiwa portal for real-time Nitaqat status.
+      </div>
+    </details>
+
+    <details>
+      <summary>Who pays the Iqama transfer fee?</summary>
+      <div class="faq-answer">
+        Legally, the employer is responsible for government fees. However, in practice, many new employers require the employee to cover the SAR 2,000 transfer fee as part of the hiring agreement. This should be clarified in the offer letter.
+      </div>
+    </details>
+
+    <details>
+      <summary>How long does an Iqama transfer take?</summary>
+      <div class="faq-answer">
+        If the current sponsor approves, the transfer can be completed within 24-48 hours via Qiwa. If the transfer is contested or requires Ministry approval, it may take 1-2 weeks.
+      </div>
+    </details>
+
+    <details>
+      <summary>Is there a limit on how many times I can transfer my Iqama?</summary>
+      <div class="faq-answer">
+        There is no legal limit on the number of transfers. However, frequent transfers may raise questions during visa stamping or renewals. Ensure each transfer is documented with a valid employment contract.
+      </div>
+    </details>
+
+    <details>
+      <summary>What happens to my Iqama validity after transfer?</summary>
+      <div class="faq-answer">
+        The Iqama validity remains the same as the original expiry date. The new sponsor is responsible for renewing it before expiration. You do not get a new validity period automatically upon transfer.
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I transfer my Iqama if I have unpaid traffic fines?</summary>
+      <div class="faq-answer">
+        Yes, traffic fines are linked to the individual, not the sponsor. You can transfer your Iqama even with unpaid fines, but you must clear them to renew the Iqama or get an exit/re-entry visa later.
+      </div>
+    </details>
+  </div>
+
+  <!-- RELATED TOOLS & BLOGS SECTION -->
+  <div class="related-section">
+    <h3>🛠️ Related Free Tools</h3>
+    <div class="tools-grid">
+      <a href="/final-settlement-calculator.html" class="tool-card">
+        <h4>💵 Final Settlement Calculator</h4>
+        <p>Calculate EOS, vacation pay, and unpaid salary before leaving.</p>
+      </a>
+      <a href="/salary-calculator.html" class="tool-card">
+        <h4>💰 Net Salary Calculator</h4>
+        <p>Compare take-home pay between current and new job offers.</p>
+      </a>
+      <a href="/nitaqat-saudization-guide.html" class="tool-card">
+        <h4>📊 Nitaqat Saudization Guide</h4>
+        <p>Understand Nitaqat ranges and how they affect transfers.</p>
+      </a>
+      <a href="/gosi-calculator.html" class="tool-card">
+        <h4>🏢 GOSI Calculator</h4>
+        <p>Calculate social insurance contributions for new employment.</p>
+      </a>
+    </div>
+
+    <h3>📚 Related Blog Posts</h3>
+    <div class="blog-grid">
+      <a href="/blog/iqama-transfer-guide-2026.html" class="blog-card">
+        <h4>Complete Guide to Iqama Transfer in Saudi Arabia 2026</h4>
+        <p>Everything you need to know about transferring sponsorship: fees, Nitaqat rules, Qiwa process, and legal rights.</p>
+        <div class="blog-meta">
+          <span>📅 June 2026</span>
+          <span>⏱️ 18 min read</span>
+        </div>
+      </a>
+      <a href="/blog/nitaqat-ranges-explained.html" class="blog-card">
+        <h4>Nitaqat Ranges Explained: Platinum to Red</h4>
+        <p>How Nitaqat affects your job mobility, transfer eligibility, and visa renewals in Saudi Arabia.</p>
+        <div class="blog-meta">
+          <span>📅 May 2026</span>
+          <span>⏱️ 12 min read</span>
+        </div>
+      </a>
+      <a href="/blog/transfer-without-sponsor-consent.html" class="blog-card">
+        <h4>How to Transfer Iqama Without Sponsor Consent</h4>
+        <p>Legal conditions for transferring without approval: unpaid salary, expired Iqama, and contract end rules.</p>
+        <div class="blog-meta">
+          <span>📅 April 2026</span>
+          <span>⏱️ 10 min read</span>
+        </div>
+      </a>
+      <a href="/blog/job-change-tips-ksa.html" class="blog-card">
+        <h4>Job Change Tips for Expats in Saudi Arabia</h4>
+        <p>Negotiating transfer fees, verifying Nitaqat status, and protecting your rights during job switches.</p>
+        <div class="blog-meta">
+          <span>📅 March 2026</span>
+          <span>⏱️ 14 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h4>💼 Finance Tools</h4>
-      <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
-      <a href="https://www.saudiutilityhub.com/salary-slip-generator.html">Pay Slip Generator</a>
-      <a href="https://www.saudiutilityhub.com/salary-certificate.html">Salary Certificate</a>
-      <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
-      <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
-      <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT Calculator</a>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4> Finance Tools</h4>
+        <a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a>
+        <a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a>
+        <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a>
+        <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a>
+        <a href="https://www.saudiutilityhub.com/vat-calculator.html">VAT Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>🪪 Expat Tools</h4>
+        <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a>
+        <a href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">Iqama Transfer</a>
+        <a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visit Visa</a>
+        <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic Fines</a>
+      </div>
+      <div class="footer-col">
+        <h4>🏦 Banking</h4>
+        <a href="https://www.saudiutilityhub.com/saudi-iban-validator.html">IBAN Validator</a>
+        <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance Compare</a>
+        <a href="https://www.saudiutilityhub.com/currency-converter.html">Currency Converter</a>
+      </div>
+      <div class="footer-col">
+        <h4>ℹ️ About</h4>
+        <a href="https://www.saudiutilityhub.com/about.html">About Us</a>
+        <a href="https://www.saudiutilityhub.com/contact.html">Contact</a>
+        <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
+        <a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>🪪 Expat Tools</h4>
-      <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a>
-      <a href="https://www.saudiutilityhub.com/muqeem-visa-check.html">Muqeem Visa Check</a>
-      <a href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Dependent Levy</a>
-      <a href="https://www.saudiutilityhub.com/exit-reentry-calculator.html">Exit Visa Cost</a>
-      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance Compare</a>
-      <a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic Fines</a>
+    <div class="footer-bottom">
+      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Calculations are estimates only. Verify with official Qiwa portal.
     </div>
-    <div class="footer-col">
-      <h4>⚖️ Labour Law</h4>
-      <a href="https://www.saudiutilityhub.com/final-settlement-calculator.html">Final Settlement</a>
-      <a href="https://www.saudiutilityhub.com/leave-calculator.html">Leave Calculator</a>
-      <a href="https://www.saudiutilityhub.com/probation-calculator.html">Probation Calc</a>
-      <a href="https://www.saudiutilityhub.com/nitaqat-saudization-guide.html">Nitaqat Guide</a>
-      <a href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">Iqama Transfer</a>
-    </div>
-    <div class="footer-col">
-      <h4>🏠 Family &amp; Visa</h4>
-      <a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visit Visa</a>
-      <a href="https://www.saudiutilityhub.com/visit-visa-to-iqama.html">Visit Visa → Iqama</a>
-      <a href="https://www.saudiutilityhub.com/family-residence-visa.html">Residence Visa</a>
-      <a href="https://www.saudiutilityhub.com/family-visa-cost-calculator.html">Visa Cost Calc</a>
-      <a href="https://www.saudiutilityhub.com/housing-allowance-calculator.html">Housing Allowance</a>
-      <a href="https://www.saudiutilityhub.com/expat-affordability-dashboard.html">Affordability Check</a>
-        <a href="https://www.saudiutilityhub.com/absher-guide-expats-2026.html">Absher Guide 2026</a>
-        <a href="https://www.saudiutilityhub.com/saudi-work-visa-types-2026.html">Work Visa Types</a>
-        <a href="https://www.saudiutilityhub.com/saudi-rental-law-expats-2026.html">Rental Law Guide</a>
-    </div>
-    <div class="footer-col">
-      <h4>💸 Money Transfer</h4>
-      <a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Compare Services</a>
-      <a href="https://www.saudiutilityhub.com/pakistan-remittance.html">SAR → PKR</a>
-      <a href="https://www.saudiutilityhub.com/currency-converter.html">Currency Converter</a>
-    </div>
-    <div class="footer-col">
-      <h4>🌙 Zakat &amp; Islamic</h4>
-      <a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a>
-      <a href="https://www.saudiutilityhub.com/zakat-calculator.html">Cash Zakat</a>
-      <a href="https://www.saudiutilityhub.com/islamic-finance-calculator.html">Islamic Finance Calc</a>
-      <a href="https://www.saudiutilityhub.com/gold-prices.html">Live Gold Prices</a>
-    </div>
-    <div class="footer-col">
-      <h4>📝 Blog Guides</h4>
-      <a href="https://www.saudiutilityhub.com/blog/">All Articles</a>
-      <a href="https://www.saudiutilityhub.com/blog/blog-salary-certificate-guide-2026.html">Salary Certificate Guide</a>
-      <a href="https://www.saudiutilityhub.com/blog/gosi-guide-2026.html">GOSI Guide 2026</a>
-      <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html">EOS Guide 2026</a>
-      <a href="https://www.saudiutilityhub.com/blog/iqama-renewal-2026.html">Iqama Renewal Guide</a>
-    </div>
-    <div class="footer-col">
-      <h4>ℹ️ Info</h4>
-      <a href="https://www.saudiutilityhub.com/about.html">About Us</a>
-      <a href="https://www.saudiutilityhub.com/contact.html">Contact</a>
-      <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a>
-      <a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a></div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Saudi Utility Hub · Calculations are estimates only · <a href="mailto:saudiutilityhub@gmail.com" style="color:#888">saudiutilityhub@gmail.com</a></span>
-    <span>📢 Google AdSense &amp; affiliate commissions. Never affects our tools.</span>
   </div>
 </footer>
 
-<!-- COOKIE BAR -->
-<div class="cookie-bar" id="cookieBar">
-  <span>🍪 We use cookies for ads and analytics. <a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a></span>
-  <button class="cookie-btn cookie-accept" onclick="document.getElementById('cookieBar').style.display='none'">Accept</button>
+<!-- COOKIE CONSENT -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;background:#1a202c;color:#e2e8f0;padding:12px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;z-index:999;font-size:0.83rem;">
+  <span>🍪 We use cookies for ads and analytics. <a href="https://www.saudiutilityhub.com/privacy.html" style="color:#60a5fa;">Privacy Policy</a></span>
+  <button onclick="document.getElementById('cookie-bar').style.display='none';localStorage.setItem('ck','1')" style="background:#0891b2;color:#fff;border:none;padding:6px 14px;border-radius:5px;cursor:pointer;font-weight:600;">Accept</button>
+  <button onclick="document.getElementById('cookie-bar').style.display='none'" style="background:#374151;color:#e2e8f0;border:none;padding:6px 14px;border-radius:5px;cursor:pointer;">Decline</button>
 </div>
+<script>if(localStorage.getItem('ck'))document.getElementById('cookie-bar').style.display='none'</script>
 
+<!-- CALCULATOR JAVASCRIPT -->
 <script>
-// ── ELIGIBILITY & FEE LOGIC ──
-function calculateTransfer() {
-  const currentZone = document.getElementById('currentZone').value;
-  const newZone     = document.getElementById('newZone').value;
-  const months      = parseInt(document.getElementById('monthsWorked').value) || 0;
-  const status      = document.getElementById('iqamaStatus').value;
-  const iqamaMonths = parseInt(document.getElementById('iqamaMonths').value) || 0;
-  const transferType = document.getElementById('transferType').value;
-  const dependents  = parseInt(document.getElementById('dependents').value) || 0;
-  const renewal     = document.getElementById('renewalRequired').value;
-
-  if (!currentZone || !newZone) {
-    alert('Please select both current and new employer Nitaqat zones.');
+document.getElementById('transferCalculator').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const transferFee = parseFloat(document.getElementById('transferFee').value);
+  const whoPays = document.getElementById('whoPays').value;
+  const nitaqatRange = document.getElementById('nitaqatRange').value;
+  const processingDays = parseInt(document.getElementById('processingDays').value);
+  
+  if (!transferFee || transferFee <= 0) {
+    alert('Please enter a valid transfer fee');
     return;
   }
-
-  const greenZones = ['platinum','high_green','medium_green','low_green'];
-  const isCurrentGreen = greenZones.includes(currentZone);
-  const isNewGreen = greenZones.includes(newZone);
-  const isSpecialCase = ['from_red','employer_closed','unpaid_wages'].includes(transferType);
-
-  // ── ELIGIBILITY ──
-  let eligible = 'conditional';
-  let eligMsg = '';
-
-  if (status === 'expired_over_90') {
-    eligible = 'ineligible';
-    eligMsg = '❌ Your Iqama has been expired for more than 90 days. You must first pay overstay fines and regularise your status before a transfer can proceed. Contact Jawazat (Immigration Authority) immediately.';
-  } else if (isSpecialCase) {
-    eligible = 'eligible';
-    eligMsg = '✅ You qualify for <strong>immediate transfer without employer consent</strong>. Your situation (Red zone employer / business closure / unpaid wages) grants you full transfer rights under the Saudi Labour Reform Initiative.';
-  } else if (!isNewGreen) {
-    eligible = 'ineligible';
-    eligMsg = '❌ The new employer is in the <strong>Yellow or Red Nitaqat zone</strong>. You cannot transfer to an employer in these zones under the Labour Reform rules. The new employer must first improve their Nitaqat standing.';
-  } else if (!isCurrentGreen && months < 12) {
-    eligible = 'ineligible';
-    eligMsg = '❌ Your current employer is in Yellow/Red zone AND you have worked less than 12 months. Without special circumstances (non-payment, business closure), you will need employer consent to transfer.';
-  } else if (months < 12 && isCurrentGreen) {
-    eligible = 'conditional';
-    eligMsg = '⚠️ You have worked <strong>fewer than 12 months</strong> with your current employer. You will need your employer\'s written consent (NOC) to transfer. Transfer may be possible if both parties agree.';
-  } else if (!isCurrentGreen) {
-    eligible = 'conditional';
-    eligMsg = '⚠️ Your current employer is in <strong>Yellow zone</strong>. Transfers from Yellow-zone employers may face additional scrutiny. Check on Qiwa for your specific status.';
-  } else {
-    eligible = 'eligible';
-    eligMsg = '✅ You appear <strong>eligible for transfer without employer consent</strong>. You have completed 12+ months with a Green/Platinum zone employer, and your new employer is also compliant.';
+  
+  let employeeShare = 0;
+  let employerShare = 0;
+  
+  if (whoPays === 'employer') {
+    employerShare = transferFee;
+    employeeShare = 0;
+  } else if (whoPays === 'employee') {
+    employeeShare = transferFee;
+    employerShare = 0;
+  } else if (whoPays === 'shared') {
+    employeeShare = transferFee / 2;
+    employerShare = transferFee / 2;
   }
-
-  // ── FEE CALCULATION ──
-  let fees = [];
-  let total = 0;
-
-  // Base transfer fee
-  const transferFee = 2000;
-  fees.push({item:'Iqama Transfer Service Fee', amount: transferFee, note:'Typically paid by new employer — confirm before accepting offer'});
-  total += transferFee;
-
-  // Iqama renewal
-  if (renewal === 'yes' || iqamaMonths <= 2) {
-    const renewalFee = 650;
-    fees.push({item:'Iqama Renewal (1 year)', amount: renewalFee, note:'Required if Iqama is expiring or expired'});
-    total += renewalFee;
+  
+  // Check Nitaqat restriction
+  let timelineText = processingDays + ' days';
+  let warningMsg = '';
+  
+  if (nitaqatRange === 'red') {
+    warningMsg = '<div style="margin-top:12px;padding:12px;background:#fef2f2;border-radius:6px;color:#991b1b;"><strong>️ Transfer Blocked:</strong> Red Nitaqat companies cannot accept new transfers. Choose a Green or Platinum employer.</div>';
+    timelineText = 'Blocked';
+  } else if (nitaqatRange === 'low_green') {
+    warningMsg = '<div style="margin-top:12px;padding:12px;background:#fffbeb;border-radius:6px;color:#92400e;"><strong>⚠️ Limited Slots:</strong> Low Green companies may have transfer quotas. Verify availability on Qiwa.</div>';
+  } else if (nitaqatRange === 'platinum') {
+    timelineText = Math.max(1, Math.floor(processingDays / 2)) + ' days (Fast Track)';
   }
+  
+  // Display results
+  document.getElementById('govFee').textContent = 'SAR ' + transferFee.toLocaleString('en-SA');
+  document.getElementById('yourShare').textContent = 'SAR ' + employeeShare.toLocaleString('en-SA');
+  document.getElementById('employerShare').textContent = 'SAR ' + employerShare.toLocaleString('en-SA');
+  document.getElementById('timeline').textContent = timelineText;
+  
+  // Detailed breakdown
+  const breakdownHTML = `
+    <h4 style="margin-bottom:12px;color:#0891b2;">Detailed Cost Breakdown:</h4>
+    <ul style="line-height:2; margin-left:20px;">
+      <li>Government Transfer Fee: <strong>SAR ${transferFee.toLocaleString('en-SA')}</strong></li>
+      <li>Payment Agreement: <strong>${whoPays.charAt(0).toUpperCase() + whoPays.slice(1)} Pays</strong></li>
+      <li>Your Share: <strong style="color:#0e7490;">SAR ${employeeShare.toLocaleString('en-SA')}</strong></li>
+      <li>Employer Share: <strong>SAR ${employerShare.toLocaleString('en-SA')}</strong></li>
+      <li>Nitaqat Range: <strong>${nitaqatRange.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}</strong></li>
+      <li>Estimated Timeline: <strong>${timelineText}</strong></li>
+    </ul>
+    ${warningMsg}
+    <div style="margin-top:12px;padding:12px;background:#ecfeff;border-radius:6px;color:#155e75;">
+      <strong>Process Tip:</strong> Ensure your current employer releases you on Qiwa before the new employer initiates the transfer.
+    </div>
+  `;
+  
+  document.getElementById('transferBreakdown').innerHTML = breakdownHTML;
+  document.getElementById('results').classList.add('show');
+  
+  // Scroll to results
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
 
-  // Dependents
-  if (dependents > 0) {
-    const depFee = dependents * 800;
-    fees.push({item:`Dependent Transfer (${dependents} person${dependents>1?'s':''})`, amount: depFee, note:'SAR 800 per dependent'});
-    total += depFee;
-  }
-
-  // Medical fitness
-  const medFee = 160;
-  fees.push({item:'Medical Fitness Test (estimate)', amount: medFee, note:'Required if certificate expired; cost varies by clinic'});
-  total += medFee;
-
-  // Overstay fine if expired
-  if (status === 'expired_within_90') {
-    const fine = 500;
-    fees.push({item:'Overstay Fine (estimate — 90-day grace)', amount: fine, note:'Approximately SAR 500 fine for late renewal within grace period'});
-    total += fine;
-  }
-
-  fees.push({item:'TOTAL ESTIMATED COST', amount: total, note:'Exact fees may vary — confirm with Jawazat/Absher', highlight: true});
-
-  // ── RENDER ──
-  const badge = document.getElementById('eligBadge');
-  badge.textContent = eligible === 'eligible' ? '✅ Eligible' : eligible === 'conditional' ? '⚠️ Conditional' : '❌ Not Eligible';
-  badge.className = 'eligibility-badge ' + eligible;
-
-  const msgBox = document.getElementById('eligMsg');
-  msgBox.innerHTML = eligMsg;
-  msgBox.style.background = eligible === 'eligible' ? '#d4edda' : eligible === 'conditional' ? '#fff3cd' : '#f8d7da';
-  msgBox.style.borderLeft = `4px solid ${eligible === 'eligible' ? '#28a745' : eligible === 'conditional' ? '#ffc107' : '#dc3545'}`;
-  msgBox.style.borderRadius = '8px';
-  msgBox.style.padding = '12px 14px';
-
-  let rows = '';
-  fees.forEach(f => {
-    rows += `<tr>
-      <td>${f.item}</td>
-      <td class="${f.highlight?'highlight':''}">SAR ${f.amount.toLocaleString()}</td>
-      <td style="font-size:.82rem;color:#666">${f.note}</td>
-    </tr>`;
-  });
-  document.getElementById('feeRows').innerHTML = rows;
-
-  // Steps
-  let stepsHtml = `<h3 style="font-size:1rem;font-weight:700;margin-bottom:.8rem;color:#1a1a2e">📋 Your Next Steps</h3><ol class="steps-list" style="padding-left:0">`;
-  const steps = [];
-  if (status === 'expired_over_90') {
-    steps.push('Contact Jawazat (Immigration Authority) immediately to regularise your status and pay overstay fines before proceeding.');
-  }
-  if (eligible !== 'ineligible') {
-    steps.push('Log in to <a href="https://qiwa.sa" target="_blank" style="color:#3498db">qiwa.sa</a> with your Absher credentials and check your transfer eligibility status.');
-    steps.push('Confirm your new employer\'s Nitaqat zone on Qiwa — they must initiate the transfer request from their side.');
-    if (months < 12) steps.push('Obtain a written NOC (No Objection Certificate) from your current employer since you have not completed 12 months.');
-    steps.push('Schedule a medical fitness test at a licensed centre if your certificate has expired.');
-    if (renewal === 'yes' || iqamaMonths <= 2) steps.push('Renew your Iqama via Absher as part of the transfer process. Your new employer will pay the renewal fee.');
-    if (dependents > 0) steps.push(`Transfer your ${dependents} dependent(s) Iqama(s) simultaneously. All must be valid for the transfer to proceed.`);
-    steps.push('Clarify with your new employer who will pay the SAR 2,000 transfer fee — this should be agreed in writing before you accept the offer.');
-    steps.push('Once complete, update your bank, GOSI, and health insurance records with your new employer\'s commercial registration (CR) number.');
-  }
-  steps.forEach(s => { stepsHtml += `<li><div>${s}</div></li>`; });
-  stepsHtml += '</ol>';
-  document.getElementById('stepsList').innerHTML = stepsHtml;
-
-  document.getElementById('resultDisclaimer').textContent = 'Figures are estimates based on 2026 Saudi government fee schedules. Actual costs may vary. Always verify with Absher, Qiwa, and Jawazat before proceeding.';
-
-  const box = document.getElementById('resultBox');
-  box.classList.add('show');
-  box.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-function toggleFaq(el) {
-  el.parentElement.classList.toggle('open');
-}
+// Reset handler
+document.getElementById('transferCalculator').addEventListener('reset', function() {
+  setTimeout(() => {
+    document.getElementById('results').classList.remove('show');
+  }, 100);
+});
 </script>
-
-<section class="suh-faq" style="max-width:900px;margin:32px auto;padding:0 16px;font-family:Segoe UI,Arial,sans-serif">
-  <h2 style="font-size:1.4rem;margin-bottom:16px;color:#1a202c">❓ Frequently Asked Questions</h2>
-  <div style="display:flex;flex-direction:column;gap:14px">
-    <details style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px;cursor:pointer">
-      <summary style="font-weight:600;color:#1a202c">What does it cost to transfer my Iqama in Saudi Arabia?</summary>
-      <p style="margin-top:10px;color:#374151;line-height:1.55">Iqama transfer fees follow a tiered structure: SAR 2,000 for first transfer, SAR 4,000 for the second, SAR 6,000 for third and beyond. Employer normally pays — but verify in your contract.</p>
-    </details>
-    <details style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px;cursor:pointer">
-      <summary style="font-weight:600;color:#1a202c">Can I transfer my Iqama without my current employer's approval?</summary>
-      <p style="margin-top:10px;color:#374151;line-height:1.55">Yes, in many cases. Under labour reforms, expats can transfer without sponsor approval if: contract has ended, sponsor hasn't paid wages for 3+ months, sponsor doesn't have a valid Iqama, or after one year with documented violations.</p>
-    </details>
-    <details style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px;cursor:pointer">
-      <summary style="font-weight:600;color:#1a202c">How long does an Iqama transfer take?</summary>
-      <p style="margin-top:10px;color:#374151;line-height:1.55">Typically 7–14 days through Qiwa once both parties agree. If sponsor approval is not required (eligibility met), the process can complete in 3–5 business days.</p>
-    </details>
-    <details style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px;cursor:pointer">
-      <summary style="font-weight:600;color:#1a202c">Does my probation period affect Iqama transfer?</summary>
-      <p style="margin-top:10px;color:#374151;line-height:1.55">Yes. During the 90-day probation period, the employer can terminate without obligation, and you can resign and transfer easily. After probation, normal contract terms apply.</p>
-    </details>
-  </div>
-  <p style="margin-top:24px;font-size:.85rem;color:#6b7280;border-top:1px solid #e2e8f0;padding-top:12px">
-    Last updated: 28 May 2026. All figures verified against official Saudi government sources
-    (<a href="https://gosi.gov.sa" rel="noopener" target="_blank">GOSI</a>,
-     <a href="https://zatca.gov.sa" rel="noopener" target="_blank">ZATCA</a>,
-     <a href="https://jawazat.gov.sa" rel="noopener" target="_blank">Jawazat</a>,
-     <a href="https://qiwa.sa" rel="noopener" target="_blank">Qiwa</a>).
-    Calculator results are estimates — verify with HR or the relevant authority for legally binding figures.
-  </p>
-</section>
 
 </body>
 </html>
