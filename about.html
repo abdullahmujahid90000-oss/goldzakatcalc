@@ -28,8 +28,9 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --gold-bright: #ffd166;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -42,8 +43,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -57,11 +58,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -69,12 +72,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -214,7 +221,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>
@@ -254,51 +261,41 @@
     <ol>
       <li><strong>Accuracy First</strong>: Every number is verified against official Saudi sources. If a rate changes (e.g., GOSI 9.75%, VAT 15%, Dependent Levy SAR 400), we update it within 24 hours.</li>
       <li><strong>User Trust</strong>: We never sell user data. Calculators run entirely in your browser — no tracking during calculation.</li>
-      <li><strong>E-E-A-T Compliance</strong>: Each tool is reviewed by a topic-matched expert before publishing (e.g., labour law by HR specialists, Zakat by scholars).</li>
+      <li><strong>Topic-Matched Review</strong>: Each tool is checked by the relevant editorial desk against official sources before publishing (e.g., labour-law tools against the Saudi Labour Law and GOSI, Zakat tools against published fiqh rulings).</li>
     </ol>
 
     <h2>Our Review Process</h2>
     <p>Every calculator and guide undergoes a 3-step review:</p>
     <ol>
       <li><strong>Data Validation</strong>: Cross-check with at least two official Saudi government sources.</li>
-      <li><strong>Expert Review</strong>: Assigned to a credentialed reviewer (see team below).</li>
+      <li><strong>Editorial Review</strong>: Assigned to the relevant editorial desk (see team below).</li>
       <li><strong>Monthly Audit</strong>: All pages are re-verified on the 1st of each month for rate changes.</li>
     </ol>
     <p>Last full site audit: <strong>June 1, 2026</strong>. Next audit: <strong>July 1, 2026</strong>.</p>
 
-    <h2>Meet Our Reviewers</h2>
+    <h2>Our Editorial Team</h2>
     <div class="team-grid">
       <div class="team-member">
-        <div class="member-name">Sheikh Abdulrahman Al-Harbi</div>
-        <div class="member-role">Islamic Finance Scholar<br>Member, Saudi Council of Senior Scholars</div>
-        <p>Reviews all Zakat, gold, silver, and Islamic finance tools.</p>
+        <div class="member-name">Islamic Finance Desk</div>
+        <div class="member-role">Zakat &amp; Islamic Finance</div>
+        <p>Maintains all Zakat, gold, silver, and Islamic finance tools, with calculations based on published rulings from recognised Saudi and international fiqh bodies.</p>
       </div>
       <div class="team-member">
-        <div class="member-name">Layla Al-Mansoori</div>
-        <div class="member-role">HR & Labour Law Specialist<br>Former Ministry of Human Resources Advisor</div>
-        <p>Reviews GOSI, EOS, salary, and Iqama-related tools.</p>
+        <div class="member-name">Labour &amp; HR Desk</div>
+        <div class="member-role">GOSI, EOS &amp; Salary</div>
+        <p>Maintains GOSI, end-of-service, salary, and Iqama-related tools, with figures sourced from GOSI, the Ministry of Human Resources, and the Saudi Labour Law.</p>
       </div>
       <div class="team-member">
-        <div class="member-name">Omar Farooq</div>
-        <div class="member-role">Remittance & Banking Analyst<br>Certified Financial Planner (CFP®)</div>
-        <p>Reviews currency, IBAN, and money-transfer comparisons.</p>
+        <div class="member-name">Banking &amp; Remittance Desk</div>
+        <div class="member-role">Currency &amp; Money Transfer</div>
+        <p>Maintains currency, IBAN, and money-transfer tools, with rates and rules checked against SAMA and major Saudi banks.</p>
       </div>
     </div>
 
     <h2>Contact & Transparency</h2>
     <p>We welcome feedback, corrections, and suggestions. If you spot an error or have a feature request, please reach out via our <a href="/contact.html">Contact page</a>.</p>
     <p>This site is independently operated and not affiliated with any Saudi government entity, though we strive to reflect official policies accurately.</p>
-    <p>Monetization: We use Google AdSense and select affiliate partnerships (clearly disclosed) to sustain free access. Revenue funds server costs and monthly expert reviews.</p>
-
-    <h2>Commitment to AdSense Compliance</h2>
-    <p>Saudi Utility Hub adheres to all Google AdSense policies:</p>
-    <ul>
-      <li>No misleading content</li>
-      <li>No prohibited content</li>
-      <li>Clear navigation and legal pages</li>
-      <li>Working cookie consent</li>
-      <li>Original, useful content (>900 words per page)</li>
-    </ul>
+    <p>Monetization: We use advertising and select affiliate partnerships (clearly disclosed) to sustain free access. Revenue funds server costs and our monthly review cycle.</p>
   </div>
 
   <footer>

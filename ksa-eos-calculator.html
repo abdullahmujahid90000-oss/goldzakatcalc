@@ -115,7 +115,7 @@
         "name": "What is the EOS formula in Saudi Arabia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Under Article 84 of Saudi Labour Law, EOS = (Basic Salary ÷ 2) × Years of Service for resignation, or Basic Salary × Years of Service for termination by employer."
+          "text": "Under Article 84 of Saudi Labour Law, the end-of-service award is a half-month wage for each of the first 5 years of service plus a full-month wage for each year beyond 5, based on your last wage. On resignation, Article 85 reduces this to one-third of the award for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full award at 10+ years. Termination by the employer pays the full award."
         }
       },
       {
@@ -123,7 +123,7 @@
         "name": "Do I get EOS if I resign?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, but only half the amount: (Basic Salary ÷ 2) × Years of Service, provided you've completed at least 2 years of service."
+          "text": "Yes, if you have at least 2 years of service. Under Article 85, resignation pays one-third of the full Article 84 award for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full award at 10 years or more."
         }
       },
       {
@@ -131,7 +131,7 @@
         "name": "What if my employer terminates me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You receive full EOS: Basic Salary × Years of Service, regardless of service duration."
+          "text": "You receive the full Article 84 award: a half-month wage for each of the first 5 years plus a full-month wage for each year beyond 5, regardless of service duration."
         }
       },
       {
@@ -196,9 +196,10 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
-      --accent: #d97706;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --accent: #c9a227;
+      --gold-bright: #ffd166;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -212,8 +213,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -227,11 +228,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -239,12 +242,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -503,7 +510,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>
@@ -538,11 +545,11 @@
     <div class="hero">
       <h1>⚖️ Saudi EOS Calculator 2026</h1>
       <p>Calculate End of Service Gratuity under Article 84: resignation vs termination, unlimited contracts, expatriate eligibility</p>
-      <span class="badge">Updated June 2026 • Article 84 • Resignation: ½ month/year • Termination: 1 month/year</span>
+      <span class="badge">Updated June 2026 • Article 84 • ½ month/yr (first 5 yrs) + 1 month/yr (after) • Resignation reduced per Article 85</span>
     </div>
 
     <div class="quick-answer">
-      Under Saudi Labour Law Article 84, your End of Service Gratuity = (Basic Salary ÷ 2) × Years of Service if you resign (min. 2 years), or Basic Salary × Years of Service if terminated by employer. Only basic salary counts — not allowances.
+      Under Saudi Labour Law Article 84, your End of Service Gratuity is a half-month wage for each of the first 5 years of service plus a full-month wage for each year beyond 5, based on your last wage. If you resign, Article 85 reduces the award to one-third (2–5 years), two-thirds (5–10 years), or the full amount (10+ years). Termination by the employer pays the full award. The award is based on the last wage; this tool uses basic salary as the input.
     </div>
 
     <!-- Ad Slot 1 -->
@@ -597,16 +604,16 @@
           <span id="service-duration">3.5 years</span>
         </div>
         <div class="result-row">
-          <span>Gratuity Rate</span>
-          <span id="gratuity-rate">0.5 months/year</span>
+          <span>Applicable Rate</span>
+          <span id="gratuity-rate">1/3 of full award (resignation, 2–5 yrs)</span>
         </div>
         <div class="result-row">
           <span>Total Months Payable</span>
-          <span id="total-months">1.75 months</span>
+          <span id="total-months">0.58 months of wage</span>
         </div>
         <div class="result-row result-total">
           <span>End of Service Gratuity</span>
-          <span id="eos-amount">SAR 17,500</span>
+          <span id="eos-amount">SAR 5,833.33</span>
         </div>
       </div>
     </div>
@@ -615,17 +622,17 @@
     <p>Our free EOS calculator helps employees in Saudi Arabia understand their exact end-of-service entitlement under Article 84 of the Labour Law. Whether you're resigning or being terminated, this tool computes your gratuity accurately using only your basic salary.</p>
 
     <ol>
-      <li><strong>Enter Your Basic Salary</strong><br>Input your monthly basic salary as stated in your employment contract. Note: only basic salary is included — housing, transport, and other allowances are excluded.</li>
+      <li><strong>Enter Your Last Wage</strong><br>Input your last monthly wage. Saudi Labour Law bases the award on the "last wage"; if your allowances are part of your contractual wage, include them. If you are unsure, enter your basic salary for a conservative estimate.</li>
       <li><strong>Select Contract Type</strong><br>Choose between unlimited or fixed-term contract. Both follow the same Article 84 rules for EOS calculation.</li>
-      <li><strong>Choose Reason for Leaving</strong><br>Select resignation (employee-initiated) or termination (employer-initiated). This determines your gratuity rate.</li>
+      <li><strong>Choose Reason for Leaving</strong><br>Select resignation (employee-initiated) or termination (employer-initiated). This determines the Article 85 reduction applied to your award.</li>
       <li><strong>Enter Service Duration</strong><br>Input your total years and months of continuous service with this employer.</li>
       <li><strong>Calculate EOS</strong><br>See your exact gratuity amount based on Saudi Labour Law Article 84.</li>
     </ol>
 
     <h2>📊 Worked Examples: EOS Calculations</h2>
 
-    <h3>Example 1: Resignation After 3 Years</h3>
-    <p><strong>Scenario:</strong> Ali resigns from his job in Riyadh after 3 years 6 months with SAR 10,000 basic salary.</p>
+    <h3>Example 1: Resignation After 3.5 Years</h3>
+    <p><strong>Scenario:</strong> Ali resigns from his job in Riyadh after 3 years 6 months with SAR 10,000 last wage.</p>
     <table>
       <thead>
         <tr>
@@ -635,30 +642,30 @@
       </thead>
       <tbody>
         <tr>
-          <td>Basic Salary</td>
+          <td>Last wage</td>
           <td>SAR 10,000</td>
         </tr>
         <tr>
           <td>Service Duration</td>
-          <td>3.5 years</td>
+          <td>3.5 years (all within first 5 years)</td>
         </tr>
         <tr>
-          <td>Gratuity Rate (Resignation)</td>
-          <td>0.5 months/year</td>
+          <td>Article 84 base award</td>
+          <td>3.5 × ½ month = 1.75 × 10,000 = SAR 17,500</td>
         </tr>
         <tr>
-          <td>Total Months Payable</td>
-          <td>3.5 × 0.5 = 1.75 months</td>
+          <td>Article 85 resignation factor (2–5 yrs)</td>
+          <td>1/3</td>
         </tr>
         <tr>
           <td><strong>EOS Amount</strong></td>
-          <td><strong>SAR 17,500</strong></td>
+          <td><strong>17,500 × 1/3 = SAR 5,833.33</strong></td>
         </tr>
       </tbody>
     </table>
 
     <h3>Example 2: Termination After 2 Years</h3>
-    <p><strong>Scenario:</strong> Fatima is terminated by her employer in Jeddah after 2 years with SAR 8,000 basic salary.</p>
+    <p><strong>Scenario:</strong> Fatima is terminated by her employer in Jeddah after 2 years with SAR 8,000 last wage.</p>
     <table>
       <thead>
         <tr>
@@ -668,32 +675,61 @@
       </thead>
       <tbody>
         <tr>
-          <td>Basic Salary</td>
+          <td>Last wage</td>
           <td>SAR 8,000</td>
         </tr>
         <tr>
           <td>Service Duration</td>
-          <td>2 years</td>
+          <td>2 years (all within first 5 years)</td>
         </tr>
         <tr>
-          <td>Gratuity Rate (Termination)</td>
-          <td>1 month/year</td>
+          <td>Article 84 base award</td>
+          <td>2 × ½ month = 1.0 × 8,000 = SAR 8,000</td>
         </tr>
         <tr>
-          <td>Total Months Payable</td>
-          <td>2 × 1 = 2 months</td>
+          <td>Termination factor</td>
+          <td>Full award (100%)</td>
         </tr>
         <tr>
           <td><strong>EOS Amount</strong></td>
-          <td><strong>SAR 16,000</strong></td>
+          <td><strong>SAR 8,000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Example 3: Resignation After 8 Years (crosses the 5-year tier)</h3>
+    <p><strong>Scenario:</strong> Omar resigns after 8 years with SAR 12,000 last wage.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Last wage</td>
+          <td>SAR 12,000</td>
+        </tr>
+        <tr>
+          <td>Article 84 base award</td>
+          <td>(5 × ½) + (3 × 1) = 5.5 months × 12,000 = SAR 66,000</td>
+        </tr>
+        <tr>
+          <td>Article 85 resignation factor (5–10 yrs)</td>
+          <td>2/3</td>
+        </tr>
+        <tr>
+          <td><strong>EOS Amount</strong></td>
+          <td><strong>66,000 × 2/3 = SAR 44,000</strong></td>
         </tr>
       </tbody>
     </table>
 
     <!-- E-E-A-T Block -->
     <div class="expert-block">
-      <div class="expert-name">Reviewed by Layla Al-Mansoori</div>
-      <div class="expert-cred">HR & Labour Law Specialist<br>Former Ministry of Human Resources Advisor</div>
+      <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
+      <div class="expert-cred">Researched and fact-checked against official Saudi government sources (GOSI, HRSD, Qiwa).</div>
       <p>Last reviewed: June 2, 2026 | Next review: July 1, 2026<br>
          Verified against official Saudi Labour Law Article 84 and Qiwa portal guidelines.<br>
          <a href="/about.html">Learn more about our review process</a>.</p>
@@ -712,15 +748,15 @@
     <h2>❓ Frequently Asked Questions</h2>
     <div class="faq-item">
       <div class="faq-question">What is the EOS formula in Saudi Arabia?</div>
-      <div>Under Article 84 of Saudi Labour Law, EOS = (Basic Salary ÷ 2) × Years of Service for resignation, or Basic Salary × Years of Service for termination by employer.</div>
+      <div>Under Article 84 of Saudi Labour Law, the end-of-service award is a half-month wage for each of the first 5 years of service plus a full-month wage for each year beyond 5, based on your last wage. On resignation, Article 85 reduces this to one-third of the award for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full award at 10+ years. Termination by the employer pays the full award.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">Do I get EOS if I resign?</div>
-      <div>Yes, but only half the amount: (Basic Salary ÷ 2) × Years of Service, provided you've completed at least 2 years of service.</div>
+      <div>Yes, if you have at least 2 years of service. Under Article 85, resignation pays one-third of the full Article 84 award for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full award at 10 years or more.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What if my employer terminates me?</div>
-      <div>You receive full EOS: Basic Salary × Years of Service, regardless of service duration.</div>
+      <div>You receive the full Article 84 award: a half-month wage for each of the first 5 years plus a full-month wage for each year beyond 5, regardless of service duration.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">Is there a minimum service period for EOS?</div>
@@ -872,26 +908,42 @@
       }
 
       const totalYears = years + (months / 12);
-      let gratuityRate, gratuityText;
 
+      // Article 84 base award: half-month wage per year for the first 5 years,
+      // full-month wage per year for each year beyond 5 (prorated for partial years).
+      const first5 = Math.min(totalYears, 5);
+      const beyond5 = Math.max(totalYears - 5, 0);
+      const baseMonths = first5 * 0.5 + beyond5 * 1;   // award expressed in months of wage
+      const baseAward = basicSalary * baseMonths;
+
+      // Article 85 resignation reduction.
+      let fraction, gratuityText;
       if (reason === 'resignation') {
         if (totalYears < 2) {
-          alert('Minimum 2 years of service required for EOS on resignation.');
-          return;
+          fraction = 0;
+          gratuityText = 'No EOS (under 2 years on resignation)';
+        } else if (totalYears <= 5) {
+          fraction = 1/3;
+          gratuityText = '1/3 of full award (resignation, 2–5 yrs)';
+        } else if (totalYears < 10) {
+          fraction = 2/3;
+          gratuityText = '2/3 of full award (resignation, 5–10 yrs)';
+        } else {
+          fraction = 1;
+          gratuityText = 'Full award (resignation, 10+ yrs)';
         }
-        gratuityRate = 0.5;
-        gratuityText = '0.5 months/year';
       } else {
-        gratuityRate = 1;
-        gratuityText = '1 month/year';
+        // Termination by employer / retirement: full Article 84 award.
+        fraction = 1;
+        gratuityText = 'Full award (termination/retirement)';
       }
 
-      const totalMonths = totalYears * gratuityRate;
-      const eosAmount = basicSalary * totalMonths;
+      const totalMonths = baseMonths * fraction;
+      const eosAmount = baseAward * fraction;
 
       document.getElementById('service-duration').textContent = totalYears.toFixed(1) + ' years';
       document.getElementById('gratuity-rate').textContent = gratuityText;
-      document.getElementById('total-months').textContent = totalMonths.toFixed(2) + ' months';
+      document.getElementById('total-months').textContent = totalMonths.toFixed(2) + ' months of wage';
       document.getElementById('eos-amount').textContent = 'SAR ' + eosAmount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
       document.getElementById('eos-results').style.display = 'block';

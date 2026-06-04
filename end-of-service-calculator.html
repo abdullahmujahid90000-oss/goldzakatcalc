@@ -47,15 +47,9 @@
       "price": "0",
       "priceCurrency": "SAR"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "2156"
-    },
     "author": {
-      "@type": "Person",
-      "name": "Abdullah",
-      "jobTitle": "KSA Labor Law Researcher",
+      "@type": "Organization",
+      "name": "Saudi Utility Hub Editorial Team",
       "url": "https://www.saudiutilityhub.com/about.html"
     },
     "datePublished": "2026-01-01",
@@ -75,7 +69,7 @@
         "name": "How is End of Service calculated in Saudi Arabia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EOS is calculated based on years of service and last salary. For resignation: 1/3 of half-month salary per year (years 2-5), 2/3 (years 5-10), full half-month (10+ years). For termination by employer: full half-month salary per year after 2 years."
+          "text": "EOS is based on years of service and your last wage. The Article 84 base award is a half-month wage for each of the first 5 years plus a full-month wage for each year beyond 5. On resignation, Article 85 reduces this base award to one-third for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full amount at 10+ years. Termination by the employer pays the full award regardless of length of service."
         }
       },
       {
@@ -99,7 +93,7 @@
         "name": "What's the difference between resignation and termination for EOS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If you resign, you receive reduced EOS benefits (1/3, 2/3, or full depending on years). If employer terminates without cause, you receive full EOS benefits regardless of years beyond 2. Termination with cause may forfeit benefits."
+          "text": "If you resign, the Article 84 base award is reduced under Article 85 (one-third for 2–5 years, two-thirds for 5–10 years, full at 10+ years). If the employer terminates without cause, you receive the full Article 84 award regardless of length of service. Termination with cause may forfeit benefits."
         }
       },
       {
@@ -832,7 +826,7 @@
       <h3 style="color:#6d28d9; margin-bottom:16px; font-size:1.3rem;">📊 End of Service Calculation Results</h3>
       <div class="result-grid">
         <div class="result-item">
-          <div class="result-label">Eligible Years</div>
+          <div class="result-label">Years of Service</div>
           <div class="result-value" id="eligibleYears">0 years</div>
         </div>
         <div class="result-item">
@@ -873,7 +867,7 @@
     <p>Our free End of Service (EOS) Calculator helps employees in Saudi Arabia accurately calculate their gratuity benefits for 2026. Whether you're resigning, being terminated, or retiring, this tool uses official Saudi Labor Law rates to determine your exact EOS amount in Saudi Riyals.</p>
     
     <div class="info-highlight">
-      <strong>Quick Answer:</strong> EOS is calculated as half-month salary per year of service. For resignation: 1/3 benefit (years 2-5), 2/3 (years 5-10), full (10+ years). For termination by employer: full benefit after 2 years.
+      <strong>Quick Answer:</strong> The Article 84 award is a half-month wage per year for the first 5 years plus a full-month wage per year after that. For resignation, Article 85 pays 1/3 of that award (2–5 years), 2/3 (5–10 years), or the full amount (10+ years). Termination by the employer pays the full award regardless of length of service.
     </div>
 
     <h3><span class="step-number">1</span>Enter Your Last Salary</h3>
@@ -898,7 +892,7 @@
     <p>This critically affects your EOS calculation:</p>
     <ul style="margin:12px 0 12px 24px; line-height:2;">
       <li><strong>Resignation:</strong> Reduced benefits based on years served</li>
-      <li><strong>Termination (no cause):</strong> Full benefits after 2 years</li>
+      <li><strong>Termination (no cause):</strong> Full Article 84 award regardless of length of service</li>
       <li><strong>Termination (with cause):</strong> May forfeit EOS benefits</li>
       <li><strong>Retirement:</strong> Full benefits regardless of years</li>
     </ul>
@@ -906,8 +900,8 @@
     <h3><span class="step-number">4</span>Review Calculation & Legal Rights</h3>
     <p>The calculator shows:</p>
     <ul style="margin:12px 0 12px 24px; line-height:2;">
-      <li><strong>Eligible years:</strong> Years counting toward EOS</li>
-      <li><strong>Applicable rate:</strong> 1/3, 2/3, or full half-month salary</li>
+      <li><strong>Years of service:</strong> All years count toward the Article 84 award</li>
+      <li><strong>Applicable factor:</strong> 1/3, 2/3, or full award (per Article 85 on resignation)</li>
       <li><strong>Total benefit:</strong> Your exact EOS amount in SAR</li>
       <li><strong>Payment timeline:</strong> When you should receive payment</li>
     </ul>
@@ -944,37 +938,41 @@
     <table class="calculation-table">
       <thead>
         <tr>
-          <th>Service Period</th>
-          <th>Years</th>
-          <th>Rate Applied</th>
+          <th>Step</th>
           <th>Calculation</th>
           <th>Amount (SAR)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Years 2-5</td>
-          <td>3 years</td>
-          <td>1/3 of ½ salary</td>
-          <td>3 × (12,000 ÷ 2) × 1/3</td>
-          <td>6,000</td>
+          <td>Article 84 — first 5 years (½ month each)</td>
+          <td>5 × ½ × 12,000 = 2.5 months</td>
+          <td>30,000</td>
         </tr>
         <tr>
-          <td>Years 5-7.25</td>
-          <td>2.25 years</td>
-          <td>2/3 of ½ salary</td>
-          <td>2.25 × (12,000 ÷ 2) × 2/3</td>
-          <td>9,000</td>
+          <td>Article 84 — years beyond 5 (full month each)</td>
+          <td>2.25 × 1 × 12,000 = 2.25 months</td>
+          <td>27,000</td>
+        </tr>
+        <tr>
+          <td>Base award (Article 84)</td>
+          <td>4.75 months × 12,000</td>
+          <td>57,000</td>
+        </tr>
+        <tr>
+          <td>Article 85 resignation factor (5–10 yrs)</td>
+          <td>57,000 × 2/3</td>
+          <td>38,000</td>
         </tr>
         <tr style="background:#f5f3ff;">
-          <td colspan="4"><strong>Total EOS Benefit</strong></td>
-          <td><strong style="color:#6d28d9;">SAR 15,000</strong></td>
+          <td colspan="2"><strong>Total EOS Benefit</strong></td>
+          <td><strong style="color:#6d28d9;">SAR 38,000</strong></td>
         </tr>
       </tbody>
     </table>
 
     <div class="info-highlight">
-      <strong>Result:</strong> Ahmed receives <strong>SAR 15,000</strong> as End of Service benefit. Payment due within 10 days of last working day.
+      <strong>Result:</strong> Ahmed receives <strong>SAR 38,000</strong> as End of Service benefit. Payment due within 10 days of last working day.
     </div>
 
     <!-- EXAMPLE 2: TERMINATION BY EMPLOYER -->
@@ -989,8 +987,8 @@
     </div>
 
     <h3>Calculation for Termination:</h3>
-    <p><strong>Key Difference:</strong> Termination by employer (without cause) entitles employee to full EOS benefits regardless of years beyond 2.</p>
-    
+    <p><strong>Key Difference:</strong> Termination by the employer (without cause) entitles the employee to the full Article 84 award regardless of length of service — no Article 85 reduction applies. All years of service count toward the award.</p>
+
     <table class="calculation-table">
       <thead>
         <tr>
@@ -1001,30 +999,30 @@
       </thead>
       <tbody>
         <tr>
-          <td>Half-month salary</td>
-          <td>9,500 ÷ 2</td>
-          <td>4,750</td>
+          <td>Article 84 — first 5 years (½ month each)</td>
+          <td>4 × ½ × 9,500 = 2.0 months</td>
+          <td>19,000</td>
         </tr>
         <tr>
-          <td>Years eligible (after year 2)</td>
-          <td>4 - 2 = 2 years</td>
-          <td>2 years</td>
+          <td>Years beyond 5</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
         <tr>
-          <td>EOS benefit</td>
-          <td>2 × 4,750 × 1 (full rate)</td>
-          <td>9,500</td>
+          <td>Termination factor</td>
+          <td>Full award (100%)</td>
+          <td>—</td>
         </tr>
         <tr style="background:#dcfce7; font-size:1.1rem;">
           <td><strong>Total EOS Benefit</strong></td>
           <td></td>
-          <td><strong style="color:#166534;">SAR 9,500</strong></td>
+          <td><strong style="color:#166534;">SAR 19,000</strong></td>
         </tr>
       </tbody>
     </table>
 
     <div class="success-box">
-      <strong>Result:</strong> Maria receives <strong>SAR 9,500</strong> as full EOS benefit. Employer must also provide return ticket and 30-day notice period pay.
+      <strong>Result:</strong> Maria receives <strong>SAR 19,000</strong> as full EOS benefit. Employer must also provide return ticket and 30-day notice period pay.
     </div>
 
     <!-- EXAMPLE 3: SHORT SERVICE (NO BENEFIT) -->
@@ -1074,24 +1072,24 @@
     
     <div class="eos-rules">
       <div class="eos-card">
-        <h4>Resignation: Years 2-5</h4>
+        <h4>Resignation: 2–5 Years</h4>
         <div class="eos-percentage">⅓</div>
-        <p>One-third of half-month salary per year</p>
+        <p>One-third of the full Article 84 award</p>
       </div>
       <div class="eos-card">
-        <h4>Resignation: Years 5-10</h4>
+        <h4>Resignation: 5–10 Years</h4>
         <div class="eos-percentage">⅔</div>
-        <p>Two-thirds of half-month salary per year</p>
+        <p>Two-thirds of the full Article 84 award</p>
       </div>
       <div class="eos-card">
         <h4>Resignation: 10+ Years</h4>
         <div class="eos-percentage">100%</div>
-        <p>Full half-month salary per year</p>
+        <p>Full Article 84 award</p>
       </div>
       <div class="eos-card">
         <h4>Termination (No Cause)</h4>
         <div class="eos-percentage">100%</div>
-        <p>Full half-month salary per year after 2 years</p>
+        <p>Full Article 84 award, regardless of length of service</p>
       </div>
     </div>
 
@@ -1152,7 +1150,7 @@
     <details>
       <summary>How is End of Service calculated in Saudi Arabia?</summary>
       <div class="faq-answer">
-        EOS is calculated based on years of service and last salary. For resignation: 1/3 of half-month salary per year (years 2-5), 2/3 (years 5-10), full half-month (10+ years). For termination by employer: full half-month salary per year after 2 years.
+        EOS is based on years of service and your last wage. The Article 84 base award is a half-month wage for each of the first 5 years plus a full-month wage for each year beyond 5. On resignation, Article 85 reduces this base award to one-third for 2–5 years of service, two-thirds for more than 5 but under 10 years, and the full amount at 10+ years. Termination by the employer pays the full award regardless of length of service.
       </div>
     </details>
 
@@ -1173,7 +1171,7 @@
     <details>
       <summary>What's the difference between resignation and termination for EOS?</summary>
       <div class="faq-answer">
-        If you resign, you receive reduced EOS benefits (1/3, 2/3, or full depending on years). If employer terminates without cause, you receive full EOS benefits regardless of years beyond 2. Termination with cause may forfeit benefits.
+        If you resign, the Article 84 base award is reduced under Article 85 (one-third for 2–5 years, two-thirds for 5–10 years, full at 10+ years). If the employer terminates without cause, you receive the full Article 84 award regardless of length of service. Termination with cause may forfeit benefits.
       </div>
     </details>
 
@@ -1222,7 +1220,7 @@
         <h4>🏢 GOSI Calculator</h4>
         <p>Calculate social insurance contributions and pension estimates.</p>
       </a>
-      <a href="/vacation-accrual-calculator.html" class="tool-card">
+      <a href="/leave-calculator.html" class="tool-card">
         <h4>🏖️ Vacation Accrual Calculator</h4>
         <p>Calculate unused vacation days and their cash value for settlement.</p>
       </a>
@@ -1238,7 +1236,7 @@
           <span>⏱️ 18 min read</span>
         </div>
       </a>
-      <a href="/blog/resignation-vs-termination-eos.html" class="blog-card">
+      <a href="/blog/eos-guide-2026.html" class="blog-card">
         <h4>Resignation vs Termination: How It Affects Your EOS</h4>
         <p>Detailed comparison of how different exit scenarios impact your End of Service benefits, with real examples and legal references.</p>
         <div class="blog-meta">
@@ -1246,7 +1244,7 @@
           <span>⏱️ 12 min read</span>
         </div>
       </a>
-      <a href="/blog/expat-rights-saudi-arabia.html" class="blog-card">
+      <a href="/blog/worker-rights-saudi.html" class="blog-card">
         <h4>Expat Worker Rights: EOS & Benefits in KSA</h4>
         <p>What expatriate workers need to know about End of Service benefits, return tickets, notice periods, and dispute resolution.</p>
         <div class="blog-meta">
@@ -1254,7 +1252,7 @@
           <span>⏱️ 14 min read</span>
         </div>
       </a>
-      <a href="/blog/labor-law-updates-2026.html" class="blog-card">
+      <a href="/blog/worker-rights-saudi.html" class="blog-card">
         <h4>Saudi Labor Law Updates 2026: What Changed for Employees</h4>
         <p>Summary of recent Labor Law amendments affecting EOS calculation, payment timelines, and employee protections.</p>
         <div class="blog-meta">
@@ -1297,7 +1295,7 @@
         <a href="https://www.saudiutilityhub.com/blog/">Blog</a>
         <a href="https://www.saudiutilityhub.com/blog/eos-guide-2026.html">EOS Guide</a>
         <a href="https://www.saudiutilityhub.com/blog/salary-guide.html">Salary Guide</a>
-        <a href="https://www.saudiutilityhub.com/blog/labor-law-guide.html">Labor Law Guide</a>
+        <a href="https://www.saudiutilityhub.com/blog/worker-rights-saudi.html">Labor Law Guide</a>
       </div>
       <div class="footer-col">
         <h4>ℹ️ About</h4>
@@ -1341,60 +1339,53 @@ document.getElementById('eosCalculator').addEventListener('submit', function(e) 
     return;
   }
   
-  // Calculate eligible years (minimum 2 years required)
-  const eligibleYears = Math.max(0, yearsService - 2);
-  
+  // Article 84 base award: half-month wage per year for first 5 years,
+  // full-month wage per year beyond 5 (all years of service count; prorated).
+  const first5 = Math.min(yearsService, 5);
+  const beyond5 = Math.max(yearsService - 5, 0);
+  const baseMonths = first5 * 0.5 + beyond5 * 1;
+  const baseAward = lastSalary * baseMonths;
+
   let applicableRate = 0;
   let totalEos = 0;
   let breakdownHTML = '';
-  
-  // Determine applicable rate based on termination type and years
+
+  // Article 85 resignation reduction; termination/retirement pays full award.
   if (terminationType === 'resignation') {
     if (yearsService < 2) {
       applicableRate = 0;
-      totalEos = 0;
-    } else if (yearsService >= 2 && yearsService < 5) {
+    } else if (yearsService <= 5) {
       applicableRate = 1/3;
-      totalEos = eligibleYears * (lastSalary / 2) * applicableRate;
-    } else if (yearsService >= 5 && yearsService < 10) {
+    } else if (yearsService < 10) {
       applicableRate = 2/3;
-      totalEos = eligibleYears * (lastSalary / 2) * applicableRate;
     } else {
       applicableRate = 1;
-      totalEos = eligibleYears * (lastSalary / 2) * applicableRate;
     }
   } else if (terminationType === 'termination' || terminationType === 'retirement') {
-    if (yearsService < 2) {
-      applicableRate = 0;
-      totalEos = 0;
-    } else {
-      applicableRate = 1; // Full rate for termination/retirement
-      totalEos = eligibleYears * (lastSalary / 2) * applicableRate;
-    }
+    applicableRate = 1; // Full award regardless of length of service
   } else if (terminationType === 'cause') {
     applicableRate = 0;
-    totalEos = 0;
   }
-  
+  totalEos = baseAward * applicableRate;
+
   // Payment timeline
   const paymentTimeline = '10 days';
-  
+
   // Display results
-  document.getElementById('eligibleYears').textContent = eligibleYears.toFixed(2) + ' years';
+  document.getElementById('eligibleYears').textContent = yearsService.toFixed(2) + ' years';
   document.getElementById('applicableRate').textContent = (applicableRate * 100).toFixed(0) + '%';
   document.getElementById('totalEos').textContent = 'SAR ' + totalEos.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
   document.getElementById('paymentTimeline').textContent = paymentTimeline;
-  
+
   // Detailed breakdown
-  const halfSalary = lastSalary / 2;
   breakdownHTML = `
     <h4 style="margin-bottom:12px;color:#7c3aed;">Detailed Calculation:</h4>
     <ul style="line-height:2; margin-left:20px;">
-      <li>Last salary (basic + fixed allowances): <strong>SAR ${lastSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})}</strong></li>
-      <li>Half-month salary base: SAR ${lastSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})} ÷ 2 = <strong>SAR ${halfSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})}</strong></li>
-      <li>Eligible years (after year 2): <strong>${eligibleYears.toFixed(2)} years</strong></li>
-      <li>Applicable rate (${terminationType}): <strong>${(applicableRate * 100).toFixed(0)}%</strong></li>
-      <li>EOS calculation: ${eligibleYears.toFixed(2)} × SAR ${halfSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})} × ${(applicableRate * 100).toFixed(0)}% = <strong style="color:#6d28d9; font-size:1.1em;">SAR ${totalEos.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></li>
+      <li>Last wage: <strong>SAR ${lastSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})}</strong></li>
+      <li>Years of service: <strong>${yearsService.toFixed(2)} years</strong> (first 5 yrs: ${first5.toFixed(2)}, beyond 5: ${beyond5.toFixed(2)})</li>
+      <li>Article 84 base award: (${first5.toFixed(2)} × ½ + ${beyond5.toFixed(2)} × 1) = <strong>${baseMonths.toFixed(2)} months</strong> × SAR ${lastSalary.toLocaleString('en-SA', {minimumFractionDigits: 2})} = <strong>SAR ${baseAward.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></li>
+      <li>Applicable factor (${terminationType}): <strong>${(applicableRate * 100).toFixed(0)}%</strong></li>
+      <li>EOS payable: SAR ${baseAward.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2})} × ${(applicableRate * 100).toFixed(0)}% = <strong style="color:#6d28d9; font-size:1.1em;">SAR ${totalEos.toLocaleString('en-SA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong></li>
     </ul>
     ${yearsService < 2 ? '<div style="margin-top:12px;padding:12px;background:#fef9c3;border-radius:6px;color:#854d0e;"><strong>Note:</strong> Less than 2 years service. No EOS benefits under Labor Law, but you still receive unpaid salary and accrued vacation pay.</div>' : ''}
     ${terminationType === 'cause' ? '<div style="margin-top:12px;padding:12px;background:#fef2f2;border-radius:6px;color:#991b1b;"><strong>Warning:</strong> Termination for cause may forfeit EOS benefits. Consult HRSD for your specific situation.</div>' : ''}

@@ -89,7 +89,7 @@
       {
         "@type": "HowToStep",
         "name": "Apply GOSI deduction",
-        "text": "Calculate 9.75% employee contribution on basic salary up to SAR 45,000."
+        "text": "For Saudi nationals, calculate 9.75% employee contribution on basic + housing, capped at SAR 45,000. Expats pay 0%."
       },
       {
         "@type": "HowToStep",
@@ -110,7 +110,7 @@
         "name": "How is net salary calculated in Saudi Arabia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Net salary = Gross salary + Allowances - GOSI (9.75% of basic salary up to SAR 45,000). Housing and transport allowances are not subject to GOSI."
+          "text": "Net salary = Gross salary − GOSI. For Saudi nationals, GOSI is 9.75% of (basic + housing), capped at SAR 45,000. Transport is excluded. Expat employees pay 0% GOSI."
         }
       },
       {
@@ -118,7 +118,7 @@
         "name": "What is the GOSI deduction rate in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The GOSI employee contribution rate is 9.75% of basic salary, capped at SAR 45,000 per month (max deduction SAR 4,387.50)."
+          "text": "For Saudi employees the rate is 9.75% of (basic + housing), capped at SAR 45,000 per month (max SAR 4,387.50). Non-Saudi/expat employees pay 0%."
         }
       },
       {
@@ -126,7 +126,7 @@
         "name": "Is housing allowance included in GOSI calculation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Only basic salary is subject to GOSI. Housing, transport, and other allowances are exempt from social insurance contributions."
+          "text": "Yes. For Saudi nationals the GOSI base is basic salary + housing allowance (capped at SAR 45,000). Transport and other allowances are excluded."
         }
       },
       {
@@ -151,9 +151,10 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
-      --accent: #d97706;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --accent: #c9a227;
+      --gold-bright: #ffd166;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -167,8 +168,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -182,11 +183,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -194,12 +197,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -458,7 +465,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html" class="active">Salary</a></li>
@@ -497,7 +504,7 @@
     </div>
 
     <div class="quick-answer">
-      Your net salary in Saudi Arabia = Gross salary + Allowances - GOSI (9.75% of basic salary, capped at SAR 45,000). For a SAR 10,000 basic salary, GOSI = SAR 975, so net = SAR 9,025 before other deductions.
+      Your net salary in Saudi Arabia = Gross salary − GOSI. For Saudi nationals, GOSI is 9.75% of (basic + housing allowance), capped at SAR 45,000. Example: basic SAR 10,000 + housing SAR 3,000 = SAR 13,000 base, GOSI = SAR 1,267.50. Expat employees pay 0% GOSI.
     </div>
 
     <!-- Ad Slot 1 -->
@@ -514,6 +521,14 @@
     <div class="calculator-card">
       <h2>Calculate Your Net Salary</h2>
       <div class="form-group">
+        <label for="nationality">Employee Type</label>
+        <select id="nationality" style="width:100%;padding:12px;border:1px solid var(--border,#e2e8f0);border-radius:8px;font-size:1rem;background:#fff;">
+          <option value="saudi">Saudi national (pays GOSI 9.75%)</option>
+          <option value="expat">Non-Saudi / Expat (pays 0% GOSI)</option>
+        </select>
+        <div class="note">Expat employees pay 0% GOSI. Only the employer pays 2% occupational-hazard insurance.</div>
+      </div>
+      <div class="form-group">
         <label for="gross">Gross Monthly Salary (SAR)</label>
         <input type="number" id="gross" value="15000" min="0" step="100">
         <div class="note">Your total contractual salary before any deductions</div>
@@ -521,17 +536,17 @@
       <div class="form-group">
         <label for="basic">Basic Salary (SAR)</label>
         <input type="number" id="basic" value="10000" min="0" step="100">
-        <div class="note">Only basic salary is subject to GOSI. Typically 40–60% of gross.</div>
+        <div class="note">Part of the GOSI base for Saudi nationals. Typically 40–60% of gross.</div>
       </div>
       <div class="form-group">
         <label for="housing">Housing Allowance (SAR)</label>
         <input type="number" id="housing" value="3000" min="0" step="100">
-        <div class="note">Non-taxable, not subject to GOSI</div>
+        <div class="note">Included in the GOSI base for Saudi nationals (basic + housing, capped at SAR 45,000).</div>
       </div>
       <div class="form-group">
         <label for="transport">Transport Allowance (SAR)</label>
         <input type="number" id="transport" value="2000" min="0" step="100">
-        <div class="note">Non-taxable, not subject to GOSI</div>
+        <div class="note">Not subject to GOSI.</div>
       </div>
       <div class="btn-group">
         <button class="btn-primary" onclick="calculateSalary()">Calculate Net Pay</button>
@@ -545,7 +560,7 @@
         </div>
         <div class="result-row">
           <span>GOSI Deduction (9.75%)</span>
-          <span id="gosi-result">SAR 975</span>
+          <span id="gosi-result">SAR 1,267.50</span>
         </div>
         <div class="result-row">
           <span>Total Allowances</span>
@@ -553,7 +568,7 @@
         </div>
         <div class="result-row result-total">
           <span>Net Take-Home Pay</span>
-          <span id="net-result">SAR 14,025</span>
+          <span id="net-result">SAR 13,732.50</span>
         </div>
       </div>
     </div>
@@ -563,16 +578,17 @@
 
     <ol>
       <li><strong>Enter Your Gross Salary</strong><br>This is your total monthly compensation as stated in your contract. Include all components before deductions.</li>
-      <li><strong>Specify Basic Salary</strong><br>Only your basic salary is subject to GOSI social insurance. In Saudi contracts, basic salary is usually 40–60% of gross. Check your iqama or contract for this figure.</li>
-      <li><strong>Add Allowances</strong><br>Housing and transport allowances are common in KSA and are NOT subject to GOSI. Enter these separately for accurate calculation.</li>
-      <li><strong>Calculate Net Pay</strong><br>The calculator applies the 9.75% GOSI employee contribution (capped at SAR 45,000 basic salary) and shows your final take-home amount.</li>
+      <li><strong>Select Employee Type</strong><br>Choose Saudi national or expat. For Saudi nationals, GOSI is charged on basic + housing; expat employees pay 0% GOSI.</li>
+      <li><strong>Specify Basic Salary</strong><br>For Saudi nationals, basic salary is part of the GOSI base. In Saudi contracts, basic salary is usually 40–60% of gross. Check your iqama or contract for this figure.</li>
+      <li><strong>Add Allowances</strong><br>Housing allowance is included in the GOSI base for Saudi nationals; transport is excluded. Enter these separately for accurate calculation.</li>
+      <li><strong>Calculate Net Pay</strong><br>For Saudi nationals the calculator applies 9.75% GOSI on (basic + housing), capped at SAR 45,000, and shows your final take-home amount.</li>
       <li><strong>Use for Official Purposes</strong><br>Save or screenshot your results for salary certificates, visa applications, or rental agreements.</li>
     </ol>
 
     <h2>📊 Worked Examples: Saudi Salary Calculations</h2>
 
-    <h3>Example 1: Engineer in Riyadh</h3>
-    <p><strong>Scenario:</strong> Ali earns SAR 20,000 gross per month with SAR 12,000 basic salary, SAR 5,000 housing, and SAR 3,000 transport.</p>
+    <h3>Example 1: Saudi Engineer in Riyadh</h3>
+    <p><strong>Scenario:</strong> Ali (Saudi national) earns SAR 20,000 gross per month with SAR 12,000 basic salary, SAR 5,000 housing, and SAR 3,000 transport.</p>
     <table>
       <thead>
         <tr>
@@ -586,26 +602,26 @@
           <td>20,000</td>
         </tr>
         <tr>
-          <td>Basic Salary</td>
-          <td>12,000</td>
+          <td>GOSI base (Basic 12,000 + Housing 5,000)</td>
+          <td>17,000</td>
         </tr>
         <tr>
-          <td>GOSI (9.75% of 12,000)</td>
-          <td>1,170</td>
+          <td>GOSI (9.75% of 17,000)</td>
+          <td>1,657.50</td>
         </tr>
         <tr>
-          <td>Housing + Transport</td>
-          <td>8,000</td>
+          <td>Transport (excluded from GOSI)</td>
+          <td>3,000</td>
         </tr>
         <tr>
           <td><strong>Net Take-Home Pay</strong></td>
-          <td><strong>18,830</strong></td>
+          <td><strong>18,342.50</strong></td>
         </tr>
       </tbody>
     </table>
 
-    <h3>Example 2: Nurse in Jeddah</h3>
-    <p><strong>Scenario:</strong> Fatima has SAR 8,000 gross salary with SAR 5,000 basic, SAR 2,000 housing, SAR 1,000 transport.</p>
+    <h3>Example 2: Expat Nurse in Jeddah</h3>
+    <p><strong>Scenario:</strong> Fatima (non-Saudi/expat) has SAR 8,000 gross salary with SAR 5,000 basic, SAR 2,000 housing, SAR 1,000 transport. Expat employees pay 0% GOSI.</p>
     <table>
       <thead>
         <tr>
@@ -623,8 +639,8 @@
           <td>5,000</td>
         </tr>
         <tr>
-          <td>GOSI (9.75% of 5,000)</td>
-          <td>487.50</td>
+          <td>GOSI (expat employee = 0%)</td>
+          <td>0.00</td>
         </tr>
         <tr>
           <td>Housing + Transport</td>
@@ -632,15 +648,15 @@
         </tr>
         <tr>
           <td><strong>Net Take-Home Pay</strong></td>
-          <td><strong>7,512.50</strong></td>
+          <td><strong>8,000.00</strong></td>
         </tr>
       </tbody>
     </table>
 
     <!-- E-E-A-T Block -->
     <div class="expert-block">
-      <div class="expert-name">Reviewed by Layla Al-Mansoori</div>
-      <div class="expert-cred">HR & Labour Law Specialist<br>Former Ministry of Human Resources Advisor</div>
+      <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
+      <div class="expert-cred">Researched and fact-checked against official Saudi government sources (GOSI, HRSD, Qiwa).</div>
       <p>Last reviewed: June 2, 2026 | Next review: July 1, 2026<br>
          Verified against official GOSI rates and Qiwa portal guidelines.<br>
          <a href="/about.html">Learn more about our review process</a>.</p>
@@ -659,15 +675,15 @@
     <h2>❓ Frequently Asked Questions</h2>
     <div class="faq-item">
       <div class="faq-question">How is net salary calculated in Saudi Arabia?</div>
-      <div>Net salary = Gross salary + Allowances - GOSI (9.75% of basic salary up to SAR 45,000). Housing and transport allowances are not subject to GOSI.</div>
+      <div>Net salary = Gross salary − GOSI. For Saudi nationals, GOSI is 9.75% of (basic salary + housing allowance), capped at SAR 45,000. Transport and other allowances are excluded from the GOSI base. Expat employees pay 0% GOSI.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What is the GOSI deduction rate in 2026?</div>
-      <div>The GOSI employee contribution rate is 9.75% of basic salary, capped at SAR 45,000 per month (max deduction SAR 4,387.50).</div>
+      <div>For Saudi employees the contribution rate is 9.75% of (basic + housing), capped at SAR 45,000 per month (max deduction SAR 4,387.50). Non-Saudi/expat employees pay 0%.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">Is housing allowance included in GOSI calculation?</div>
-      <div>No. Only basic salary is subject to GOSI. Housing, transport, and other allowances are exempt from social insurance contributions.</div>
+      <div>Yes. For Saudi nationals the GOSI contribution base is basic salary + housing allowance (capped at SAR 45,000). Transport and other allowances are excluded.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What is a salary certificate in Saudi Arabia?</div>
@@ -679,7 +695,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-question">Does GOSI apply to expatriate employees?</div>
-      <div>Yes, all private sector employees in Saudi Arabia (Saudi and expatriate) must contribute to GOSI at 9.75% of basic salary.</div>
+      <div>No. Non-Saudi (expat) employees do not pay any GOSI from their salary (0%). Their employer pays only 2% for occupational-hazard insurance. The 9.75% employee contribution applies to Saudi nationals only.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What if my basic salary exceeds SAR 45,000?</div>
@@ -804,10 +820,11 @@
       const basic = parseFloat(document.getElementById('basic').value) || 0;
       const housing = parseFloat(document.getElementById('housing').value) || 0;
       const transport = parseFloat(document.getElementById('transport').value) || 0;
+      const nationality = document.getElementById('nationality').value;
 
-      // GOSI capped at SAR 45,000
-      const gosiBase = Math.min(basic, 45000);
-      const gosi = gosiBase * 0.0975;
+      // GOSI base = basic + housing (Saudi rule), capped at SAR 45,000. Expats pay 0%.
+      const gosiBase = Math.min(basic + housing, 45000);
+      const gosi = (nationality === 'saudi') ? gosiBase * 0.0975 : 0;
       const net = gross - gosi;
 
       document.getElementById('gross-result').textContent = 'SAR ' + gross.toLocaleString();

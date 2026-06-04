@@ -28,8 +28,9 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --gold-bright: #ffd166;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -42,8 +43,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -57,11 +58,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -69,12 +72,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -202,7 +209,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>

@@ -156,9 +156,10 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
-      --accent: #059669;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --gold-bright: #ffd166;
+      --accent: #c9a227;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -172,8 +173,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -187,11 +188,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -199,12 +202,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -369,7 +376,7 @@
     }
     .affiliate-disclosure {
       background: #fffbeb;
-      border-left: 4px solid #d97706;
+      border-left: 4px solid #c9a227;
       padding: 1rem;
       margin: 1.5rem 0;
       font-size: 0.9rem;
@@ -497,7 +504,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>
@@ -709,8 +716,8 @@
 
     <!-- E-E-A-T Block -->
     <div class="expert-block">
-      <div class="expert-name">Reviewed by Omar Farooq</div>
-      <div class="expert-cred">Certified Financial Planner (CFP®), Remittance & Banking Analyst</div>
+      <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
+      <div class="expert-cred">Researched and fact-checked against official Saudi sources (SAMA, bank tariffs).</div>
       <p>Last reviewed: June 2, 2026 | Next review: July 1, 2026<br>
          Verified against live rates from SAMA-regulated providers and user transfer receipts.<br>
          <a href="/about.html">Learn more about our review process</a>.</p>

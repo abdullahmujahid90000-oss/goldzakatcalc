@@ -144,7 +144,7 @@
         "name": "Do I get final settlement if I resign?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, but EOS is half the amount: (Basic Salary ÷ 2) × Years of Service (min. 2 years). Unused leave is always paid at full rate regardless of resignation or termination."
+          "text": "Yes, if you have at least 2 years of service. On resignation, the Article 84 award (½ month per year for the first 5 years plus a full month per year after) is reduced under Article 85 to one-third for 2–5 years of service, two-thirds for 5–10 years, and the full amount at 10+ years. Unused leave is always paid at the full daily rate regardless of resignation or termination."
         }
       },
       {
@@ -152,7 +152,7 @@
         "name": "What if my employer terminates me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You receive full EOS: Basic Salary × Years of Service, plus full unused leave encashment, regardless of service duration."
+          "text": "You receive the full Article 84 award (½ month per year for the first 5 years plus a full month per year after), plus full unused leave encashment, regardless of service duration."
         }
       },
       {
@@ -201,9 +201,10 @@
 
   <style>
     :root {
-      --primary: #1a365d;
-      --secondary: #2c5282;
-      --accent: #d97706;
+      --primary: #065a2d;
+      --secondary: #0a7c3e;
+      --accent: #c9a227;
+      --gold-bright: #ffd166;
       --light: #f8fafc;
       --gray: #64748b;
       --border: #e2e8f0;
@@ -217,8 +218,8 @@
       background-color: #fff;
     }
     header {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: #1a1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -232,11 +233,13 @@
       justify-content: space-between;
     }
     .logo {
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: #fff;
       text-decoration: none;
     }
+    .logo span { color: var(--gold-bright); }
     nav ul {
       display: flex;
       list-style: none;
@@ -244,12 +247,16 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray);
+      color: rgba(255,255,255,0.82);
       font-weight: 500;
       font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
     }
     nav a:hover, nav a.active {
-      color: var(--primary);
+      color: #fff;
+      border-bottom-color: var(--gold-bright);
     }
     .container {
       max-width: 1200px;
@@ -508,7 +515,7 @@
 <body>
   <header>
     <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi Utility Hub</a>
+      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
       <nav>
         <ul>
           <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>
@@ -547,7 +554,7 @@
     </div>
 
     <div class="quick-answer">
-      In Saudi Arabia 2026, your final settlement = End of Service Gratuity (EOS) + Unused Annual Leave Encashment. EOS is (Basic Salary ÷ 2) × Years for resignation (min. 2 years) or Basic Salary × Years for termination. Leave is paid at full daily rate (Basic ÷ 30) × Unused Days.
+      In Saudi Arabia 2026, your final settlement = End of Service Gratuity (EOS) + Unused Annual Leave Encashment. The EOS award (Article 84) is a half-month wage per year for the first 5 years plus a full-month wage per year after that. On resignation it is reduced under Article 85 to one-third (2–5 years), two-thirds (5–10 years), or the full amount (10+ years); termination by the employer pays the full award. Leave is paid at the full daily rate (Basic ÷ 30) × Unused Days.
     </div>
 
     <!-- Ad Slot 1 -->
@@ -608,15 +615,15 @@
         </div>
         <div class="result-row">
           <span>EOS Amount</span>
-          <span id="eos-amount-final">SAR 17,500</span>
+          <span id="eos-amount-final">SAR 5,833.33</span>
         </div>
         <div class="result-row">
           <span>Leave Encashment</span>
-          <span id="leave-amount-final">SAR 5,000</span>
+          <span id="leave-amount-final">SAR 5,000.00</span>
         </div>
         <div class="result-row result-total">
           <span>Total Final Settlement</span>
-          <span id="total-settlement-final">SAR 22,500</span>
+          <span id="total-settlement-final">SAR 10,833.33</span>
         </div>
       </div>
     </div>
@@ -625,9 +632,9 @@
     <p>Our free final settlement calculator helps employees in Saudi Arabia understand their exact end-of-employment entitlement under Article 84 of the Labour Law. This tool computes both your End of Service Gratuity (EOS) and unused annual leave encashment in one place.</p>
 
     <ol>
-      <li><strong>Enter Your Basic Salary</strong><br>Input your monthly basic salary as stated in your employment contract. Only basic salary is included — housing, transport, and other allowances are excluded.</li>
+      <li><strong>Enter Your Last Wage</strong><br>Input your last monthly wage. Saudi Labour Law bases the award on the "last wage"; if your allowances are part of your contractual wage, include them. If unsure, enter your basic salary for a conservative estimate.</li>
       <li><strong>Select Contract Type</strong><br>Choose between unlimited or fixed-term contract. Both follow the same Article 84 rules for final settlement.</li>
-      <li><strong>Choose Reason for Leaving</strong><br>Select resignation (employee-initiated) or termination (employer-initiated). This determines your EOS rate.</li>
+      <li><strong>Choose Reason for Leaving</strong><br>Select resignation (employee-initiated) or termination (employer-initiated). This determines the Article 85 reduction applied to your EOS award.</li>
       <li><strong>Enter Service Duration</strong><br>Input your total years and months of continuous service with this employer.</li>
       <li><strong>Enter Unused Leave Days</strong><br>Input the number of unused annual leave days you've accumulated (max 30 days per year, up to 60 total).</li>
       <li><strong>Calculate Final Settlement</strong><br>See your total final settlement amount including both EOS and leave encashment.</li>
@@ -635,8 +642,8 @@
 
     <h2>📊 Worked Examples: Final Settlement Scenarios</h2>
 
-    <h3>Example 1: Resignation After 3 Years</h3>
-    <p><strong>Scenario:</strong> Ali resigns from his job in Riyadh after 3 years 6 months with SAR 10,000 basic salary and 15 unused leave days.</p>
+    <h3>Example 1: Resignation After 3.5 Years</h3>
+    <p><strong>Scenario:</strong> Ali resigns from his job in Riyadh after 3 years 6 months with SAR 10,000 last wage and 15 unused leave days.</p>
     <table>
       <thead>
         <tr>
@@ -646,20 +653,20 @@
       </thead>
       <tbody>
         <tr>
-          <td>Basic Salary</td>
+          <td>Last wage</td>
           <td>SAR 10,000</td>
         </tr>
         <tr>
           <td>Service Duration</td>
-          <td>3.5 years</td>
+          <td>3.5 years (within first 5 years)</td>
         </tr>
         <tr>
-          <td>EOS Rate (Resignation)</td>
-          <td>0.5 months/year</td>
+          <td>Article 84 base award</td>
+          <td>3.5 × ½ month = 1.75 × 10,000 = SAR 17,500</td>
         </tr>
         <tr>
-          <td>EOS Amount</td>
-          <td>3.5 × 0.5 × 10,000 = SAR 17,500</td>
+          <td>Article 85 resignation factor (2–5 yrs)</td>
+          <td>1/3 → EOS = SAR 5,833.33</td>
         </tr>
         <tr>
           <td>Daily Wage (10,000 ÷ 30)</td>
@@ -667,17 +674,17 @@
         </tr>
         <tr>
           <td>Leave Encashment (15 × 333.33)</td>
-          <td>SAR 5,000</td>
+          <td>SAR 5,000.00</td>
         </tr>
         <tr>
           <td><strong>Total Final Settlement</strong></td>
-          <td><strong>SAR 22,500</strong></td>
+          <td><strong>SAR 10,833.33</strong></td>
         </tr>
       </tbody>
     </table>
 
     <h3>Example 2: Termination After 2 Years</h3>
-    <p><strong>Scenario:</strong> Fatima is terminated by her employer in Jeddah after 2 years with SAR 8,000 basic salary and 25 unused leave days.</p>
+    <p><strong>Scenario:</strong> Fatima is terminated by her employer in Jeddah after 2 years with SAR 8,000 last wage and 25 unused leave days.</p>
     <table>
       <thead>
         <tr>
@@ -687,20 +694,20 @@
       </thead>
       <tbody>
         <tr>
-          <td>Basic Salary</td>
+          <td>Last wage</td>
           <td>SAR 8,000</td>
         </tr>
         <tr>
           <td>Service Duration</td>
-          <td>2 years</td>
+          <td>2 years (within first 5 years)</td>
         </tr>
         <tr>
-          <td>EOS Rate (Termination)</td>
-          <td>1 month/year</td>
+          <td>Article 84 base award</td>
+          <td>2 × ½ month = 1.0 × 8,000 = SAR 8,000</td>
         </tr>
         <tr>
-          <td>EOS Amount</td>
-          <td>2 × 1 × 8,000 = SAR 16,000</td>
+          <td>Termination factor</td>
+          <td>Full award → EOS = SAR 8,000</td>
         </tr>
         <tr>
           <td>Daily Wage (8,000 ÷ 30)</td>
@@ -708,19 +715,19 @@
         </tr>
         <tr>
           <td>Leave Encashment (25 × 266.67)</td>
-          <td>SAR 6,667</td>
+          <td>SAR 6,666.67</td>
         </tr>
         <tr>
           <td><strong>Total Final Settlement</strong></td>
-          <td><strong>SAR 22,667</strong></td>
+          <td><strong>SAR 14,666.67</strong></td>
         </tr>
       </tbody>
     </table>
 
     <!-- E-E-A-T Block -->
     <div class="expert-block">
-      <div class="expert-name">Reviewed by Layla Al-Mansoori</div>
-      <div class="expert-cred">HR & Labour Law Specialist<br>Former Ministry of Human Resources Advisor</div>
+      <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
+      <div class="expert-cred">Researched and fact-checked against official Saudi government sources (GOSI, HRSD, Qiwa).</div>
       <p>Last reviewed: June 2, 2026 | Next review: July 1, 2026<br>
          Verified against official Saudi Labour Law Article 84 and Qiwa portal guidelines.<br>
          <a href="/about.html">Learn more about our review process</a>.</p>
@@ -751,11 +758,11 @@
     </div>
     <div class="faq-item">
       <div class="faq-question">Do I get final settlement if I resign?</div>
-      <div>Yes, but EOS is half the amount: (Basic Salary ÷ 2) × Years of Service (min. 2 years). Unused leave is always paid at full rate regardless of resignation or termination.</div>
+      <div>Yes, if you have at least 2 years of service. On resignation, the Article 84 award (½ month per year for the first 5 years plus a full month per year after) is reduced under Article 85 to one-third for 2–5 years of service, two-thirds for 5–10 years, and the full amount at 10+ years. Unused leave is always paid at the full daily rate regardless of resignation or termination.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What if my employer terminates me?</div>
-      <div>You receive full EOS: Basic Salary × Years of Service, plus full unused leave encashment, regardless of service duration.</div>
+      <div>You receive the full Article 84 award (½ month per year for the first 5 years plus a full month per year after), plus full unused leave encashment, regardless of service duration.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">Is there a minimum service period for final settlement?</div>
@@ -900,19 +907,31 @@
       }
 
       const totalYears = years + (months / 12);
-      let eosRate;
 
+      // Article 84 base award: half-month wage per year for first 5 years,
+      // full-month wage per year beyond 5 (prorated for partial years).
+      const first5 = Math.min(totalYears, 5);
+      const beyond5 = Math.max(totalYears - 5, 0);
+      const baseMonths = first5 * 0.5 + beyond5 * 1;
+      const baseAward = basicSalary * baseMonths;
+
+      // Article 85 resignation reduction.
+      let fraction;
       if (reason === 'resignation') {
         if (totalYears < 2) {
-          alert('Minimum 2 years of service required for EOS on resignation.');
-          return;
+          fraction = 0;
+        } else if (totalYears <= 5) {
+          fraction = 1/3;
+        } else if (totalYears < 10) {
+          fraction = 2/3;
+        } else {
+          fraction = 1;
         }
-        eosRate = 0.5;
       } else {
-        eosRate = 1;
+        fraction = 1; // termination by employer / retirement
       }
 
-      const eosAmount = basicSalary * totalYears * eosRate;
+      const eosAmount = baseAward * fraction;
       const dailyWage = basicSalary / 30;
       const leaveEncashment = dailyWage * leaveDays;
       const totalSettlement = eosAmount + leaveEncashment;
