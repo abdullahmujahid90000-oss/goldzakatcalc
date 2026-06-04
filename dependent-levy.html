@@ -1,206 +1,29 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta name="robots" content="noindex,nofollow">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حاسبة رسوم التابعين – Saudi Utility Hub</title>
-  <meta name="description" content="احسب رسوم التابعين في المملكة العربية السعودية. 400 ريال لكل تابع شهرياً. احسب التكلفة الشهرية والسنوية.">
-  <link rel="canonical" href="https://www.saudiutilityhub.com/ar/dependent-levy-calculator.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
-  <style>
-    :root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;--radius:12px;--shadow:0 4px 20px rgba(6,90,45,0.10);}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Tajawal',sans-serif;background:#f7faf8;color:#1a2e22;min-height:100vh;}
-    
-    .logo{color:#fff;font-size:1.4rem;font-weight:400;text-decoration:none;}
-    .logo strong{font-weight:800;}
-    .lang-btn{background:var(--gold);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
-    .lang-btn:hover{background:#a97820;}
-    main{max-width:680px;margin:0 auto;padding:32px 16px 60px;}
-    .page-header{text-align:center;margin-bottom:32px;}
-    .page-header h1{font-size:2rem;font-weight:800;color:var(--green);margin-bottom:8px;}
-    .page-header p{color:#556b5e;font-size:1.05rem;}
-    .ad-slot{background:#eef2ef;border:1px dashed #b0c4b8;border-radius:var(--radius);padding:16px;text-align:center;color:#8a9e92;font-size:0.85rem;margin-bottom:28px;min-height:90px;display:flex;align-items:center;justify-content:center;}
-    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:24px;}
-    .rate-box{background:var(--green-light);border-radius:10px;padding:16px 20px;margin-bottom:24px;text-align:center;}
-    .rate-box .rate-num{font-size:2rem;font-weight:800;color:var(--green);}
-    .rate-box .rate-desc{color:#556b5e;font-size:0.95rem;margin-top:4px;}
-    /* COUNTER */
-    .counter-section{text-align:center;padding:20px 0;}
-    .counter-label{font-weight:700;color:var(--green-dark);font-size:1rem;margin-bottom:20px;}
-    .counter-widget{display:inline-flex;align-items:center;gap:0;border:3px solid var(--green);border-radius:16px;overflow:hidden;}
-    .counter-btn{width:60px;height:60px;background:var(--green);color:#fff;border:none;font-size:1.8rem;font-weight:700;cursor:pointer;transition:background 0.15s;display:flex;align-items:center;justify-content:center;line-height:1;}
-    .counter-btn:hover{background:var(--green-dark);}
-    .counter-btn:disabled{background:#ccc;cursor:not-allowed;}
-    .counter-val{width:80px;height:60px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;color:var(--green);background:#fff;border-right:3px solid var(--green);border-left:3px solid var(--green);}
-    /* PERIOD */
-    .period-section{margin-top:24px;}
-    .period-label{font-weight:700;color:var(--green-dark);font-size:0.95rem;margin-bottom:8px;}
-    .period-row{display:flex;align-items:center;gap:12px;}
-    .period-row input{flex:1;padding:12px 16px;border:2px solid #d0e4d8;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:1rem;color:#1a2e22;outline:none;background:#fafdfc;}
-    .period-row input:focus{border-color:var(--green);}
-    .period-row select{padding:12px 16px;border:2px solid #d0e4d8;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:1rem;color:#1a2e22;outline:none;background:#fafdfc;}
-    /* RESULTS */
-    .results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:28px;}
-    @media(max-width:520px){.results-grid{grid-template-columns:1fr;}}
-    .r-item{background:var(--green-light);border-radius:10px;padding:20px 14px;text-align:center;}
-    .r-item.main{background:var(--green);color:#fff;}
-    .r-label{font-size:0.82rem;margin-bottom:6px;color:#556b5e;font-weight:600;}
-    .r-item.main .r-label{color:#c8f5d8;}
-    .r-value{font-size:1.35rem;font-weight:800;color:var(--green);}
-    .r-item.main .r-value{color:#fff;}
-    .r-unit{font-size:0.78rem;color:#8a9e92;margin-top:3px;}
-    .r-item.main .r-unit{color:#a8d8b8;}
-    .info-box{background:var(--green-light);border-right:4px solid var(--green);border-radius:8px;padding:16px 20px;margin-top:24px;font-size:0.92rem;color:#2d5a3d;line-height:1.7;}
-    footer{background:var(--green-dark);color:#a8c8b0;text-align:center;padding:24px;font-size:0.9rem;}
-    footer a{color:var(--gold);text-decoration:none;}
-  </style>
-
-<style id="nav-standard-css">
-nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
-.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
-.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
-.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
-.nav-ar{color:#f0a500 !important;font-weight:600}
-@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
-</style>
-  <meta property="og:image" content="https://www.saudiutilityhub.com/og-image.png">
-  <meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png">
-  <meta property="og:url" content="https://www.saudiutilityhub.com/ar/dependent-levy-calculator.html">
-
-  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saudiutilityhub.com/"},{"@type":"ListItem","position":2,"name":"العربية","item":"https://www.saudiutilityhub.com/ar/"},{"@type":"ListItem","position":3,"name":"حاسبة رسوم التابعين – Saudi Utility Hub","item":"https://www.saudiutilityhub.com/ar/dependent-levy.html"}]}</script>
-  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"WebPage","name":"حاسبة رسوم التابعين – Saudi Utility Hub","description":"احسب رسوم التابعين في المملكة العربية السعودية. 400 ريال لكل تابع شهرياً. احسب التكلفة الشهرية والسنوية.","url":"https://www.saudiutilityhub.com/ar/dependent-levy-calculator.html","inLanguage":"ar","isPartOf":{"@type":"WebSite","name":"Saudi Utility Hub","url":"https://www.saudiutilityhub.com/"}}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dependent Levy Calculator — Saudi Utility Hub</title>
+<meta name="description" content="Saudi dependent levy calculator — SAR 400/month per dependent, full annual cost breakdown.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">
+<meta http-equiv="refresh" content="0;url=https://www.saudiutilityhub.com/dependent-levy-calculator.html">
+<meta property="og:title" content="Dependent Levy Calculator — Saudi Utility Hub">
+<meta property="og:description" content="Saudi dependent levy calculator — SAR 400/month per dependent, full annual cost breakdown.">
+<meta property="og:url" content="https://www.saudiutilityhub.com/dependent-levy-calculator.html">
+<meta property="og:image" content="https://www.saudiutilityhub.com/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dependent Levy Calculator — Saudi Utility Hub">
+<meta name="twitter:description" content="Saudi dependent levy calculator — SAR 400/month per dependent, full annual cost breakdown.">
+<meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png">
+<style>body{font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#1a1a2e;background:#f4f7f4;line-height:1.65;max-width:640px;margin:40px auto;padding:24px;}h1{font-size:1.5rem;color:#0a7c3e;margin-bottom:10px;}.btn{display:inline-block;background:#0a7c3e;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:14px;}.btn:hover{background:#065a2d;}.muted{color:#4a5568;font-size:0.92rem;}</style>
 </head>
 <body>
-<nav dir="rtl">
-  <div class="nav-inner">
-    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
-    <div class="nav-links">
-      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
-      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
-      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
-      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
-      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
-      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
-      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
-      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
-      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
-      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
-      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
-      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-  <div class="page-header">
-    <h1>حاسبة رسوم التابعين</h1>
-    <p>احسب رسوم التابعين الشهرية والسنوية للمقيمين في المملكة</p>
-  </div>
-
-  <div class="ad-slot">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="7710956327" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-  </div>
-
-  <div class="card">
-    <div class="rate-box">
-      <div class="rate-num">400 ريال</div>
-      <div class="rate-desc">رسوم التابع الواحد — شهرياً</div>
-    </div>
-
-    <div class="counter-section">
-      <div class="counter-label">عدد التابعين</div>
-      <div class="counter-widget">
-        <button class="counter-btn" id="btn-minus" onclick="changeCount(-1)">−</button>
-        <div class="counter-val" id="count-display">1</div>
-        <button class="counter-btn" id="btn-plus" onclick="changeCount(1)">+</button>
-      </div>
-    </div>
-
-    <div class="period-section">
-      <div class="period-label">احسب للفترة المخصصة</div>
-      <div class="period-row">
-        <input type="number" id="period-num" value="12" min="1" max="120" onchange="updateResults()">
-        <select id="period-unit" onchange="updateResults()">
-          <option value="1">شهر</option>
-          <option value="12">سنة</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="results-grid">
-      <div class="r-item">
-        <div class="r-label">الرسوم الشهرية</div>
-        <div class="r-value" id="r-monthly">400</div>
-        <div class="r-unit">ريال سعودي</div>
-      </div>
-      <div class="r-item">
-        <div class="r-label">الرسوم السنوية</div>
-        <div class="r-value" id="r-annual">4,800</div>
-        <div class="r-unit">ريال سعودي</div>
-      </div>
-      <div class="r-item main">
-        <div class="r-label">للفترة المحددة</div>
-        <div class="r-value" id="r-period">4,800</div>
-        <div class="r-unit">ريال سعودي</div>
-      </div>
-    </div>
-
-    <div class="info-box">
-      <strong>معلومة:</strong> رسوم التابعين تُطبَّق على كل فرد من أفراد أسرة المقيم (الزوجة والأبناء والوالدان) بمقدار 400 ريال شهرياً لكل تابع. يُعفى من هذه الرسوم من يعمل لدى منشأة وطنية ذات نسبة سعودة محددة.
-    </div>
-  </div>
-
-  <div class="ad-slot">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2626150601" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-  </div>
-</main>
-
-<footer>
-  <p>© 2026 Saudi Utility Hub · <a href="../index.html">الرئيسية</a></p>
-</footer>
-
-<script>
-  let count = 1;
-  const RATE = 400;
-
-  function fmt(n){ return Math.round(n).toLocaleString('ar-SA'); }
-
-  function changeCount(delta){
-    count = Math.max(1, Math.min(10, count + delta));
-    document.getElementById('count-display').textContent = count;
-    document.getElementById('btn-minus').disabled = count <= 1;
-    document.getElementById('btn-plus').disabled = count >= 10;
-    updateResults();
-  }
-
-  function updateResults(){
-    const periodNum = parseInt(document.getElementById('period-num').value)||1;
-    const periodUnit = parseInt(document.getElementById('period-unit').value);
-    const months = periodNum * periodUnit;
-
-    const monthly = count * RATE;
-    const annual = monthly * 12;
-    const total = monthly * months;
-
-    document.getElementById('r-monthly').textContent = fmt(monthly);
-    document.getElementById('r-annual').textContent = fmt(annual);
-    document.getElementById('r-period').textContent = fmt(total);
-  }
-
-  // Init
-  document.getElementById('btn-minus').disabled = true;
-  updateResults();
-</script>
+<h1>Dependent Levy Calculator — Saudi Utility Hub</h1>
+<p>This page has moved. You will be redirected automatically. If your browser does not redirect, click the button below.</p>
+<p class="muted">Saudi dependent levy calculator — SAR 400/month per dependent, full annual cost breakdown.</p>
+<a class="btn" href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Go to Dependent Levy Calculator — Saudi Utility Hub →</a>
+<p class="muted" style="margin-top:24px;">© 2026 Saudi Utility Hub · saudiutilityhub@gmail.com</p>
 </body>
 </html>
