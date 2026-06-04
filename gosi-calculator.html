@@ -1,914 +1,171 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GOSI Calculator Saudi Arabia 2026 | Employee & Employer Contributions</title>
-  <meta name="description" content="Calculate GOSI contributions in Saudi Arabia 2026: Saudi employee 9.75% + employer 11.75%; expats 0% (employer pays 2%). Base = basic + housing, capped SAR 45,000." />
-  <meta name="keywords" content="gosi calculator saudi arabia 2026, saudi gosi contribution calculator, employee gosi rate ksa, employer gosi calculator, gosi deduction from salary saudi, how to calculate gosi in ksa, gosi rate 2026 saudi, saudi social insurance calculator, gosi employee vs employer contribution, gosi cap salary saudi arabia, gosi for expatriates saudi, gosi monthly contribution calculator, what is gosi in saudi salary, gosi registration qiwa, saudi gosi refund calculator" />
-  <link rel="canonical" href="https://www.saudiutilityhub.com/gosi-calculator.html" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة التأمينات الاجتماعية GOSI السعودية 2026</title>
+<meta name="description" content="احسب اشتراكات التأمينات الاجتماعية GOSI في السعودية. نسبة الموظف 9.75% ونسبة صاحب العمل 11.75% مع التفاصيل الكاملة.">
+<link rel="canonical" href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+<style>
+:root{--green:#065a2d;--green-dark:#044020;--green-light:#e8f5ee;--gold:#c8972b;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#374151;--gray-800:#1f2937}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Tajawal',sans-serif;color:var(--gray-800);background:#fff;direction:rtl}
+a{text-decoration:none;color:inherit}
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="GOSI Calculator Saudi Arabia 2026 | Employee & Employer Contributions" />
-  <meta property="og:description" content="Free GOSI calculator for Saudi Arabia 2026: compute Saudi and expat social insurance contributions on basic + housing, capped at SAR 45,000." />
-  <meta property="og:url" content="https://www.saudiutilityhub.com/gosi-calculator.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Saudi Utility Hub" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GOSI Calculator Saudi Arabia 2026" />
-  <meta name="twitter:description" content="Calculate exact GOSI deductions for employees and employers in KSA. Updated with June 2026 official rates from GOSI.gov.sa." />
+.nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:62px}
+.nav-logo{color:#fff;font-size:1.2rem;font-weight:800}
+.nav-logo span{color:var(--gold)}
+.lang-btn{background:var(--gold);color:#fff;border-radius:6px;padding:6px 14px;font-size:.82rem;font-weight:700}
+.page-hero{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;padding:40px 20px;text-align:center}
+.page-hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:8px}
+.page-hero p{opacity:.88;font-size:.95rem}
+.main{max-width:860px;margin:0 auto;padding:30px 20px}
+.calc-card{background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:24px}
+.calc-card h2{font-size:1.1rem;font-weight:800;color:var(--green);margin-bottom:18px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.88rem;font-weight:700;margin-bottom:6px}
+input{width:100%;padding:12px 14px;border:2px solid var(--gray-200);border-radius:8px;font-family:'Tajawal',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
+input:focus{border-color:var(--green)}
+.calc-btn{width:100%;background:var(--green);color:#fff;border:none;padding:13px;border-radius:9px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;margin-top:8px}
+.calc-btn:hover{background:var(--green-dark)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;display:none}
+.res-card{border-radius:14px;padding:20px}
+.res-card.employee{background:#dbeafe;border:2px solid #3b82f6}
+.res-card.employer{background:#fef3c7;border:2px solid #f59e0b}
+.res-card h3{font-size:.9rem;font-weight:800;margin-bottom:12px}
+.res-card.employee h3{color:#1d4ed8}
+.res-card.employer h3{color:#d97706}
+.res-row{display:flex;justify-content:space-between;font-size:.85rem;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.res-row:last-child{border-bottom:none;font-weight:800}
+.breakdown-table{width:100%;border-collapse:collapse;margin-top:20px;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.breakdown-table th{background:var(--green);color:#fff;padding:12px 16px;text-align:right;font-size:.85rem}
+.breakdown-table td{padding:11px 16px;font-size:.85rem;border-bottom:1px solid var(--gray-200)}
+.breakdown-table tr:last-child td{font-weight:800;background:var(--green-light)}
+.ad-slot{background:var(--gray-100);border:1px dashed var(--gray-200);border-radius:10px;text-align:center;padding:20px;margin:24px 0;font-size:.8rem;color:var(--gray-600)}
+footer{background:var(--green-dark);color:rgba(255,255,255,.88);text-align:center;padding:24px;font-size:.85rem;margin-top:40px}
+footer a{color:rgba(255,255,255,.8)}
+@media(max-width:600px){.results-grid{grid-template-columns:1fr!important}}
+</style>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+  <meta property="og:image" content="https://www.saudiutilityhub.com/og-image.png">
+  <meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png">
+  <meta property="og:url" content="https://www.saudiutilityhub.com/ar/gosi-calculator.html">
 
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "GOSI Calculator Saudi Arabia 2026",
-    "url": "https://www.saudiutilityhub.com/gosi-calculator.html",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "SAR"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saudiutilityhub.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Finance Tools",
-        "item": "https://www.saudiutilityhub.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "GOSI Calculator"
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Calculate GOSI Contributions in Saudi Arabia 2026",
-    "description": "Step-by-step guide to calculate employee and employer GOSI contributions with the SAR 45,000 salary cap.",
-    "step": [
-      {
-        "@type": "HowToStep",
-        "name": "Add basic salary and housing allowance",
-        "text": "Add your monthly basic salary and housing allowance to get the GOSI base. Transport and other allowances are excluded."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Apply GOSI cap",
-        "text": "If the base (basic + housing) exceeds SAR 45,000, use SAR 45,000 as the base."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Calculate employee share",
-        "text": "Saudi nationals: multiply the base by 9.75%. Expat employees pay 0%."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Calculate employer share",
-        "text": "Saudi nationals: multiply the base by 11.75%. For expats, the employer pays only 2% occupational hazard."
-      },
-      {
-        "@type": "HowToStep",
-        "name": "Get total contribution",
-        "text": "Add employee and employer shares for total GOSI."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the GOSI employee contribution rate in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The GOSI employee contribution rate for Saudi nationals is 9.75% of basic salary plus housing allowance, capped at SAR 45,000 per month. Expat (non-Saudi) employees do not pay any employee GOSI contribution."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the GOSI employer contribution rate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For Saudi national employees, employers contribute 11.75% of basic salary plus housing allowance (capped at SAR 45,000). For expat employees, the employer pays only 2% occupational-hazard insurance on the same base."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does GOSI apply to expatriate workers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Expat (non-Saudi) employees do NOT pay an employee GOSI deduction. Only Saudi nationals pay the 9.75% employee contribution. For expats, the employer pays a 2% occupational-hazard contribution, which is not deducted from the employee's salary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is housing allowance included in GOSI calculation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The GOSI base is basic salary PLUS housing allowance (capped at SAR 45,000). Transport, food, and other allowances are not included in the GOSI base."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the maximum GOSI deduction?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For a Saudi national, the maximum employee GOSI deduction is SAR 4,387.50 (9.75% of SAR 45,000) and the maximum employer contribution is SAR 5,287.50 (11.75% of SAR 45,000). For an expat employee there is no employee deduction; the employer's occupational-hazard maximum is SAR 900 (2% of SAR 45,000)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How to check GOSI contributions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Employees can check their GOSI contributions through the Qiwa portal (qiwa.sa) or the GOSI mobile app."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get a GOSI refund?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Expatriate workers may be eligible for a GOSI refund upon final exit from Saudi Arabia, provided they meet eligibility criteria."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if my employer doesn't pay GOSI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can report non-compliance to the Ministry of Human Resources via the Qiwa platform or Absher."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --primary: #065a2d;
-      --secondary: #0a7c3e;
-      --accent: #c9a227;
-      --gold-bright: #ffd166;
-      --light: #f8fafc;
-      --gray: #64748b;
-      --border: #e2e8f0;
-      --success: #16a34a;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: #1e293b;
-      background-color: #fff;
-    }
-    header {
-      background: #1a1a2e;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: 'Montserrat', 'Inter', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
-    }
-    .logo span { color: var(--gold-bright); }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.25rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: rgba(255,255,255,0.82);
-      font-weight: 500;
-      font-size: 0.95rem;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s;
-    }
-    nav a:hover, nav a.active {
-      color: #fff;
-      border-bottom-color: var(--gold-bright);
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    .breadcrumb {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-    .breadcrumb a {
-      color: var(--secondary);
-      text-decoration: none;
-    }
-    .hero {
-      margin-bottom: 2rem;
-    }
-    .hero h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      font-size: 1.125rem;
-      color: var(--gray);
-      margin-bottom: 1rem;
-    }
-    .badge {
-      display: inline-block;
-      background: #dbeafe;
-      color: var(--secondary);
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-    }
-    .quick-answer {
-      background: #f0fdf4;
-      border-left: 4px solid var(--success);
-      padding: 1.25rem;
-      margin: 2rem 0;
-      font-weight: 600;
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-    .ad-slot {
-      text-align: center;
-      margin: 2rem 0;
-      min-height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f8fafc;
-      border: 1px dashed #cbd5e1;
-      color: var(--gray);
-      font-size: 0.875rem;
-    }
-    .calculator-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
-    input, select {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      font-size: 1rem;
-    }
-    .note {
-      font-size: 0.875rem;
-      color: var(--gray);
-      margin-top: 0.5rem;
-    }
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    button {
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--gray);
-    }
-    .results {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: #f8fafc;
-      border-radius: 1rem;
-      display: none;
-    }
-    .result-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.75rem;
-      font-size: 1.125rem;
-    }
-    .result-total {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 1.25rem;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    h2 {
-      font-size: 1.875rem;
-      margin: 2.5rem 0 1.5rem;
-      color: var(--primary);
-    }
-    h3 {
-      font-size: 1.375rem;
-      margin: 2rem 0 1rem;
-      color: var(--secondary);
-    }
-    ol, ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-    }
-    th, td {
-      padding: 0.75rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      background: #f1f5f9;
-      font-weight: 600;
-    }
-    .expert-block {
-      background: #f8fafc;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-      border-left: 4px solid var(--accent);
-    }
-    .expert-name {
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-    }
-    .expert-cred {
-      color: var(--gray);
-      margin-bottom: 0.75rem;
-    }
-    footer {
-      background: var(--primary);
-      color: white;
-      padding: 3rem 1.5rem 1.5rem;
-      margin-top: 3rem;
-    }
-    .footer-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .footer-col h3 {
-      color: white;
-      margin-bottom: 1.25rem;
-      font-size: 1.125rem;
-    }
-    .footer-col ul {
-      list-style: none;
-      margin-left: 0;
-    }
-    .footer-col a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    .footer-col a:hover {
-      color: white;
-    }
-    .copyright {
-      text-align: center;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    .cookie-text {
-      max-width: 800px;
-      font-size: 0.9rem;
-      color: var(--gray);
-    }
-    .cookie-btns {
-      display: flex;
-      gap: 0.75rem;
-    }
-    .cookie-btn {
-      padding: 0.5rem 1rem;
-      border-radius: 0.375rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-    .accept { background: var(--primary); color: white; border: none; }
-    .decline { background: #f1f5f9; color: var(--gray); border: 1px solid var(--border); }
-
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; gap: 1rem; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
-      .hero h1 { font-size: 1.75rem; }
-      .btn-group { flex-direction: column; }
-    }
-  </style>
+  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saudiutilityhub.com/"},{"@type":"ListItem","position":2,"name":"العربية","item":"https://www.saudiutilityhub.com/ar/"},{"@type":"ListItem","position":3,"name":"حاسبة التأمينات الاجتماعية GOSI السعودية 2026","item":"https://www.saudiutilityhub.com/ar/gosi-calculator.html"}]}</script>
+  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"WebApplication","name":"حاسبة التأمينات الاجتماعية GOSI السعودية 2026","description":"احسب اشتراكات التأمينات الاجتماعية GOSI في السعودية. نسبة الموظف 9.75% ونسبة صاحب العمل 11.75% مع التفاصيل الكاملة.","url":"https://www.saudiutilityhub.com/ar/gosi-calculator.html","inLanguage":"ar","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"},"isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Saudi Utility Hub","url":"https://www.saudiutilityhub.com/"}}</script>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <a href="https://www.saudiutilityhub.com/" class="logo">Saudi<span>Utility</span>Hub</a>
-      <nav>
-        <ul>
-          <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary</a></li>
-          <li><a href="https://www.saudiutilityhub.com/gosi-calculator.html" class="active">GOSI</a></li>
-          <li><a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS</a></li>
-          <li><a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Zakat</a></li>
-          <li><a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama</a></li>
-          <li><a href="https://www.saudiutilityhub.com/blog/">Blog</a></li>
-        </ul>
-      </nav>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
     </div>
-  </header>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>🏛️ حاسبة التأمينات الاجتماعية GOSI</h1>
+  <p>احسب اشتراكات الموظف وصاحب العمل في التأمينات الاجتماعية السعودية</p>
+</div>
+<div class="main">
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="7710956327" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
 
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <span itemscope itemtype="https://schema.org/BreadcrumbList">
-        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="https://www.saudiutilityhub.com/"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1" />
-        </span> › 
-        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="https://www.saudiutilityhub.com/"><span itemprop="name">Finance Tools</span></a>
-          <meta itemprop="position" content="2" />
-        </span> › 
-        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <span itemprop="name">GOSI Calculator</span>
-          <meta itemprop="position" content="3" />
-        </span>
-      </span>
-    </nav>
-
-    <div class="hero">
-      <h1>🏢 GOSI Calculator Saudi Arabia 2026</h1>
-      <p>Calculate Saudi and expat GOSI contributions on basic + housing, with the SAR 45,000 cap. Saudi nationals pay 9.75% (employer 11.75%); expat employees pay 0% (employer pays 2%). Free, accurate, official rates.</p>
-      <span class="badge">Updated June 2026 • Saudi: 9.75% + 11.75% • Expat: 0% + 2% • Cap: SAR 45,000</span>
+  <div class="calc-card">
+    <h2>🔢 أدخل بيانات الراتب</h2>
+    <div class="form-group">
+      <label>الراتب الأساسي (ريال/شهر)</label>
+      <input type="number" id="basicSalary" placeholder="مثال: 8000" min="0" oninput="calculate()">
     </div>
-
-    <div class="quick-answer">
-      In Saudi Arabia 2026, the GOSI base is basic salary plus housing allowance, capped at SAR 45,000. <strong>Saudi national</strong> employees pay 9.75% (max SAR 4,387.50) and their employer pays 11.75% (max SAR 5,287.50) — a combined 21.5%. <strong>Expat (non-Saudi)</strong> employees pay 0%; their employer pays only a 2% occupational-hazard contribution (max SAR 900), which is never deducted from the employee's salary. Note: under the GOSI scheme introduced in July 2024, contribution rates for newly registered Saudi entrants rise gradually over several years, so newer hires may see slightly higher rates.
+    <div class="form-group">
+      <label>بدل السكن (ريال/شهر) — يُضاف إلى وعاء الاشتراك</label>
+      <input type="number" id="housingAllow" placeholder="مثال: 2000" min="0" value="0" oninput="calculate()">
     </div>
 
-    <!-- Ad Slot 1 -->
-    <div class="ad-slot">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5391037132181133"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
-
-    <!-- Calculator -->
-    <div class="calculator-card">
-      <h2>Calculate Your GOSI Contributions</h2>
-      <div class="form-group">
-        <label for="basic-salary">Basic Monthly Salary (SAR)</label>
-        <input type="number" id="basic-salary" value="10000" min="0" step="100">
-        <div class="note">Enter your monthly basic salary from your contract.</div>
+    <div class="results-grid" id="resultsGrid" style="display:grid">
+      <div class="res-card employee">
+        <h3>👤 حصة الموظف (9.75%)</h3>
+        <div class="res-row"><span>تقاعد</span><span id="empRetirement"></span></div>
+        <div class="res-row"><span>التأمين ضد العجز والوفاة</span><span id="empAnnuity"></span></div>
+        <div class="res-row"><span>إجمالي الخصم الشهري</span><span id="empTotal"></span></div>
       </div>
-      <div class="form-group">
-        <label for="housing-allowance">Housing Allowance (SAR)</label>
-        <input type="number" id="housing-allowance" value="2500" min="0" step="100">
-        <div class="note">Housing allowance is included in the GOSI base. Transport and other allowances are not.</div>
-      </div>
-      <div class="form-group">
-        <label for="employee-type">Employee Type</label>
-        <select id="employee-type">
-          <option value="expat">Expatriate Worker</option>
-          <option value="saudi">Saudi National</option>
-        </select>
-        <div class="note">Saudi nationals pay 9.75% employee GOSI. Expat employees pay 0% — the employer pays 2% occupational-hazard insurance.</div>
-      </div>
-      <div class="btn-group">
-        <button class="btn-primary" onclick="calculateGOSI()">Calculate GOSI</button>
-        <button class="btn-outline" onclick="resetGOSIForm()">Reset</button>
-      </div>
-
-      <div id="gosi-results" class="results">
-        <div class="result-row">
-          <span>GOSI Base (Basic + Housing, capped)</span>
-          <span id="capped-salary">SAR 12,500</span>
-        </div>
-        <div class="result-row">
-          <span id="employee-label">Employee Contribution (9.75%)</span>
-          <span id="employee-gosi">SAR 0.00</span>
-        </div>
-        <div class="result-row">
-          <span id="employer-label">Employer Contribution</span>
-          <span id="employer-gosi">SAR 0.00</span>
-        </div>
-        <div class="result-row result-total">
-          <span>Total GOSI Contribution</span>
-          <span id="total-gosi">SAR 0.00</span>
-        </div>
-      </div>
-    </div>
-
-    <h2>📖 How to Use This GOSI Calculator</h2>
-    <p>Our free GOSI calculator helps employees and employers in Saudi Arabia understand their exact social insurance obligations for 2026. Whether you're checking your payslip deduction or calculating payroll costs, this tool uses official GOSI rates with the SAR 45,000 salary cap.</p>
-
-    <ol>
-      <li><strong>Enter Your Basic Salary &amp; Housing Allowance</strong><br>Input your monthly basic salary and housing allowance from your contract. The GOSI base is basic + housing; transport, food, and other allowances are not included.</li>
-      <li><strong>Select Employee Type</strong><br>Choose expatriate worker or Saudi national. Saudi nationals pay the 9.75% employee contribution; expat employees pay 0% (the employer pays 2% occupational hazard instead).</li>
-      <li><strong>Apply GOSI Cap</strong><br>If your basic salary exceeds SAR 45,000, the calculator automatically caps it at SAR 45,000 for GOSI purposes.</li>
-      <li><strong>View Contributions</strong><br>See your exact employee deduction, employer payment, and total GOSI contribution.</li>
-      <li><strong>Use for Verification</strong><br>Compare results with your payslip or payroll software to ensure compliance.</li>
-    </ol>
-
-    <h2>📊 Worked Examples: GOSI Calculations</h2>
-
-    <h3>Example 1: Saudi National in Riyadh</h3>
-    <p><strong>Scenario:</strong> Khalid (Saudi) earns SAR 12,000 basic salary + SAR 3,000 housing allowance per month.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Amount (SAR)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GOSI base (basic 12,000 + housing 3,000)</td>
-          <td>15,000</td>
-        </tr>
-        <tr>
-          <td>Capped for GOSI?</td>
-          <td>No (≤45,000)</td>
-        </tr>
-        <tr>
-          <td>Employee GOSI (9.75%)</td>
-          <td>1,462.50</td>
-        </tr>
-        <tr>
-          <td>Employer GOSI (11.75%)</td>
-          <td>1,762.50</td>
-        </tr>
-        <tr>
-          <td><strong>Total GOSI</strong></td>
-          <td><strong>3,225.00</strong></td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Khalid's net salary is SAR 15,000 − 1,462.50 = <strong>SAR 13,537.50</strong>.</p>
-
-    <h3>Example 2: Expat Employee (Same Salary)</h3>
-    <p><strong>Scenario:</strong> Ahmed (expat) earns the same SAR 12,000 basic + SAR 3,000 housing.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Amount (SAR)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GOSI base (basic 12,000 + housing 3,000)</td>
-          <td>15,000</td>
-        </tr>
-        <tr>
-          <td>Employee GOSI</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <td>Employer occupational hazard (2%)</td>
-          <td>300.00</td>
-        </tr>
-        <tr>
-          <td><strong>Deducted from Ahmed's salary</strong></td>
-          <td><strong>0.00</strong></td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Ahmed has no GOSI deduction, so his net salary equals his gross: <strong>SAR 15,000</strong>. The 2% (SAR 300) is paid by the employer, not deducted from him.</p>
-
-    <h3>Example 3: Saudi National Above the Cap</h3>
-    <p><strong>Scenario:</strong> Fatima (Saudi) earns SAR 50,000 basic + SAR 12,000 housing = SAR 62,000, which exceeds the cap.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Amount (SAR)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GOSI base (62,000)</td>
-          <td>Capped → 45,000</td>
-        </tr>
-        <tr>
-          <td>Employee GOSI (9.75% of 45k)</td>
-          <td>4,387.50</td>
-        </tr>
-        <tr>
-          <td>Employer GOSI (11.75% of 45k)</td>
-          <td>5,287.50</td>
-        </tr>
-        <tr>
-          <td><strong>Total GOSI</strong></td>
-          <td><strong>9,675.00</strong></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- E-E-A-T Block -->
-    <div class="expert-block">
-      <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
-      <div class="expert-cred">Researched and fact-checked against official Saudi government sources (GOSI, HRSD, Qiwa).</div>
-      <p>Last reviewed: June 2, 2026 | Next review: July 1, 2026<br>
-         Verified against official GOSI circulars and Qiwa portal guidelines.<br>
-         <a href="/about.html">Learn more about our review process</a>.</p>
-    </div>
-
-    <!-- Official Sources -->
-    <h2>📜 Official Sources</h2>
-    <ul>
-      <li><a href="https://gosi.gov.sa" target="_blank" rel="noopener">General Organization for Social Insurance (GOSI)</a> – Official contribution rates and rules.</li>
-      <li><a href="https://qiwa.sa" target="_blank" rel="noopener">Qiwa Platform</a> – Register employees and view GOSI statements.</li>
-      <li><a href="https://hrsd.gov.sa" target="_blank" rel="noopener">Ministry of Human Resources and Social Development</a> – Labour law enforcement.</li>
-    </ul>
-    <p><em>Disclaimer: Calculator results are estimates only. Verify your final GOSI contributions through the official Qiwa portal.</em></p>
-
-    <!-- FAQ -->
-    <h2>❓ Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-question">What is the GOSI employee contribution rate in 2026?</div>
-      <div>The GOSI employee contribution rate for Saudi nationals is 9.75% of basic salary plus housing allowance, capped at SAR 45,000 per month. Expat (non-Saudi) employees do not pay any employee GOSI contribution.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">What is the GOSI employer contribution rate?</div>
-      <div>For Saudi national employees, employers contribute 11.75% of basic salary plus housing allowance (capped at SAR 45,000). For expat employees, the employer pays only 2% occupational-hazard insurance on the same base.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Does GOSI apply to expatriate workers?</div>
-      <div>Expat (non-Saudi) employees do NOT pay an employee GOSI deduction. Only Saudi nationals pay the 9.75% employee contribution. For expats, the employer pays a 2% occupational-hazard contribution, which is not deducted from the employee's salary.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Is housing allowance included in GOSI calculation?</div>
-      <div>Yes. The GOSI base is basic salary PLUS housing allowance (capped at SAR 45,000). Transport, food, and other allowances are not included in the GOSI base.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">What is the maximum GOSI deduction?</div>
-      <div>For a Saudi national, the maximum employee GOSI deduction is SAR 4,387.50 (9.75% of SAR 45,000) and the maximum employer contribution is SAR 5,287.50 (11.75% of SAR 45,000). For an expat employee there is no employee deduction; the employer's occupational-hazard maximum is SAR 900 (2% of SAR 45,000).</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">How to check GOSI contributions?</div>
-      <div>Employees can check their GOSI contributions through the Qiwa portal (qiwa.sa) or the GOSI mobile app.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Can I get a GOSI refund?</div>
-      <div>Expatriate workers may be eligible for a GOSI refund upon final exit from Saudi Arabia, provided they meet eligibility criteria.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">What happens if my employer doesn't pay GOSI?</div>
-      <div>You can report non-compliance to the Ministry of Human Resources via the Qiwa platform or Absher.</div>
-    </div>
-
-    <!-- Ad Slot 2 -->
-    <div class="ad-slot">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5391037132181133"
-           data-ad-slot="2345678901"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
-
-    <!-- Related Tools -->
-    <h2>🔗 Related Free Tools</h2>
-    <div class="related-grid">
-      <div class="related-card">
-        <h3>💼 Salary Calculator</h3>
-        <p>Calculate net take-home pay after GOSI, housing, and transport allowances.</p>
-        <a href="https://www.saudiutilityhub.com/salary-calculator.html">Open Tool →</a>
-      </div>
-      <div class="related-card">
-        <h3>⚖️ EOS Gratuity Calculator</h3>
-        <p>Calculate end-of-service benefits under Saudi Labour Law Article 84.</p>
-        <a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">Open Tool →</a>
-      </div>
-      <div class="related-card">
-        <h3>🪪 Iqama Expiry Tracker</h3>
-        <p>Track your residency permit expiry date and renewal fees.</p>
-        <a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Open Tool →</a>
-      </div>
-      <div class="related-card">
-        <h3>💰 Dependent Levy Calculator</h3>
-        <p>Calculate monthly fees for family members on your sponsorship.</p>
-        <a href="https://www.saudiutilityhub.com/dependent-levy-calculator.html">Open Tool →</a>
-      </div>
-    </div>
-
-    <!-- Related Blog Posts -->
-    <h2>📚 Related Blog Posts</h2>
-    <div class="related-grid">
-      <div class="related-card">
-        <h3>How to Calculate GOSI in Saudi Arabia 2026</h3>
-        <p>9.75% employee rate, SAR 45k cap, step-by-step examples.</p>
-        <div>📅 May 2026 ⏱️ 8 min read</div>
-      </div>
-      <div class="related-card">
-        <h3>GOSI Refund for Expats — Complete Guide 2026</h3>
-        <p>Eligibility, documents, processing time, and common mistakes.</p>
-        <div>📅 April 2026 ⏱️ 10 min read</div>
+      <div class="res-card employer">
+        <h3>🏢 حصة صاحب العمل (11.75%)</h3>
+        <div class="res-row"><span>تقاعد</span><span id="emplRetirement"></span></div>
+        <div class="res-row"><span>إصابات العمل</span><span id="emplOccupational"></span></div>
+        <div class="res-row"><span>إجمالي التحمل الشهري</span><span id="emplTotal"></span></div>
       </div>
     </div>
   </div>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>💼 Finance Tools</h3>
-        <ul>
-          <li><a href="https://www.saudiutilityhub.com/salary-calculator.html">Salary Calculator</a></li>
-          <li><a href="https://www.saudiutilityhub.com/gosi-calculator.html">GOSI Calculator</a></li>
-          <li><a href="https://www.saudiutilityhub.com/ksa-eos-calculator.html">EOS Gratuity</a></li>
-          <li><a href="https://www.saudiutilityhub.com/gold-zakat-calculator.html">Gold Zakat</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>🪪 Expat Tools</h3>
-        <ul>
-          <li><a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a></li>
-          <li><a href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">Iqama Transfer</a></li>
-          <li><a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visit Visa</a></li>
-          <li><a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic Fines</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>🏦 Banking</h3>
-        <ul>
-          <li><a href="https://www.saudiutilityhub.com/remittance-fee-compare.html">Remittance Compare</a></li>
-          <li><a href="https://www.saudiutilityhub.com/saudi-iban-validator.html">IBAN Validator</a></li>
-          <li><a href="https://www.saudiutilityhub.com/currency-converter.html">Currency Converter</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>ℹ️ About</h3>
-        <ul>
-          <li><a href="https://www.saudiutilityhub.com/about.html">About Us</a></li>
-          <li><a href="https://www.saudiutilityhub.com/contact.html">Contact</a></li>
-          <li><a href="https://www.saudiutilityhub.com/privacy.html">Privacy Policy</a></li>
-          <li><a href="https://www.saudiutilityhub.com/terms.html">Terms of Use</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Calculations are estimates only. Verify with official sources.
-    </div>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner">
-    <div class="cookie-text">
-      🍪 We use cookies for ads and analytics. By clicking "Accept", you consent to our use of cookies. 
-      <a href="/privacy.html" style="color:var(--primary);">Privacy Policy</a>
-    </div>
-    <div class="cookie-btns">
-      <button class="cookie-btn accept" onclick="acceptCookies()">Accept</button>
-      <button class="cookie-btn decline" onclick="declineCookies()">Decline</button>
-    </div>
+  <div class="calc-card">
+    <h2>📊 جدول معدلات الاشتراك</h2>
+    <table class="breakdown-table">
+      <thead><tr><th>الفئة</th><th>نسبة الموظف</th><th>نسبة صاحب العمل</th><th>الإجمالي</th></tr></thead>
+      <tbody>
+        <tr><td>التقاعد (المعاش)</td><td>9%</td><td>9%</td><td>18%</td></tr>
+        <tr><td>التأمين ضد العجز والوفاة</td><td>0.75%</td><td>0.75%</td><td>1.5%</td></tr>
+        <tr><td>إصابات العمل</td><td>—</td><td>2%</td><td>2%</td></tr>
+        <tr><td><strong>الإجمالي</strong></td><td><strong>9.75%</strong></td><td><strong>11.75%</strong></td><td><strong>21.5%</strong></td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <script>
-    function acceptCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
-    function declineCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
-
-    function calculateGOSI() {
-      const basicSalary = parseFloat(document.getElementById('basic-salary').value) || 0;
-      const housing = parseFloat(document.getElementById('housing-allowance').value) || 0;
-      const type = document.getElementById('employee-type').value;
-      const gosiBase = Math.min(basicSalary + housing, 45000);
-
-      let employeeGOSI, employerGOSI, empRate, emprRate;
-      if (type === 'saudi') {
-        empRate = 0.0975;   // Saudi employee
-        emprRate = 0.1175;  // Saudi employer (9% pension + 2% occupational hazard + 0.75% SANED)
-        employeeGOSI = gosiBase * empRate;
-        employerGOSI = gosiBase * emprRate;
-      } else {
-        empRate = 0;        // Expat employees do not contribute
-        emprRate = 0.02;    // Employer pays 2% occupational hazard only
-        employeeGOSI = 0;
-        employerGOSI = gosiBase * emprRate;
-      }
-      const totalGOSI = employeeGOSI + employerGOSI;
-
-      document.getElementById('employee-label').textContent =
-        'Employee Contribution (' + (empRate * 100).toFixed(2).replace(/\.?0+$/, '') + '%)';
-      document.getElementById('employer-label').textContent =
-        'Employer Contribution (' + (emprRate * 100).toFixed(2).replace(/\.?0+$/, '') + '%)';
-
-      document.getElementById('capped-salary').textContent = 'SAR ' + gosiBase.toLocaleString();
-      document.getElementById('employee-gosi').textContent = 'SAR ' + employeeGOSI.toFixed(2);
-      document.getElementById('employer-gosi').textContent = 'SAR ' + employerGOSI.toFixed(2);
-      document.getElementById('total-gosi').textContent = 'SAR ' + totalGOSI.toFixed(2);
-
-      document.getElementById('gosi-results').style.display = 'block';
-      document.getElementById('gosi-results').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function resetGOSIForm() {
-      document.getElementById('basic-salary').value = '10000';
-      document.getElementById('housing-allowance').value = '2500';
-      document.getElementById('employee-type').selectedIndex = 0;
-      document.getElementById('gosi-results').style.display = 'none';
-    }
-
-    window.addEventListener('load', () => {
-      if (typeof adsbygoogle !== 'undefined') {
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-      }
-    });
-  </script>
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2626150601" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+<footer>
+  <p>© 2026 Saudi Utility Hub | <a href="../index.html">الرئيسية</a> | <a href="salary-calculator.html">حاسبة الراتب</a> | <a href="../gosi-calculator.html">English</a></p>
+</footer>
+<script>
+function calculate(){
+  const basic=parseFloat(document.getElementById('basicSalary').value)||0;
+  const housing=parseFloat(document.getElementById('housingAllow').value)||0;
+  const base=basic+housing;
+  if(base===0) return;
+  const fmt=n=>n.toLocaleString('ar-SA',{minimumFractionDigits:2,maximumFractionDigits:2})+' ريال';
+  // Employee: 9% retirement + 0.75% annuity = 9.75%
+  const empRet=base*0.09, empAnn=base*0.0075, empTot=base*0.0975;
+  // Employer: 9% retirement + 2% occupational + 0.75% annuity = 11.75%
+  const emplRet=base*0.09, emplOcc=base*0.02, emplTot=base*0.1175;
+  document.getElementById('empRetirement').textContent=fmt(empRet);
+  document.getElementById('empAnnuity').textContent=fmt(empAnn);
+  document.getElementById('empTotal').textContent=fmt(empTot);
+  document.getElementById('emplRetirement').textContent=fmt(emplRet);
+  document.getElementById('emplOccupational').textContent=fmt(emplOcc);
+  document.getElementById('emplTotal').textContent=fmt(emplTot);
+}
+calculate();
+</script>
 </body>
 </html>
