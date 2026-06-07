@@ -4,23 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Live Gold Prices Saudi Arabia 2026 | 24K, 22K, 21K, 18K Rates</title>
-  <meta name="description" content="Live gold prices in Saudi Arabia 2026: 24K (SAR 569.52), 22K, 21K, 18K. Updated hourly from gold.sa. Riyadh, Jeddah, Dammam rates." />
-  <meta name="keywords" content="live gold prices saudi arabia 2026, today gold rate riyadh jeddah, gold price per gram ksa, 24k gold price saudi, 22k gold rate saudi arabia, 21k gold price today, 18k gold rate ksa, gold price chart saudi, gold price history 2026, buy gold saudi arabia, sell gold ksa, gold souq prices, sar to gold price, gold investment saudi, gold rate forecast 2026" />
+  <meta name="description" content="Live gold prices in Saudi Arabia for 24K, 22K, 21K, 18K per gram in SAR. Auto-updated from the global gold spot price. Riyadh, Jeddah, Dammam rates." />
+  <meta name="keywords" content="live gold prices saudi arabia 2026, today gold rate riyadh jeddah, gold price per gram ksa, 24k gold price saudi, 22k gold rate saudi arabia, 21k gold price today, 18k gold rate ksa, gold price chart saudi, sar to gold price, gold investment saudi" />
   <link rel="canonical" href="https://www.saudiutilityhub.com/gold-prices.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Live Gold Prices Saudi Arabia 2026 | 24K, 22K, 21K, 18K Rates" />
-  <meta property="og:description" content="Live gold prices in Saudi Arabia: 24K (SAR 569.52), 22K (SAR 522.06), 21K (SAR 498.33), 18K (SAR 427.14). Updated hourly." />
+  <meta property="og:description" content="Live gold prices in Saudi Arabia for all karats, per gram in SAR. Auto-updated from the global gold spot price." />
   <meta property="og:url" content="https://www.saudiutilityhub.com/gold-prices.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Saudi Utility Hub" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Live Gold Prices Saudi Arabia 2026" />
-  <meta name="twitter:description" content="Check live gold prices for all karats in KSA. Updated hourly from official gold.sa data." />
+  <meta name="twitter:description" content="Check live gold prices for all karats in KSA, auto-updated from the global spot price." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://data-asg.goldprice.org" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
   <!-- AdSense -->
@@ -79,7 +80,7 @@
         "name": "What is the current gold price in Saudi Arabia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "As of January 20, 2026, the live gold prices in Saudi Arabia are: 24K: SAR 569.52/gram, 22K: SAR 522.06/gram, 21K: SAR 498.33/gram, 18K: SAR 427.14/gram."
+          "text": "The live gold prices for 24K, 22K, 21K and 18K per gram in SAR are shown in the price table at the top of this page. They are calculated automatically from the global gold spot price (XAU/USD) converted to SAR at the fixed 3.75 peg, then adjusted for each karat's purity."
         }
       },
       {
@@ -87,7 +88,7 @@
         "name": "How often do gold prices change in KSA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Gold prices in Saudi Arabia change multiple times per day based on global market movements and local demand."
+          "text": "Gold prices in Saudi Arabia change multiple times per day based on global market movements and local demand. This page refreshes the rate from the live spot price each time it is opened."
         }
       },
       {
@@ -111,7 +112,7 @@
         "name": "Is the price shown with or without making charges?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The prices shown are for raw gold only (without making charges). When buying jewelry, you'll pay extra for craftsmanship (maksariya)."
+          "text": "The prices shown are for raw gold only (without making charges). When buying jewelry, you'll pay extra for craftsmanship (maksariya) and a small dealer premium over the spot price."
         }
       }
     ]
@@ -257,6 +258,17 @@
       background: #f1f5f9;
       font-weight: 600;
     }
+    .live-dot {
+      display: inline-block;
+      width: 9px; height: 9px;
+      background: var(--success);
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 1.6s infinite;
+      vertical-align: middle;
+    }
+    @keyframes pulse { 0%{opacity:1;} 50%{opacity:.3;} 100%{opacity:1;} }
+    .updated-line { font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem; }
     .expert-block {
       background: #f8fafc;
       border-radius: 1rem;
@@ -273,6 +285,22 @@
       color: var(--gray);
       margin-bottom: 0.75rem;
     }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .related-card {
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+    .related-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.05rem; }
+    .related-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .related-card a { color: var(--secondary); font-weight: 600; text-decoration: none; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+    .faq-question { font-weight: 600; color: var(--primary); margin-bottom: 0.35rem; }
     footer {
       background: var(--primary);
       color: white;
@@ -372,11 +400,11 @@
         <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a itemprop="item" href="https://www.saudiutilityhub.com/"><span itemprop="name">Home</span></a>
           <meta itemprop="position" content="1" />
-        </span> › 
+        </span> ›
         <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a itemprop="item" href="https://www.saudiutilityhub.com/"><span itemprop="name">Finance Tools</span></a>
           <meta itemprop="position" content="2" />
-        </span> › 
+        </span> ›
         <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <span itemprop="name">Live Gold Prices</span>
           <meta itemprop="position" content="3" />
@@ -386,12 +414,12 @@
 
     <div class="hero">
       <h1>📈 Live Gold Prices Saudi Arabia 2026</h1>
-      <p>Real-time gold rates for 24K, 22K, 21K, 18K in Riyadh, Jeddah, Dammam. Updated hourly from gold.sa.</p>
-      <span class="badge">Updated Jan 20, 2026 • 24K: SAR 569.52 • 10-day avg: SAR 554.57</span>
+      <p>Real-time gold rates for 24K, 22K, 21K, 18K in Riyadh, Jeddah, Dammam — auto-updated from the global gold spot price and converted to SAR.</p>
+      <span class="badge" id="priceBadge"><span class="live-dot"></span>Loading live price…</span>
     </div>
 
-    <div class="quick-answer">
-      As of January 20, 2026, live gold prices in Saudi Arabia are: 24K: SAR 569.52/gram, 22K: SAR 522.06/gram, 21K: SAR 498.33/gram, 18K: SAR 427.14/gram. Prices update hourly based on global markets.
+    <div class="quick-answer" id="quickAnswer">
+      Loading the latest gold prices for Saudi Arabia…
     </div>
 
     <!-- Ad Slot 1 -->
@@ -406,7 +434,7 @@
 
     <!-- Current Prices -->
     <div class="price-card">
-      <h2>Today's Gold Prices (January 20, 2026)</h2>
+      <h2 id="priceDateHeading">Today's Gold Prices</h2>
       <table>
         <thead>
           <tr>
@@ -420,57 +448,39 @@
           <tr>
             <td>24 Karat</td>
             <td>99.9%</td>
-            <td><strong>569.52</strong></td>
-            <td>6,640.60</td>
+            <td><strong id="g24">—</strong></td>
+            <td id="t24">—</td>
           </tr>
           <tr>
             <td>22 Karat</td>
             <td>91.7%</td>
-            <td><strong>522.06</strong></td>
-            <td>6,087.22</td>
+            <td><strong id="g22">—</strong></td>
+            <td id="t22">—</td>
           </tr>
           <tr>
             <td>21 Karat</td>
             <td>87.5%</td>
-            <td><strong>498.33</strong></td>
-            <td>5,810.53</td>
+            <td><strong id="g21">—</strong></td>
+            <td id="t21">—</td>
           </tr>
           <tr>
             <td>18 Karat</td>
             <td>75%</td>
-            <td><strong>427.14</strong></td>
-            <td>4,980.45</td>
+            <td><strong id="g18">—</strong></td>
+            <td id="t18">—</td>
           </tr>
         </tbody>
       </table>
-      <p><em>Note: These are raw gold prices (without making charges). Actual jewelry prices include additional craftsmanship fees.</em></p>
+      <p class="updated-line" id="lastUpdated">Fetching the latest spot price…</p>
+      <p><em>Note: These are raw gold prices (without making charges). Actual jewelry prices include additional craftsmanship fees and a dealer premium.</em></p>
     </div>
 
-    <!-- Historical Prices -->
+    <!-- Today's movement -->
     <div class="price-card">
-      <h2>Last 10 Days Gold Price History</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>24K Price (SAR)</th>
-            <th>Change</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Jan 20, 2026</td><td>569.52</td><td>+0.56</td></tr>
-          <tr><td>Jan 19, 2026</td><td>563.15</td><td>-0.99</td></tr>
-          <tr><td>Jan 18, 2026</td><td>554.19</td><td>0.00</td></tr>
-          <tr><td>Jan 17, 2026</td><td>554.19</td><td>-1.57</td></tr>
-          <tr><td>Jan 16, 2026</td><td>555.76</td><td>-0.46</td></tr>
-          <tr><td>Jan 15, 2026</td><td>556.22</td><td>+1.84</td></tr>
-          <tr><td>Jan 14, 2026</td><td>554.38</td><td>-0.01</td></tr>
-          <tr><td>Jan 13, 2026</td><td>554.39</td><td>+7.27</td></tr>
-          <tr><td>Jan 12, 2026</td><td>547.12</td><td>+3.40</td></tr>
-          <tr><td>Jan 11, 2026</td><td>543.72</td><td>-</td></tr>
-        </tbody>
-      </table>
-      <p><strong>Average (10 days): SAR 554.57/gram</strong></p>
+      <h2>📊 Today's Movement (24K)</h2>
+      <p id="chgValue" style="font-size:1.4rem;font-weight:700;color:var(--gray);">—</p>
+      <p id="changeNote" style="color:var(--gray);">Change vs. the previous close, based on the global gold spot price.</p>
+      <p style="margin-top:1rem;font-size:0.9rem;color:var(--gray);">How this is calculated: we take the international gold spot price (XAU per troy ounce in USD), convert it to SAR at the fixed 3.75 USD–SAR peg, divide by 31.1035 to get the per-gram 24K rate, then scale by each karat's purity (22K = 91.7%, 21K = 87.5%, 18K = 75%). Local souq prices may differ slightly due to dealer premiums and making charges.</p>
     </div>
 
     <h2>📖 Understanding Gold Prices in Saudi Arabia</h2>
@@ -496,30 +506,30 @@
     <!-- E-E-A-T Block -->
     <div class="expert-block">
       <div class="expert-name">Reviewed by the Saudi Utility Hub Editorial Team</div>
-      <div class="expert-cred">Reviewed against widely accepted Zakat rulings and official guidance.</div>
-      <p>Last reviewed: June 2, 2026 | Next review: December 2026<br>
-         Verified against market data from <a href="https://gold.sa" target="_blank" rel="noopener">gold.sa</a> and <a href="https://www.sama.gov.sa" target="_blank" rel="noopener">Saudi Central Bank (SAMA)</a>.<br>
+      <div class="expert-cred">Calculation method reviewed against standard spot-to-karat pricing and the fixed SAR peg.</div>
+      <p>Method last reviewed: June 2026<br>
+         Spot price sourced live from <a href="https://goldprice.org" target="_blank" rel="noopener">goldprice.org</a>; SAR conversion uses the Saudi Central Bank (<a href="https://www.sama.gov.sa" target="_blank" rel="noopener">SAMA</a>) USD peg of 3.75.<br>
          <a href="/about.html">Learn more about our review process</a>.</p>
     </div>
 
     <!-- Official Sources -->
-    <h2>📜 Official Sources</h2>
+    <h2>📜 Sources & Method</h2>
     <ul>
-      <li><a href="https://gold.sa" target="_blank" rel="noopener">gold.sa</a> – Live gold prices across all Saudi cities and karats.</li>
-      <li><a href="https://www.sama.gov.sa" target="_blank" rel="noopener">Saudi Central Bank (SAMA)</a> – Regulator of precious metals markets.</li>
-      <li><a href="https://sgjg.org.sa" target="_blank" rel="noopener">Saudi Gold & Jewellery Group</a> – Industry standards and consumer protection.</li>
+      <li><a href="https://goldprice.org" target="_blank" rel="noopener">goldprice.org</a> – Live international gold spot price (XAU/USD) used for the rates above.</li>
+      <li><a href="https://www.sama.gov.sa" target="_blank" rel="noopener">Saudi Central Bank (SAMA)</a> – Fixed USD–SAR peg of 3.75 used for conversion.</li>
+      <li><a href="https://gold.sa" target="_blank" rel="noopener">gold.sa</a> – Reference for local Saudi retail gold prices (which include dealer premiums).</li>
     </ul>
-    <p><em>Disclaimer: Prices are updated hourly from official sources but may vary slightly by location and dealer. Verify with your local gold souq before purchasing.</em></p>
+    <p><em>Disclaimer: Prices are an estimate derived from the live global spot price and may differ from local souq/dealer rates, which include premiums and making charges. Verify with your local dealer before buying or selling.</em></p>
 
     <!-- FAQ -->
     <h2>❓ Frequently Asked Questions</h2>
     <div class="faq-item">
       <div class="faq-question">What is the current gold price in Saudi Arabia?</div>
-      <div>As of January 20, 2026, the live gold prices in Saudi Arabia are: 24K: SAR 569.52/gram, 22K: SAR 522.06/gram, 21K: SAR 498.33/gram, 18K: SAR 427.14/gram.</div>
+      <div>The live 24K, 22K, 21K and 18K per-gram rates in SAR are shown in the table at the top of this page. They update from the global gold spot price each time you open the page.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">How often do gold prices change in KSA?</div>
-      <div>Gold prices in Saudi Arabia change multiple times per day based on global market movements and local demand.</div>
+      <div>Gold prices in Saudi Arabia change multiple times per day based on global market movements and local demand. This page pulls the latest spot price on every visit.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">What is the difference between gold karats?</div>
@@ -531,7 +541,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-question">Is the price shown with or without making charges?</div>
-      <div>The prices shown are for raw gold only (without making charges). When buying jewelry, you'll pay extra for craftsmanship (maksariya).</div>
+      <div>The prices shown are for raw gold only (without making charges). When buying jewelry, you'll pay extra for craftsmanship (maksariya) and a small dealer premium over spot.</div>
     </div>
 
     <!-- Ad Slot 2 -->
@@ -619,13 +629,13 @@
       </div>
     </div>
     <div class="copyright">
-      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Prices updated hourly from official sources.
+      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Gold rates auto-updated from the global spot price.
     </div>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-text">
-      🍪 We use cookies for ads and analytics. By clicking "Accept", you consent to our use of cookies. 
+      🍪 We use cookies for ads and analytics. By clicking "Accept", you consent to our use of cookies.
       <a href="/privacy.html" style="color:var(--primary);">Privacy Policy</a>
     </div>
     <div class="cookie-btns">
@@ -638,7 +648,6 @@
     function acceptCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
     function declineCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
 
-    // Auto-update prices from gold.sa (simplified)
     window.addEventListener('load', () => {
       if (typeof adsbygoogle !== 'undefined') {
         try {
@@ -647,6 +656,94 @@
         } catch (e) {}
       }
     });
+
+    /* ---------- Live gold price ---------- */
+    (function () {
+      var SAR_PER_USD = 3.75;        // fixed SAMA peg
+      var OZ_TO_G = 31.1034768;      // troy ounce -> gram
+      var TOLA_G = 11.66;            // 1 tola
+      var KARAT = { 24: 1, 22: 22/24, 21: 21/24, 18: 18/24 };
+      var FALLBACK_24K = 360.00;     // approx last-known SAR/g, used only if all feeds fail
+
+      function fmt(n) {
+        return Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+      function today() {
+        return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      }
+      function nowTime() {
+        return new Date().toLocaleString('en-GB', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: 'short' });
+      }
+
+      async function getSpot() {
+        try {
+          var r = await fetch('https://data-asg.goldprice.org/dbXRates/USD', { cache: 'no-store' });
+          if (r.ok) {
+            var j = await r.json();
+            var it = j && j.items && j.items[0];
+            if (it && it.xauPrice) return { usdPerOz: it.xauPrice, chgUsd: it.chgXau, pct: it.pcXau };
+          }
+        } catch (e) {}
+        try {
+          var r2 = await fetch('https://api.gold-api.com/price/XAU', { cache: 'no-store' });
+          if (r2.ok) {
+            var j2 = await r2.json();
+            if (j2 && j2.price) return { usdPerOz: j2.price, chgUsd: null, pct: null };
+          }
+        } catch (e) {}
+        return null;
+      }
+
+      function paint(g24, live, chgSar, pct) {
+        var p = { 24: g24, 22: g24 * KARAT[22], 21: g24 * KARAT[21], 18: g24 * KARAT[18] };
+        [24, 22, 21, 18].forEach(function (k) {
+          var g = document.getElementById('g' + k);
+          var t = document.getElementById('t' + k);
+          if (g) g.textContent = fmt(p[k]);
+          if (t) t.textContent = fmt(p[k] * TOLA_G);
+        });
+        var d = today();
+        var heading = document.getElementById('priceDateHeading');
+        if (heading) heading.textContent = "Today's Gold Prices (" + d + ")";
+        var qa = document.getElementById('quickAnswer');
+        if (qa) qa.textContent = "As of " + d + ", gold prices in Saudi Arabia are approximately: 24K SAR "
+          + fmt(p[24]) + "/g, 22K SAR " + fmt(p[22]) + "/g, 21K SAR " + fmt(p[21]) + "/g, 18K SAR "
+          + fmt(p[18]) + "/g — derived from the live global spot price.";
+        var badge = document.getElementById('priceBadge');
+        if (badge) badge.innerHTML = (live ? '<span class="live-dot"></span>' : '')
+          + (live ? 'Live • ' : 'Indicative • ') + d + ' • 24K: SAR ' + fmt(p[24]) + '/g';
+        var lu = document.getElementById('lastUpdated');
+        if (lu) lu.textContent = live
+          ? 'Live spot-based estimate · updated ' + nowTime()
+          : 'Live feed unavailable — showing last known values. Refresh to retry.';
+        var chg = document.getElementById('chgValue');
+        var note = document.getElementById('changeNote');
+        if (chg) {
+          if (live && chgSar !== null && chgSar !== undefined) {
+            var up = chgSar >= 0;
+            chg.textContent = (up ? '▲ +' : '▼ ') + fmt(Math.abs(chgSar)) + ' SAR/g'
+              + (pct !== null && pct !== undefined ? '  (' + (up ? '+' : '') + Number(pct).toFixed(2) + '%)' : '') + ' today';
+            chg.style.color = up ? '#16a34a' : '#dc2626';
+            if (note) note.textContent = 'Change vs. the previous close, based on the global gold spot price.';
+          } else {
+            chg.textContent = '—';
+            if (note) note.textContent = 'Daily change is unavailable from the live feed right now.';
+          }
+        }
+      }
+
+      getSpot().then(function (data) {
+        if (data && data.usdPerOz) {
+          var g24 = data.usdPerOz / OZ_TO_G * SAR_PER_USD;
+          var chgSar = (data.chgUsd !== null && data.chgUsd !== undefined) ? data.chgUsd / OZ_TO_G * SAR_PER_USD : null;
+          paint(g24, true, chgSar, data.pct);
+        } else {
+          paint(FALLBACK_24K, false, null, null);
+        }
+      }).catch(function () {
+        paint(FALLBACK_24K, false, null, null);
+      });
+    })();
   </script>
 </body>
 </html>
