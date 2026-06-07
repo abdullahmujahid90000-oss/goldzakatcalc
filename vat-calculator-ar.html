@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة ضريبة القيمة المضافة 15٪ — السعودية 2026</title>
+  <meta name="description" content="احسب أو استخرج ضريبة القيمة المضافة 15٪ في السعودية فوراً. أداة مجانية للأفراد والشركات لعام 2026.">
+  <link rel="canonical" href="https://www.saudiutilityhub.com/ar/vat-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"></noscript>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4J28KBE6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MX4J28KBE6');</script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5391037132181133" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --green: #065a2d;
+      --green-dark: #044020;
+      --green-light: #e8f5ee;
+      --gold: #c8972b;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(6,90,45,0.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Tajawal', sans-serif; background: #f7faf8; color: #1a2e22; min-height: 100vh; }
+    /* NAV */
+    
+    .logo { color: #fff; font-size: 1.4rem; font-weight: 400; text-decoration: none; letter-spacing: 0; }
+    .logo strong { font-weight: 800; }
+    .lang-btn { background: var(--gold); color: #fff; border: none; padding: 8px 18px; border-radius: 8px; font-family: 'Tajawal', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.2s; }
+    .lang-btn:hover { background: #a97820; }
+    /* MAIN */
+    main { max-width: 720px; margin: 0 auto; padding: 32px 16px 60px; }
+    .page-header { text-align: center; margin-bottom: 32px; }
+    .page-header h1 { font-size: 2rem; font-weight: 800; color: var(--green); margin-bottom: 8px; }
+    .page-header p { color: #556b5e; font-size: 1.05rem; }
+    /* AD SLOT */
+    .ad-slot { background: #eef2ef; border: 1px dashed #b0c4b8; border-radius: var(--radius); padding: 16px; text-align: center; color: #8a9e92; font-size: 0.85rem; margin-bottom: 28px; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+    /* CARD */
+    .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; margin-bottom: 24px; }
+    /* TABS */
+    .tabs { display: flex; gap: 0; border-radius: 10px; overflow: hidden; border: 2px solid var(--green); margin-bottom: 28px; }
+    .tab-btn { flex: 1; padding: 12px; background: #fff; color: var(--green); border: none; font-family: 'Tajawal', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .tab-btn.active { background: var(--green); color: #fff; }
+    /* FORM */
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--green-dark); font-size: 0.95rem; }
+    input[type="number"] { width: 100%; padding: 14px 16px; border: 2px solid #d0e4d8; border-radius: 10px; font-family: 'Tajawal', sans-serif; font-size: 1.1rem; color: #1a2e22; outline: none; transition: border 0.2s; background: #fafdfc; }
+    input[type="number"]:focus { border-color: var(--green); }
+    .rate-badge { background: var(--green-light); color: var(--green); font-weight: 700; padding: 8px 16px; border-radius: 8px; display: inline-block; margin-bottom: 20px; font-size: 0.95rem; }
+    .calc-btn { width: 100%; padding: 15px; background: var(--green); color: #fff; border: none; border-radius: 10px; font-family: 'Tajawal', sans-serif; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--green-dark); }
+    /* RESULTS */
+    .results { display: none; margin-top: 24px; }
+    .results.show { display: block; }
+    .result-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    @media(max-width:560px) { .result-grid { grid-template-columns: 1fr; } }
+    .result-item { background: var(--green-light); border-radius: 10px; padding: 20px 16px; text-align: center; }
+    .result-item.highlight { background: var(--green); color: #fff; }
+    .result-label { font-size: 0.85rem; font-weight: 500; margin-bottom: 8px; color: #556b5e; }
+    .result-item.highlight .result-label { color: #c8f5d8; }
+    .result-value { font-size: 1.4rem; font-weight: 800; color: var(--green); }
+    .result-item.highlight .result-value { color: #fff; }
+    .result-unit { font-size: 0.8rem; color: #8a9e92; margin-top: 4px; }
+    .result-item.highlight .result-unit { color: #a8d8b8; }
+    /* INFO BOX */
+    .info-box { background: var(--green-light); border-right: 4px solid var(--green); border-radius: 8px; padding: 16px 20px; margin-top: 24px; font-size: 0.92rem; color: #2d5a3d; line-height: 1.7; }
+    /* FOOTER */
+    footer { background: var(--green-dark); color: #a8c8b0; text-align: center; padding: 24px; font-size: 0.9rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+  </style>
+
+<style id="nav-standard-css">
+nav{background:#1a1a2e;padding:0;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 16px;flex-wrap:wrap;gap:4px;min-height:52px}
+.nav-brand{color:#fff;font-weight:800;font-size:1rem;white-space:nowrap;margin-right:12px;flex-shrink:0;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.78rem;padding:6px 8px;border-radius:4px;white-space:nowrap;text-decoration:none;transition:background .15s,color .15s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
+.nav-ar{color:#f0a500 !important;font-weight:600}
+@media(max-width:600px){.nav-links{gap:1px}.nav-links a{font-size:.72rem;padding:5px 5px}}
+</style>
+  <meta property="og:image" content="https://www.saudiutilityhub.com/og-image.png">
+  <meta name="twitter:image" content="https://www.saudiutilityhub.com/og-image.png">
+  <meta property="og:url" content="https://www.saudiutilityhub.com/ar/vat-calculator.html">
+
+  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saudiutilityhub.com/"},{"@type":"ListItem","position":2,"name":"العربية","item":"https://www.saudiutilityhub.com/ar/"},{"@type":"ListItem","position":3,"name":"حاسبة ضريبة القيمة المضافة 15٪ — السعودية 2026","item":"https://www.saudiutilityhub.com/ar/vat-calculator-ar.html"}]}</script>
+  <script type="application/ld+json" data-suh-schema="auto">{"@context":"https://schema.org","@type":"WebApplication","name":"حاسبة ضريبة القيمة المضافة 15٪ — السعودية 2026","description":"احسب أو استخرج ضريبة القيمة المضافة 15٪ في السعودية فوراً. أداة مجانية للأفراد والشركات لعام 2026.","url":"https://www.saudiutilityhub.com/ar/vat-calculator.html","inLanguage":"ar","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"},"isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Saudi Utility Hub","url":"https://www.saudiutilityhub.com/"}}</script>
+</head>
+<body>
+<nav dir="rtl">
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.saudiutilityhub.com/ar/">Saudi<span style="color:#f0a500">Utility</span>Hub</a>
+    <div class="nav-links">
+      <a href="https://www.saudiutilityhub.com/ar/">الرئيسية</a>
+      <a href="https://www.saudiutilityhub.com/ar/salary-calculator.html">الراتب</a>
+      <a href="https://www.saudiutilityhub.com/ar/gosi-calculator.html">التأمينات</a>
+      <a href="https://www.saudiutilityhub.com/ar/ksa-eos-calculator.html">نهاية الخدمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/gold-zakat-calculator.html">الزكاة</a>
+      <a href="https://www.saudiutilityhub.com/ar/iqama-expiry-calculator.html">الإقامة</a>
+      <a href="https://www.saudiutilityhub.com/ar/vat-calculator.html">ضريبة القيمة</a>
+      <a href="https://www.saudiutilityhub.com/ar/traffic-fine-calculator.html">المخالفات</a>
+      <a href="https://www.saudiutilityhub.com/ar/remittance-fee-compare.html">التحويلات</a>
+      <a href="https://www.saudiutilityhub.com/ar/blog/">المدونة</a>
+      <a href="https://www.saudiutilityhub.com/" class="nav-ar">English</a>
+      <a href="https://www.saudiutilityhub.com/ur/" class="nav-ar">اردو</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h1>حاسبة ضريبة القيمة المضافة</h1>
+    <p>احسب ضريبة القيمة المضافة (VAT) بنسبة 15% — المملكة العربية السعودية</p>
+  </div>
+
+  <!-- Ad Slot 1 -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="7710956327" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <div class="tabs">
+      <button class="tab-btn active" id="tab-add" onclick="switchTab('add')">➕ إضافة ضريبة</button>
+      <button class="tab-btn" id="tab-remove" onclick="switchTab('remove')">➖ خصم الضريبة</button>
+    </div>
+
+    <div id="panel-add">
+      <div class="rate-badge">نسبة ضريبة القيمة المضافة: 15%</div>
+      <div class="form-group">
+        <label for="amount-add">المبلغ قبل الضريبة (بدون ضريبة) — ريال سعودي</label>
+        <input type="number" id="amount-add" placeholder="مثال: 1000" min="0" step="0.01">
+      </div>
+      <button class="calc-btn" onclick="calcAdd()">احسب الضريبة</button>
+      <div class="results" id="results-add">
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-label">المبلغ قبل الضريبة</div>
+            <div class="result-value" id="base-add">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+          <div class="result-item">
+            <div class="result-label">مبلغ الضريبة (15%)</div>
+            <div class="result-value" id="tax-add">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+          <div class="result-item highlight">
+            <div class="result-label">المبلغ الإجمالي</div>
+            <div class="result-value" id="total-add">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-remove" style="display:none;">
+      <div class="rate-badge">نسبة ضريبة القيمة المضافة: 15%</div>
+      <div class="form-group">
+        <label for="amount-remove">المبلغ الإجمالي (شامل الضريبة) — ريال سعودي</label>
+        <input type="number" id="amount-remove" placeholder="مثال: 1150" min="0" step="0.01">
+      </div>
+      <button class="calc-btn" onclick="calcRemove()">خصم الضريبة</button>
+      <div class="results" id="results-remove">
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-label">المبلغ قبل الضريبة</div>
+            <div class="result-value" id="base-remove">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+          <div class="result-item">
+            <div class="result-label">مبلغ الضريبة (15%)</div>
+            <div class="result-value" id="tax-remove">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+          <div class="result-item highlight">
+            <div class="result-label">المبلغ الإجمالي</div>
+            <div class="result-value" id="total-remove">0.00</div>
+            <div class="result-unit">ريال سعودي</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>معلومة:</strong> فرضت المملكة العربية السعودية ضريبة القيمة المضافة بنسبة 5% عام 2018، ورُفعت إلى 15% في يوليو 2020. تُطبَّق على معظم السلع والخدمات.
+    </div>
+  </div>
+
+  <!-- Ad Slot 2 -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5391037132181133" data-ad-slot="2626150601" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Saudi Utility Hub · <a href="../index.html">الرئيسية</a></p>
+</footer>
+
+<script>
+  const VAT = 0.15;
+  function fmt(n){ return n.toLocaleString('ar-SA',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function switchTab(tab){
+    document.getElementById('tab-add').classList.toggle('active', tab==='add');
+    document.getElementById('tab-remove').classList.toggle('active', tab==='remove');
+    document.getElementById('panel-add').style.display = tab==='add'?'block':'none';
+    document.getElementById('panel-remove').style.display = tab==='remove'?'block':'none';
+  }
+  function calcAdd(){
+    const v = parseFloat(document.getElementById('amount-add').value);
+    if(isNaN(v)||v<0) return alert('يرجى إدخال مبلغ صحيح');
+    const tax = v * VAT;
+    const total = v + tax;
+    document.getElementById('base-add').textContent = fmt(v);
+    document.getElementById('tax-add').textContent = fmt(tax);
+    document.getElementById('total-add').textContent = fmt(total);
+    document.getElementById('results-add').classList.add('show');
+  }
+  function calcRemove(){
+    const v = parseFloat(document.getElementById('amount-remove').value);
+    if(isNaN(v)||v<0) return alert('يرجى إدخال مبلغ صحيح');
+    const base = v / (1 + VAT);
+    const tax = v - base;
+    document.getElementById('base-remove').textContent = fmt(base);
+    document.getElementById('tax-remove').textContent = fmt(tax);
+    document.getElementById('total-remove').textContent = fmt(v);
+    document.getElementById('results-remove').classList.add('show');
+  }
+</script>
+</body>
+</html>
