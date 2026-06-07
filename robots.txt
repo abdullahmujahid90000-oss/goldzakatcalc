@@ -7,13 +7,8 @@ Allow: /
 # Internal/admin
 Disallow: /cdn-cgi/
 
-# Languages temporarily not indexed (will be re-enabled with proper hreflang)
-Disallow: /ar/
-Disallow: /ur/
-
-# Old/legacy URL patterns
-Disallow: /*-ar.html$
-Disallow: /*-ur.html$
+# AR/UR are crawlable but noindex (lets Google cleanly drop them).
+# Re-enable for indexing post-AdSense by removing noindex + adding hreflang/sitemap.
 
 # Sitemap
 Sitemap: https://www.saudiutilityhub.com/sitemap.xml
