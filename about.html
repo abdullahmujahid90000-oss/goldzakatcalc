@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Saudi Utility Hub — Trusted Tools for Residents & Expats</title>
-  <meta name="description" content="Learn about Saudi Utility Hub: our mission, team, review process, and commitment to accurate, Sharia-compliant, government-aligned financial & expat tools for Saudi Arabia." />
-  <meta name="keywords" content="about saudi utility hub, who we are, zakat calculator saudi, gosi calculator, iqama tool" />
+  <meta name="description" content="Learn about Saudi Utility Hub: our mission, review process, and commitment to accurate, government-aligned financial and expat tools for Saudi Arabia." />
+  <meta name="keywords" content="about saudi utility hub, who we are, saudi calculators, gosi calculator, iqama tool" />
   <link rel="canonical" href="https://www.saudiutilityhub.com/about.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="About Saudi Utility Hub — Trusted Tools for Residents & Expats" />
-  <meta property="og:description" content="Free, accurate calculators for salary, GOSI, EOS, Zakat, Iqama, remittance & more — built for Saudi Arabia with official 2026 data." />
+  <meta property="og:description" content="Free, accurate calculators for salary, GOSI, EOS, Zakat, Iqama, remittance and more — built for Saudi Arabia with official 2026 data." />
   <meta property="og:url" content="https://www.saudiutilityhub.com/about.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Saudi Utility Hub" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Saudi Utility Hub" />
-  <meta name="twitter:description" content="Your trusted source for official Saudi calculators — updated daily with 2026 rates from SAMA, ZATCA, GOSI & alifta.gov.sa." />
+  <meta name="twitter:description" content="Your trusted source for official Saudi calculators — updated with 2026 rates from SAMA, ZATCA, GOSI and the Ministry of Human Resources." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,7 +57,7 @@
       justify-content: space-between;
     }
     .logo {
-      font-family: 'Montserrat', 'Inter', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.5rem;
       font-weight: 800;
       color: #fff;
@@ -84,9 +83,9 @@
       border-bottom-color: var(--gold-bright);
     }
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
     }
     .breadcrumb {
       display: flex;
@@ -103,50 +102,167 @@
       font-size: 2.25rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
     }
     h2 {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-      color: var(--secondary);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      color: var(--primary);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
     }
     p {
       margin-bottom: 1.25rem;
+      color: #334155;
     }
     .mission-card {
-      background: #f8fafc;
+      background: #f0fdf4;
       border-radius: 1rem;
-      padding: 2rem;
+      padding: 1.75rem 2rem;
       margin: 2rem 0;
       border-left: 4px solid var(--primary);
+    }
+    .mission-card p { margin-bottom: 0.75rem; }
+    .mission-list {
+      list-style: none;
+      margin: 0.75rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .mission-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: #1e293b;
+      font-size: 0.97rem;
     }
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
     }
-    .team-member {
+    .team-card {
       background: white;
       border: 1px solid var(--border);
       border-radius: 1rem;
       padding: 1.5rem;
-      text-align: center;
     }
-    .member-name {
+    .team-card-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    .team-card-role {
+      color: var(--gray);
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .team-card p {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 0;
+    }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .steps li::before {
+      content: counter(step);
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      min-width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .steps li span { color: #334155; }
+    .disclaimer-box {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.93rem;
+      color: #7c2d12;
+    }
+    .disclaimer-box strong { color: #9a3412; }
+    .contact-box {
+      background: var(--light);
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .contact-box p { margin: 0; color: #334155; }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
       font-weight: 600;
-      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .btn:hover { background: var(--secondary); }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .stat-box {
+      background: var(--light);
+      border-radius: 0.75rem;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
       color: var(--primary);
     }
-    .member-role {
+    .stat-label {
+      font-size: 0.8rem;
       color: var(--gray);
-      font-size: 0.9rem;
+      margin-top: 0.25rem;
     }
     footer {
       background: var(--primary);
       color: white;
       padding: 3rem 1.5rem 1.5rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     .footer-grid {
       max-width: 1200px;
@@ -159,32 +275,24 @@
     .footer-col h3 {
       color: white;
       margin-bottom: 1.25rem;
-      font-size: 1.125rem;
+      font-size: 1rem;
+      font-weight: 600;
     }
-    .footer-col ul {
-      list-style: none;
-      margin-left: 0;
-    }
-    .footer-col a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    .footer-col a:hover {
-      color: white;
-    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; }
+    .footer-col a:hover { color: white; }
     .copyright {
+      max-width: 1200px;
+      margin: 0 auto;
       text-align: center;
       padding-top: 1.5rem;
       border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: #94a3b8;
     }
     .cookie-banner {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       background: white;
       padding: 1rem 1.5rem;
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
@@ -192,29 +300,18 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
+      gap: 1rem;
     }
-    .cookie-text {
-      max-width: 800px;
-      font-size: 0.9rem;
-      color: var(--gray);
-    }
-    .cookie-btns {
-      display: flex;
-      gap: 0.75rem;
-    }
-    .cookie-btn {
-      padding: 0.5rem 1rem;
-      border-radius: 0.375rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
+    .cookie-text { font-size: 0.9rem; color: var(--gray); }
+    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-btn { padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9rem; cursor: pointer; }
     .accept { background: var(--primary); color: white; border: none; }
     .decline { background: #f1f5f9; color: var(--gray); border: 1px solid var(--border); }
-
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; gap: 1rem; }
       nav ul { flex-wrap: wrap; justify-content: center; }
       h1 { font-size: 1.75rem; }
+      .contact-box { flex-direction: column; }
     }
   </style>
 </head>
@@ -237,65 +334,107 @@
 
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="https://www.saudiutilityhub.com/">Home</a> › 
+      <a href="https://www.saudiutilityhub.com/">Home</a> ›
       <span>About Us</span>
     </nav>
 
-    <h1>ℹ️ About Saudi Utility Hub</h1>
+    <h1>About Saudi Utility Hub</h1>
+    <p class="subtitle">Free, accurate tools for everyone who lives and works in Saudi Arabia.</p>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Free Tools & Guides</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">2026</div>
+        <div class="stat-label">Official Rates</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Logins Required</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">Monthly</div>
+        <div class="stat-label">Rate Audits</div>
+      </div>
+    </div>
+
+    <h2>Our Mission</h2>
 
     <div class="mission-card">
-      <h2>Our Mission</h2>
-      <p>Saudi Utility Hub was founded in 2025 to solve a simple problem: <strong>accurate, free, and easy-to-use tools for life in Saudi Arabia</strong>.</p>
-      <p>Whether you're a Saudi national, an expatriate worker, or a business owner, navigating GOSI, EOS, Zakat, Iqama, or remittance fees can be confusing. Official government portals often lack calculators, and third-party sites use outdated or incorrect data.</p>
-      <p>We build <strong>one-page tools</strong> that combine:</p>
-      <ul>
-        <li>✅ <strong>Official 2026 rates</strong> from SAMA, ZATCA, GOSI, Ministry of HR, and alifta.gov.sa</li>
-        <li>✅ <strong>Real-world examples</strong> (Riyadh, Jeddah, Dammam scenarios)</li>
-        <li>✅ <strong>Sharia-compliant guidance</strong> reviewed by Saudi Islamic scholars</li>
-        <li>✅ <strong>No login, no ads in calculators</strong> — just instant answers</li>
+      <p>Saudi Utility Hub was built to solve a simple problem: <strong>people living in Saudi Arabia need accurate, free tools for everyday financial decisions</strong> — and most don't exist in one place.</p>
+      <p>Whether you're calculating your GOSI deduction, figuring out your end-of-service gratuity, checking your Iqama expiry, or comparing remittance fees, we give you the answer instantly — based on the official rules, not estimates.</p>
+      <ul class="mission-list">
+        <li>✅ <strong>Official 2026 rates</strong> from SAMA, ZATCA, GOSI, and the Ministry of Human Resources</li>
+        <li>✅ <strong>No login required</strong> — every tool works instantly in your browser</li>
+        <li>✅ <strong>Calculations stay on your device</strong> — we do not store what you enter</li>
+        <li>✅ <strong>Monthly audits</strong> — all rates are re-verified on the 1st of each month</li>
       </ul>
     </div>
 
-    <h2>Who We Are</h2>
-    <p>We are a small team of developers, financial analysts, and Islamic finance specialists based in <strong>Riyadh, Saudi Arabia</strong>. Our work is guided by three principles:</p>
-    <ol>
-      <li><strong>Accuracy First</strong>: Every number is verified against official Saudi sources. If a rate changes (e.g., GOSI 9.75%, VAT 15%, Dependent Levy SAR 400), we update it within 24 hours.</li>
-      <li><strong>User Trust</strong>: We never sell user data. Calculators run entirely in your browser — no tracking during calculation.</li>
-      <li><strong>Topic-Matched Review</strong>: Each tool is checked by the relevant editorial desk against official sources before publishing (e.g., labour-law tools against the Saudi Labour Law and GOSI, Zakat tools against published fiqh rulings).</li>
-    </ol>
+    <h2>What We Cover</h2>
+    <p>Saudi Utility Hub covers six core areas for residents and expats in the Kingdom:</p>
+    <ul class="mission-list" style="margin-top:0.5rem">
+      <li>💼 <strong>Salary & Work</strong> — GOSI, EOS, salary slips, settlements, overtime, leave, probation</li>
+      <li>🧾 <strong>Tax & Zakat</strong> — VAT at 15%, complete Zakat calculator, Gold Zakat, Nisab</li>
+      <li>🏦 <strong>Loans & Banking</strong> — car finance, mortgage, Islamic finance (Murabaha), IBAN validator</li>
+      <li>💸 <strong>Send Money Home</strong> — remittance fee comparison for Pakistan, India, Bangladesh, Philippines</li>
+      <li>🪪 <strong>Iqama & Visas</strong> — expiry tracker, transfer costs, dependent levy, family visa, exit/re-entry</li>
+      <li>🚗 <strong>Bills & Transport</strong> — electricity, water, fuel, traffic fines, driving licence conversion</li>
+    </ul>
 
     <h2>Our Review Process</h2>
-    <p>Every calculator and guide undergoes a 3-step review:</p>
-    <ol>
-      <li><strong>Data Validation</strong>: Cross-check with at least two official Saudi government sources.</li>
-      <li><strong>Editorial Review</strong>: Assigned to the relevant editorial desk (see team below).</li>
-      <li><strong>Monthly Audit</strong>: All pages are re-verified on the 1st of each month for rate changes.</li>
+    <p>Every calculator and guide on this site follows a three-step process before it goes live:</p>
+    <ol class="steps">
+      <li><span><strong>Data validation</strong> — cross-checked against at least two official Saudi government sources (GOSI, ZATCA, SAMA, Ministry of HR, Jawazat).</span></li>
+      <li><span><strong>Editorial review</strong> — assigned to the relevant desk based on topic (see below).</span></li>
+      <li><span><strong>Monthly audit</strong> — all pages re-verified on the 1st of each month for any rate or regulation changes.</span></li>
     </ol>
-    <p>Last full site audit: <strong>June 1, 2026</strong>. Next audit: <strong>July 1, 2026</strong>.</p>
+    <p>Last full site audit: <strong>June 1, 2026</strong>. Next scheduled audit: <strong>July 1, 2026</strong>.</p>
 
     <h2>Our Editorial Team</h2>
     <div class="team-grid">
-      <div class="team-member">
-        <div class="member-name">Islamic Finance Desk</div>
-        <div class="member-role">Zakat &amp; Islamic Finance</div>
-        <p>Maintains all Zakat, gold, silver, and Islamic finance tools, with calculations based on published rulings from recognised Saudi and international fiqh bodies.</p>
+      <div class="team-card">
+        <div class="team-card-title">Labour & HR Desk</div>
+        <div class="team-card-role">GOSI · EOS · Salary · Iqama</div>
+        <p>Maintains all employment-related tools. Figures sourced from GOSI, the Ministry of Human Resources and Social Development, and the Saudi Labour Law.</p>
       </div>
-      <div class="team-member">
-        <div class="member-name">Labour &amp; HR Desk</div>
-        <div class="member-role">GOSI, EOS &amp; Salary</div>
-        <p>Maintains GOSI, end-of-service, salary, and Iqama-related tools, with figures sourced from GOSI, the Ministry of Human Resources, and the Saudi Labour Law.</p>
+      <div class="team-card">
+        <div class="team-card-title">Islamic Finance Desk</div>
+        <div class="team-card-role">Zakat · Gold · Islamic Finance</div>
+        <p>Maintains Zakat, gold, silver, and Islamic finance tools, with calculations based on published rulings from recognised fiqh authorities.</p>
       </div>
-      <div class="team-member">
-        <div class="member-name">Banking &amp; Remittance Desk</div>
-        <div class="member-role">Currency &amp; Money Transfer</div>
-        <p>Maintains currency, IBAN, and money-transfer tools, with rates and rules checked against SAMA and major Saudi banks.</p>
+      <div class="team-card">
+        <div class="team-card-title">Banking & Remittance Desk</div>
+        <div class="team-card-role">Currency · Money Transfer · IBAN</div>
+        <p>Maintains currency, IBAN, and money-transfer tools. Rates and rules checked against SAMA and major Saudi banks.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-card-title">Visa & Expat Desk</div>
+        <div class="team-card-role">Visas · Iqama · Residency</div>
+        <p>Maintains Iqama, visa, and residency tools. Information sourced from the Jawazat (Passports Authority), Absher, and Muqeem portals.</p>
       </div>
     </div>
 
-    <h2>Contact & Transparency</h2>
-    <p>We welcome feedback, corrections, and suggestions. If you spot an error or have a feature request, please reach out via our <a href="/contact.html">Contact page</a>.</p>
-    <p>This site is independently operated and not affiliated with any Saudi government entity, though we strive to reflect official policies accurately.</p>
-    <p>Monetization: We use advertising and select affiliate partnerships (clearly disclosed) to sustain free access. Revenue funds server costs and our monthly review cycle.</p>
+    <h2>Accuracy Disclaimer</h2>
+    <div class="disclaimer-box">
+      <strong>Important:</strong> All calculator results are estimates based on publicly available Saudi government regulations and rates. They are provided for informational purposes only. Always verify important financial decisions with your employer, bank, or the relevant Saudi authority (Ministry of Human Resources, GOSI, ZATCA, Jawazat, or SAMA).
+    </div>
+
+    <h2>Transparency & Monetisation</h2>
+    <p>Saudi Utility Hub is independently operated and is not affiliated with any Saudi government entity, though we strive to reflect official policies accurately.</p>
+    <p>This site is free to use. We cover running costs through Google AdSense advertising and select affiliate partnerships with financial service providers. Affiliate links are clearly disclosed and never influence our calculations or recommendations.</p>
+
+    <h2>Contact & Feedback</h2>
+    <p>We welcome corrections, suggestions, and feedback. If you spot an error in a calculation, please tell us — we aim to fix confirmed errors within 24 hours.</p>
+    <div class="contact-box">
+      <div>
+        <p><strong>Email:</strong> hello@saudiutilityhub.com</p>
+        <p style="margin-top:0.25rem;font-size:0.9rem;color:var(--gray)">We aim to respond within 48 hours.</p>
+      </div>
+      <a href="https://www.saudiutilityhub.com/contact.html" class="btn">Go to Contact Form →</a>
+    </div>
   </div>
 
   <footer>
@@ -315,6 +454,7 @@
           <li><a href="https://www.saudiutilityhub.com/iqama-expiry-calculator.html">Iqama Tracker</a></li>
           <li><a href="https://www.saudiutilityhub.com/iqama-transfer-calculator.html">Iqama Transfer</a></li>
           <li><a href="https://www.saudiutilityhub.com/family-visit-visa-guide.html">Family Visit Visa</a></li>
+          <li><a href="https://www.saudiutilityhub.com/traffic-fine-calculator.html">Traffic Fines</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -336,13 +476,13 @@
       </div>
     </div>
     <div class="copyright">
-      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · All tools are free, accurate, and updated monthly.
+      © 2026 Saudi Utility Hub · Riyadh, Saudi Arabia · Free calculators kept up to date with official Saudi rates.
     </div>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-text">
-      🍪 We use cookies for ads and analytics. By clicking "Accept", you consent to our use of cookies. 
+      🍪 We use cookies for ads and analytics. By clicking "Accept", you consent to our use of cookies.
       <a href="/privacy.html" style="color:var(--primary);">Privacy Policy</a>
     </div>
     <div class="cookie-btns">
@@ -352,8 +492,17 @@
   </div>
 
   <script>
-    function acceptCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
-    function declineCookies() { document.getElementById('cookieBanner').style.display = 'none'; }
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+    function declineCookies() {
+      localStorage.setItem('cookieConsent', 'declined');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
   </script>
 </body>
 </html>
